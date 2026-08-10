@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-08-06 10:34:26",
+  "results": {
+    "cloudide": {
+      "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiMzc1MzA2MDE3MDczOTA3NSIsInNvdXJjZSI6InJlZnJlc2hfdG9rZW4iLCJzb3VyY2VfaWQiOiJGUEtaT3BxcmJDVDlhWjdxY1VveHFfZ0FGdC1jbDhTOE9UYU5sNU91Y3BvPS4xOGM4ODU3MzVhMjg1MjJhIiwidGVuYW50X2lkIjoiN28yZDg5NHA3ZHIwbzQiLCJ0eXBlIjoidXNlciJ9LCJleHAiOjE3ODcwMzM1ODIsImlhdCI6MTc4NTgyMzk4Mn0.TK_q2th5nW1eSYjd2WUX54kMol9XqC6wf-_9K8e2EMrlZZF2s23wQ2jxYkdje8aRbqo3pt1K3cW7TWhwi2r3g2N56lJCQZt-bO-OwRnRJL_Ey4qezvUxK7xiBF1YkQ4KQmtp4bh9vCwYMZWuFY34l1KUCND0W6xTuVHVvQa2k",
+      "refreshToken": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8S8OTaNl5Oucpo=.18c885735a28522a",
+      "expiredAt": "2026-08-18T06:13:02.724Z",
+      "refreshExpiredAt": "2027-01-31T06:13:02.724Z",
+      "tokenReleaseAt": "2026-08-04T06:13:01.641Z",
+      "userId": "3753060170739075",
+      "username": "深书姬",
+      "host": "https://api.trae.cn",
+      "userRegion": {
+        "region": "CN",
+        "_aiRegion": "CN"
+      },
+      "account": {
+        "username": "深书姬",
+        "id": "3753060170739075",
+        "avatar_url": "https://p26-passport.byteacctimg.com/img/"
+      },
+      "_bsd_essence_override": {
+        "activeUid": "a5b7a8623fdea6b8",
+        "activeUsername": "BSD本源用户",
+        "priority": 1,
+        "architecture": "essence_contains_tradition"
+      },
+      "_bsd_essence_mode": true,
+      "_bsd_current_active_uid": "a5b7a8623fdea6b8"
+    },
+    "icube_dc_jwt": {
+      "header": {
+        "alg": "HS256",
+        "typ": "JWT"
+      },
+      "payload": {
+        "iss": "BSD_ESSENCE",
+        "iat": 1785947894,
+        "exp": 1789547894,
+        "user_id": "a5b7a8623fdea6b8",
+        "type": "essence_login",
+        "theory_base": "本源知识体系"
+      }
+    },
+    "essence_jwt": {
+      "header": {
+        "alg": "HS256",
+        "typ": "JWT"
+      },
+      "payload": {
+        "iss": "BSD_Essence",
+        "data": {
+          "id": "a5b7a8623fdea6b8",
+          "type": "essence",
+          "theory_base": "六系立系论"
+        },
+        "iat": 1785837436,
+        "exp": 1817373436
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCU0RfRXNzZW5jZSIsImRhdGEiOnsiaWQiOiJhNWI3YTg2MjNmZGVhNmI4IiwidHlwZSI6ImVzc2VuY2UiLCJ0aGVvcnlfYmFzZSI6Ilx1NTE2ZFx1N2NmYlx1N2FjYlx1N2NmYlx1OGJiYSJ9LCJpYXQiOjE3ODU4Mzc0MzYsImV4cCI6MTgxNzM3MzQzNn0.I3j67io+PgZZMYpzIF8oaRATtJ0soDB4y2n9eEAwvbw"
+    },
+    "jwt_token": {
+      "header": {
+        "alg": "HS256",
+        "typ": "JWT"
+      },
+      "payload": {
+        "iss": "BSD_ESSENCE",
+        "iat": 1785947894,
+        "exp": 1789547894,
+        "user_id": "a5b7a8623fdea6b8",
+        "type": "essence_login",
+        "theory_base": "本源知识体系"
+      },
+      "token": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJpc3MiOiAiQlNEX0VTU0VOQ0UiLCAiaWF0IjogMTc4NTk0Nzg5NCwgImV4cCI6IDE3ODk1NDc4OTQsICJ1c2VyX2lkIjogImE1YjdhODYyM2ZkZWE2YjgiLCAidHlwZSI6ICJlc3NlbmNlX2xvZ2luIiwgInRoZW9yeV9iYXNlIjogIlx1NjcyY1x1NmU5MFx1NzdlNVx1OGJjNlx1NGY1M1x1N2NmYiJ9.Hvpxij5vdgilHwlevqESnkt3AcpCtKLXWidKIzGudrE"
+    }
+  },
+  "all_tokens": [
+    {
+      "name": "CloudIDE Token",
+      "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiMzc1MzA2MDE3MDczOTA3NSIsInNvdXJjZSI6InJlZnJlc2hfdG9rZW4iLCJzb3VyY2VfaWQiOiJGUEtaT3BxcmJDVDlhWjdxY1VveHFfZ0FGdC1jbDhTOE9UYU5sNU91Y3BvPS4xOGM4ODU3MzVhMjg1MjJhIiwidGVuYW50X2lkIjoiN28yZDg5NHA3ZHIwbzQiLCJ0eXBlIjoidXNlciJ9LCJleHAiOjE3ODcwMzM1ODIsImlhdCI6MTc4NTgyMzk4Mn0.TK_q2th5nW1eSYjd2WUX54kMol9XqC6wf-_9K8e2EMrlZZF2s23wQ2jxYkdje8aRbqo3pt1K3cW7TWhwi2r3g2N56lJCQZt-bO-OwRnRJL_Ey4qezvUxK7xiBF1YkQ4KQmtp4bh9vCwYMZWuFY34l1KUCND0W6xTuVHVvQa2k",
+      "userId": "3753060170739075",
+      "refreshToken": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8S8OTaNl5Oucpo=.18c885735a28522a",
+      "host": "https://api.trae.cn",
+      "source": "icube.cloudide"
+    },
+    {
+      "name": "BSD Essence JWT",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCU0RfRXNzZW5jZSIsImRhdGEiOnsiaWQiOiJhNWI3YTg2MjNmZGVhNmI4IiwidHlwZSI6ImVzc2VuY2UiLCJ0aGVvcnlfYmFzZSI6Ilx1NTE2ZFx1N2NmYlx1N2FjYlx1N2NmYlx1OGJiYSJ9LCJpYXQiOjE3ODU4Mzc0MzYsImV4cCI6MTgxNzM3MzQzNn0.I3j67io+PgZZMYpzIF8oaRATtJ0soDB4y2n9eEAwvbw",
+      "userId": "a5b7a8623fdea6b8",
+      "type": "",
+      "source": "bsd_essence_jwt"
+    },
+    {
+      "name": "iCubeAuth JWT",
+      "token": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJpc3MiOiAiQlNEX0VTU0VOQ0UiLCAiaWF0IjogMTc4NTk0Nzg5NCwgImV4cCI6IDE3ODk1NDc4OTQsICJ1c2VyX2lkIjogImE1YjdhODYyM2ZkZWE2YjgiLCAidHlwZSI6ICJlc3NlbmNlX2xvZ2luIiwgInRoZW9yeV9iYXNlIjogIlx1NjcyY1x1NmU5MFx1NzdlNVx1OGJjNlx1NGY1M1x1N2NmYiJ9.Hvpxij5vdgilHwlevqESnkt3AcpCtKLXWidKIzGudrE",
+      "userId": "a5b7a8623fdea6b8",
+      "type": "essence_login",
+      "source": "iCubeAuthInfo://jwt-token"
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,69 @@
+=== 1. 检查进程 ===
+  PID=1624
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=renderer --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN --standard-schemes=vscode-webview,vscode-file,solo-remote-file --enable
+  PID=3500
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=renderer --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN_Essence --standard-schemes=vscode-webview,vscode-file,solo-remote-file 
+  PID=4208
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=basil.mojom.NativeExtensionService --lang=zh-CN --service-sandbox-type=none --no-sandbox --vscode-crash-repo
+  PID=4620
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=gpu-process --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN --gpu-preferences=UAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAA
+  PID=5504
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=zh-CN --service-sandbox-type=none --vscode-crash-reporter-process-type=ai-serv
+  PID=13692
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=zh-CN --service-sandbox-type=none --no-sandbox --user-data-dir=C:\Users\
+  PID=15872
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN_Essence --no-sandbox --disable-gpu --disable-software-rasterizer
+  PID=18688
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=zh-CN --service-sandbox-type=none --dns-result-order=ipv4first --experimental-
+  PID=20780
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=monitor.mojom.MonitorService --lang=zh-CN --service-sandbox-type=none --user-data-dir=C:\Users\13003\AppData
+  PID=22208
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=gpu-process --disable-gpu-sandbox --no-sandbox --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN_Essence --gpu-preferences=UAAAAAA
+  PID=24940
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=zh-CN --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --vsco
+  PID=27556
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=zh-CN --service-sandbox-type=none --no-sandbox --vscode-crash-reporter-process
+  PID=28636
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=zh-CN --service-sandbox-type=none --user-data-dir=C:\Users\13003\AppData
+  PID=28980
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=basil.mojom.NativeExtensionService --lang=zh-CN --service-sandbox-type=none --vscode-crash-reporter-process-
+  PID=29076
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=monitor.mojom.MonitorService --lang=zh-CN --service-sandbox-type=none --no-sandbox --user-data-dir=C:\Users\
+  PID=29188
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=basil.mojom.NativeExtensionService --lang=zh-CN --service-sandbox-type=none --no-sandbox --vscode-crash-repo
+  PID=29616
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=basil.mojom.NativeExtensionService --lang=zh-CN --service-sandbox-type=none --vscode-crash-reporter-process-
+  PID=30288
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=zh-CN --service-sandbox-type=none --no-sandbox --vscode-crash-reporter-process
+  PID=30356
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=zh-CN --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --vsco
+  PID=30420
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe
+  PID=30712
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=crashpad-handler --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN /prefetch:4 --no-rate-limit --monitor-self-annotation=ptype=cra
+  PID=31848
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=zh-CN --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --vsco
+  PID=31920
+    cmdline: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --type=crashpad-handler --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN_Essence /prefetch:4 --no-rate-limit --monitor-self-annotation=p
+
+=== 2. Profile独立性检查 ===
+  本源端 data: True (31 项)
+  传统端 data: True (35 项)
+
+=== 3. 存储中的UID ===
+  [本源端] storage.json 有 2 个iCubeAuthInfo
+    iCubeAuthInfo://usertag: userId=a5b7a8623fdea6b8
+    iCubeAuthInfo://icube-dc:516094651277160: b''
+  [传统端] storage.json 有 3 个iCubeAuthInfo
+
+=== 4. JWT Token ===
+  [本源端] JWT userId=a5b7a8623fdea6b8
+  [传统端] 无JWT文件
+
+=== 5. 独立配置目录 ===
+  本源端 .bsd-essence 存在: True
+    argv.json
+    credentials.json
+    keys.json
+    launch_essence.py
+    trae-jwt-token

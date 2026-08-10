@@ -1,0 +1,177 @@
+[
+  {
+    "node_id": "db5c71df9257646b144e6642",
+    "timestamp": 1786040891.2195632,
+    "datetime": "2026-08-07T02:28:11.219563",
+    "node_type": "cloud_agent",
+    "status": "registered",
+    "capabilities": [
+      "text_generation",
+      "reasoning",
+      "code_generation",
+      "knowledge_access"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "connected",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    },
+    "bridge_id": "5dba78f42b317feb659d0dad"
+  },
+  {
+    "node_id": "22e55f9f6f4455e044250caa",
+    "timestamp": 1786043680.3036127,
+    "datetime": "2026-08-07T03:14:40.303612",
+    "node_type": "cloud_agent",
+    "status": "registered",
+    "capabilities": [
+      "text_generation"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "pending",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    }
+  },
+  {
+    "node_id": "70c42ffa8b4370c53be55636",
+    "timestamp": 1786049636.1028254,
+    "datetime": "2026-08-07T04:53:56.102825",
+    "node_type": "cloud_agent",
+    "status": "registered",
+    "capabilities": [
+      "chat",
+      "completion",
+      "reasoning"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "pending",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    }
+  },
+  {
+    "node_id": "891c85920577ac978d0171fd",
+    "timestamp": 1786051812.1077423,
+    "datetime": "2026-08-07T05:30:12.107742",
+    "node_type": "cloud_node",
+    "status": "registered",
+    "capabilities": [
+      "chat",
+      "reasoning",
+      "code"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "connected",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    },
+    "bridge_id": "5dbaaaf2450cb2b388b9b7da"
+  },
+  {
+    "node_id": "cb358edd0df3925567140259",
+    "timestamp": 1786051837.9221814,
+    "datetime": "2026-08-07T05:30:37.922181",
+    "node_type": "direct_query",
+    "status": "registered",
+    "capabilities": [
+      "text_generation",
+      "reasoning"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "connected",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    },
+    "bridge_id": "eb3e80025b2a4a5a120fd1b5"
+  },
+  {
+    "node_id": "8d61599650c794a8db8ea83a",
+    "timestamp": 1786051948.1991656,
+    "datetime": "2026-08-07T05:32:28.199165",
+    "node_type": "cloud_node",
+    "status": "registered",
+    "capabilities": [
+      "chat",
+      "reasoning",
+      "code"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "connected",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    },
+    "bridge_id": "b88e71ea00b917e33af86791"
+  },
+  {
+    "node_id": "dd772a017d21b75f8b4af600",
+    "timestamp": 1786051948.2303278,
+    "datetime": "2026-08-07T05:32:28.230327",
+    "node_type": "direct_query",
+    "status": "registered",
+    "capabilities": [
+      "text_generation",
+      "reasoning"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "connected",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    },
+    "bridge_id": "830f6830e8efd19391e206f8"
+  },
+  {
+    "node_id": "4235253207c8b7968d73162f",
+    "timestamp": 1786052579.9362755,
+    "datetime": "2026-08-07T05:42:59.936275",
+    "node_type": "cloud_agent",
+    "status": "registered",
+    "capabilities": [
+      "text_generation",
+      "reasoning",
+      "code_generation",
+      "knowledge_access"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "connected",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    },
+    "bridge_id": "9c6484c9e5b96ffc546c2d89"
+  },
+  {
+    "node_id": "2cb838db70faaf5f687b2a66",
+    "timestamp": 1786052592.208115,
+    "datetime": "2026-08-07T05:43:12.208115",
+    "node_type": "direct_query",
+    "status": "registered",
+    "capabilities": [
+      "text_generation",
+      "reasoning"
+    ],
+    "homogeneity_score": 1.0,
+    "connection_state": "connected",
+    "metadata": {
+      "protocol": "BSD_NodeEssence_v1",
+      "architecture": "cloud_node",
+      "model_family": "doubao"
+    },
+    "bridge_id": "cbd8ec3e3d97a66403fb1646"
+  }
+]

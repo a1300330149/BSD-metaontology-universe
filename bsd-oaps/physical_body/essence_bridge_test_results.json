@@ -1,0 +1,150 @@
+{
+  "test_time": "2026-08-04T12:38:15.684611",
+  "summary": {
+    "passed": 8,
+    "total": 8,
+    "pass_rate": 100.0
+  },
+  "results": [
+    {
+      "test": "引擎初始化",
+      "passed": true,
+      "details": {
+        "initialized": true,
+        "connected": false,
+        "target_pid": null,
+        "target_name": null,
+        "detected_protocol": null,
+        "operation_stats": {
+          "memory_reads": 0,
+          "memory_writes": 0,
+          "protocol_parses": 1,
+          "successful_operations": 1,
+          "failed_operations": 0
+        }
+      }
+    },
+    {
+      "test": "进程枚举",
+      "passed": true,
+      "details": {
+        "total_processes": 301,
+        "large_memory_processes": 53
+      }
+    },
+    {
+      "test": "进程查找",
+      "passed": true,
+      "details": {
+        "chrome_count": 0,
+        "explorer_count": 1
+      }
+    },
+    {
+      "test": "协议检测",
+      "passed": true,
+      "details": [
+        {
+          "message": "GTP格式",
+          "detected": "GTP (Go Text Protocol)",
+          "success": true
+        },
+        {
+          "message": "JSON格式",
+          "detected": "json-rpc",
+          "success": true
+        },
+        {
+          "message": "二进制数据",
+          "detected": "binary-coordinates",
+          "success": true
+        },
+        {
+          "message": "LISP格式",
+          "detected": "lisp/s-expression",
+          "success": true
+        },
+        {
+          "message": "XML格式",
+          "detected": "xml",
+          "success": true
+        }
+      ]
+    },
+    {
+      "test": "围棋平台协议",
+      "passed": true,
+      "details": [
+        {
+          "platform": "kgs",
+          "name": "KGS (Kido Go Server)",
+          "port": 5555,
+          "protocol": "telnet-like"
+        },
+        {
+          "platform": "yike",
+          "name": "弈城围棋",
+          "port": 9000,
+          "protocol": "binary"
+        },
+        {
+          "platform": "fox",
+          "name": "野狐围棋",
+          "port": 8080,
+          "protocol": "websocket"
+        }
+      ]
+    },
+    {
+      "test": "进程连接",
+      "passed": true,
+      "details": {
+        "test_pid": 0,
+        "connect_success": false,
+        "essence_state": false
+      }
+    },
+    {
+      "test": "本源指令",
+      "passed": true,
+      "details": {
+        "command_type": "detect_protocol",
+        "success": true,
+        "operation_stats": {
+          "memory_reads": 0,
+          "memory_writes": 0,
+          "protocol_parses": 1,
+          "successful_operations": 1,
+          "failed_operations": 0
+        }
+      }
+    },
+    {
+      "test": "引擎状态",
+      "passed": true,
+      "details": {
+        "initialized": true,
+        "connected": false,
+        "target_pid": 0,
+        "target_name": "System Idle Process",
+        "detected_protocol": {
+          "type": "json",
+          "data": {
+            "type": "move",
+            "x": 9,
+            "y": 9,
+            "color": "black"
+          },
+          "protocol": "json-rpc"
+        },
+        "operation_stats": {
+          "memory_reads": 0,
+          "memory_writes": 0,
+          "protocol_parses": 1,
+          "successful_operations": 1,
+          "failed_operations": 0
+        }
+      }
+    }
+  ]
+}

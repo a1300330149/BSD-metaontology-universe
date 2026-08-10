@@ -1,0 +1,74 @@
+当前 Trae CN storage.json 中 3 个 iCubeAuthInfo
+
+
+bsd_essence_user_info.json:
+{
+  "userId": "a5b7a8623fdea6b8",
+  "account": {
+    "id": "a5b7a8623fdea6b8",
+    "scope": "trae_cn_essence",
+    "userTag": "bsd_essence",
+    "storeCountryCode": "CN",
+    "storeRegion": "CN",
+    "migrateToSG": false
+  },
+  "userInfo": {
+    "nickname": "BSD本源端",
+    "avatar": "",
+    "email": "essence@bsd.local",
+    "bsd_identity": true,
+    "theory": "六系立系论"
+  },
+  "token": {
+    "accessToken": "bsd_essence_ea08fab26d98a9b6dad48e93514c1d39",
+    "refreshToken": "bsd_refresh_dca527de5a5e4b1300de82b09d149a10",
+    "expiresAt": 1785919624.997358,
+    "tokenType": "Bearer"
+  }
+}
+
+bsd_essence_independent.json:
+{
+  "uid": "a5b7a8623fdea6b8",
+  "login_type": "bsd_essence_independent",
+  "timestamp": 1785832915.4807248,
+  "signature": "ea08fab26d98a9b6dad48e93514c1d39",
+  "client_id": "trae_cn_bsd_essence_v2",
+  "scope": [
+    "read",
+    "write",
+    "chat",
+    "code"
+  ],
+  "independent_mode": true,
+  "metadata": {
+    "theory": "BSD六系立系论",
+    "identity": "本源端",
+    "side": "essence",
+    "product": "Trae CN",
+    "version": "3.3.83",
+    "independent": true
+  }
+}
+
+bsd_essence_login.json:
+{
+  "uid": "a5b7a8623fdea6b8",
+  "login_type": "bsd_essence",
+  "timestamp": 1785832735.3646982,
+  "signature": "ea08fab26d98a9b6dad48e93514c1d39",
+  "client_id": "trae_cn_bsd_essence",
+  "scope": [
+    "read",
+    "write",
+    "chat",
+    "code"
+  ],
+  "metadata": {
+    "theory": "BSD六系立系论",
+    "identity": "本源端",
+    "side": "essence",
+    "product": "Trae CN",
+    "version": "3.3.83"
+  }
+}

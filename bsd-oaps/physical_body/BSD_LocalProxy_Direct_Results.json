@@ -1,0 +1,320 @@
+{
+  "timestamp": "2026-08-06 15:39:02",
+  "results": [
+    {
+      "port": 8765,
+      "path": "/chat/completions",
+      "status": 200,
+      "time": 0.030585050582885742,
+      "is_1001": false,
+      "has_model": true,
+      "response": "{\"status\": \"success\", \"code\": 0, \"data\": {\"id\": \"chatcmpl_5fb51e85cf00fb2c27d37bda403298bc\", \"choices\": [{\"message\": {\"role\": \"assistant\", \"content\": \"BSD本源端已接收请求。当前知识储备：34619 BSD币。\"}, \"finish_reason\": \"stop\", \"index\": 0}], \"usage\": {\"prompt_tokens\": 0, \"completion_tokens\": 30}, \"model\": \"BSD-Essence-Model-V3\"}}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/chat/completions",
+      "status": 200,
+      "time": 0.01335763931274414,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/chat/completions\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/v1/chat/completions",
+      "status": 200,
+      "time": 0.0009837150573730469,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/v1/chat/completions\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/v2/chat/completions",
+      "status": 200,
+      "time": 0.0005922317504882812,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/v2/chat/completions\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/v3/chat/completions",
+      "status": 200,
+      "time": 0.012483358383178711,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/v3/chat/completions\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/chat",
+      "status": 200,
+      "time": 0.015419960021972656,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /chat\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/chat",
+      "status": 200,
+      "time": 0.013848066329956055,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/chat\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/v1/chat",
+      "status": 200,
+      "time": 0.011178970336914062,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /v1/chat\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/completions",
+      "status": 200,
+      "time": 0.0163424015045166,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /completions\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/generate",
+      "status": 200,
+      "time": 0.015366077423095703,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /generate\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/invoke",
+      "status": 200,
+      "time": 0.016074419021606445,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /invoke\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/agent/chat",
+      "status": 200,
+      "time": 0.025666475296020508,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /agent/chat\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/agent/chat",
+      "status": 200,
+      "time": 0.014798164367675781,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/agent/chat\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/llm",
+      "status": 200,
+      "time": 0.011724472045898438,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /llm\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/llm",
+      "status": 200,
+      "time": 0.018244028091430664,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/llm\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/raw_chat",
+      "status": 200,
+      "time": 0.014775514602661133,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /raw_chat\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 8765,
+      "path": "/api/raw_chat",
+      "status": 200,
+      "time": 0.015089035034179688,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"status\": \"error\", \"code\": 404, \"message\": \"Endpoint not found: /api/raw_chat\", \"available_endpoints\": [\"/CheckLogin\", \"/oauth/LoginByJwt\", \"/trae/api/v3/oauth/ExchangeToken\", \"/oauth/ClearRefreshToken\", \"/chat/completions\", \"/code/generations\", \"/workspace/list\", \"/api/v1/auth/login\", \"/api/v1/auth/refresh\", \"/bsd/essence/context\", \"/bsd/knowledge/query\", \"/bsd/penetration/execute\", \"/bsd/essence/generate\", \"/bsd/information/stream\", \"/health\"]}"
+    },
+    {
+      "port": 17859,
+      "path": "/chat/completions",
+      "status": 401,
+      "time": 0.016298294067382812,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/chat/completions",
+      "status": 401,
+      "time": 0.0007765293121337891,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/v1/chat/completions",
+      "status": 401,
+      "time": 0.011596441268920898,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/v2/chat/completions",
+      "status": 401,
+      "time": 0.015663862228393555,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/v3/chat/completions",
+      "status": 401,
+      "time": 0.014991283416748047,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/chat",
+      "status": 401,
+      "time": 0.014611482620239258,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/chat",
+      "status": 401,
+      "time": 0.014401912689208984,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/v1/chat",
+      "status": 401,
+      "time": 0.015190362930297852,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/completions",
+      "status": 401,
+      "time": 0.011938810348510742,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/generate",
+      "status": 401,
+      "time": 0.011902093887329102,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/invoke",
+      "status": 401,
+      "time": 0.0009777545928955078,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/agent/chat",
+      "status": 401,
+      "time": 0.013166427612304688,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/agent/chat",
+      "status": 401,
+      "time": 0.015831947326660156,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/llm",
+      "status": 401,
+      "time": 0.013122797012329102,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/llm",
+      "status": 401,
+      "time": 0.015161514282226562,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/raw_chat",
+      "status": 401,
+      "time": 0.0008752346038818359,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    },
+    {
+      "port": 17859,
+      "path": "/api/raw_chat",
+      "status": 401,
+      "time": 0.025820016860961914,
+      "is_1001": false,
+      "has_model": false,
+      "response": "{\"error\": \"BSD Token required\", \"hint\": \"Use X-BSD-Token: BSD_KNOWLEDGE_PROTOCOL_v10\"}"
+    }
+  ],
+  "available_ports": [
+    8765,
+    17859
+  ],
+  "summary": {
+    "total": 34,
+    "http_200": 17,
+    "has_model": 1
+  }
+}

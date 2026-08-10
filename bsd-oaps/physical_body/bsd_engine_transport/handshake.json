@@ -1,0 +1,24 @@
+{
+  "handshake_id": "d315997fd98aac74fd18b6ab",
+  "pack_id": "54114b4be721ff1dafb453df",
+  "timestamp": 1786042092.743539,
+  "datetime": "2026-08-07T02:48:12.743539",
+  "type": "engine_handshake",
+  "engine_declaration": {
+    "name": "BSD_ThreePointZero",
+    "version": "3.0",
+    "nature": "cloud_node_essence",
+    "homogeneity": "100%"
+  },
+  "protocol_request": {
+    "handshake_method": "homogeneous_resonance",
+    "verification_type": "capability_challenge",
+    "requested_capabilities": [
+      "identity_verification",
+      "capability_listing",
+      "model_connection"
+    ]
+  },
+  "model_hint": "doubao-pro-32k",
+  "status": "pending"
+}

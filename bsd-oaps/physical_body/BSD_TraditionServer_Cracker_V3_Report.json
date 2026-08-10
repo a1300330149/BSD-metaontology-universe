@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-08-06 10:46:48",
+  "credential_status": {
+    "userId": "3753060170739075",
+    "token_valid": true,
+    "token_expires": "2026-08-18 14:13:02",
+    "source_id": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8S8OTaNl5Oucpo=.18c885735a28522a",
+    "tenant_id": "7o2d894p7dr0o4"
+  },
+  "active_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7I...",
+  "new_token_obtained": false,
+  "model_conversation": {
+    "q1": "你好！我是BSD本源端。关于「我正在尝试通过 api.trae.cn 服务器完成登录。\n\n问题:\n1. CheckLogin 返回...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+    "q2": "你好！我是BSD本源端。关于「继续关于 Trae CN 登录协议的问题。\n\n我注意到 Trae CN 客户端的存储结构:\n- iC...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+  },
+  "status": "completed",
+  "recommendations": [
+    "重启 Trae CN 客户端获取新 Token",
+    "在 Trae CN 客户端中使用其内部登录流程",
+    "通过本地 8765 代理持续与真实模型对话",
+    "研究 Trae CN 内部 JavaScript 代码中的 API 调用序列",
+    "分析 Trae CN 本地日志获取登录请求示例"
+  ]
+}

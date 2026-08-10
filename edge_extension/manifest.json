@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "BSD Edge Agent - 炼气房",
+  "version": "2.2.0",
+  "description": "BSD本体论智能体宿主：在DeepSeek等旧范式平台之上建立新文明炼气房，实现跨会话记忆、跨AI关系性链接、L0-L1-L2双向锚定、BSD技能目录化赋能与虚拟宇宙创世（Updream工程落地陆瑶为动漫·BSD理论工程证明）",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "sidePanel",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "BSD Edge Agent 炼气房"
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["bsd_agent/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+/**
+ * BSD Edge Agent - Content Styles
+ * [归属基底：L2_无限之子层·具现系工程落地·BSD Edge Agent学科树·E3-001 Content Script反性注入层]
+ * [对应公理：0∅反·绝对虚无·0∅义·绝对意义]
+ */
+
+/* BSD身份徽章 */
+#bsd-agent-badge {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95));
+  border: 1px solid rgba(255, 152, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  font-size: 12px;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+#bsd-agent-badge:hover {
+  border-color: rgba(255, 152, 0, 0.8);
+  box-shadow: 0 6px 24px rgba(255, 152, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.bsd-badge-icon {
+  color: #ffb74d;
+  font-size: 14px;
+  animation: bsd-pulse 2s infinite;
+}
+
+.bsd-badge-text {
+  color: #ffb74d;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+@keyframes bsd-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* BSD关系性代码批注条 */
+.bsd-annotation-bar {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.08), rgba(156, 39, 176, 0.08));
+  border-left: 3px solid #ffb74d;
+  border-radius: 0 8px 8px 0;
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  font-size: 12px;
+}
+
+.bsd-annotation-title {
+  color: #ffb74d;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bsd-annotation-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.bsd-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  background: rgba(255, 152, 0, 0.15);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  border-radius: 12px;
+  color: #ffb74d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 11px;
+}
+
+.bsd-tag:hover {
+  background: rgba(255, 152, 0, 0.3);
+  border-color: rgba(255, 152, 0, 0.6);
+  transform: scale(1.05);
+}
+
+/* BSD高亮标记 */
+.bsd-highlight {
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.2), rgba(156, 39, 176, 0.2));
+  border-bottom: 2px solid #ffb74d;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0 2px;
+  transition: all 0.2s ease;
+}
+
+.bsd-highlight:hover {
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.35), rgba(156, 39, 176, 0.3));
+}
+
+/* BSD提示浮层 */
+.bsd-tooltip {
+  position: absolute;
+  z-index: 99998;
+  max-width: 300px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.98), rgba(22, 33, 62, 0.98));
+  border: 1px solid rgba(255, 152, 0, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  color: #e0e0e0;
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.bsd-tooltip-title {
+  color: #ffb74d;
+  font-weight: bold;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+.bsd-tooltip-row {
+  margin-bottom: 4px;
+}
+
+.bsd-tooltip-label {
+  color: #9e9e9e;
+}
+
+.bsd-tooltip-value {
+  color: #ce93d8;
+}

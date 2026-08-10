@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-04 03:34:13",
+  "experiment": "BSD Go Daydream V3.0",
+  "conclusion": "limited",
+  "dream_win_rate": 20.0,
+  "avg_dream_rate": 19.0,
+  "key_moments": [],
+  "results": {
+    "dream_win": 2,
+    "basic_win": 7,
+    "draw": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-08-06 10:36:52",
+  "credentials": {
+    "cloudide_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7I...",
+    "refresh_token": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8...",
+    "traditional_userId": "3753060170739075",
+    "essence_uid": "a5b7a8623fdea6b8"
+  },
+  "checklogin": {
+    "is_login": false,
+    "full_result": {
+      "ExpiredAt": 0,
+      "Host": "",
+      "IsLogin": false,
+      "NickNameEditStatus": "",
+      "PasswordChanged": false,
+      "Region": "",
+      "UserID": ""
+    }
+  },
+  "active_token_used": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7I...",
+  "status": "completed"
+}

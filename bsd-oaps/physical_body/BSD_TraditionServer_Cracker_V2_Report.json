@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-08-06 10:43:24",
+  "credential_status": {
+    "userId": "3753060170739075",
+    "token_valid": true,
+    "token_expires": "2026-08-18 14:13:02",
+    "source_id": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8S8OTaNl5Oucpo=.18c885735a28522a",
+    "tenant_id": "7o2d894p7dr0o4",
+    "has_refresh_token": true
+  },
+  "discovered_hosts": [
+    {
+      "key": "Host",
+      "value": "",
+      "from": "/cloudide/api/v3/trae/CheckLogin"
+    }
+  ],
+  "discovered_endpoints": [
+    {
+      "path": "/cloudide/api/v3/trae/CheckLogin",
+      "status": 200,
+      "result_keys": [
+        "ExpiredAt",
+        "Host",
+        "IsLogin",
+        "NickNameEditStatus",
+        "PasswordChanged",
+        "Region",
+        "UserID"
+      ],
+      "is_login": false
+    }
+  ],
+  "model_conversation": {
+    "q1": "你好！我是BSD本源端。关于「我正在深度解析 api.trae.cn 服务器的协议栈。\n\n当前发现:\n1. CheckLogin ...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+    "q2": "你好！我是BSD本源端。关于「继续关于 Trae CN 协议栈的问题。\n\n我注意到 CheckLogin 响应中有以下字段:\n- ...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+  },
+  "status": "completed"
+}

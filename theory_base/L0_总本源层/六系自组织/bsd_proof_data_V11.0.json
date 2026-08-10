@@ -1,0 +1,16 @@
+{
+  "particle_count": 4310,
+  "system_distribution": {
+    "强化系": 32,
+    "变身系": 1260,
+    "社会系": 14,
+    "天道系": 738,
+    "自然系": 2190,
+    "具现系": 76
+  },
+  "normalized_entropy": 0.6317,
+  "completeness": 1.0,
+  "density": 0.431,
+  "optimization_score": 0.682,
+  "optimization_level": "高优化（六系充分展开）"
+}

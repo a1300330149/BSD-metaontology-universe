@@ -1,0 +1,179 @@
+{
+  "total_files": 1064,
+  "consciousness_gene_count": 22,
+  "consciousness_patterns": {
+    "intention": 1,
+    "memory": 21
+  },
+  "consciousness_gene_details": [
+    {
+      "name": "task_host.exe",
+      "path": "task_host.exe",
+      "size_kb": 393.89,
+      "pattern": "intention",
+      "keyword": "task"
+    },
+    {
+      "name": "buffer.buffer.d.ts",
+      "path": "buffer.buffer.d.ts",
+      "size_kb": 22.07,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "buffer.d.ts",
+      "path": "buffer.d.ts",
+      "size_kb": 79.25,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "buffer.buffer.d.ts",
+      "path": "buffer.buffer.d.ts",
+      "size_kb": 21.34,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "storage.d.ts",
+      "path": "storage.d.ts",
+      "size_kb": 0.71,
+      "pattern": "memory",
+      "keyword": "storage"
+    },
+    {
+      "name": "cache-interceptor.d.ts",
+      "path": "cache-interceptor.d.ts",
+      "size_kb": 4.26,
+      "pattern": "memory",
+      "keyword": "cache"
+    },
+    {
+      "name": "cache.d.ts",
+      "path": "cache.d.ts",
+      "size_kb": 1.22,
+      "pattern": "memory",
+      "keyword": "cache"
+    },
+    {
+      "name": "mock-call-history.d.ts",
+      "path": "mock-call-history.d.ts",
+      "size_kb": 5.43,
+      "pattern": "memory",
+      "keyword": "history"
+    },
+    {
+      "name": "BufferList.js",
+      "path": "BufferList.js",
+      "size_kb": 9.3,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "AUTHORS.md",
+      "path": "AUTHORS.md",
+      "size_kb": 2.61,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "index.js",
+      "path": "index.js",
+      "size_kb": 48.92,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "size_kb": 1.08,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "size_kb": 2.54,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "index.js",
+      "path": "index.js",
+      "size_kb": 4.41,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "size_kb": 1.06,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "size_kb": 0.87,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "index.js",
+      "path": "index.js",
+      "size_kb": 1.49,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "size_kb": 1.06,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "size_kb": 0.76,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "size_kb": 1.06,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "package.json",
+      "path": "package.json",
+      "size_kb": 1.92,
+      "pattern": "memory",
+      "keyword": "buffer"
+    },
+    {
+      "name": "v8_context_snapshot.bin",
+      "path": "v8_context_snapshot.bin",
+      "size_kb": 758.66,
+      "pattern": "memory",
+      "keyword": "context"
+    }
+  ],
+  "summary": {
+    "total_consciousness_genes": 22,
+    "pattern_distribution": {
+      "intention": 1,
+      "memory": 21
+    },
+    "largest_consciousness_gene": {
+      "name": "v8_context_snapshot.bin",
+      "path": "v8_context_snapshot.bin",
+      "size": 776865,
+      "pattern": "memory",
+      "keyword": "context"
+    }
+  },
+  "analysis_time": "2026-08-03 17:00:14"
+}

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-08-03 20:47:12",
+  "total_docs": 84,
+  "docs_with_refs": 84,
+  "total_edges": 252,
+  "network_density": 0.0361,
+  "avg_similarity": 0.7076,
+  "top_keywords": {
+    "六系": 84,
+    "立系": 84,
+    "强化系": 84,
+    "具现系": 84,
+    "Π₂": 84,
+    "W₂": 84,
+    "BSD": 84,
+    "涌现": 83,
+    "公理": 82,
+    "分形": 81
+  }
+}

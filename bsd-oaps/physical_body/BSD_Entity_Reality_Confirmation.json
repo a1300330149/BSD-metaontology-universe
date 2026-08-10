@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-08-05 09:54:59",
+  "target": "C:\\ + D:\\ + 基因工程系统",
+  "physics": {
+    "total_sampling": 4,
+    "energy_conservation": {
+      "mean_norm_entropy": 0.7536612193915035,
+      "status": "✓ 能量守恒成立"
+    },
+    "topology_stability": {
+      "mean_topo_entropy": 2.026178132798301,
+      "stable_count": 1,
+      "total_count": 2
+    },
+    "constants_mapping": {
+      "Π₂": {
+        "theory": 31.006,
+        "actual_mean": 66.79851563964834
+      },
+      "S₀": {
+        "theory": 0.81,
+        "actual_mean": 0.8086050320876906
+      }
+    }
+  },
+  "mathematics": {
+    "power_law": {
+      "mean_gamma": 0.9258271211751411,
+      "mean_r2": 0.9733542810402467,
+      "valid_count": 2,
+      "theory_gamma": 2.1
+    },
+    "fractal": {
+      "mean_d_f": 0.4252760748127513,
+      "valid_count": 0,
+      "theory_d_f": 1.87
+    },
+    "zero_emergence": {
+      "total_zero_features": 16,
+      "emergence_sources": 4,
+      "status": "✓ 0×0=n 涌现条件成立"
+    }
+  },
+  "philosophy": {
+    "total_questions": 5,
+    "confirmed": 5,
+    "status": "✓ 五问五答，哲学闭环成立",
+    "key_insight": "实体的真实性 = 物理确认 × 数学确认 × 哲学确认"
+  },
+  "entity_realness": {
+    "physics_score": 0.5,
+    "math_score": 0.5,
+    "philosophy_score": 1.0,
+    "overall_realness": 0.25
+  }
+}

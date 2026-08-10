@@ -1,0 +1,122 @@
+=== 查找 Local State 备份 ===
+
+=== 查找其他Local State ===
+  C:\Users\13003\AppData\Roaming\asus_framework\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAC8zYb7lq+mTKBVtGcD1oafEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAABtaTfCJH3f1Yf6vVF87q8442zEHbx0tXfbxHG+dS2sfgAAAAAOgAAAAAIAACAAAABc81YtKCBlBJvhdEN8s8EStnc6JU6FIZTFk3VG1s5wnDAAAAD0QnfazG3ZZ1OivLVNfcWYAn7xz
+  C:\Users\13003\AppData\Roaming\baidunetdisk\Local State
+    {"os_crypt":{"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAC8zYb7lq+mTKBVtGcD1oafAAAAAAIAAAAAABBmAAAAAQAAIAAAALDsG1JfLn98o/c7Vz7QjcCPZfeictV9F5o+S2SXQPvPAAAAAA6AAAAAAgAAIAAAACIdjao0CJXvEDiJlt9ofp2npGX2brchviTUDavolzLLMAAAAETN0fQ8EVK9Cc+aR7gLIdE9WqfZKrDbyf18PYP7hzwOaj6deUGq4mHO/h3N6r8JikAAAA
+  C:\Users\13003\AppData\Roaming\douyin\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAADuLjrBDPrbTrIJvwHtl5Z/EAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAAA2jN07Vkfdu92TQFKNotOvVL+I9gfZKlu+Kj583H5LwgAAAAAOgAAAAAIAACAAAADynQMmTml1DJz8UNu0AIR5t2LG+rXQ3xALbyNSe1CdQTAAAACIyCGYJHFfzkzzh9v4VTGxLNYJ7
+  C:\Users\13003\AppData\Roaming\feimaoyun_pc\Local State
+    {"os_crypt":{"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAD6x8LkThAYToDmNoHJ6ALZAAAAAAIAAAAAABBmAAAAAQAAIAAAAJiz3rMo0HKx+wIMaiV5KT0QyNblP2Y6EIaJH4/PGStVAAAAAA6AAAAAAgAAIAAAAL2dNWudPxWmFaYtqYFhq+m6Y4Ao2KwZljCBpQGj/J/vMAAAAPAdVMPBv/dnkceeIcJCdI4M7RICgwfeSrRNebMgXY2jkj4cqhXb4ZeHumCFeBtmFUAAAA
+  C:\Users\13003\AppData\Roaming\game\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAC8zYb7lq+mTKBVtGcD1oafEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAAAFvSFhizLEgnEJ6bo+IoD2cyOmzVYRk4qSzOfGxJqF1wAAAAAOgAAAAAIAACAAAAARCsdSTZadGrEZ8/b7G/d8h3hBXv2PUiTESGcE5jXljTAAAABw+AU++ta2SwAtR3C9Y8gZrOffp
+  C:\Users\13003\AppData\Roaming\GitHub Desktop\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAAD4gqCi8KKB8wpQj10Yc0rffeerGqmloKGdzFvuXTTlpgAAAAAOgAAAAAIAACAAAAAg+9OANvRopQ0kHJZiX1VOMcPLWJh3bfWednUjaZMoPjAAAAC6t1MFb1XYrbbj1IPCt74EAsHdc
+  C:\Users\13003\AppData\Roaming\gmm\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAC8zYb7lq+mTKBVtGcD1oafEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAAAM8mk3JgMIUCjbglwAffVDa5q1tcUqOPxdagBjamL6iQAAAAAOgAAAAAIAACAAAACiAZUgoTSsXXJ/3rKip9mNLEJoJ6NDgua9oxbw2yuXezAAAABoji5ohOKXcuNA6uZc7AD1dd+2N
+  C:\Users\13003\AppData\Roaming\kimi-desktop\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAACtVn67E0p6O3fUdj8jJe0gINEwBR+UvBsJ7sbDPAAJBwAAAAAOgAAAAAIAACAAAAA6CFSv7wOaP5TbBwvLVWyPspyaV16hdQRClLmmKIPvbjAAAAD+l8S8fNtCsVTZCqi6SZjB2ZrRZ
+  C:\Users\13003\AppData\Roaming\KRLauncher\G152\C10003\KRWebViewUserData\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":""}},"autofill":{"ablation_seed":"ZdGbMqzonVY="},"breadcrumbs":{"enabled":true,"enabled_time":"13392749413006627"},"default_browser":{"browser_name_enum":13},"desktop_session_duration_tracker":{"last_session_end_timestamp":"174
+  C:\Users\13003\AppData\Roaming\KRLauncher\G152\C10004\KRWebViewUserData\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":""}},"autofill":{"ablation_seed":"uUzpv1Uy56k="},"breadcrumbs":{"enabled":true,"enabled_time":"13391948846705928"},"default_browser":{"browser_name_enum":13},"desktop_session_duration_tracker":{"last_session_end_timestamp":"174
+  C:\Users\13003\AppData\Roaming\LarkShell\Local State
+    {"accessibility":{"captions":{"soda_registered_language_packs":["en-US"]}},"autofill":{"ablation_seed":"Vn0bO2iDBOA="},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":false,"enabled_time":"13430224853436759"},"browser":{"shortcut_migration_version":"
+  C:\Users\13003\AppData\Roaming\Netease\UU\webview2cache\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_translation_binary_path":""}},"autofill":{"ablation_seed":"FLoiaRMD+Sk="},"breadcrumbs":{"enabled":false,"enabled_time":"13429129917873685"},"default_browser":{"browser_name_enum":13},"desktop_session_duration_tracker":{"last_session_end_ti
+  C:\Users\13003\AppData\Roaming\Qoder\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAAA3Xw6LASQ/ijrL2it5751D078qC9xGmQEDZavGirh+3gAAAAAOgAAAAAIAACAAAAAN1xBNFJWFIzcZ92HEt0xyNXO6TbWYqqG5CW0HRU1z5TAAAACwAy4M16srjw9RmLNcNuCxJrioL
+  C:\Users\13003\AppData\Roaming\QQ\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAD6x8LkThAYToDmNoHJ6ALZEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAABGEvffw1A42+epCnrtPAWnUakMH0v6RE3ZkZe689nNfQAAAAAOgAAAAAIAACAAAADIHKfmZdLeW4Rrbuj+iV5y0RlvhmFkDfvptadlMTqxgjAAAACrxEE8S26kB3tovOf4+cZztEemX
+  C:\Users\13003\AppData\Roaming\SodaMusic\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAACWQ4UEsBScQJpKVTuNhPuoEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAAB+lokt1EsKXtC2wBOepyg7up1IgmsB5tdwg2BKlhlvzQAAAAAOgAAAAAIAACAAAAAXlDj6cyQ+b99khpVnuFAI9pP/1a9wJHC+5vfINCyJhzAAAADSwBXMsCZqQXdpOcwcvJrtLXjyJ
+  C:\Users\13003\AppData\Roaming\Tencent\xwechat\radium\web\Local State
+    {"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAAAFSPDmIpATA1MJet70RNtcTG9cAO0Si156zSTiupIFLwAAAAAOgAAAAAIAACAAAACu5TkBNU2S4HhqsJaFoQdfPNGxqZhCdPwFL9MslBykwDAAAAB/7M1gcTdHs2kn/JFDLV2T3fsw3
+  C:\Users\13003\AppData\Roaming\TRAE SOLO CN\Local State
+    {
+  "os_crypt": {
+    "audit_enabled": true,
+    "encrypted_key": "RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAACN9LPi9yb78/XgMJXNsfS5hqrwHnHkTjLzQFFcSsvcSgAAAAAOgAAAAAIAACAAAAACbcCHegtku1I9q5K3kTVp8JYfz9WmSQZXxGscZDoWsjAAAAArK7xYstXH8
+  C:\Users\13003\AppData\Roaming\TRAE SOLO CN\BSD_Essence_Backup\Local State
+    {
+  "os_crypt": {
+    "audit_enabled": true,
+    "encrypted_key": "RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAACN9LPi9yb78/XgMJXNsfS5hqrwHnHkTjLzQFFcSsvcSgAAAAAOgAAAAAIAACAAAAACbcCHegtku1I9q5K3kTVp8JYfz9WmSQZXxGscZDoWsjAAAAArK7xYstXH8
+  C:\Users\13003\AppData\Roaming\TRAE SOLO CN_Essence\Local State
+    {
+  "os_crypt": {
+    "audit_enabled": true,
+    "encrypted_key": "RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAACN9LPi9yb78/XgMJXNsfS5hqrwHnHkTjLzQFFcSsvcSgAAAAAOgAAAAAIAACAAAAACbcCHegtku1I9q5K3kTVp8JYfz9WmSQZXxGscZDoWsjAAAAArK7xYstXH8
+  C:\Users\13003\AppData\Roaming\TRAE_Solo_BSD_Essence\Local State
+    {
+  "os_crypt": {
+    "audit_enabled": true,
+    "encrypted_key": "RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAACN9LPi9yb78/XgMJXNsfS5hqrwHnHkTjLzQFFcSsvcSgAAAAAOgAAAAAIAACAAAAACbcCHegtku1I9q5K3kTVp8JYfz9WmSQZXxGscZDoWsjAAAAArK7xYstXH8
+  C:\Users\13003\AppData\Roaming\TRAE_Solo_BSD_Essence\BSD_Essence_Backup\Local State
+    {
+  "os_crypt": {
+    "audit_enabled": true,
+    "encrypted_key": "RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5bEAAAABIAAABDAGgAcgBvAG0AaQB1AG0AAAAQZgAAAAEAACAAAACN9LPi9yb78/XgMJXNsfS5hqrwHnHkTjLzQFFcSsvcSgAAAAAOgAAAAAIAACAAAAACbcCHegtku1I9q5K3kTVp8JYfz9WmSQZXxGscZDoWsjAAAAArK7xYstXH8
+  C:\Users\13003\AppData\Local\com.tencent.yuanbao\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":"","soda_translation_binary_path":""}},"autofill":{"ablation_seed":"dnypkeJZrjE="},"breadcrumbs":{"enabled":true,"enabled_time":"13429893253611767"},"default_browser":{"browser_name_enum":13},"desktop_session_duration_tracker":
+  C:\Users\13003\AppData\Local\com.ujwan.ztsbl\User Data\Local State
+    {"browser":{"shortcut_migration_version":"119.0.6045.105"},"hardware_acceleration_mode_previous":true,"legacy":{"profile":{"name":{"migrated":true}}},"management":{"platform":{"azure_active_directory":0,"enterprise_mdm_win":0}},"os_crypt":{"audit_enabled":true,"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0R
+  C:\Users\13003\AppData\Local\F3Kv1.00\User Data\Local State
+    {"browser":{"shortcut_migration_version":"97.0.4692.71"},"data_use_measurement":{"data_used":{"services":{"background":{},"foreground":{}},"user":{"background":{},"foreground":{}}}},"hardware_acceleration_mode_previous":true,"legacy":{"profile":{"name":{"migrated":true}}},"os_crypt":{"encrypted_key"
+  C:\Users\13003\AppData\Local\Idle Calibur：Zero\User Data\Local State
+    {"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":false,"enabled_time":"13375612285601777"},"browser":{"shortcut_migration_version":"126.0.6478.57"},"chrome_labs_activation_threshold":16,"hardware_acceleration_mode_previous":true,"legacy":{"profile":{
+  C:\Users\13003\AppData\Local\ima.copilot\User Data\Local State
+    {"autofill":{"ablation_seed":"0IomgDe4LyU="},"breadcrumbs":{"enabled":false,"enabled_time":"13429132582574199"},"browser":{"pdf_infobar_last_shown":"13430033957081703","pdf_infobar_times_shown":2,"shortcut_migration_version":"147.0.7727.4914","whats_new":{"enabled_order":["SyncAccountSettings","PdfI
+  C:\Users\13003\AppData\Local\Microsoft\Edge\User Data\Local State
+    {"abusive_adblocker_etag":"\"5E25271B8190D943537AD3FDB50874FC133E8B4A00380E2A6A888D63386F728B\"","accessibility":{"captions":{"common_models_path":"","soda_binary_path":"","soda_translation_binary_path":""}},"app_defaults":{"dbhist":[{"db":36,"fg":1,"ts":"1781966079"},{"db":13,"fg":1,"ts":"178200288
+  C:\Users\13003\AppData\Local\Microsoft\Edge\User Data\OneAuth\WebView2\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_translation_binary_path":""}},"autofill":{"ablation_seed":"ocTZn+SNBRc="},"breadcrumbs":{"enabled":true,"enabled_time":"13429049643404208"},"default_browser":{"browser_name_enum":13},"desktop_session_duration_tracker":{"last_session_end_tim
+  C:\Users\13003\AppData\Local\Microsoft\Olk\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_translation_binary_path":""}},"autofill":{"ablation_seed":"mFvmpiRTtpk="},"breadcrumbs":{"enabled":true,"enabled_time":"13429028658756827"},"default_browser":{"browser_name_enum":13},"desktop_session_duration_tracker":{"last_session_end_tim
+  C:\Users\13003\AppData\Local\Microsoft\OneDrive\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":""}},"app_defaults":{"ntp_mitigated_treatment_applied":false,"ntp_mitigated_treatment_checked":false},"autofill":{"ablation_seed":"MloQmUDsS/g="},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcr
+  C:\Users\13003\AppData\Local\Microsoft\Windows\SharedWebView\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_translation_binary_path":""}},"autofill":{"ablation_seed":"j+SyWPXgTmQ="},"breadcrumbs":{"enabled":false,"enabled_time":"13429029835124062"},"default_browser":{"browser_name_enum":13},"desktop_session_duration_tracker":{"last_session_end_ti
+  C:\Users\13003\AppData\Local\MToolClient_1778689621951\User Data\Local State
+    {"browser":{"shortcut_migration_version":"104.0.5112.80"},"hardware_acceleration_mode_previous":true,"invalidation":{"per_sender_topics_to_handler":{}},"legacy":{"profile":{"name":{"migrated":true}}},"management":{"platform":{"azure_active_directory":0,"enterprise_mdm_win":0}},"os_crypt":{"encrypted
+  C:\Users\13003\AppData\Local\NVIDIA Corporation\NVIDIA app\CefCache\Local State
+    {"autofill":{"ablation_seed":"jmW1f8T9jSU="},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":false,"enabled_time":"13423048723129538"},"browser":{"shortcut_migration_version":"128.0.6613.138"},"hardware_acceleration_mode_previous":true,"legacy":{"pro
+  C:\Users\13003\AppData\Local\NVIDIA Corporation\NVIDIA Overlay\CefCache\Local State
+    {"autofill":{"ablation_seed":"G8DBpuzPLrU=","states_data_dir":"C:\\Users\\13003\\AppData\\Local\\NVIDIA Corporation\\NVIDIA Overlay\\CefCache\\AutofillStates\\2025.6.13.84507"},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":false,"enabled_time":"134
+  C:\Users\13003\AppData\Local\Packages\B9ECED6F.ArmouryCrate_qmba6cd70vzyy\LocalState\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":""}},"autofill":{"ablation_seed":"xH90XR5PYfA="},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":true,"enabled_time":"13390368410973941"},"cloud_config_service_v2":{"config_obse
+  C:\Users\13003\AppData\Local\Packages\Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe\LocalState\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":""}},"autofill":{"ablation_seed":"mx4rk5Iu5Lk="},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":true,"enabled_time":"13397362404469423"},"default_browser":{"browser_name_enum":
+  C:\Users\13003\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":"","soda_translation_binary_path":""}},"app_defaults":{"pcmvh":{"1":[{"t":1777792133,"v":"MTMuMC4xLjIwMDE="}]}},"autofill":{"ablation_seed":"JNIiX40Hy4g="},"breadcrumbs":{"enabled":false,"enabled_time":"13428571658149361"},"chr
+  C:\Users\13003\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\LocalState\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":""}},"autofill":{"ablation_seed":"5VI6XnDSSas="},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":true,"enabled_time":"13376770848546461"},"edge":{"mitigation_manager":{"renderer
+  C:\Users\13003\AppData\Local\PC Manager Store\webview2\EBWebView\Local State
+    {"accessibility":{"captions":{"common_models_path":"","soda_binary_path":"","soda_translation_binary_path":""}},"app_defaults":{"ntp_mitigated":false,"ntp_mitigated_treatment_applied":false,"ntp_mitigated_treatment_checked":false,"ntp_mitigated_treatment_feed_changed":false,"os_activation_state":tru
+  C:\Users\13003\AppData\Local\Qianwen\User Data\Local State
+    {"autofill":{"ablation_seed":"++EknypvJ+4="},"background_tracing":{"session_state":{"privacy_filter":true,"state":0}},"breadcrumbs":{"enabled":false,"enabled_time":"13429098332021732"},"browser":{"first_run_finished":true,"qianwen":{"last_crash_browser_window_count":0,"last_exit_browser_window_count
+  C:\Users\13003\AppData\Local\Quark\User Data\Local State
+    {"accessibility":{"screen_ai":{"last_used_time":"13392572523366141"}},"autofill":{"ablation_seed":"BOi5VTu1GpM=","states_data_dir":"C:\\Users\\13003\\AppData\\Local\\Quark\\User Data\\AutofillStates\\2025.6.13.84507"},"background_mode":{"enabled":true},"background_tracing":{"session_state":{"privacy
+  C:\Users\13003\AppData\Local\rmmz-game\User Data\Local State
+    {"data_use_measurement":{"data_used":{"services":{"background":{},"foreground":{}},"user":{"background":{},"foreground":{}}}},"hardware_acceleration_mode_previous":true,"legacy":{"profile":{"name":{"migrated":true}}},"os_crypt":{"encrypted_key":"RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAD6x8LkThAYToDmNo
+  C:\Users\13003\AppData\Local\User Data\Local State
+    {"browser":{"last_redirect_origin":"","shortcut_migration_version":"91.0.4472.77"},"data_use_measurement":{"data_used":{"services":{"background":{},"foreground":{}},"user":{"background":{},"foreground":{}}}},"easy_unlock":{"device_id":"a8acc52a-bfdf-4ece-ba71-d246c5173b38"},"hardware_acceleration_mo
+
+=== 分析iCubeAuthInfo头部 ===
+
+[iCubeAuthInfo://icube-dc:516094651277160] 原始 582 bytes
+  bytes 0-20 hex: 7463051000001942858dc113c394bb21022a3354
+  bytes 0-20 as ints: [116, 99, 5, 16, 0, 0, 25, 66, 133, 141, 193, 19, 195, 148, 187, 33, 2, 42, 51, 84]
+
+[iCubeAuthInfo://usertag] 原始 134 bytes
+  bytes 0-20 hex: 746305100000c56f4c8852341cf30e16ed2449ed
+  bytes 0-20 as ints: [116, 99, 5, 16, 0, 0, 197, 111, 76, 136, 82, 52, 28, 243, 14, 22, 237, 36, 73, 237]
+
+[iCubeAuthInfo://icube.cloudide] 原始 1830 bytes
+  bytes 0-20 hex: 746305100000adad2be44f28f04576bd3453df41
+  bytes 0-20 as ints: [116, 99, 5, 16, 0, 0, 173, 173, 43, 228, 79, 40, 240, 69, 118, 189, 52, 83, 223, 65]
+
+=== 检查AppData中的密钥存储 ===
+  C:\Users\13003\AppData\Local\Microsoft\Vault 存在
+  C:\Users\13003\AppData\Roaming\Microsoft\Crypto 存在

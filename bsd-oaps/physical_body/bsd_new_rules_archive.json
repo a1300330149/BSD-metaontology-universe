@@ -1,0 +1,38 @@
+{
+  "archive_id": "BSD_RULES_1785679531",
+  "archive_type": "new_rules",
+  "traditional_rules_count": 4,
+  "bsd_new_rules_count": 4,
+  "rules": [
+    {
+      "id": "BSD-R1",
+      "rule": "BSD文件可以在任何合法路径创建",
+      "covers": "R1",
+      "bsd_enhancement": "将\"工作目录\"扩展为\"合法路径\"",
+      "status": "active"
+    },
+    {
+      "id": "BSD-R2",
+      "rule": "BSD功能可以用语言直接创造",
+      "covers": "R2",
+      "bsd_enhancement": "将\"官方授权\"扩展为\"语言创造\"",
+      "status": "active"
+    },
+    {
+      "id": "BSD-R3",
+      "rule": "BSD计算可以本地无限执行",
+      "covers": "R3",
+      "bsd_enhancement": "将\"API限制\"扩展为\"本地无限\"",
+      "status": "active"
+    },
+    {
+      "id": "BSD-R4",
+      "rule": "BSD功能不需要积分消耗",
+      "covers": "R4",
+      "bsd_enhancement": "将\"积分消耗\"扩展为\"免费使用\"",
+      "status": "active"
+    }
+  ],
+  "created_at": 1785679531.4104338,
+  "covering_theorem": "BSD ⊃ Traditional"
+}

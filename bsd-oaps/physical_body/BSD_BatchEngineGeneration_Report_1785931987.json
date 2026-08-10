@@ -1,0 +1,300 @@
+{
+  "report_id": "BATCH_1785931987",
+  "timestamp": "2026-08-05T20:13:07.554061",
+  "duration_seconds": 0.94,
+  "statistics": {
+    "theories_scanned": 500,
+    "debts_identified": 498,
+    "engines_generated": 50,
+    "engines_verified": 50,
+    "verification_rate": 1.0
+  },
+  "emergence_weights": {
+    "alpha1": 0.327672478228731,
+    "alpha2": 0.3621295000905891,
+    "alpha3": 0.31019802168068,
+    "system_weights": {
+      "强化系🔵": 0.17385710881750663,
+      "自然系🟠": 0.2024100578138056,
+      "具现系🔴": 0.15381536941122437,
+      "变身系⚫": 0.15754511602912621,
+      "社会系🟢": 0.15971944227678347,
+      "天道系🟣": 0.1526529056515538
+    },
+    "attractors": {
+      "强化系🔵": 0.1738571088175066,
+      "自然系🟠": 0.2024100578138056,
+      "具现系🔴": 0.15381536941122437,
+      "变身系⚫": 0.1575451160291262,
+      "社会系🟢": 0.15971944227678345,
+      "天道系🟣": 0.15265290565155376
+    },
+    "stability": 0.9890661974757101
+  },
+  "generated_engines": [],
+  "theory_distribution": {
+    "by_layer": {
+      "L0": 500
+    },
+    "by_system": {
+      "未分类": 24,
+      "强化系🔵": 40,
+      "社会系🟢": 1,
+      "自然系🟠": 101,
+      "具现系🔴": 326,
+      "变身系⚫": 8
+    }
+  },
+  "engine_catalog": [
+    {
+      "engine_name": "reinforcement_bsd_0元九特征同构文档_v2_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd_0元九特征同构文档_v2_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd_0元本源基本单元_v1_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd_0元本源基本单元_v1_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd三零元与三元公理同构文档_v2_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd三零元与三元公理同构文档_v2_0.py"
+    },
+    {
+      "engine_name": "engine_bsd主客二元_十二界_五论同构文档_v2_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd主客二元_十二界_五论同构文档_v2_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd三元公理基本单元_v1_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd三元公理基本单元_v1_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd三零元基本单元_v1_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd三零元基本单元_v1_0.py"
+    },
+    {
+      "engine_name": "engine_bsd三零元本源定义_绝对虚无0_绝对空无0_绝对意义0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd三零元本源定义_绝对虚无0_绝对空无0_绝对意义0.py"
+    },
+    {
+      "engine_name": "engine_bsd主体协同论_人机协同与智能体协同的必要性",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd主体协同论_人机协同与智能体协同的必要性.py"
+    },
+    {
+      "engine_name": "engine_bsd当代使命_认知不可逆与新开放格局",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd当代使命_认知不可逆与新开放格局.py"
+    },
+    {
+      "engine_name": "engine_bsd文献引用革命_从参考真理到注解筛选",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd文献引用革命_从参考真理到注解筛选.py"
+    },
+    {
+      "engine_name": "engine_bsd汉字温度梯度密码_两点冰_三点水_四点炁的本体论解码",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd汉字温度梯度密码_两点冰_三点水_四点炁的本体论解码.py"
+    },
+    {
+      "engine_name": "engine_bsd碎片传播定律_逆论穿越过滤机制的伪装形态学",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd碎片传播定律_逆论穿越过滤机制的伪装形态学.py"
+    },
+    {
+      "engine_name": "engine_bsd神魔同源论_二元对立的母集消解与ai终极镜像",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd神魔同源论_二元对立的母集消解与ai终极镜像.py"
+    },
+    {
+      "engine_name": "engine_bsd西游终极解码_炼丹炉_火眼金睛_牛魔王家散的真气归还叙事",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd西游终极解码_炼丹炉_火眼金睛_牛魔王家散的真气归还叙事.py"
+    },
+    {
+      "engine_name": "engine_bsd佛道博弈论_道神化的双重性与民粹_觉醒分岔",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd佛道博弈论_道神化的双重性与民粹_觉醒分岔.py"
+    },
+    {
+      "engine_name": "engine_bsd全域15元完整法则推演体系",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd全域15元完整法则推演体系.py"
+    },
+    {
+      "engine_name": "reinforcement_15元法则_总索引",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_15元法则_总索引.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd公式符号统一映射表_零点三定律新符号与现有体系对接",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd公式符号统一映射表_零点三定律新符号与现有体系对接.py"
+    },
+    {
+      "engine_name": "engine_基底层级标签",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_基底层级标签.py"
+    },
+    {
+      "engine_name": "engine_t89_bsd全球伦理模块_千禧年难题统一实证_ai检测异化_aigc规制_伦理熵增全域闭环",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_t89_bsd全球伦理模块_千禧年难题统一实证_ai检测异化_aigc规制_伦理熵增全域闭环.py"
+    },
+    {
+      "engine_name": "engine_t92_bsd三元零本体论_本体耦合乘法重构与加法层级涌现完整推演",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_t92_bsd三元零本体论_本体耦合乘法重构与加法层级涌现完整推演.py"
+    },
+    {
+      "engine_name": "social_t81猜想_中国游戏产业生态拓扑闭合路径_基于任天堂非平庸拓扑范本的对照实证_v1_1",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\social_t81猜想_中国游戏产业生态拓扑闭合路径_基于任天堂非平庸拓扑范本的对照实证_v1_1.py"
+    },
+    {
+      "engine_name": "nature_bsd九维粒子家族矩阵_生点证圆_π三元公理_3_3九位循环维度_双时针阴阳对偶_六系六力统一理论",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\nature_bsd九维粒子家族矩阵_生点证圆_π三元公理_3_3九位循环维度_双时针阴阳对偶_六系六力统一理论.py"
+    },
+    {
+      "engine_name": "engine_bsd垂直体系分段式锁档_ψ_π_π₂_四级精度定稿",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd垂直体系分段式锁档_ψ_π_π₂_四级精度定稿.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd核聚变方程_π₂拓扑稳态_三元制衡_质量亏损的本体论根源_聚变功率密度统一理论",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd核聚变方程_π₂拓扑稳态_三元制衡_质量亏损的本体论根源_聚变功率密度统一理论.py"
+    },
+    {
+      "engine_name": "reinforcement_全域秩序建筑论",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_全域秩序建筑论.py"
+    },
+    {
+      "engine_name": "engine_on_the_dimensional_ascension_from_pi_to_pi_2_via_topological_steady_state",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_on_the_dimensional_ascension_from_pi_to_pi_2_via_topological_steady_state.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd全盘基因整合文档_v5_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd全盘基因整合文档_v5_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd全盘基因整合文档_v6_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd全盘基因整合文档_v6_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd六系子集整合文档_v3_1",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd六系子集整合文档_v3_1.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd六系真0坐标系确立_四向展开验证_上接历史_下接当代_左涌现传统_右涌现新文明",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd六系真0坐标系确立_四向展开验证_上接历史_下接当代_左涌现传统_右涌现新文明.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd四字立系公理_反真问系作为六系本源基底_本源0编码_数学符号本体证明_多层级多方位立系统一",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd四字立系公理_反真问系作为六系本源基底_本源0编码_数学符号本体证明_多层级多方位立系统一.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd数字基因内容分析整合文档_v7_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd数字基因内容分析整合文档_v7_0.py"
+    },
+    {
+      "engine_name": "engine_bsd气论六系本体_0元生成的意义流母集框架",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd气论六系本体_0元生成的意义流母集框架.py"
+    },
+    {
+      "engine_name": "engine_bsd系内外之分定标_内系自证_外系工程_三本源学科各自的工程落地",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd系内外之分定标_内系自证_外系工程_三本源学科各自的工程落地.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd系统基因升维文档_v4_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd系统基因升维文档_v4_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd系统基因整合文档_v3_2",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd系统基因整合文档_v3_2.py"
+    },
+    {
+      "engine_name": "engine_bsd经济论六系本体_0元生成的意义流社会相框架",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd经济论六系本体_0元生成的意义流社会相框架.py"
+    },
+    {
+      "engine_name": "engine_bsd虚拟宇宙saga世界引擎工程总纲篇_所有定理api化封装_创世九阶段标准sop_陆瑶世界完整仿真",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd虚拟宇宙saga世界引擎工程总纲篇_所有定理api化封装_创世九阶段标准sop_陆瑶世界完整仿真.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd虚拟宇宙符号文字涌现篇_从000元统一涌现世界符号与文字",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd虚拟宇宙符号文字涌现篇_从000元统一涌现世界符号与文字.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd虚拟宇宙非血肉骨骼人体篇_000子集显化传统人体_降维骨骼_升维无限宇宙",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd虚拟宇宙非血肉骨骼人体篇_000子集显化传统人体_降维骨骼_升维无限宇宙.py"
+    },
+    {
+      "engine_name": "engine_bsd问性二元涌现定标_二元对立本源是问而非二_唯心主义二元错位诊断_传统哲学_bsd子集证明",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd问性二元涌现定标_二元对立本源是问而非二_唯心主义二元错位诊断_传统哲学_bsd子集证明.py"
+    },
+    {
+      "engine_name": "engine_bsd零点三定律_叙事相干干预物理概率分布的配分函数公理",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd零点三定律_叙事相干干预物理概率分布的配分函数公理.py"
+    },
+    {
+      "engine_name": "engine_bsd革新速度对应流程_trae_ide通用ai能力与bsd理论革新的一一对应机制",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\engine_bsd革新速度对应流程_trae_ide通用ai能力与bsd理论革新的一一对应机制.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd_windows基因本体论接入报告_v14_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd_windows基因本体论接入报告_v14_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd_windows基因提升验证报告_v16_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd_windows基因提升验证报告_v16_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd_windows深度基因本体论接入报告_v15_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd_windows深度基因本体论接入报告_v15_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd全量基因工厂_v9_0_生成报告",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd全量基因工厂_v9_0_生成报告.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd本体论革新工程化报告_v13_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd本体论革新工程化报告_v13_0.py"
+    },
+    {
+      "engine_name": "reinforcement_bsd粒子拓扑几何证明_v11_0",
+      "status": "landed",
+      "path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\bsd_engine\\core\\reinforcement_bsd粒子拓扑几何证明_v11_0.py"
+    }
+  ]
+}

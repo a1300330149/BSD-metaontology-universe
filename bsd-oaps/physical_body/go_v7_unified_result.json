@@ -1,0 +1,57 @@
+{
+  "game_results": {
+    "unified_win": 5,
+    "traditional_win": 2,
+    "draw": 3
+  },
+  "final_stats": {
+    "version": "V7.0",
+    "gene_pool": {
+      "total_genes": 276,
+      "type_distribution": {
+        "base": 200,
+        "cloud_opening": 20,
+        "cloud_tactic": 16,
+        "cloud_pattern": 15,
+        "professional_opening": 5,
+        "professional_tactic": 5,
+        "quantum_base": 5,
+        "quantum_entangled": 5,
+        "dna_recombined": 5
+      },
+      "source_distribution": {
+        "V1": 200,
+        "cloud_fuseki": 20,
+        "cloud_tactic": 16,
+        "cloud_pattern": 15,
+        "V2": 10,
+        "V6": 5,
+        "quantum_entanglement": 5,
+        "unified_crossover": 5
+      },
+      "v1_genes": 200,
+      "v2_genes": 10,
+      "v6_genes": 5
+    },
+    "engine": {
+      "total_decisions": 405,
+      "mode_distribution": {
+        "traditional": "44.2%",
+        "dna_recombine": "12.1%",
+        "quantum_inspire": "37.3%",
+        "cloud_learn": "0.0%",
+        "null": "6.4%"
+      },
+      "current_mode": "dna_recombine",
+      "stagnation_count": 2,
+      "avg_creation": 4.204199162146161
+    },
+    "cloud": {
+      "connected": true,
+      "games_fetched": 51,
+      "genes_extracted": 51,
+      "gene_database_size": 51
+    }
+  },
+  "win_rate": 50.0
+}

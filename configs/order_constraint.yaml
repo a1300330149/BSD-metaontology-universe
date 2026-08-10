@@ -1,0 +1,49 @@
+competition_order:
+  TAO:
+    budget_limit: false
+    distributed_parallel: true
+    budget_interception_simplified: true
+    priority_by_eself: true
+    knowledge_sharing: true
+    preload_prior: true
+  NATURE:
+    auto_phase_upgrade: true
+    sparse_debias_always_on: true
+    enable_lightweight: false
+    max_hidden_dim: 256
+    skip_mlp_cold_start: true
+    phase_threshold_reduction: 0.10
+    feature_enhancement: true
+    missing_value_fill: true
+  HUMAN:
+    bayes_explore_rate: 0.40
+    reward_weight: 1.25
+    evolution_cycle: 5
+    negative_transfer_strict: false
+    causal_reward_weight: 1.3
+    adaptive_exploration: true
+
+research_order:
+  TAO:
+    budget_limit: true
+    distributed_parallel: false
+    budget_interception_simplified: false
+    priority_by_eself: false
+    knowledge_sharing: false
+    preload_prior: false
+  NATURE:
+    auto_phase_upgrade: false
+    sparse_debias_always_on: false
+    enable_lightweight: true
+    max_hidden_dim: 128
+    skip_mlp_cold_start: false
+    phase_threshold_reduction: 0.0
+    feature_enhancement: false
+    missing_value_fill: false
+  HUMAN:
+    bayes_explore_rate: 0.20
+    reward_weight: 1.0
+    evolution_cycle: 10
+    negative_transfer_strict: true
+    causal_reward_weight: 1.0
+    adaptive_exploration: false

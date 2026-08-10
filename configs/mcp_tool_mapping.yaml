@@ -1,0 +1,244 @@
+# MCP外部工具协同场配置文件
+# 归属基底：第相变演化位（第三位）
+# 对应公理：公理二（自主科研闭环动力学公理）
+# 理论映射：三界秩序分层分配外部算力资源
+# SHA256锁档哈希：e62f918340dc2975108294736ac8927d90584136972485931027958740925713
+
+# ==================== 三界秩序工具分配 ====================
+
+# 天道秩序（master顶层主控）
+# 对应维度：天道原理、天道动力学
+# 权责：顶层调度、全局统摄、哈希校验
+tian_dao:
+  role: "顶层主控智能体"
+  layer: "master_agent"
+  base_level: 2
+  dimension: ["天道原理", "天道动力学"]
+  
+  # MCP工具接入配置
+  mcp_tools:
+    # 算力调度工具
+    compute_scheduler:
+      tool_name: "distributed_compute"
+      tool_type: "external"
+      description: "分布式算力调度，对应天道顶层统摄"
+      parameters:
+        max_nodes: 10
+        load_balance: "dynamic"
+      
+    # Git版本仓库工具
+    git_manager:
+      tool_name: "git_operations"
+      tool_type: "external"
+      description: "版本控制，对应天道时间秩序"
+      parameters:
+        branch_strategy: "feature_branch"
+        commit_validation: true
+      
+    # 哈希校验工具
+    hash_validator:
+      tool_name: "hash_verification"
+      tool_type: "internal"
+      description: "SHA256哈希校验，对应宿命边界公理"
+      parameters:
+        lock_hash: "e62f918340dc2975108294736ac8927d90584136972485931027958740925713"
+        validation_mode: "strict"
+
+# 自然秩序（entity底层实体）
+# 对应维度：自然实体、自然相变、自然载体
+# 权责：数据处理、模型训练、实体演化
+zi_ran:
+  role: "底层实体智能体"
+  layer: "entity_layer"
+  base_level: 2
+  dimension: ["自然实体", "自然相变", "自然载体"]
+  
+  # MCP工具接入配置
+  mcp_tools:
+    # 图计算环境
+    graph_compute:
+      tool_name: "graph_neural_network"
+      tool_type: "external"
+      description: "图神经网络计算，对应自然实体层"
+      parameters:
+        model_type: "GCL"
+        sparse_mode: true
+      
+    # 数据集处理脚本
+    data_processor:
+      tool_name: "dataset_handler"
+      tool_type: "internal"
+      description: "数据预处理，对应自然载体"
+      parameters:
+        format: "npz"
+        sparse_threshold: 0.42
+      
+    # 轻量化嵌入式模拟器
+    embedded_simulator:
+      tool_name: "lightweight_embedded"
+      tool_type: "external"
+      description: "嵌入式模拟，对应自然相变"
+      parameters:
+        memory_limit: "512MB"
+        optimization_level: "O2"
+
+# 人道秩序（decision中层决策）
+# 对应维度：社会因果、社会创造、人道能级
+# 权责：决策优化、实验设计、因果奖励
+ren_dao:
+  role: "中层决策智能体"
+  layer: "decision_layer"
+  base_level: 2
+  dimension: ["社会因果", "社会创造", "人道能级"]
+  
+  # MCP工具接入配置
+  mcp_tools:
+    # 贝叶斯寻优工具
+    bayesian_optimizer:
+      tool_name: "bayesian_search"
+      tool_type: "external"
+      description: "贝叶斯优化，对应人道决策"
+      parameters:
+        search_space: "continuous"
+        acquisition_function: "EI"
+      
+    # 消融实验绘图
+    ablation_plotter:
+      tool_name: "ablation_visualization"
+      tool_type: "external"
+      description: "消融实验可视化，对应社会因果"
+      parameters:
+        plot_type: "comparison"
+        metrics: ["accuracy", "diversity"]
+      
+    # 论文图表生成工具
+    paper_figure_generator:
+      tool_name: "figure_generator"
+      tool_type: "external"
+      description: "学术图表生成，对应社会创造"
+      parameters:
+        format: "pdf"
+        style: "academic"
+
+# ==================== 工具约束规则 ====================
+
+constraints:
+  # 全局约束（所有工具必须遵循）
+  global:
+    # 锁档哈希校验
+    hash_validation: true
+    lock_hash: "e62f918340dc2975108294736ac8927d90584136972485931027958740925713"
+    
+    # 参数一致性
+    parameter_alignment:
+      gamma: 0.92
+      kappa: 0.35
+      alpha: 0.18
+      E1: 0.35
+      E2: 0.65
+      E3: 0.90
+    
+    # 理论映射标注
+    theory_mapping_required: true
+    
+  # 工具输出约束
+  output:
+    # 自动写入理论-代码映射表
+    auto_mapping_table: true
+    # 输出文件哈希校验
+    output_hash_check: true
+    # 禁止脱离理论割裂
+    prevent_theory_code_split: true
+
+# ==================== 工具协同关系 ====================
+
+collaboration:
+  # 天道-自然协同
+  tian_ran:
+    trigger: "算力调度请求"
+    flow: "天道调度 → 自然执行 → 结果回流"
+    constraint: "自然执行结果必须对齐九维参数"
+  
+  # 自然-人道协同
+  ran_ren:
+    trigger: "实验数据生成"
+    flow: "自然数据处理 → 人道决策优化 → 反馈回流"
+    constraint: "人道决策必须遵循因果奖励公理"
+  
+  # 人道-天道协同
+  ren_tian:
+    trigger: "全局优化请求"
+    flow: "人道决策 → 天道统摄 → 全局调度"
+    constraint: "全局调度必须遵循宿命边界约束"
+
+# ==================== 外部数据回流机制 ====================
+
+data回流:
+  # 实验数据回流
+  experiment_data:
+    target: "theory_base"
+    format: "md"
+    auto_tag: true
+    tag_template: "归属X重基底+对应公理"
+  
+  # 模型权重回流
+  model_weights:
+    target: "output/models"
+    format: "pt"
+    hash_check: true
+  
+  # 配置参数回流
+  config_params:
+    target: "configs"
+    format: "yaml"
+    validation: true
+
+# ==================== MCP接入状态 ====================
+
+mcp_status:
+  # 当前已接入工具
+  connected:
+    - hash_validator
+    - data_processor
+  
+  # 待接入工具（需作者配置）
+  pending:
+    - compute_scheduler
+    - git_manager
+    - graph_compute
+    - embedded_simulator
+    - bayesian_optimizer
+    - ablation_plotter
+    - paper_figure_generator
+  
+  # 接入优先级
+  priority_order:
+    - hash_validator  # 最高优先级，锁档铁律
+    - data_processor  # 数据处理基础
+    - bayesian_optimizer  # 决策优化核心
+    - graph_compute  # 图计算核心
+    - compute_scheduler  # 分布式调度
+
+# ==================== 场涌现关系 ====================
+
+field_emergence:
+  # 正向涌现：外部工具产出 → 知识库生长
+  positive:
+    source: "mcp_tools_output"
+    target: "theory_base"
+    mechanism: "自动归档入库"
+  
+  # 反向涌现：知识库 → 工具参数优化
+  negative:
+    source: "theory_base"
+    target: "mcp_tools"
+    mechanism: "参数对齐校验"
+  
+  # 双向涌现闭环
+  closed_loop:
+    description: "外部工具产出自动回流知识库，知识库参数自动校验工具输出"
+    constraint: "全程遵循顶层永久规则"
+
+# ==================== SHA256锁档哈希 ====================
+# 禁止修改，修改会破坏确权铁律
+lock_hash: "e62f918340dc2975108294736ac8927d90584136972485931027958740925713"

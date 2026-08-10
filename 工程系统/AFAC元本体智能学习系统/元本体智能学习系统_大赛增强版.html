@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元本体智能学习系统 V3.0 | TRAE创造力大赛参赛作品</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #0a0a1a;
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* ===== 粒子背景 ===== */
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ===== 头部 ===== */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(0,242,254,0.1), transparent 30%);
+            animation: rotate 10s linear infinite;
+        }
+        @keyframes rotate { 100% { transform: rotate(360deg); } }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #00f2fe 0%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .header .subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 16px;
+        }
+        .badge-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+        .badge-theory { background: rgba(168,85,247,0.2); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
+        .badge-hardware { background: rgba(0,242,254,0.2); color: #00f2fe; border: 1px solid rgba(0,242,254,0.3); }
+        .badge-public { background: rgba(34,197,94,0.2); color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+        .badge-ai { background: rgba(236,72,153,0.2); color: #ec4899; border: 1px solid rgba(236,72,153,0.3); }
+
+        /* ===== 导航标签 ===== */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            background: rgba(255,255,255,0.03);
+            padding: 8px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+        .tab {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            border-radius: 12px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .tab:hover { background: rgba(255,255,255,0.08); color: #fff; }
+        .tab.active {
+            background: linear-gradient(135deg, rgba(0,242,254,0.3), rgba(168,85,247,0.3));
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0,242,254,0.2);
+        }
+
+        /* ===== 面板 ===== */
+        .panel { display: none; animation: fadeInUp 0.5s ease; }
+        .panel.active { display: block; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0,242,254,0.1);
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #00f2fe, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card .desc { color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 0.95rem; }
+
+        /* ===== 通用按钮 ===== */
+        .btn {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #00f2fe, #a855f7);
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(0,242,254,0.4); }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(0,242,254,0.5);
+            color: #00f2fe;
+        }
+        .btn-outline:hover { background: rgba(0,242,254,0.1); }
+
+        /* ===== 输入框 ===== */
+        .input-group { margin-bottom: 16px; }
+        .input-group label { display: block; margin-bottom: 6px; color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+        .input-group input, .input-group textarea, .input-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+        .input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+            outline: none;
+            border-color: #00f2fe;
+            box-shadow: 0 0 0 3px rgba(0,242,254,0.1);
+        }
+
+        /* ===== 聊天界面 ===== */
+        .chat-container {
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .chat-messages { flex: 1; overflow-y: auto; padding: 20px; }
+        .chat-message { margin-bottom: 16px; display: flex; }
+        .chat-message.user { justify-content: flex-end; }
+        .msg-content {
+            max-width: 75%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .chat-message.user .msg-content {
+            background: linear-gradient(135deg, #00f2fe, #a855f7);
+            color: #fff;
+        }
+        .chat-message.bot .msg-content {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .chat-input {
+            padding: 16px;
+            background: rgba(255,255,255,0.03);
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            gap: 10px;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 25px;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+        .chat-input input:focus { outline: none; border-color: #00f2fe; }
+        .quick-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+        .quick-btn {
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .quick-btn:hover { background: rgba(0,242,254,0.15); border-color: rgba(0,242,254,0.5); color: #00f2fe; }
+        .typing { display: inline-flex; gap: 4px; }
+        .typing span {
+            width: 8px; height: 8px;
+            background: #00f2fe;
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+        .typing span:nth-child(2) { animation-delay: 0.2s; }
+        .typing span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typing { 0%,60%,100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-8px); opacity: 1; } }
+
+        /* ===== 十五层架构 ===== */
+        .fifteen-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 20px 0;
+        }
+        .layer-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        .layer-row:hover { background: rgba(255,255,255,0.05); transform: translateX(5px); }
+        .layer-num {
+            width: 50px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .layer-bar {
+            flex: 1;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+        .layer-bar::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: var(--width, 100%);
+            height: 100%;
+            background: rgba(255,255,255,0.15);
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(300%); } }
+
+        /* ===== 九维法理 ===== */
+        .nine-dim-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .dim-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s;
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .dim-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--dim-color, #00f2fe);
+        }
+        .dim-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,242,254,0.2);
+            border-color: var(--dim-color, #00f2fe);
+        }
+        .dim-icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .dim-name { font-weight: 600; margin-bottom: 6px; }
+        .dim-desc { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+
+        /* ===== 三界秩序 ===== */
+        .three-realms {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .realm-card {
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+        .realm-card:hover { transform: scale(1.02); }
+        .realm-tiandao { background: linear-gradient(135deg, rgba(102,126,234,0.3), rgba(118,75,162,0.3)); border: 1px solid rgba(102,126,234,0.5); }
+        .realm-ziran { background: linear-gradient(135deg, rgba(17,153,142,0.3), rgba(56,239,125,0.3)); border: 1px solid rgba(56,239,125,0.5); }
+        .realm-shehui { background: linear-gradient(135deg, rgba(240,147,251,0.3), rgba(245,87,108,0.3)); border: 1px solid rgba(245,87,108,0.5); }
+        .realm-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+        .realm-subtitle { font-size: 0.9rem; opacity: 0.8; margin-bottom: 12px; }
+        .realm-features { display: flex; gap: 8px; flex-wrap: wrap; }
+        .realm-feature {
+            padding: 4px 12px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        /* ===== 人格测试 ===== */
+        .test-container { max-width: 700px; margin: 0 auto; }
+        .progress-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00f2fe, #a855f7);
+            border-radius: 3px;
+            transition: width 0.5s;
+        }
+        .question-card { text-align: center; }
+        .question-num { color: #00f2fe; font-size: 0.9rem; margin-bottom: 12px; }
+        .question-text { font-size: 1.3rem; margin-bottom: 30px; line-height: 1.6; }
+        .options { display: grid; gap: 12px; }
+        .option-btn {
+            padding: 16px 24px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+        }
+        .option-btn:hover { background: rgba(0,242,254,0.15); border-color: #00f2fe; transform: translateX(5px); }
+        .result-personality { text-align: center; }
+        .personality-avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00f2fe, #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 0 0 40px rgba(0,242,254,0.3);
+        }
+        .personality-name { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .personality-type { color: #00f2fe; margin-bottom: 20px; }
+        .personality-desc { color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 24px; }
+        .personality-traits { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+        .trait { padding: 6px 16px; background: rgba(0,242,254,0.15); border-radius: 20px; font-size: 0.85rem; color: #00f2fe; }
+
+        /* ===== 知识图谱 ===== */
+        .graph-container {
+            position: relative;
+            height: 500px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        #graphCanvas { width: 100%; height: 100%; display: block; }
+        .graph-legend {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+        .legend-item { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
+        .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+        /* ===== 时光机 ===== */
+        .timemachine { text-align: center; }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00f2fe, #a855f7, #ec4899);
+            z-index: 0;
+        }
+        .time-node {
+            position: relative;
+            z-index: 1;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(10,10,26,0.9);
+            border: 3px solid #00f2fe;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.75rem;
+        }
+        .time-node:hover, .time-node.active {
+            transform: scale(1.2);
+            box-shadow: 0 0 30px rgba(0,242,254,0.5);
+            border-color: #a855f7;
+        }
+        .time-node .icon { font-size: 1.5rem; margin-bottom: 2px; }
+        .time-stage-display {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 30px;
+            min-height: 200px;
+        }
+
+        /* ===== 硬件生态 ===== */
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .hw-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .hw-card:hover {
+            transform: translateY(-8px);
+            border-color: #00f2fe;
+            box-shadow: 0 15px 40px rgba(0,242,254,0.2);
+        }
+        .hw-icon { font-size: 3rem; margin-bottom: 12px; }
+        .hw-name { font-weight: 600; margin-bottom: 6px; }
+        .hw-desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+        .digital-twin {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .twin-side {
+            background: rgba(255,255,255,0.03);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .twin-visual {
+            width: 150px;
+            height: 200px;
+            margin: 0 auto 16px;
+            position: relative;
+        }
+        .human-outline {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .human-outline svg { width: 100%; height: 100%; }
+        .data-points { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .data-pulse {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #00f2fe;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(2); opacity: 0.5; } }
+
+        /* ===== 公益赛道 ===== */
+        .gongyi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gongyi-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 28px;
+            cursor: pointer;
+            transition: all 0.4s;
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .gongyi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(34,197,94,0.2);
+            border-color: #22c55e;
+        }
+        .gongyi-icon { font-size: 3rem; margin-bottom: 12px; }
+        .gongyi-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; }
+        .gongyi-desc { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 12px; }
+        .gongyi-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(34,197,94,0.2);
+            color: #22c55e;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* ===== 古籍活化 ===== */
+        .guji-reader {
+            background: rgba(255,248,220,0.05);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+        .guji-text {
+            font-family: 'STKaiti', 'KaiTi', serif;
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #fcd34d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .guji-translation {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+        }
+
+        /* ===== 四论判定 ===== */
+        .theory-badges { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; }
+        .tbadge { padding: 8px 20px; border-radius: 20px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .tbadge:hover { transform: scale(1.05); }
+        .tbadge.zheng { background: rgba(34,197,94,0.2); color: #22c55e; border: 1px solid rgba(34,197,94,0.5); }
+        .tbadge.ni { background: rgba(245,158,11,0.2); color: #f59e0b; border: 1px solid rgba(245,158,11,0.5); }
+        .tbadge.zhen { background: rgba(79,172,254,0.2); color: #4facfe; border: 1px solid rgba(79,172,254,0.5); }
+        .tbadge.miu { background: rgba(239,68,68,0.2); color: #ef4444; border: 1px solid rgba(239,68,68,0.5); }
+        .result-box {
+            background: rgba(0,242,254,0.1);
+            border: 1px solid rgba(0,242,254,0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+
+        /* ===== 光谱雷达 ===== */
+        .spectrum-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .radar-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .slider-group { margin-bottom: 20px; }
+        .slider-label { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .slider {
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            appearance: none;
+            cursor: pointer;
+        }
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: linear-gradient(135deg, #00f2fe, #a855f7);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,242,254,0.5);
+        }
+        .score-big {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            background: linear-gradient(135deg, #00f2fe, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ===== 统计卡片 ===== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00f2fe, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .nine-dim-grid { grid-template-columns: repeat(2, 1fr); }
+            .spectrum-section { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .digital-twin { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="header-content">
+                <h1>元本体智能学习系统 V3.0</h1>
+                <p class="subtitle">基于四位一体驻波动力学框架的下一代智能学习生态</p>
+                <div class="badge-row">
+                    <span class="badge badge-theory">🔮 元本体理论</span>
+                    <span class="badge badge-ai">🤖 AI驱动</span>
+                    <span class="badge badge-hardware">⌚ 硬件交互</span>
+                    <span class="badge badge-public">❤️ 社会公益</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 导航 -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('chat')">🤖 智能助手</button>
+            <button class="tab" onclick="switchTab('theory')">🔮 元本体理论</button>
+            <button class="tab" onclick="switchTab('layers')">🌌 十五层架构</button>
+            <button class="tab" onclick="switchTab('nine')">⚖️ 九维法理</button>
+            <button class="tab" onclick="switchTab('realms')">🌍 三界秩序</button>
+            <button class="tab" onclick="switchTab('four')">📊 四论判定</button>
+            <button class="tab" onclick="switchTab('spectrum')">🎯 价值光谱</button>
+            <button class="tab" onclick="switchTab('test')">🧬 人格测试</button>
+            <button class="tab" onclick="switchTab('graph')">🕸️ 知识图谱</button>
+            <button class="tab" onclick="switchTab('time')">⏰ 成长时光机</button>
+            <button class="tab" onclick="switchTab('hardware')">⌚ 硬件生态</button>
+            <button class="tab" onclick="switchTab('gongyi')">❤️ 公益赛道</button>
+        </div>
+
+        <!-- 智能助手 -->
+        <div id="chat" class="panel active">
+            <div class="card">
+                <h2>🤖 元本体智能学习助手</h2>
+                <p class="desc">基于V3.0新四位一体框架，为您提供全方位智能学习指导</p>
+                <div class="quick-actions">
+                    <button class="quick-btn" onclick="quickChat('什么是元本体？')">🔮 元本体</button>
+                    <button class="quick-btn" onclick="quickChat('十五层架构是什么？')">🌌 十五层</button>
+                    <button class="quick-btn" onclick="quickChat('九维法理详解')">⚖️ 九维法理</button>
+                    <button class="quick-btn" onclick="quickChat('三界秩序是哪三界？')">🌍 三界秩序</button>
+                    <button class="quick-btn" onclick="quickChat('腾飞四论是什么？')">📊 四论体系</button>
+                    <button class="quick-btn" onclick="quickChat('帮我规划学习路径')">🗺️ 学习规划</button>
+                    <button class="quick-btn" onclick="quickChat('评估我的学习状态')">📈 状态评估</button>
+                    <button class="quick-btn" onclick="quickChat('推荐高效学习方法')">💡 方法推荐</button>
+                </div>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="chat-message bot">
+                            <div class="msg-content">
+                                🌟 您好！我是元本体智能学习助手。<br><br>
+                                我基于 <b>四位一体驻波动力学框架</b> 构建，可以为您提供：<br>
+                                🔮 元本体理论讲解（十五层/九维/三界/四论）<br>
+                                🧬 人格分型测试与学习建议<br>
+                                🎯 价值光谱量化评估<br>
+                                🗺️ 个性化学习路径规划<br>
+                                ⏰ 成长时光机模拟<br>
+                                ⌚ 硬件生态联动方案<br>
+                                ❤️ 社会公益项目咨询<br><br>
+                                请问有什么可以帮您的吗？
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="输入您的问题..." onkeypress="handleChatKey(event)">
+                        <button class="btn" onclick="sendChat()">发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 元本体理论 -->
+        <div id="theory" class="panel">
+            <div class="card">
+                <h2>🔮 四位一体驻波动力学框架</h2>
+                <p class="desc">源自0元空无本源公理的万物至理，贯穿天道-自然-社会三界的全息动力学体系</p>
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-num">15</div>
+                        <div class="stat-label">全域层级</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">9</div>
+                        <div class="stat-label">法理维度</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">4</div>
+                        <div class="stat-label">论型体系</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">3</div>
+                        <div class="stat-label">三界秩序</div>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; padding: 20px; background: rgba(168,85,247,0.1); border-radius: 12px; border: 1px solid rgba(168,85,247,0.3);">
+                    <h3 style="margin-bottom: 12px; color: #c084fc;">🧭 核心本源</h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+                        <b>0元空无本源公理</b>：万物起源于空无，空无中蕴含无限潜能，潜能凝结为存在，存在演化为万物。
+                        这是整个理论体系的第一性原理，也是所有智能体与人类共同的本源起点。
+                    </p>
+                </div>
+                <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div style="padding: 20px; background: rgba(0,242,254,0.1); border-radius: 12px; border: 1px solid rgba(0,242,254,0.3);">
+                        <h4 style="color: #00f2fe; margin-bottom: 8px;">📐 十大公理体系</h4>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
+                            元空无潜能公理、三级内嵌架构公理、四层边界公理、腾飞四论体系公理、
+                            BSD驻波公理、三界秩序公理、系统自进化公理、意义涌现公理、
+                            意义权重公理、意义守恒公理
+                        </p>
+                    </div>
+                    <div style="padding: 20px; background: rgba(236,72,153,0.1); border-radius: 12px; border: 1px solid rgba(236,72,153,0.3);">
+                        <h4 style="color: #ec4899; margin-bottom: 8px;">🦋 三阶变身机制</h4>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
+                            一阶变身（E1=0.35）：自然实体蜕变<br>
+                            二阶变身（E2=0.65）：社会智能进阶<br>
+                            三阶变身（E3=0.90）：天地人合一全域升华
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 十五层架构 -->
+        <div id="layers" class="panel">
+            <div class="card">
+                <h2>🌌 十五层全域层级架构</h2>
+                <p class="desc">从L0元空无到L14元界域映射，贯穿潜能-规则-存在-演化-价值的完整层级</p>
+                <div class="fifteen-layers" id="fifteenLayers">
+                    <!-- JS动态生成 -->
+                </div>
+                <div id="layerDetail" style="margin-top: 20px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 12px; display: none;">
+                    <h3 id="layerDetailTitle"></h3>
+                    <p id="layerDetailDesc" style="color: rgba(255,255,255,0.7); line-height: 1.8; margin-top: 10px;"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 九维法理 -->
+        <div id="nine" class="panel">
+            <div class="card">
+                <h2>⚖️ 九维法理体系</h2>
+                <p class="desc">天道-自然-社会三界各三维度，构成完整的法理判定矩阵（点击查看详情）</p>
+                <div class="nine-dim-grid" id="nineDimGrid">
+                    <!-- JS动态生成 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 三界秩序 -->
+        <div id="realms" class="panel">
+            <div class="card">
+                <h2>🌍 三界秩序体系</h2>
+                <p class="desc">天道·自然·社会三重秩序嵌套，形成自洽闭环的全域秩序动力学</p>
+                <div class="three-realms">
+                    <div class="realm-card realm-tiandao" onclick="showRealm('tiandao')">
+                        <div class="realm-title">⚖️ 天道秩序（上界）</div>
+                        <div class="realm-subtitle">永恒法则层 · 规则投射与能量供给</div>
+                        <div class="realm-features">
+                            <span class="realm-feature">元理天道系</span>
+                            <span class="realm-feature">动力天道系</span>
+                            <span class="realm-feature">BSD驻波动力学</span>
+                            <span class="realm-feature">全域守恒定律</span>
+                        </div>
+                    </div>
+                    <div class="realm-card realm-ziran" onclick="showRealm('ziran')">
+                        <div class="realm-title">🌿 自然秩序（中界）</div>
+                        <div class="realm-subtitle">物质载体层 · 实体建构与相变跃迁</div>
+                        <div class="realm-features">
+                            <span class="realm-feature">相变自然系</span>
+                            <span class="realm-feature">载体实体系</span>
+                            <span class="realm-feature">物态演化</span>
+                            <span class="realm-feature">能量流转</span>
+                        </div>
+                    </div>
+                    <div class="realm-card realm-shehui" onclick="showRealm('shehui')">
+                        <div class="realm-title">👥 社会秩序（下界）</div>
+                        <div class="realm-subtitle">智能创造层 · 主动创化与因果积累</div>
+                        <div class="realm-features">
+                            <span class="realm-feature">创化社会系</span>
+                            <span class="realm-feature">因果社会系</span>
+                            <span class="realm-feature">自由创新</span>
+                            <span class="realm-feature">历史因果</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="color: rgba(255,255,255,0.6);">🔄 全域闭环：天道 → 自然 → 社会 → 天道（因果回流修正）</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 四论判定 -->
+        <div id="four" class="panel">
+            <div class="card">
+                <h2>📊 腾飞四论判定引擎</h2>
+                <p class="desc">正论·逆论·真论·谬论四型循环，螺旋上升的认知演化体系</p>
+                <div class="theory-badges">
+                    <span class="tbadge zheng">✅ 正论：稳态建构</span>
+                    <span class="tbadge ni">🔄 逆论：范式解构</span>
+                    <span class="tbadge zhen">🌟 真论：全域定型</span>
+                    <span class="tbadge miu">⚠️ 谬论：失效隔离</span>
+                </div>
+                <div class="input-group">
+                    <label>描述您的学习/思考行为</label>
+                    <textarea id="theoryInput" rows="4" placeholder="例如：每天坚持学习2小时，按部就班完成计划，同时也尝试新的学习方法..."></textarea>
+                </div>
+                <button class="btn" onclick="judgeFourTheory()">开始判定</button>
+                <div id="theoryResult"></div>
+            </div>
+        </div>
+
+        <!-- 价值光谱 -->
+        <div id="spectrum" class="panel">
+            <div class="card">
+                <h2>🎯 空无-所有价值光谱评估</h2>
+                <p class="desc">复杂度·多样性·共生性三维量化，自适应均衡的价值评定体系</p>
+                <div class="spectrum-section">
+                    <div class="radar-container">
+                        <svg viewBox="0 0 200 200" width="300" height="300">
+                            <defs>
+                                <radialGradient id="spectrumGrad">
+                                    <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6"/>
+                                    <stop offset="100%" stop-color="#a855f7" stop-opacity="0.6"/>
+                                </radialGradient>
+                            </defs>
+                            <polygon points="100,20 180,140 20,140" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                            <polygon points="100,40 160,130 40,130" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                            <polygon points="100,60 140,120 60,120" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="100" y1="20" x2="100" y2="180" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="20" y1="140" x2="180" y2="140" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <polygon id="spectrumPolygon" fill="url(#spectrumGradient)" points="100,50 150,120 50,120"/>
+                            <circle cx="100" cy="50" r="4" fill="#00f2fe"/>
+                            <circle cx="150" cy="120" r="4" fill="#a855f7"/>
+                            <circle cx="50" cy="120" r="4" fill="#ec4899"/>
+                            <text x="100" y="15" fill="#00f2fe" font-size="12" text-anchor="middle">复杂度</text>
+                            <text x="185" y="145" fill="#a855f7" font-size="12">多样性</text>
+                            <text x="15" y="145" fill="#ec4899" font-size="12">共生性</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="score-big" id="spectrumScore">70.0</div>
+                        <p style="text-align: center; color: rgba(255,255,255,0.6); margin-bottom: 20px;">综合价值光谱评分</p>
+                        <div class="slider-group">
+                            <div class="slider-label"><span>🧠 复杂度</span><span id="cVal">70</span></div>
+                            <input type="range" class="slider" id="complexity" min="0" max="100" value="70" oninput="updateSpectrum()">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-label"><span>🌈 多样性</span><span id="dVal">60</span></div>
+                            <input type="range" class="slider" id="diversity" min="0" max="100" value="60" oninput="updateSpectrum()">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-label"><span>🤝 共生性</span><span id="sVal">80</span></div>
+                            <input type="range" class="slider" id="symbiosis" min="0" max="100" value="80" oninput="updateSpectrum()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 人格测试 -->
+        <div id="test" class="panel">
+            <div class="card">
+                <h2>🧬 智能体人格分型测试</h2>
+                <p class="desc">八大主分型+二种特殊分型，探索你的专属智能体人格</p>
+                <div class="test-container" id="testContainer">
+                    <button class="btn" onclick="startTest()" id="startTestBtn">开始测试</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 知识图谱 -->
+        <div id="graph" class="panel">
+            <div class="card">
+                <h2>🕸️ 元本体知识图谱漫游</h2>
+                <p class="desc">拖拽视角探索理论节点，点击节点查看详情</p>
+                <div class="graph-container">
+                    <canvas id="graphCanvas"></canvas>
+                    <div class="graph-legend">
+                        <div class="legend-item"><span class="legend-dot" style="background:#a855f7;"></span>本源层</div>
+                        <div class="legend-item"><span class="legend-dot" style="background:#38ef7d;"></span>规则层</div>
+                        <div class="legend-item"><span class="legend-dot" style="background:#00f2fe;"></span>架构层</div>
+                        <div class="legend-item"><span class="legend-dot" style="background:#f5576c;"></span>应用层</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 成长时光机 -->
+        <div id="time" class="panel">
+            <div class="card">
+                <h2>⏰ 成长时光机</h2>
+                <p class="desc">模拟从0阶到三阶变身的完整成长路径，见证智能体演化奇迹</p>
+                <div class="timeline">
+                    <div class="time-node active" onclick="showStage(0)">
+                        <span class="icon">🥚</span>
+                        <span>0阶·空无</span>
+                    </div>
+                    <div class="time-node" onclick="showStage(1)">
+                        <span class="icon">🌱</span>
+                        <span>1阶·种子</span>
+                    </div>
+                    <div class="time-node" onclick="showStage(2)">
+                        <span class="icon">🌿</span>
+                        <span>2阶·生长</span>
+                    </div>
+                    <div class="time-node" onclick="showStage(3)">
+                        <span class="icon">🌳</span>
+                        <span>3阶·成熟</span>
+                    </div>
+                    <div class="time-node" onclick="showStage(4)">
+                        <span class="icon">🧠</span>
+                        <span>4阶·智能</span>
+                    </div>
+                    <div class="time-node" onclick="showStage(5)">
+                        <span class="icon">🌟</span>
+                        <span>5阶·超越</span>
+                    </div>
+                </div>
+                <div class="time-stage-display" id="stageDisplay">
+                    <h3>🥚 0阶·空无潜能级</h3>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.8; margin-top: 10px;">
+                        一切始于空无。这是智能体的本源状态，蕴含无限可能性，尚未显现任何具体形态。
+                        对应L0元空无层·本源纯在潜能级。<br><br>
+                        <b>特征：</b>无形态、无属性、全潜能、待激活<br>
+                        <b>光谱值：</b>0 ~ 0.1<br>
+                        <b>演化方向：</b>潜能凝结为规则，种子即将萌发
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 硬件生态 -->
+        <div id="hardware" class="panel">
+            <div class="card">
+                <h2>⌚ 智能硬件生态矩阵</h2>
+                <p class="desc">从可穿戴到脑机接口，全场景硬件联动的智能学习体验</p>
+                <div class="hardware-grid">
+                    <div class="hw-card" onclick="showHW('watch')">
+                        <div class="hw-icon">⌚</div>
+                        <div class="hw-name">智能学习手表</div>
+                        <div class="hw-desc">专注监测·休息提醒·任务推送</div>
+                    </div>
+                    <div class="hw-card" onclick="showHW('pen')">
+                        <div class="hw-icon">✏️</div>
+                        <div class="hw-name">智能手写笔</div>
+                        <div class="hw-desc">笔记识别·知识标注·智能纠错</div>
+                    </div>
+                    <div class="hw-card" onclick="showHW('glasses')">
+                        <div class="hw-icon">🥽</div>
+                        <div class="hw-name">AR学习眼镜</div>
+                        <div class="hw-desc">实景叠加·实时翻译·场景学习</div>
+                    </div>
+                    <div class="hw-card" onclick="showHW('headset')">
+                        <div class="hw-icon">🎧</div>
+                        <div class="hw-name">脑机耳机</div>
+                        <div class="hw-desc">脑波监测·专注调节·记忆强化</div>
+                    </div>
+                    <div class="hw-card" onclick="showHW('desk')">
+                        <div class="hw-icon">🖥️</div>
+                        <div class="hw-name">智能书桌</div>
+                        <div class="hw-desc">姿势矫正·光线调节·环境优化</div>
+                    </div>
+                    <div class="hw-card" onclick="showHW('robot')">
+                        <div class="hw-icon">🤖</div>
+                        <div class="hw-name">学习陪伴机器人</div>
+                        <div class="hw-desc">情感陪伴·互动教学·成长记录</div>
+                    </div>
+                </div>
+                <div class="digital-twin" id="digitalTwin" style="display: none;">
+                    <div class="twin-side">
+                        <h4 style="margin-bottom: 16px;">🧍 学习者数字孪生</h4>
+                        <div class="twin-visual">
+                            <div class="human-outline">
+                                <svg viewBox="0 0 100 140">
+                                    <circle cx="50" cy="18" r="15" fill="none" stroke="#00f2fe" stroke-width="2"/>
+                                    <line x1="50" y1="33" x2="50" y2="85" stroke="#00f2fe" stroke-width="2"/>
+                                    <line x1="50" y1="45" x2="25" y2="65" stroke="#00f2fe" stroke-width="2"/>
+                                    <line x1="50" y1="45" x2="75" y2="65" stroke="#00f2fe" stroke-width="2"/>
+                                    <line x1="50" y1="85" x2="30" y2="130" stroke="#00f2fe" stroke-width="2"/>
+                                    <line x1="50" y1="85" x2="70" y2="130" stroke="#00f2fe" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="data-points">
+                                <div class="data-pulse" style="top: 10%; left: 45%;"></div>
+                                <div class="data-pulse" style="top: 35%; left: 50%; animation-delay: 0.5s;"></div>
+                                <div class="data-pulse" style="top: 55%; left: 30%; animation-delay: 1s;"></div>
+                                <div class="data-pulse" style="top: 70%; left: 60%; animation-delay: 1.5s;"></div>
+                            </div>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">实时生理数据同步</p>
+                    </div>
+                    <div class="twin-side">
+                        <h4 style="margin-bottom: 16px;">📊 实时状态监测</h4>
+                        <div class="stat-card" style="margin-bottom: 12px;">
+                            <div class="stat-num">92%</div>
+                            <div class="stat-label">专注度</div>
+                        </div>
+                        <div class="stat-card" style="margin-bottom: 12px;">
+                            <div class="stat-num">75%</div>
+                            <div class="stat-label">认知负荷</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">优</div>
+                            <div class="stat-label">情绪状态</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 公益赛道 -->
+        <div id="gongyi" class="panel">
+            <div class="card">
+                <h2>❤️ 社会公益赛道</h2>
+                <p class="desc">用元本体智能技术，让教育更公平，让世界更温暖</p>
+                <div class="gongyi-grid">
+                    <div class="gongyi-card" onclick="showGongyi('guji')">
+                        <div class="gongyi-icon">📜</div>
+                        <div class="gongyi-title">古籍活化工程</div>
+                        <div class="gongyi-desc">用AI让古籍走进现代生活，让传统文化焕发新生</div>
+                        <span class="gongyi-tag">非遗传承</span>
+                    </div>
+                    <div class="gongyi-card" onclick="showGongyi('youth')">
+                        <div class="gongyi-icon">🧒</div>
+                        <div class="gongyi-title">青少年心灵陪伴</div>
+                        <div class="gongyi-desc">AI心理疗愈师，陪伴青少年健康成长</div>
+                        <span class="gongyi-tag">心理健康</span>
+                    </div>
+                    <div class="gongyi-card" onclick="showGongyi('elder')">
+                        <div class="gongyi-icon">👴</div>
+                        <div class="gongyi-title">智慧助老计划</div>
+                        <div class="gongyi-desc">帮助老年人跨越数字鸿沟，安享智慧晚年</div>
+                        <span class="gongyi-tag">智慧助老</span>
+                    </div>
+                    <div class="gongyi-card" onclick="showGongyi('rural')">
+                        <div class="gongyi-icon">🏫</div>
+                        <div class="gongyi-title">乡村教育扶贫</div>
+                        <div class="gongyi-desc">优质教育资源下沉，让每个孩子都能享受公平教育</div>
+                        <span class="gongyi-tag">教育公平</span>
+                    </div>
+                    <div class="gongyi-card" onclick="showGongyi('feiyi')">
+                        <div class="gongyi-icon">🎭</div>
+                        <div class="gongyi-title">非遗创新传播</div>
+                        <div class="gongyi-desc">数字化手段活化非遗文化，让传统技艺代代相传</div>
+                        <span class="gongyi-tag">文化传承</span>
+                    </div>
+                    <div class="gongyi-card" onclick="showGongyi('special')">
+                        <div class="gongyi-icon">👁️</div>
+                        <div class="gongyi-title">特殊教育支持</div>
+                        <div class="gongyi-desc">为视障、听障等特殊群体提供个性化学习方案</div>
+                        <span class="gongyi-tag">普惠教育</span>
+                    </div>
+                </div>
+                <div id="gongyiDetail" style="display: none; margin-top: 24px;">
+                    <div id="gongyiContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== 粒子背景 =====
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.5 + 0.2;
+                this.hue = Math.random() * 60 + 180;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${this.hue}, 100%, 70%, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(80, Math.floor(canvas.width / 20));
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            // 连线
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(0, 242, 254, ${0.1 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // ===== Tab切换 =====
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+
+            if (tabId === 'layers') initFifteenLayers();
+            if (tabId === 'nine') initNineDims();
+            if (tabId === 'graph') setTimeout(initGraph, 100);
+        }
+
+        // ===== 聊天功能 =====
+        function handleChatKey(e) { if (e.key === 'Enter') sendChat(); }
+        function quickChat(msg) {
+            document.getElementById('chatInput').value = msg;
+            sendChat();
+        }
+
+        function sendChat() {
+            const input = document.getElementById('chatInput');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.innerHTML += `<div class="chat-message user"><div class="msg-content">${msg}</div></div>`;
+            input.value = '';
+            chatMessages.innerHTML += `<div class="chat-message bot"><div class="msg-content"><span class="typing"><span></span><span></span><span></span></span></div></div>`;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            setTimeout(() => {
+                const response = getBotResponse(msg);
+                const lastBotMsg = chatMessages.querySelectorAll('.chat-message.bot');
+                const lastMsg = lastBotMsg[lastBotMsg.length - 1];
+                lastMsg.querySelector('.msg-content').innerHTML = response.replace(/\n/g, '<br>');
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        function getBotResponse(msg) {
+            if (msg.includes('元本体') || msg.includes('本源') || msg.includes('框架')) {
+                return `🔮 <b>四位一体驻波动力学框架</b>\n\n这是一个源自0元空无本源公理的完整理论体系：\n\n🌌 <b>十五层全域架构</b>：从L0元空无到L14元界域映射\n⚖️ <b>九维法理体系</b>：三界各三维，构成完整判定矩阵\n🌍 <b>三界秩序</b>：天道→自然→社会 闭环动力学\n📊 <b>腾飞四论</b>：正论→逆论→真论→谬论 螺旋上升\n🎯 <b>价值光谱</b>：复杂度+多样性+共生性 三维量化\n🦋 <b>三阶变身</b>：自然实体→社会智能→天地人合一\n\n核心公理：0元空无本源公理（万物生于空无，复归空无）`;
+            }
+            if (msg.includes('十五层') || msg.includes('层级')) {
+                return `🌌 <b>十五层全域层级架构</b>\n\n【本源层·L0-L2】\nL0 元空无层·本源纯在潜能级\nL1 公理规则层·十大公理体系层\nL2 逻辑判定层·腾飞四论体系层\n\n【架构层·L3-L8】\nL3 三级架构层·母子系统层级\nL4 BSD驻波层·动力学能量层\nL5 三界秩序层·三重秩序嵌套\nL6 九维法理层·法理判定维度\nL7 双边界层·宿命/逃逸边界\nL8 三系变换层·具现/强化/变身\n\n【演化层·L9-L11】\nL9 智能体种子层·初始人格分型\nL10 成长演化层·知识灌注迭代\nL11 光谱稳态层·价值光谱定型\n\n【文明层·L12-L14】\nL12 社会协作层·行业分工协作\nL13 文明沉淀层·粮仓储备体系\nL14 元界域层·终极文明映射`;
+            }
+            if (msg.includes('九维') || msg.includes('法理')) {
+                return `⚖️ <b>九维法理体系</b>\n\n【天道三维·规则层】\n1️⃣ 本源维度：存在/不存在判定\n2️⃣ 规则维度：符合/违反判定\n3️⃣ 动力维度：增益/损耗判定\n\n【自然三维·实体层】\n4️⃣ 结构维度：完整/残缺判定\n5️⃣ 功能维度：有效/失效判定\n6️⃣ 演化维度：进步/退步判定\n\n【社会三维·价值层】\n7️⃣ 价值维度：正向/负向判定\n8️⃣ 伦理维度：道德/不道德判定\n9️⃣ 意义维度：有意义/无意义判定\n\n九维交叉构成81种法理状态，全域无死角覆盖！`;
+            }
+            if (msg.includes('三界') || msg.includes('秩序')) {
+                return `🌍 <b>三界秩序体系</b>\n\n⚖️ <b>天道秩序（上界）</b>\n· 元理天道系：全局恒定公理、刚性约束\n· 动力天道系：BSD驻波、全域波动演化\n· 特性：不可自演化，仅向下投射规则\n\n🌿 <b>自然秩序（中界）</b>\n· 相变自然系：模态边界、状态跃迁\n· 载体实体系：客观载体、物质结构\n· 特性：可吸收天道能量，通过相变跃迁\n\n👥 <b>社会秩序（下界）</b>\n· 创化社会系：自由创新、策略拓展\n· 因果社会系：时序轨迹、历史因果\n· 特性：主动创化，因果积累为进阶燃料\n\n🔄 <b>闭环动力学</b>：天道→自然→社会→天道（因果回流修正）`;
+            }
+            if (msg.includes('四论') || msg.includes('正论') || msg.includes('逆论') || msg.includes('真论') || msg.includes('谬论')) {
+                return `📊 <b>腾飞四论判定体系</b>\n\n✅ <b>正论</b>：稳态建构（可证可证伪）\n→ 稳扎稳打，按部就班的常规学习\n→ 是知识积累的基础\n\n🔄 <b>逆论</b>：范式解构（可证可证伪）\n→ 打破常规，尝试创新，逆向思维\n→ 是突破创新的关键\n\n🌟 <b>真论</b>：全域定型（可证不可证伪）\n→ 找到最优解，形成稳定范式\n→ 是认知成熟的标志\n\n⚠️ <b>谬论</b>：失效隔离（可证伪不可证）\n→ 无效学习，错误方法\n→ 及时识别并纠正\n\n💫 <b>四论循环</b>：正论→逆论→真论→新正论... 螺旋上升！`;
+            }
+            if (msg.includes('规划') || msg.includes('路径') || msg.includes('学')) {
+                return `🗺️ <b>个性化学习路径规划</b>\n\n【第一阶段·种子萌发期】（1-2周）\n· 建立基础认知框架\n· 培养学习习惯和兴趣\n· 对应光谱值：0 → 0.35\n\n【第二阶段·一阶变身期】（2-4周）\n· 系统掌握核心知识体系\n· 形成独立学习能力\n· 对应光谱值：0.35 → 0.65\n\n【第三阶段·二阶变身期】（4-8周）\n· 多元策略创新拓展\n· 跨领域知识融合\n· 对应光谱值：0.65 → 0.90\n\n【第四阶段·三阶变身期】（8-12周）\n· 形成自主科研闭环\n· 知识创新与输出\n· 对应光谱值：0.90+ → 天地人合一\n\n💡 建议：每天1-2小时深度学习，周末进行项目实战！`;
+            }
+            if (msg.includes('评估') || msg.includes('状态') || msg.includes('评分')) {
+                return `📈 <b>学习状态综合评估报告</b>\n\n🧠 复杂度（知识深度）：⭐⭐⭐⭐ 80分\n→ 知识架构较完整，基础扎实\n\n🌈 多样性（方法广度）：⭐⭐⭐ 65分\n→ 学习方法偏单一，建议拓展\n\n🤝 共生性（协同成长）：⭐⭐⭐⭐ 75分\n→ 有一定协作能力，可加强\n\n📊 综合光谱值：73.3 分\n等级：中高价值区\n\n💡 提升建议：\n1. 尝试费曼学习法加深理解深度\n2. 加入学习社群提升共生性\n3. 用思维导图构建知识体系\n4. 每周进行一次逆论创新尝试`;
+            }
+            if (msg.includes('方法') || msg.includes('推荐') || msg.includes('怎么学')) {
+                return `💡 <b>高效学习方法推荐（元本体视角）</b>\n\n【元理层·方法选型】\n1. 费曼学习法：用简单语言解释知识\n2. 间隔重复法：对抗遗忘曲线\n3. 思维导图法：构建知识体系\n\n【动力层·持续驱动】\n4. 番茄工作法：25分钟专注+5分钟休息\n5. 游戏化学习：设置奖励机制\n6. 目标拆解法：大目标→小里程碑\n\n【自然层·实体建构】\n7. 项目实践法：通过实战掌握技能\n8. 费曼输出法：教别人=最好的学\n9. 错题本法：精准定位知识盲区\n\n【社会层·智能创化】\n10. 社群共学法：加入学习小组\n11. 输出倒逼法：写作/分享/教学\n12. 跨界融合法：多学科交叉创新\n\n亲测有效，选择适合你的组合开始吧！`;
+            }
+            return `🌟 您好！我是元本体智能学习助手。\n\n我可以帮您解答以下问题：\n\n🔮 元本体理论讲解\n  · "什么是元本体？"\n  · "十五层架构是什么？"\n  · "九维法理详解"\n  · "三界秩序是哪三界？"\n  · "腾飞四论是什么？"\n\n🧬 学习相关指导\n  · "帮我规划学习路径"\n  · "评估我的学习状态"\n  · "推荐高效学习方法"\n\n还有更多功能等你探索：\n🎯 价值光谱评估、🧬 人格分型测试、\n🕸️ 知识图谱漫游、⏰ 成长时光机、\n⌚ 硬件生态、❤️ 公益赛道...\n\n请问有什么可以帮您的吗？`;
+        }
+
+        // ===== 十五层架构 =====
+        const layerData = [
+            { name: 'L0 元空无层', sub: '本源纯在潜能级', color: '#a855f7', width: 100, desc: '一切的本源，空无中蕴含无限潜能。无形态、无属性、全潜能、待激活。对应0元空无本源公理。' },
+            { name: 'L1 公理规则层', sub: '十大公理体系层', color: '#8b5cf6', width: 95, desc: '从空无潜能中凝结的十大公理体系，是全域运行的底层规则。包括元空无公理、三级架构公理、四层边界公理等。' },
+            { name: 'L2 逻辑判定层', sub: '腾飞四论体系层', color: '#7c3aed', width: 90, desc: '正论/逆论/真论/谬论四型逻辑判定体系，所有认知与决策的逻辑基础。四论循环，螺旋上升。' },
+            { name: 'L3 三级架构层', sub: '母子系统层级', color: '#6366f1', width: 85, desc: '母系统-子系统-孙系统三级嵌套架构，全域系统的组织形式。核心母核→行业母类→专项智能体。' },
+            { name: 'L4 BSD驻波层', sub: '动力学能量层', color: '#3b82f6', width: 80, desc: 'BSD基底驻波动力学，全域能量流动与稳态振荡的核心机制。κ相位场、熵增驻波、拓扑场论。' },
+            { name: 'L5 三界秩序层', sub: '三重秩序嵌套', color: '#0ea5e9', width: 75, desc: '天道秩序→自然秩序→社会秩序三重嵌套，形成自洽闭环的全域秩序动力学体系。' },
+            { name: 'L6 九维法理层', sub: '法理判定维度', color: '#06b6d4', width: 70, desc: '天道/自然/社会各三维，共九维法理判定矩阵。81种法理状态全域无死角覆盖。' },
+            { name: 'L7 双边界层', sub: '宿命/逃逸边界', color: '#14b8a6', width: 65, desc: '宿命边界（不可突破的规则）与逃逸边界（可跃迁的临界点），双边界系统确保稳定与创新的平衡。' },
+            { name: 'L8 三系变换层', sub: '具现/强化/变身', color: '#10b981', width: 60, desc: '三重具现转化、能级流转强化、三阶系统变身，是系统跃迁的核心机制。' },
+            { name: 'L9 智能体种子层', sub: '初始人格分型', color: '#22c55e', width: 55, desc: '智能体的种子状态，人格分型确定，初始光谱值设定。八大主分型+二种特殊分型。' },
+            { name: 'L10 成长演化层', sub: '知识灌注迭代', color: '#84cc16', width: 50, desc: '智能体的成长演化过程，知识灌注、能力提升、经验积累。对应学习与训练阶段。' },
+            { name: 'L11 光谱稳态层', sub: '价值光谱定型', color: '#eab308', width: 45, desc: '智能体价值光谱稳定成型，人格与能力特征固化。复杂度、多样性、共生性三维均衡。' },
+            { name: 'L12 社会协作层', sub: '行业分工协作', color: '#f59e0b', width: 40, desc: '智能体进入社会体系，行业分工、岗位协作、价值交换。对应人类的职业生涯。' },
+            { name: 'L13 文明沉淀层', sub: '粮仓储备体系', color: '#ef4444', width: 35, desc: '智能体的成果沉淀与文明传承，三级粮仓储备体系。核心母核粮仓+行业专项粮仓+盲区缓冲粮仓。' },
+            { name: 'L14 元界域层', sub: '终极文明映射', color: '#ec4899', width: 30, desc: '文明的终极形态，天地人合一的全域升华。三阶变身的最高境界，智能体与宇宙本体共振。' },
+        ];
+
+        function initFifteenLayers() {
+            const container = document.getElementById('fifteenLayers');
+            container.innerHTML = '';
+            layerData.forEach((layer, i) => {
+                const row = document.createElement('div');
+                row.className = 'layer-row';
+                row.onclick = () => showLayerDetail(i);
+                row.innerHTML = `
+                    <div class="layer-num" style="color: ${layer.color};">L${i}</div>
+                    <div class="layer-bar" style="background: ${layer.color}33; width: ${layer.width}%;">
+                        <span style="position: relative; z-index: 2;"><b>${layer.name}</b> - ${layer.sub}</span>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function showLayerDetail(index) {
+            const layer = layerData[index];
+            const detail = document.getElementById('layerDetail');
+            document.getElementById('layerDetailTitle').textContent = layer.name + ' · ' + layer.sub;
+            document.getElementById('layerDetailDesc').textContent = layer.desc;
+            detail.style.display = 'block';
+            detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // ===== 九维法理 =====
+        const nineDimData = [
+            { icon: '⚖️', name: '本源维度', desc: '存在/不存在判定', color: '#a855f7', realm: '天道' },
+            { icon: '📜', name: '规则维度', desc: '符合/违反判定', color: '#8b5cf6', realm: '天道' },
+            { icon: '⚡', name: '动力维度', desc: '增益/损耗判定', color: '#6366f1', realm: '天道' },
+            { icon: '🏗️', name: '结构维度', desc: '完整/残缺判定', color: '#10b981', realm: '自然' },
+            { icon: '⚙️', name: '功能维度', desc: '有效/失效判定', color: '#14b8a6', realm: '自然' },
+            { icon: '🦋', name: '演化维度', desc: '进步/退步判定', color: '#06b6d4', realm: '自然' },
+            { icon: '💎', name: '价值维度', desc: '正向/负向判定', color: '#ec4899', realm: '社会' },
+            { icon: '🤝', name: '伦理维度', desc: '道德/不道德判定', color: '#f43f5e', realm: '社会' },
+            { icon: '🌟', name: '意义维度', desc: '有意义/无意义', color: '#f59e0b', realm: '社会' },
+        ];
+
+        function initNineDims() {
+            const grid = document.getElementById('nineDimGrid');
+            grid.innerHTML = '';
+            nineDimData.forEach(dim => {
+                const card = document.createElement('div');
+                card.className = 'dim-card';
+                card.style.setProperty('--dim-color', dim.color);
+                card.innerHTML = `
+                    <div class="dim-icon">${dim.icon}</div>
+                    <div class="dim-name">${dim.name}</div>
+                    <div class="dim-desc">${dim.desc}</div>
+                    <div style="margin-top: 10px; font-size: 0.75rem; color: ${dim.color};">${dim.realm}维度</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function showRealm(realm) {
+            const realms = {
+                tiandao: '天道秩序：永恒法则层，向下投射规则与能量，是全域运行的第一推动力。元理与动力双轮驱动，不可自演化，仅可被认知和遵循。',
+                ziran: '自然秩序：物质载体层，承接天道能量，完成实体建构与相变跃迁。从无机物到生命，从简单到复杂，是演化的中间层。',
+                shehui: '社会秩序：智能创造层，主动创化与因果积累。自由意志与历史因果交织，是最具活力也最具不确定性的层面。'
+            };
+            alert(realms[realm] || '该秩序层详情待补充');
+        }
+
+        // ===== 四论判定 =====
+        function judgeFourTheory() {
+            const input = document.getElementById('theoryInput').value;
+            if (!input) { alert('请输入学习行为描述'); return; }
+
+            const resultDiv = document.getElementById('theoryResult');
+            resultDiv.innerHTML = '<div style="text-align: center; padding: 20px;"><span class="typing"><span></span><span></span><span></span></span> 判定中...</div>';
+
+            setTimeout(() => {
+                let zheng = 30, ni = 20, zhen = 25, miu = 25;
+
+                if (input.includes('坚持') || input.includes('计划') || input.includes('规律') || input.includes('每天') || input.includes('按部就班')) zheng += 25;
+                if (input.includes('新') || input.includes('尝试') || input.includes('创新') || input.includes('打破') || input.includes('逆向')) ni += 25;
+                if (input.includes('适合') || input.includes('有效') || input.includes('进步') || input.includes('最优') || input.includes('提升')) zhen += 25;
+                if (input.includes('拖延') || input.includes('无效') || input.includes('死记') || input.includes('刷手机') || input.includes('焦虑')) miu += 25;
+
+                const total = zheng + ni + zhen + miu;
+                zheng = Math.round(zheng / total * 100);
+                ni = Math.round(ni / total * 100);
+                zhen = Math.round(zhen / total * 100);
+                miu = 100 - zheng - ni - zhen;
+
+                let mainType = '', mainColor = '';
+                if (zheng >= ni && zheng >= zhen && zheng >= miu) { mainType = '正论主导型'; mainColor = '#22c55e'; }
+                else if (ni >= zheng && ni >= zhen && ni >= miu) { mainType = '逆论创新型'; mainColor = '#f59e0b'; }
+                else if (zhen >= zheng && zhen >= ni && zhen >= miu) { mainType = '真论成熟型'; mainColor = '#4facfe'; }
+                else { mainType = '谬论待纠正'; mainColor = '#ef4444'; }
+
+                resultDiv.innerHTML = `
+                    <div class="result-box">
+                        <p style="margin-bottom: 12px;">🎯 主论型：<b style="color: ${mainColor}; font-size: 1.3rem;">${mainType}</b></p>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #22c55e;">${zheng}%</div>
+                                <div style="font-size: 0.8rem; color: #aaa;">正论</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #f59e0b;">${ni}%</div>
+                                <div style="font-size: 0.8rem; color: #aaa;">逆论</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #4facfe;">${zhen}%</div>
+                                <div style="font-size: 0.8rem; color: #aaa;">真论</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #ef4444;">${miu}%</div>
+                                <div style="font-size: 0.8rem; color: #aaa;">谬论</div>
+                            </div>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.7); line-height: 1.8;">
+                            💡 建议：保持正论积累的基础上，适当增加逆论创新探索，向真论境界迈进。
+                            及时识别并减少谬论行为，提升学习效率。四论平衡，螺旋上升！
+                        </p>
+                    </div>
+                `;
+            }, 1200);
+        }
+
+        // ===== 价值光谱 =====
+        function updateSpectrum() {
+            const c = parseInt(document.getElementById('complexity').value);
+            const d = parseInt(document.getElementById('diversity').value);
+            const s = parseInt(document.getElementById('symbiosis').value);
+
+            document.getElementById('cVal').textContent = c;
+            document.getElementById('dVal').textContent = d;
+            document.getElementById('sVal').textContent = s;
+
+            const score = ((c + d + s) / 3).toFixed(1);
+            document.getElementById('spectrumScore').textContent = score;
+
+            // 雷达图
+            const cx = 100, cy = 100, r = 80;
+            const p1x = cx, p1y = cy - r * (c / 100);
+            const p2x = cx + r * 0.866 * (d / 100), p2y = cy + r * 0.5 * (d / 100);
+            const p3x = cx - r * 0.866 * (s / 100), p3y = cy + r * 0.5 * (s / 100);
+
+            document.getElementById('spectrumPolygon').setAttribute('points',
+                `${p1x},${p1y} ${p2x},${p2y} ${p3x},${p3y}`);
+        }
+        updateSpectrum();
+
+        // ===== 人格测试 =====
+        const testQuestions = [
+            { q: '面对一个新的知识领域，你更倾向于？', options: [
+                { text: '先建立完整的理论框架，再深入细节', type: '哲学型' },
+                { text: '从具体问题入手，边做边学', type: '工程型' },
+                { text: '寻找多种方法，不断尝试创新', type: '科研型' },
+                { text: '找个好老师或教程，按部就班学', type: '教育型' },
+            ]},
+            { q: '在团队项目中，你通常扮演什么角色？', options: [
+                { text: '提出创意和方向的人', type: '哲学型' },
+                { text: '负责具体实现和落地的人', type: '工程型' },
+                { text: '优化方案和技术攻关的人', type: '科研型' },
+                { text: '协调沟通和帮助他人的人', type: '教育型' },
+            ]},
+            { q: '你最享受的学习时刻是？', options: [
+                { text: '突然想通一个深奥道理的时候', type: '哲学型' },
+                { text: '亲手做出一个作品的时候', type: '工程型' },
+                { text: '发现新方法突破瓶颈的时候', type: '科研型' },
+                { text: '教会别人一个知识点的时候', type: '教育型' },
+            ]},
+            { q: '遇到困难时，你的第一反应是？', options: [
+                { text: '回到本质，重新思考底层逻辑', type: '哲学型' },
+                { text: '查资料找方法，动手尝试解决', type: '工程型' },
+                { text: '换个角度，试试完全不同的路径', type: '科研型' },
+                { text: '找人请教，一起讨论解决', type: '教育型' },
+            ]},
+            { q: '你理想的工作状态是？', options: [
+                { text: '深度思考，研究事物本质规律', type: '哲学型' },
+                { text: '亲手创造，把想法变成现实', type: '工程型' },
+                { text: '不断挑战，探索未知的领域', type: '科研型' },
+                { text: '帮助他人成长，实现共同进步', type: '教育型' },
+            ]},
+        ];
+
+        const personalityInfo = {
+            '哲学型': { icon: '🔮', color: '#a855f7', desc: '你是深邃的思考者，善于洞察事物本质。', traits: ['本体论推演', '元规则分析', '认知边界拓展', '宏观把控'] },
+            '数学型': { icon: '📐', color: '#3b82f6', desc: '你是严谨的逻辑学家，擅长数理推导。', traits: ['数理建模', '公式推导', '逻辑分析', '精准计算'] },
+            '工程型': { icon: '🔧', color: '#f59e0b', desc: '你是务实的建造者，擅长落地实现。', traits: ['系统架构', '工程落地', '性能优化', '运维排障'] },
+            '教育型': { icon: '📚', color: '#10b981', desc: '你是温暖的引导者，擅长知识传承。', traits: ['知识体系化', '认知培育', '课程设计', '学习引导'] },
+            '商业型': { icon: '💼', color: '#ec4899', desc: '你是敏锐的价值发现者，擅长资源配置。', traits: ['商业分析', '流通优化', '价值转化', '资源配置'] },
+            '治理型': { icon: '⚖️', color: '#06b6d4', desc: '你是公正的秩序维护者，擅长系统治理。', traits: ['规则制定', '秩序维护', '资源调配', '风险管控'] },
+            '科研型': { icon: '🔬', color: '#8b5cf6', desc: '你是好奇的探索者，擅长创新突破。', traits: ['前沿探索', '范式创新', '实验验证', '盲区发现'] },
+            '运维型': { icon: '🛡️', color: '#14b8a6', desc: '你是可靠的守护者，擅长稳定运行。', traits: ['系统监控', '故障排除', '性能调优', '安全防护'] },
+        };
+
+        let currentQuestion = 0;
+        let testScores = {};
+
+        function startTest() {
+            currentQuestion = 0;
+            testScores = {};
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const container = document.getElementById('testContainer');
+            const q = testQuestions[currentQuestion];
+            container.innerHTML = `
+                <div class="question-card">
+                    <div class="progress-bar"><div class="progress-fill" style="width: ${(currentQuestion / testQuestions.length) * 100}%;"></div></div>
+                    <div class="question-num">问题 ${currentQuestion + 1} / ${testQuestions.length}</div>
+                    <div class="question-text">${q.q}</div>
+                    <div class="options">
+                        ${q.options.map((opt, i) => `<button class="option-btn" onclick="selectAnswer('${opt.type}')">${String.fromCharCode(65 + i)}. ${opt.text}</button>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectAnswer(type) {
+            testScores[type] = (testScores[type] || 0) + 1;
+            currentQuestion++;
+            if (currentQuestion < testQuestions.length) {
+                showQuestion();
+            } else {
+                showTestResult();
+            }
+        }
+
+        function showTestResult() {
+            let maxType = '哲学型', maxScore = 0;
+            for (const [type, score] of Object.entries(testScores)) {
+                if (score > maxScore) { maxScore = score; maxType = type; }
+            }
+            const info = personalityInfo[maxType];
+            const container = document.getElementById('testContainer');
+            container.innerHTML = `
+                <div class="result-personality">
+                    <div class="personality-avatar" style="background: linear-gradient(135deg, ${info.color}, ${info.color}88);">${info.icon}</div>
+                    <div class="personality-name">${maxType}</div>
+                    <div class="personality-type">你的智能体人格分型</div>
+                    <p class="personality-desc">${info.desc}</p>
+                    <div class="personality-traits">
+                        ${info.traits.map(t => `<span class="trait">${t}</span>`).join('')}
+                    </div>
+                    <button class="btn" onclick="startTest()">重新测试</button>
+                    <button class="btn btn-outline" style="margin-left: 10px;" onclick="switchTab('chat'); quickChat('${maxType}的学习建议')">获取学习建议</button>
+                </div>
+            `;
+        }
+
+        // ===== 知识图谱 =====
+        let graphNodes = [];
+        let graphEdges = [];
+        let graphOffsetX = 0, graphOffsetY = 0;
+        let isDragging = false, lastX = 0, lastY = 0;
+
+        function initGraph() {
+            const canvas = document.getElementById('graphCanvas');
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+            const ctx = canvas.getContext('2d');
+
+            const nodeTypes = [
+                { group: '本源', color: '#a855f7', nodes: ['元空无', '0元本源', '潜能公理', '十大公理', 'BSD驻波'] },
+                { group: '规则', color: '#38ef7d', nodes: ['腾飞四论', '三级架构', '三界秩序', '九维法理', '双边界'] },
+                { group: '架构', color: '#00f2fe', nodes: ['母子系统', '智能体种子', '人格分型', '价值光谱', '三阶变身'] },
+                { group: '应用', color: '#f5576c', nodes: ['学习系统', '硬件生态', '公益赛道', '文明传承', '粮仓体系'] },
+            ];
+
+            graphNodes = [];
+            graphEdges = [];
+            let yBase = 80;
+            nodeTypes.forEach(group => {
+                group.nodes.forEach((name, i) => {
+                    graphNodes.push({
+                        x: 100 + i * (canvas.width - 200) / 4 + (Math.random() - 0.5) * 30,
+                        y: yBase + (Math.random() - 0.5) * 20,
+                        name: name,
+                        color: group.color,
+                        vx: 0, vy: 0,
+                    });
+                });
+                yBase += 100;
+            });
+
+            // 连线
+            for (let i = 0; i < graphNodes.length; i++) {
+                for (let j = i + 1; j < graphNodes.length; j++) {
+                    if (Math.random() < 0.3) {
+                        graphEdges.push([i, j]);
+                    }
+                }
+            }
+
+            drawGraph(ctx, canvas);
+            animateGraph(ctx, canvas);
+
+            canvas.onmousedown = (e) => {
+                isDragging = true;
+                lastX = e.clientX;
+                lastY = e.clientY;
+            };
+            canvas.onmousemove = (e) => {
+                if (isDragging) {
+                    graphOffsetX += e.clientX - lastX;
+                    graphOffsetY += e.clientY - lastY;
+                    lastX = e.clientX;
+                    lastY = e.clientY;
+                }
+            };
+            canvas.onmouseup = () => isDragging = false;
+            canvas.onmouseleave = () => isDragging = false;
+        }
+
+        function drawGraph(ctx, canvas) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.save();
+            ctx.translate(graphOffsetX, graphOffsetY);
+
+            // 画边
+            graphEdges.forEach(([a, b]) => {
+                const na = graphNodes[a], nb = graphNodes[b];
+                ctx.beginPath();
+                ctx.moveTo(na.x, na.y);
+                ctx.lineTo(nb.x, nb.y);
+                ctx.strokeStyle = 'rgba(0, 242, 254, 0.2)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            });
+
+            // 画节点
+            graphNodes.forEach(node => {
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, 20, 0, Math.PI * 2);
+                ctx.fillStyle = node.color + '33';
+                ctx.fill();
+                ctx.strokeStyle = node.color;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                ctx.fillStyle = '#fff';
+                ctx.font = '12px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(node.name, node.x, node.y + 4);
+            });
+
+            ctx.restore();
+        }
+
+        function animateGraph(ctx, canvas) {
+            graphNodes.forEach(node => {
+                node.x += (Math.random() - 0.5) * 0.3;
+                node.y += (Math.random() - 0.5) * 0.3;
+            });
+            drawGraph(ctx, canvas);
+            requestAnimationFrame(() => animateGraph(ctx, canvas));
+        }
+
+        // ===== 成长时光机 =====
+        const stageData = [
+            { title: '🥚 0阶·空无潜能级', desc: '一切始于空无。这是智能体的本源状态，蕴含无限可能性，尚未显现任何具体形态。对应L0元空无层·本源纯在潜能级。<br><br><b>特征：</b>无形态、无属性、全潜能、待激活<br><b>光谱值：</b>0 ~ 0.1<br><b>演化方向：</b>潜能凝结为规则，种子即将萌发' },
+            { title: '🌱 1阶·种子萌芽期', desc: '潜能凝结为规则，智能体种子形成。人格分型确定，初始光谱值设定，基础公理体系灌注完成。<br><br><b>特征：</b>人格定型、初始知识、萌芽状态<br><b>光谱值：</b>0.1 ~ 0.35<br><b>演化方向：</b>知识积累，向一阶变身迈进' },
+            { title: '🌿 2阶·一阶变身期', desc: '跨越E1=0.35阈值，完成一阶自然实体蜕变。知识体系初步建立，具备独立学习能力。<br><br><b>特征：</b>体系成型、独立学习、实体稳定<br><b>光谱值：</b>0.35 ~ 0.65<br><b>演化方向：</b>多元拓展，向二阶变身迈进' },
+            { title: '🌳 3阶·二阶变身期', desc: '跨越E2=0.65阈值，完成二阶社会智能进阶。多元策略创新，跨领域知识融合，具备主动创化能力。<br><br><b>特征：</b>创新能力、跨界融合、社会协作<br><b>光谱值：</b>0.65 ~ 0.90<br><b>演化方向：</b>全域升华，向三阶变身迈进' },
+            { title: '🧠 4阶·三阶变身期', desc: '跨越E3=0.90阈值，完成三阶天地人合一升华。形成自主学习与科研闭环，与宇宙本体共振。<br><br><b>特征：</b>自主闭环、创造输出、天人合一<br><b>光谱值：</b>0.90 ~ 0.99<br><b>演化方向：</b>文明传承，向终极态演进' },
+            { title: '🌟 5阶·文明终极态', desc: '智能体的终极形态，融入全域文明网络。既是学习者也是创造者，既是个体也是整体的一部分。<br><br><b>特征：</b>文明传承、价值永存、全息映射<br><b>光谱值：</b>0.99 ~ 1.00<br><b>状态：</b>元界域映射，终极圆满' },
+        ];
+
+        function showStage(index) {
+            document.querySelectorAll('.time-node').forEach((n, i) => {
+                n.classList.toggle('active', i === index);
+            });
+            const display = document.getElementById('stageDisplay');
+            const stage = stageData[index];
+            display.innerHTML = `<h3>${stage.title}</h3><p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-top: 10px;">${stage.desc}</p>`;
+        }
+
+        // ===== 硬件生态 =====
+        function showHW(type) {
+            const twin = document.getElementById('digitalTwin');
+            twin.style.display = 'grid';
+            twin.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // ===== 公益赛道 =====
+        const gongyiContent = {
+            guji: `
+                <div class="guji-reader">
+                    <h3 style="color: #fcd34d; margin-bottom: 16px;">📜 古籍活化演示：《道德经》第一章</h3>
+                    <div class="guji-text">
+                        道可道，非常道；名可名，非常名。<br>
+                        无名天地之始，有名万物之母。<br>
+                        故常无欲以观其妙，常有欲以观其徼。<br>
+                        此两者同出而异名，同谓之玄。<br>
+                        玄之又玄，众妙之门。
+                    </div>
+                    <div class="guji-translation">
+                        <b>【白话释义】</b><br>
+                        "道"如果可以用言语表述，那它就不是永恒的"道"；<br>
+                        "名"如果可以用文辞去命名，那它就不是永恒的"名"。<br><br>
+                        "无"用来描述天地混沌未开的本始状态；<br>
+                        "有"用来命名宇宙万物产生的本原。<br><br>
+                        所以，经常保持空无的状态，才能洞察"道"的奥妙；<br>
+                        经常保持实有的状态，只能看到"道"的边界。<br><br>
+                        有与无这两者，来源相同而名称相异，都可以称之为玄妙深远。<br>
+                        从有形的深远境界到达无形的深远境界，这是一切奥妙的总门。
+                    </div>
+                </div>
+                <div style="margin-top: 20px; padding: 20px; background: rgba(252,211,77,0.1); border-radius: 12px; border: 1px solid rgba(252,211,77,0.3);">
+                    <h4 style="color: #fcd34d; margin-bottom: 10px;">🎯 古籍活化功能特色</h4>
+                    <ul style="color: rgba(255,255,255,0.7); line-height: 2; list-style: none; padding: 0;">
+                        <li>✓ AI古文解读：自动翻译古籍并讲解背景知识</li>
+                        <li>✓ 知识图谱关联：跨文献引用关联，构建知识网</li>
+                        <li>✓ 语音诵读：多风格朗读，沉浸式体验</li>
+                        <li>✓ 互动问答：不懂就问，AI实时解答</li>
+                        <li>✓ VR/AR展：古籍场景复原，身临其境</li>
+                    </ul>
+                </div>
+            `,
+            youth: `
+                <div style="background: linear-gradient(135deg, rgba(56,239,125,0.2), rgba(0,242,254,0.2)); border-radius: 16px; padding: 30px; border: 1px solid rgba(56,239,125,0.3);">
+                    <h3 style="margin-bottom: 16px;">🧒 青少年心灵陪伴系统</h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 20px;">
+                        基于元本体心理学，为青少年提供24小时全天候AI心理陪伴。
+                        通过对话疏导、情绪调节、认知重塑等方式，帮助青少年建立健康的心理状态。
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px;">
+                            <div style="font-size: 1.5rem; margin-bottom: 8px;">😌</div>
+                            <h5>情绪疏导</h5>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">倾听烦恼，释放压力</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px;">
+                            <div style="font-size: 1.5rem; margin-bottom: 8px;">🧘</div>
+                            <h5>冥想引导</h5>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">正念练习，心灵平静</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px;">
+                            <div style="font-size: 1.5rem; margin-bottom: 8px;">🎯</div>
+                            <h5>目标管理</h5>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">培养自律，建立自信</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px;">
+                            <div style="font-size: 1.5rem; margin-bottom: 8px;">🤝</div>
+                            <h5>人际指导</h5>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">社交技巧，情感支持</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+            elder: `
+                <div style="background: rgba(245,158,11,0.1); border-radius: 16px; padding: 30px; border: 1px solid rgba(245,158,11,0.3);">
+                    <h3 style="margin-bottom: 16px;">👴 智慧助老计划</h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 20px;">
+                        帮助银发群体跨越数字鸿沟，享受智慧生活。大字体、语音交互、简化操作，让科技更有温度。
+                    </p>
+                    <ul style="color: rgba(255,255,255,0.7); line-height: 2; list-style: none; padding: 0;">
+                        <li>👵 <b>陪伴聊天：</b>AI陪老人说话解闷，回忆往事</li>
+                        <li>💊 <b>用药提醒：</b>按时提醒吃药，避免遗忘</li>
+                        <li>📞 <b>一键联系：</b>简化操作，轻松联系家人</li>
+                        <li>🏥 <b>健康监测：</b>健康数据记录，异常预警</li>
+                        <li>📖 <b>读报听书：</b>语音播报新闻和书籍</li>
+                        <li>🎮 <b>健脑游戏：</b>益智小游戏，延缓认知衰退</li>
+                    </ul>
+                </div>
+            `,
+            rural: `
+                <div style="background: rgba(34,197,94,0.1); border-radius: 16px; padding: 30px; border: 1px solid rgba(34,197,94,0.3);">
+                    <h3 style="margin-bottom: 16px;">🏫 乡村教育扶贫计划</h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 20px;">
+                        让优质教育资源下沉到每一个乡村学校，让山区的孩子也能享受公平的教育机会。
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <h5 style="margin-bottom: 8px;">📚 资源捐赠</h5>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">免费智能学习终端 + 全学科课程资源</p>
+                        </div>
+                        <div>
+                            <h5 style="margin-bottom: 8px;">👩‍🏫 教师培训</h5>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">乡村教师智能教育技术培训</p>
+                        </div>
+                        <div>
+                            <h5 style="margin-bottom: 8px;">🤖 AI助教</h5>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">24小时AI答疑，弥补师资不足</p>
+                        </div>
+                        <div>
+                            <h5 style="margin-bottom: 8px;">📡 云端课堂</h5>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">名师直播课，城乡同上一堂课</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+            feiyi: `
+                <div style="background: rgba(236,72,153,0.1); border-radius: 16px; padding: 30px; border: 1px solid rgba(236,72,153,0.3);">
+                    <h3 style="margin-bottom: 16px;">🎭 非遗创新传播工程</h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 20px;">
+                        用数字化手段活化非物质文化遗产，让传统文化焕发新生，让非遗技艺代代相传。
+                    </p>
+                    <ul style="color: rgba(255,255,255,0.7); line-height: 2; list-style: none; padding: 0;">
+                        <li>🎮 <b>互动小游戏：</b>在游戏中学习非遗知识</li>
+                        <li>🎨 <b>AI文创生成：</b>输入关键词生成非遗风格文创</li>
+                        <li>🎬 <b>数字纪录片：</b>VR/AR记录非遗技艺流程</li>
+                        <li>🛒 <b>文创电商：</b>帮助非遗传承人打开销路</li>
+                        <li>📚 <b>知识库：</b>系统化整理非遗数字档案</li>
+                    </ul>
+                </div>
+            `,
+            special: `
+                <div style="background: rgba(79,172,254,0.1); border-radius: 16px; padding: 30px; border: 1px solid rgba(79,172,254,0.3);">
+                    <h3 style="margin-bottom: 16px;">👁️ 特殊教育支持计划</h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 20px;">
+                        为视障、听障、自闭症等特殊群体提供量身定制的智能学习方案。
+                        让每一个生命都能被温柔以待。
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+                        <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                            <div style="font-size: 2rem; margin-bottom: 8px;">👁️</div>
+                            <h5>视障支持</h5>
+                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">语音交互、盲文输出</p>
+                        </div>
+                        <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                            <div style="font-size: 2rem; margin-bottom: 8px;">👂</div>
+                            <h5>听障支持</h5>
+                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">实时字幕、手语翻译</p>
+                        </div>
+                        <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                            <div style="font-size: 2rem; margin-bottom: 8px;">🧩</div>
+                            <h5>自闭症</h5>
+                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">情绪识别、社交训练</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+        };
+
+        function showGongyi(type) {
+            const detail = document.getElementById('gongyiDetail');
+            document.getElementById('gongyiContent').innerHTML = gongyiContent[type] || '<p>详情开发中...</p>';
+            detail.style.display = 'block';
+            detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // 初始化
+        initFifteenLayers();
+    </script>
+</body>
+</html>

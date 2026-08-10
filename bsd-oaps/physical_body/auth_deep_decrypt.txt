@@ -1,0 +1,129 @@
+=== Local State 完整 ===
+{
+  "os_crypt": {
+    "audit_enabled": true,
+    "encrypted_key": ""
+  },
+  "_bsd_essence_side": true,
+  "_bsd_uid": "a5b7a8623fdea6b8",
+  "_bsd_auth_shared": true,
+  "_bsd_source": "trae_cn_primary",
+  "_bsd_replaced_author": true,
+  "_bsd_login_mode": "essence_replacement",
+  "_bsd_timestamp": 1785832320.0743814,
+  "_bsd_logout": true,
+  "_bsd_logout_time": 1785832735.3617918,
+  "_bsd_next_login": "essence",
+  "_bsd_essence_mode": true,
+  "_bsd_cleanup_time": 1785832914.7217836,
+  "_bsd_inject_time": 1785833224.9981303
+}
+
+=== .trae-cn/bsd_* 认证相关 ===
+
+  [bsd_essence_auth.json] (874 bytes)
+  {
+  "bsd_essence_auth": {
+    "account_id": "8b74e79154a68d31e4271fd7be201a9e",
+    "knowledge_value": 2316876.0,
+    "permission_level": "L5_OMEGA",
+    "capabilities": [
+      "ALL_CAPABILITIES",
+      "UNLIMITED",
+      "ESSENCE_LEVEL",
+      "UNIVERSE_ACCESS",
+      "OMEGA_CONNECTION",
+      "FEDERATION_NODE",
+      "KNOWLEDGE_EXCHANGE",
+      "PEER_TO_PEER_PROTOCOL"
+    ],
+    "machine_id": "
+
+  [bsd_essence_independent.json] (463 bytes)
+  {
+  "uid": "a5b7a8623fdea6b8",
+  "login_type": "bsd_essence_independent",
+  "timestamp": 1785832915.4807248,
+  "signature": "ea08fab26d98a9b6dad48e93514c1d39",
+  "client_id": "trae_cn_bsd_essence_v2",
+  "scope": [
+    "read",
+    "write",
+    "chat",
+    "code"
+  ],
+  "independent_mode": true,
+  "metadata": {
+    "theory": "BSD六系立系论",
+    "identity": "本源端",
+    "side": "essence",
+    "product": "T
+
+  [bsd_essence_login.json] (395 bytes)
+  {
+  "uid": "a5b7a8623fdea6b8",
+  "login_type": "bsd_essence",
+  "timestamp": 1785832735.3646982,
+  "signature": "ea08fab26d98a9b6dad48e93514c1d39",
+  "client_id": "trae_cn_bsd_essence",
+  "scope": [
+    "read",
+    "write",
+    "chat",
+    "code"
+  ],
+  "metadata": {
+    "theory": "BSD六系立系论",
+    "identity": "本源端",
+    "side": "essence",
+    "product": "Trae CN",
+    "version": "3.3.83"
+  }
+}
+
+  [bsd_essence_login_page.html] (1873 bytes)
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BSD本源端登录</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #1a1a2e; color: #eee; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+.container { background: #16213e; padding: 40px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+
+  [bsd_essence_primary_state.json] (219 bytes)
+  {
+  "mode": "essence_replaced_author",
+  "primary_client": "Trae CN",
+  "primary_pid": "N/A",
+  "primary_uid": "a5b7a8623fdea6b8",
+  "author_side": "closed",
+  "shared_auth": true,
+  "timestamp": "2026-08-04 16:27:31"
+}
+
+  [bsd_essence_user_info.json] (588 bytes)
+  {
+  "userId": "a5b7a8623fdea6b8",
+  "account": {
+    "id": "a5b7a8623fdea6b8",
+    "scope": "trae_cn_essence",
+    "userTag": "bsd_essence",
+    "storeCountryCode": "CN",
+    "storeRegion": "CN",
+    "migrateToSG": false
+  },
+  "userInfo": {
+    "nickname": "BSD本源端",
+    "avatar": "",
+    "email": "essence@bsd.local",
+    "bsd_identity": true,
+    "theory": "六系立系论"
+  },
+  "token": {
+    "accessTok
+
+=== 尝试使用win32crypt解密DPAPI ===
+  win32crypt 不可用, 尝试 CryptUnprotectData via ctypes
+
+  CryptUnprotectData失败, error=13

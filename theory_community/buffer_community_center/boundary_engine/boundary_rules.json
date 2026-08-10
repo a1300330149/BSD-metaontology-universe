@@ -1,0 +1,41 @@
+{
+  "global_boundary_standard": {
+    "core_manor_protection_level": "absolute",
+    "core_access_rule": "只出不进、只读不写",
+    "core_modify_deny_global": true,
+    "breakthrough_alarm_enable": true
+  },
+  
+  "boundary_modes_definition": {
+    "full_isolate": {
+      "desc": "完全隔离模式",
+      "cross_subsystem_access": false,
+      "core_read_access": false,
+      "external_network_access": false,
+      "pipeline_enable": false,
+      "scene": "高风险猜想孵化、纯内部闭环推演"
+    },
+    
+    "protocol_restricted": {
+      "desc": "协议受限连通模式（全局默认）",
+      "cross_subsystem_access": "whitelist",
+      "core_read_access": "whitelist",
+      "external_network_access": "filtered",
+      "pipeline_enable": true,
+      "scene": "常规推演、文献检索、跨系统协同，边界协议拦截越界内容"
+    },
+    
+    "full_connect": {
+      "desc": "完全互通模式",
+      "cross_subsystem_access": true,
+      "core_read_access": true,
+      "external_network_access": "compliance_audit",
+      "pipeline_enable": true,
+      "scene": "成熟领域全域协同，仍受母规则兜底校验"
+    }
+  },
+  
+  "default_subsystem_mode": "protocol_restricted",
+  "boundary_breakthrough_penalty": "auto_isolate+alarm",
+  "isolation_release_requires_audit": true
+}

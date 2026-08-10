@@ -1,0 +1,322 @@
+{
+  "timestamp": "2026-08-03T12:21:56.152512",
+  "reality_blur_score": 1.0720847560611582,
+  "reality_state": "🔴 虚实融合态：边界已高度模糊",
+  "evolution_state": {
+    "L0稳定度": 1.0,
+    "L1演化度": 0.7958561683885714,
+    "L2创新度": 0.0,
+    "L3表达度": 0.0
+  },
+  "agent_population": {
+    "total_humans": 8000000000.0,
+    "derived_per_human": 5.126256265640622,
+    "total_agents": 49010050125.12498,
+    "active_agents": 1656121204.8,
+    "emergence_level": 0.36785351753499995
+  },
+  "evolution_log_length": 6,
+  "status": "✅ BSD系统运行中",
+  "evolution_log": [
+    {
+      "timestamp": "2026-08-03T12:21:56.151232",
+      "phase": "BOOTSTRAP",
+      "reality_blur_score": 0.9400522656308593,
+      "evolution_state": {
+        "L0稳定度": 1.0,
+        "L1演化度": 0.885,
+        "L2创新度": 0.0,
+        "L3表达度": 0.0
+      },
+      "feedback_strength": 531.513537796205,
+      "agent_population": {
+        "total_humans": 8000000000.0,
+        "derived_per_human": 5.126256265640622,
+        "total_agents": 49010050125.12498,
+        "active_agents": 1656121204.8,
+        "emergence_level": 0.36785351753499995
+      },
+      "status": "✅ BSD系统自举完成"
+    },
+    {
+      "timestamp": "2026-08-03T12:21:56.152394",
+      "step": 1,
+      "gene_update": {
+        "gene_count": {
+          "L0": 2,
+          "L1": 3,
+          "L2": 0,
+          "L3": 0
+        },
+        "evolution_state": {
+          "L0稳定度": 1.0,
+          "L1演化度": 0.8018000000000001,
+          "L2创新度": 0.0,
+          "L3表达度": 0.0
+        }
+      },
+      "reality_update": {
+        "blur_score": 0.9650166800026074,
+        "reality_state": "🔴 虚实融合态：边界已高度模糊",
+        "metrics": {
+          "fidelity": 0.7272,
+          "overlap": 0.5858,
+          "density": 525.0,
+          "emergence": 0.35524999999999995
+        }
+      },
+      "field_update": {
+        "total_field_modification": 658.1738222775191,
+        "delta": 19.294165630733005,
+        "feedback_strength": 509.2622411614122,
+        "impact_details": [
+          {
+            "type": "电磁场",
+            "strength": 0.1515,
+            "density": 102.0
+          },
+          {
+            "type": "信息场",
+            "strength": 0.3535,
+            "density": 510.0
+          },
+          {
+            "type": "认知场",
+            "strength": 0.2222,
+            "density": 204.0
+          }
+        ]
+      },
+      "agent_update": {
+        "total_agents": 48199999999.99999,
+        "active_agents": 1530000000.0,
+        "derived_per_human": 5.0249999999999995,
+        "emergence_level": 0.3535
+      }
+    },
+    {
+      "timestamp": "2026-08-03T12:21:56.152430",
+      "step": 2,
+      "gene_update": {
+        "gene_count": {
+          "L0": 2,
+          "L1": 4,
+          "L2": 0,
+          "L3": 0
+        },
+        "evolution_state": {
+          "L0稳定度": 1.0,
+          "L1演化度": 0.775877,
+          "L2创新度": 0.0,
+          "L3表达度": 0.0
+        }
+      },
+      "reality_update": {
+        "blur_score": 0.9906809309305877,
+        "reality_state": "🔴 虚实融合态：边界已高度模糊",
+        "metrics": {
+          "fidelity": 0.734472,
+          "overlap": 0.591658,
+          "density": 551.25,
+          "emergence": 0.3605787499999999
+        }
+      },
+      "field_update": {
+        "total_field_modification": 678.0506717103002,
+        "delta": 19.876849432781114,
+        "feedback_strength": 521.1813086183306,
+        "impact_details": [
+          {
+            "type": "电磁场",
+            "strength": 0.15301499999999998,
+            "density": 104.04
+          },
+          {
+            "type": "信息场",
+            "strength": 0.357035,
+            "density": 520.2
+          },
+          {
+            "type": "认知场",
+            "strength": 0.224422,
+            "density": 208.08
+          }
+        ]
+      },
+      "agent_update": {
+        "total_agents": 48400999999.99999,
+        "active_agents": 1560600000.0,
+        "derived_per_human": 5.050124999999999,
+        "emergence_level": 0.357035
+      }
+    },
+    {
+      "timestamp": "2026-08-03T12:21:56.152454",
+      "step": 3,
+      "gene_update": {
+        "gene_count": {
+          "L0": 2,
+          "L1": 5,
+          "L2": 0,
+          "L3": 0
+        },
+        "evolution_state": {
+          "L0稳定度": 1.0,
+          "L1演化度": 0.773115632,
+          "L2创新度": 0.0,
+          "L3表达度": 0.0
+        }
+      },
+      "reality_update": {
+        "blur_score": 1.0170658906452927,
+        "reality_state": "🔴 虚实融合态：边界已高度模糊",
+        "metrics": {
+          "fidelity": 0.74181672,
+          "overlap": 0.5975745800000001,
+          "density": 578.8125,
+          "emergence": 0.36598743124999983
+        }
+      },
+      "field_update": {
+        "total_field_modification": 698.5278019959512,
+        "delta": 20.477130285651015,
+        "feedback_strength": 549.2590738486821,
+        "impact_details": [
+          {
+            "type": "电磁场",
+            "strength": 0.15454515,
+            "density": 106.1208
+          },
+          {
+            "type": "信息场",
+            "strength": 0.36060535,
+            "density": 530.604
+          },
+          {
+            "type": "认知场",
+            "strength": 0.22666622,
+            "density": 212.2416
+          }
+        ]
+      },
+      "agent_update": {
+        "total_agents": 48603004999.999985,
+        "active_agents": 1591812000.0,
+        "derived_per_human": 5.075375624999998,
+        "emergence_level": 0.36060535
+      }
+    },
+    {
+      "timestamp": "2026-08-03T12:21:56.152480",
+      "step": 4,
+      "gene_update": {
+        "gene_count": {
+          "L0": 2,
+          "L1": 6,
+          "L2": 0,
+          "L3": 0
+        },
+        "evolution_state": {
+          "L0稳定度": 1.0,
+          "L1演化度": 0.7821482872000001,
+          "L2创新度": 0.0,
+          "L3表达度": 0.0
+        }
+      },
+      "reality_update": {
+        "blur_score": 1.044193093103621,
+        "reality_state": "🔴 虚实融合态：边界已高度模糊",
+        "metrics": {
+          "fidelity": 0.7492348872,
+          "overlap": 0.6035503258000001,
+          "density": 607.7531250000001,
+          "emergence": 0.37147724271874977
+        }
+      },
+      "field_update": {
+        "total_field_modification": 719.6233416162289,
+        "delta": 21.09553962027769,
+        "feedback_strength": 587.726342164783,
+        "impact_details": [
+          {
+            "type": "电磁场",
+            "strength": 0.15609060149999998,
+            "density": 108.243216
+          },
+          {
+            "type": "信息场",
+            "strength": 0.3642114035,
+            "density": 541.21608
+          },
+          {
+            "type": "认知场",
+            "strength": 0.2289328822,
+            "density": 216.486432
+          }
+        ]
+      },
+      "agent_update": {
+        "total_agents": 48806020024.999985,
+        "active_agents": 1623648240.0,
+        "derived_per_human": 5.100752503124998,
+        "emergence_level": 0.3642114035
+      }
+    },
+    {
+      "timestamp": "2026-08-03T12:21:56.152499",
+      "step": 5,
+      "gene_update": {
+        "gene_count": {
+          "L0": 2,
+          "L1": 7,
+          "L2": 0,
+          "L3": 0
+        },
+        "evolution_state": {
+          "L0稳定度": 1.0,
+          "L1演化度": 0.7958561683885714,
+          "L2创新度": 0.0,
+          "L3表达度": 0.0
+        }
+      },
+      "reality_update": {
+        "blur_score": 1.0720847560611582,
+        "reality_state": "🔴 虚实融合态：边界已高度模糊",
+        "metrics": {
+          "fidelity": 0.756727236072,
+          "overlap": 0.6095858290580001,
+          "density": 638.1407812500001,
+          "emergence": 0.37704940135953097
+        }
+      },
+      "field_update": {
+        "total_field_modification": 741.355966533039,
+        "delta": 21.732624916810096,
+        "feedback_strength": 632.543641854544,
+        "impact_details": [
+          {
+            "type": "电磁场",
+            "strength": 0.15765150751499998,
+            "density": 110.40808032000001
+          },
+          {
+            "type": "信息场",
+            "strength": 0.36785351753499995,
+            "density": 552.0404016
+          },
+          {
+            "type": "认知场",
+            "strength": 0.231222211022,
+            "density": 220.81616064000002
+          }
+        ]
+      },
+      "agent_update": {
+        "total_agents": 49010050125.12498,
+        "active_agents": 1656121204.8,
+        "derived_per_human": 5.126256265640622,
+        "emergence_level": 0.36785351753499995
+      }
+    }
+  ]
+}

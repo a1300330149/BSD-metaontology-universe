@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-08-03 22:05:54",
+  "total_genes": 32446,
+  "total_size_mb": 16177.92,
+  "trinity_ratios": {
+    "恒星核心": 44.1,
+    "行星轨道": 3.6,
+    "卫星系统": 52.4
+  },
+  "scan_areas": [
+    [
+      "C:\\Windows\\System32",
+      "恒星核心基因.kernel",
+      1
+    ],
+    [
+      "C:\\Windows\\SysWOW64",
+      "恒星核心基因.syswow64",
+      1
+    ],
+    [
+      "C:\\Windows\\Drivers",
+      "恒星核心基因.drivers",
+      2
+    ],
+    [
+      "C:\\Windows",
+      "恒星核心基因.system",
+      0
+    ],
+    [
+      "C:\\Program Files",
+      "行星轨道基因.frameworks",
+      2
+    ],
+    [
+      "C:\\Program Files (x86)",
+      "行星轨道基因.frameworks_x86",
+      2
+    ],
+    [
+      "C:\\ProgramData",
+      "行星轨道基因.services",
+      2
+    ],
+    [
+      "C:\\Users\\13003\\AppData\\Local\\Programs",
+      "卫星系统基因.applications",
+      2
+    ],
+    [
+      "C:\\Users\\13003\\AppData\\Local",
+      "卫星系统基因.data",
+      1
+    ],
+    [
+      "D:\\TRAE SOLO CN",
+      "恒星核心基因.ai_platform",
+      3
+    ],
+    [
+      "D:\\Blender 4.5",
+      "行星轨道基因.creative",
+      2
+    ],
+    [
+      "D:\\CloudMusic",
+      "卫星系统基因.media",
+      2
+    ],
+    [
+      "D:\\DarkestDungeon",
+      "卫星系统基因.games",
+      2
+    ],
+    [
+      "D:\\BaiduNetdisk",
+      "卫星系统基因.cloud",
+      2
+    ],
+    [
+      "D:\\7fgame",
+      "卫星系统基因.games",
+      2
+    ]
+  ],
+  "findings": [
+    "Windows呈现典型三体系星结构",
+    "System32构成系统恒星核心",
+    "TRAE SOLO CN构成AI平台恒星核心",
+    "Program Files构成行星轨道",
+    "用户应用构成卫星系统"
+  ]
+}

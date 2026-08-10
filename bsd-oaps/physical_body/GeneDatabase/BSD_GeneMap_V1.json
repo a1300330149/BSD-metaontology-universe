@@ -1,0 +1,329 @@
+{
+  "generated_at": "2026-08-03 22:05:54",
+  "source": "C:\\ + D:\\ 全面扫描",
+  "total_genes": 32446,
+  "total_size_mb": 16177.924993515015,
+  "trinity_distribution": {
+    "恒星核心基因": {
+      "count": 14296,
+      "size_mb": 4995.61,
+      "percentage": 44.1
+    },
+    "行星轨道基因": {
+      "count": 1152,
+      "size_mb": 2070.99,
+      "percentage": 3.6
+    },
+    "卫星系统基因": {
+      "count": 16998,
+      "size_mb": 9111.33,
+      "percentage": 52.4
+    }
+  },
+  "gene_categories": {
+    "恒星核心基因.kernel": {
+      "count": 9881,
+      "size_mb": 3438.2
+    },
+    "恒星核心基因.syswow64": {
+      "count": 4157,
+      "size_mb": 1142.73
+    },
+    "恒星核心基因.system": {
+      "count": 22,
+      "size_mb": 8.7
+    },
+    "行星轨道基因.frameworks": {
+      "count": 286,
+      "size_mb": 246.57
+    },
+    "行星轨道基因.frameworks_x86": {
+      "count": 249,
+      "size_mb": 565.83
+    },
+    "行星轨道基因.services": {
+      "count": 458,
+      "size_mb": 716.94
+    },
+    "卫星系统基因.applications": {
+      "count": 378,
+      "size_mb": 2053.25
+    },
+    "卫星系统基因.data": {
+      "count": 113,
+      "size_mb": 1905.65
+    },
+    "恒星核心基因.ai_platform": {
+      "count": 236,
+      "size_mb": 405.97
+    },
+    "行星轨道基因.creative": {
+      "count": 159,
+      "size_mb": 541.65
+    },
+    "卫星系统基因.media": {
+      "count": 174,
+      "size_mb": 414.91
+    },
+    "卫星系统基因.games": {
+      "count": 15829,
+      "size_mb": 3517.01
+    },
+    "卫星系统基因.cloud": {
+      "count": 504,
+      "size_mb": 1220.52
+    }
+  },
+  "core_genes_detail": [
+    {
+      "name": "msedge.dll",
+      "path": "C:\\Windows\\System32\\Microsoft-Edge-WebView\\msedge.dll",
+      "size": 324041072
+    },
+    {
+      "name": "MRT.exe",
+      "path": "C:\\Windows\\System32\\MRT.exe",
+      "size": 228534800
+    },
+    {
+      "name": "TRAE SOLO CN.exe",
+      "path": "D:\\TRAE SOLO CN\\TRAE SOLO CN.exe",
+      "size": 214161296
+    },
+    {
+      "name": "BucketConfidenceData.cab",
+      "path": "C:\\Windows\\System32\\SecureBootUpdates\\BucketConfidenceData.cab",
+      "size": 94392245
+    },
+    {
+      "name": "OneDriveSetup.exe",
+      "path": "C:\\Windows\\System32\\OneDriveSetup.exe",
+      "size": 89771848
+    },
+    {
+      "name": "FMAPO64.dll",
+      "path": "C:\\Windows\\System32\\FMAPO64.dll",
+      "size": 56888576
+    },
+    {
+      "name": "RTAIODAT.DAT",
+      "path": "C:\\Windows\\System32\\drivers\\RTAIODAT.DAT",
+      "size": 45160768
+    },
+    {
+      "name": "resources.pak",
+      "path": "C:\\Windows\\System32\\Microsoft-Edge-WebView\\resources.pak",
+      "size": 35471822
+    },
+    {
+      "name": "nvcuvid.dll",
+      "path": "C:\\Windows\\System32\\nvcuvid.dll",
+      "size": 29138664
+    },
+    {
+      "name": "nvidia-pcc.exe",
+      "path": "C:\\Windows\\System32\\nvidia-pcc.exe",
+      "size": 28071144
+    },
+    {
+      "name": "mfxplugin64_hw.dll",
+      "path": "C:\\Windows\\System32\\mfxplugin64_hw.dll",
+      "size": 27983976
+    },
+    {
+      "name": "dxcompiler.dll",
+      "path": "D:\\TRAE SOLO CN\\dxcompiler.dll",
+      "size": 26088336
+    },
+    {
+      "name": "edgehtml.dll",
+      "path": "C:\\Windows\\System32\\edgehtml.dll",
+      "size": 26030080
+    },
+    {
+      "name": "mshtml.dll",
+      "path": "C:\\Windows\\System32\\mshtml.dll",
+      "size": 24023040
+    },
+    {
+      "name": "dxcompiler.dll",
+      "path": "C:\\Windows\\System32\\Microsoft-Edge-WebView\\dxcompiler.dll",
+      "size": 20425576
+    },
+    {
+      "name": "mspdf.dll",
+      "path": "C:\\Windows\\System32\\Microsoft-Edge-WebView\\mspdf.dll",
+      "size": 19317616
+    },
+    {
+      "name": "Windows.UI.Xaml.dll",
+      "path": "C:\\Windows\\System32\\Windows.UI.Xaml.dll",
+      "size": 17846272
+    },
+    {
+      "name": "LICENSES.chromium.html",
+      "path": "D:\\TRAE SOLO CN\\LICENSES.chromium.html",
+      "size": 15102158
+    },
+    {
+      "name": "ntoskrnl.exe",
+      "path": "C:\\Windows\\System32\\ntoskrnl.exe",
+      "size": 13047280
+    },
+    {
+      "name": "icudtl.dat",
+      "path": "C:\\Windows\\System32\\Microsoft-Edge-WebView\\icudtl.dat",
+      "size": 12461312
+    },
+    {
+      "name": "unins000.dat",
+      "path": "D:\\TRAE SOLO CN\\unins000.dat",
+      "size": 11145608
+    },
+    {
+      "name": "wmp.dll",
+      "path": "C:\\Windows\\System32\\wmp.dll",
+      "size": 10637312
+    },
+    {
+      "name": "onnxruntime.dll",
+      "path": "C:\\Windows\\System32\\onnxruntime.dll",
+      "size": 10572960
+    },
+    {
+      "name": "icudtl.dat",
+      "path": "D:\\TRAE SOLO CN\\icudtl.dat",
+      "size": 10467680
+    },
+    {
+      "name": "directml.dll",
+      "path": "C:\\Windows\\System32\\directml.dll",
+      "size": 10239544
+    },
+    {
+      "name": "twinui.pcshell.dll",
+      "path": "C:\\Windows\\System32\\twinui.pcshell.dll",
+      "size": 10022912
+    },
+    {
+      "name": "aha_doctor.exe",
+      "path": "D:\\TRAE SOLO CN\\aha_doctor\\aha_doctor.exe",
+      "size": 9462672
+    },
+    {
+      "name": "mstscax.dll",
+      "path": "C:\\Windows\\System32\\mstscax.dll",
+      "size": 9396224
+    },
+    {
+      "name": "migcore.dll",
+      "path": "C:\\Windows\\System32\\migwiz\\migcore.dll",
+      "size": 9315832
+    },
+    {
+      "name": "sscronet.dll",
+      "path": "D:\\TRAE SOLO CN\\sscronet.dll",
+      "size": 9093520
+    },
+    {
+      "name": "windows.storage.dll",
+      "path": "C:\\Windows\\System32\\windows.storage.dll",
+      "size": 9046536
+    },
+    {
+      "name": "mip_core_gn.dll",
+      "path": "C:\\Windows\\System32\\Microsoft-Edge-WebView\\mip_core_gn.dll",
+      "size": 8627056
+    },
+    {
+      "name": "libGLESv2.dll",
+      "path": "D:\\TRAE SOLO CN\\libGLESv2.dll",
+      "size": 8420752
+    },
+    {
+      "name": "BingMaps.dll",
+      "path": "C:\\Windows\\System32\\BingMaps.dll",
+      "size": 8118272
+    },
+    {
+      "name": "shell32.dll",
+      "path": "C:\\Windows\\System32\\shell32.dll",
+      "size": 7984648
+    },
+    {
+      "name": "Chakra.dll",
+      "path": "C:\\Windows\\System32\\Chakra.dll",
+      "size": 7938048
+    },
+    {
+      "name": "ieframe.dll",
+      "path": "C:\\Windows\\System32\\ieframe.dll",
+      "size": 7458816
+    },
+    {
+      "name": "F12Script.dll",
+      "path": "C:\\Windows\\System32\\F12\\F12Script.dll",
+      "size": 7401472
+    },
+    {
+      "name": "ffmpeg.exe",
+      "path": "D:\\TRAE SOLO CN\\resources\\app\\bin\\ffmpeg.exe",
+      "size": 7384464
+    },
+    {
+      "name": "metasecml.dll",
+      "path": "D:\\TRAE SOLO CN\\metasecml.dll",
+      "size": 7332240
+    },
+    {
+      "name": "ffprobe.exe",
+      "path": "D:\\TRAE SOLO CN\\resources\\app\\bin\\ffprobe.exe",
+      "size": 7280016
+    },
+    {
+      "name": "dbgeng.dll",
+      "path": "C:\\Windows\\System32\\dbgeng.dll",
+      "size": 7225344
+    },
+    {
+      "name": "Windows.Media.Protection.PlayReady.dll",
+      "path": "C:\\Windows\\System32\\Windows.Media.Protection.PlayReady.dll",
+      "size": 7207824
+    },
+    {
+      "name": "libGLESv2.dll",
+      "path": "C:\\Windows\\System32\\Microsoft-Edge-WebView\\libGLESv2.dll",
+      "size": 7124752
+    },
+    {
+      "name": "Windows.Media.dll",
+      "path": "C:\\Windows\\System32\\Windows.Media.dll",
+      "size": 6984648
+    },
+    {
+      "name": "windowsudk.shellcommon.dll",
+      "path": "C:\\Windows\\System32\\windowsudk.shellcommon.dll",
+      "size": 6889472
+    },
+    {
+      "name": "OneCoreUAPCommonProxyStub.dll",
+      "path": "C:\\Windows\\System32\\OneCoreUAPCommonProxyStub.dll",
+      "size": 6757392
+    },
+    {
+      "name": "SRH.dll",
+      "path": "C:\\Windows\\System32\\SRH.dll",
+      "size": 6619136
+    },
+    {
+      "name": "d2d1.dll",
+      "path": "C:\\Windows\\System32\\d2d1.dll",
+      "size": 6592096
+    },
+    {
+      "name": "Windows.Data.Pdf.dll",
+      "path": "C:\\Windows\\System32\\Windows.Data.Pdf.dll",
+      "size": 6459392
+    }
+  ]
+}

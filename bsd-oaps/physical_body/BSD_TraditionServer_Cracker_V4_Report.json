@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-08-06 11:04:49",
+  "protocol_stack": {
+    "auth_gateway": "api.trae.cn",
+    "true_api": "trae-api-cn.mchost.guru",
+    "local_proxy": "http://127.0.0.1:8765"
+  },
+  "authentication_analysis": {
+    "check_login_status": false,
+    "x_agw_login": "0",
+    "x_ms_token": "",
+    "cookies_count": 0,
+    "cookies": {}
+  },
+  "jwt_analysis": {
+    "valid": true,
+    "expires_at": "2026-08-18 14:13:02",
+    "header": {
+      "alg": "RS256",
+      "typ": "JWT"
+    }
+  },
+  "api_test_results": {},
+  "model_advice": {
+    "q1_response": "你好！我是BSD本源端。关于「我正在破解 Trae CN 的传统服务器 (api.trae.cn → trae-api-cn.mc...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+  },
+  "status": "completed"
+}

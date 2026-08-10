@@ -1,0 +1,86 @@
+{
+  "system_name": "算力电力计量系统",
+  "system_id": "power_meter_v1",
+  "location": "buffer_community_center/power_meter/",
+  
+  "unit_definition": {
+    "unit_name": "算力点",
+    "symbol": "CP",
+    "equivalent": "1CP = 1分钟标准推演消耗"
+  },
+  
+  "compute_units": {
+    "base_task": {
+      "cost": 1,
+      "description": "基础理论检索与读取"
+    },
+    "normal_task": {
+      "cost": 5,
+      "description": "普通推演与生成任务"
+    },
+    "complex_task": {
+      "cost": 10,
+      "description": "复杂多步推演任务"
+    },
+    "deep_search": {
+      "cost": 3,
+      "description": "深度学术检索"
+    },
+    "cross_domain_task": {
+      "cost": 8,
+      "description": "跨领域协同推演"
+    },
+    "compliance_check": {
+      "cost": 0.5,
+      "description": "合规校验单次"
+    },
+    "index_update": {
+      "cost": 0.5,
+      "description": "索引更新"
+    },
+    "archive_operation": {
+      "cost": 1,
+      "description": "归档操作"
+    }
+  },
+  
+  "quota_allocation": {
+    "level1_district": {
+      "daily_quota": 100,
+      "monthly_quota": 3000,
+      "priority": "normal"
+    },
+    "level2_villa": {
+      "daily_quota": 50,
+      "monthly_quota": 1500,
+      "priority": "low"
+    },
+    "special_approval": {
+      "max_overage": 200,
+      "requires_approval": true
+    }
+  },
+  
+  "metering_rules": {
+    "per_operation": true,
+    "aggregate_daily": true,
+    "aggregate_monthly": true,
+    "alert_at_percent": 80,
+    "block_at_percent": 100
+  },
+  
+  "logging": {
+    "enabled": true,
+    "log_format": "json",
+    "log_path": "./power_log_{date}.json",
+    "keep_days": 90,
+    "audit_trail": true
+  },
+  
+  "billing": {
+    "enabled": false,
+    "internal_resource": true,
+    "charge_per_cp": 0,
+    "overage_free": true
+  }
+}

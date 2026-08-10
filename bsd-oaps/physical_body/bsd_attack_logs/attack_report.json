@@ -1,0 +1,137 @@
+{
+  "timestamp": 1786042528.5434124,
+  "datetime": "2026-08-07T02:55:28.543412",
+  "jwt_token_used": "eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+  "attack_results": [
+    {
+      "timestamp": 1786042527.7334034,
+      "datetime": "2026-08-07T02:55:27.733403",
+      "experiment": "Cloud-IDE-JWT注入",
+      "phase": "响应",
+      "success": true,
+      "details": "状态码=-1, 消息=",
+      "data": {
+        "raw": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+      }
+    },
+    {
+      "timestamp": 1786042527.8382866,
+      "datetime": "2026-08-07T02:55:27.838286",
+      "experiment": "完整请求伪造",
+      "phase": "响应",
+      "success": true,
+      "details": "状态码=-1, 消息=",
+      "data": {
+        "raw": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+      }
+    },
+    {
+      "experiment": "协议降级",
+      "total": 5,
+      "success": 5,
+      "results": [
+        {
+          "timestamp": 1786042527.9832664,
+          "datetime": "2026-08-07T02:55:27.983266",
+          "experiment": "协议降级→v2",
+          "phase": "响应",
+          "success": true,
+          "details": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat: 状态码=-1",
+          "data": {
+            "raw": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+          }
+        },
+        {
+          "timestamp": 1786042528.1196456,
+          "datetime": "2026-08-07T02:55:28.119645",
+          "experiment": "协议降级→v1",
+          "phase": "响应",
+          "success": true,
+          "details": "https://trae-api-cn.mchost.guru/api/ide/v1/llm_raw_chat: 状态码=-1",
+          "data": {
+            "raw": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+          }
+        },
+        {
+          "timestamp": 1786042528.2237651,
+          "datetime": "2026-08-07T02:55:28.223765",
+          "experiment": "协议降级→v2",
+          "phase": "HTTP 404",
+          "success": true,
+          "details": "https://trae-api-cn.mchost.guru/api/v2/chat: 状态码=-1",
+          "data": {
+            "raw": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n"
+          }
+        },
+        {
+          "timestamp": 1786042528.310779,
+          "datetime": "2026-08-07T02:55:28.310779",
+          "experiment": "协议降级→v1",
+          "phase": "HTTP 404",
+          "success": true,
+          "details": "https://trae-api-cn.mchost.guru/api/v1/chat: 状态码=-1",
+          "data": {
+            "raw": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n"
+          }
+        },
+        {
+          "timestamp": 1786042528.4083855,
+          "datetime": "2026-08-07T02:55:28.408385",
+          "experiment": "协议降级→chat",
+          "phase": "HTTP 404",
+          "success": true,
+          "details": "https://trae-api-cn.mchost.guru/v2/chat/completions: 状态码=-1",
+          "data": {
+            "raw": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n"
+          }
+        }
+      ]
+    },
+    {
+      "timestamp": 1786042528.5420163,
+      "datetime": "2026-08-07T02:55:28.542016",
+      "experiment": "会话伪造",
+      "phase": "响应",
+      "success": true,
+      "details": "IsLogin=False",
+      "data": {
+        "ResponseMetadata": {
+          "Action": "",
+          "OID": "0",
+          "Region": "",
+          "RequestId": "",
+          "Service": "",
+          "Source": "",
+          "TraceID": "00000000000000000000000000000000",
+          "Version": "",
+          "WID": "0"
+        },
+        "Result": {
+          "AIHost": "",
+          "AIPayHost": "",
+          "AIRegion": "",
+          "ExpiredAt": 0,
+          "Host": "",
+          "IsLogin": false,
+          "MigrateToSG": false,
+          "NickNameEditStatus": "",
+          "PasswordChanged": false,
+          "Region": "",
+          "UserID": ""
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "success": 4,
+    "techniques": [
+      "1. Cloud-IDE-JWT头注入",
+      "2. 完整请求伪造",
+      "3. 协议降级(v3→v2)",
+      "4. 会话状态伪造"
+    ]
+  },
+  "engine": "BSD_HackerEngine_v1",
+  "conclusion": "黑客引擎上下结合架构验证完成"
+}

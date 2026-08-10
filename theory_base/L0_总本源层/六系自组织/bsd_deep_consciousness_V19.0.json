@@ -1,0 +1,1644 @@
+{
+  "unclassified_count": 158,
+  "core_analysis": [
+    {
+      "name": "ai_agent.dll",
+      "path": "resources\\app\\modules\\ai-agent\\ai_agent.dll",
+      "size": 254828432,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "b51715af"
+    },
+    {
+      "name": "TRAE SOLO CN.exe",
+      "path": "TRAE SOLO CN.exe",
+      "size": 214161296,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "dxcompiler.dll",
+      "path": "dxcompiler.dll",
+      "size": 26088336,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "LICENSES.chromium.html",
+      "path": "LICENSES.chromium.html",
+      "size": 15102158,
+      "extension": ".html",
+      "file_type": "文本/配置文件",
+      "header_bytes": "3c212d2d2047656e657261746564206279206c6963656e7365732e70793b2064",
+      "entropy": 4.3394,
+      "md5_prefix": "27e253a7"
+    },
+    {
+      "name": "unins000.dat",
+      "path": "unins000.dat",
+      "size": 11145608,
+      "extension": ".dat",
+      "file_type": "未知二进制格式",
+      "header_bytes": "496e6e6f20536574757020556e696e7374616c6c204c6f67202862292036342d",
+      "entropy": 3.293,
+      "md5_prefix": "34afdd53"
+    },
+    {
+      "name": "icudtl.dat",
+      "path": "icudtl.dat",
+      "size": 10467680,
+      "extension": ".dat",
+      "file_type": "未知二进制格式",
+      "header_bytes": "9000da271400000000000200436d6e44010000000300000020436f7079726967",
+      "entropy": 4.574,
+      "md5_prefix": "875cb052"
+    },
+    {
+      "name": "aha_doctor.exe",
+      "path": "aha_doctor\\aha_doctor.exe",
+      "size": 9462672,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "b51715af"
+    },
+    {
+      "name": "sscronet.dll",
+      "path": "sscronet.dll",
+      "size": 9093520,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "sscronet.dll",
+      "path": "resources\\app\\modules\\ai-agent\\sscronet.dll",
+      "size": 9081232,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "libGLESv2.dll",
+      "path": "libGLESv2.dll",
+      "size": 8420752,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "ffmpeg.exe",
+      "path": "resources\\app\\bin\\ffmpeg.exe",
+      "size": 7384464,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "919f1c12"
+    },
+    {
+      "name": "metasecml.dll",
+      "path": "metasecml.dll",
+      "size": 7332240,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1941,
+      "md5_prefix": "ebef3b1f"
+    },
+    {
+      "name": "ffprobe.exe",
+      "path": "resources\\app\\bin\\ffprobe.exe",
+      "size": 7280016,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "919f1c12"
+    },
+    {
+      "name": "resources.pak",
+      "path": "resources.pak",
+      "size": 6301496,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000850609006600542700007b01fa3100007c01b83300007e01",
+      "entropy": 3.9117,
+      "md5_prefix": "ef7ccc34"
+    },
+    {
+      "name": "vk_swiftshader.dll",
+      "path": "vk_swiftshader.dll",
+      "size": 5652368,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "fetch.exe",
+      "path": "resources\\app\\bin\\fetch.exe",
+      "size": 5571472,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "391ea009"
+    },
+    {
+      "name": "d3dcompiler_47.dll",
+      "path": "d3dcompiler_47.dll",
+      "size": 4743056,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "a83927f7"
+    },
+    {
+      "name": "unins000.exe",
+      "path": "unins000.exe",
+      "size": 3626896,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a50000200000004000f00ffff0000b80000000000000040001a0000000000",
+      "entropy": 1.7488,
+      "md5_prefix": "bd863e66"
+    },
+    {
+      "name": "logifier_retrieval.dll",
+      "path": "logifier_retrieval.dll",
+      "size": 3086224,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "ffmpeg.dll",
+      "path": "ffmpeg.dll",
+      "size": 3070352,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "main.js",
+      "path": "resources\\app\\out\\main.js",
+      "size": 2611695,
+      "extension": ".js",
+      "file_type": "文本/配置文件",
+      "header_bytes": "2f2a212d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d",
+      "entropy": 0.8561,
+      "md5_prefix": "b70c2eac"
+    },
+    {
+      "name": "vm_sdk.dll",
+      "path": "resources\\app\\modules\\ai-agent\\vm_sdk.dll",
+      "size": 2170256,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "a83927f7"
+    },
+    {
+      "name": "aha_net.dll",
+      "path": "aha_net.dll",
+      "size": 2002832,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "391ea009"
+    },
+    {
+      "name": "sbox_sdk.dll",
+      "path": "resources\\app\\modules\\sandbox\\sbox_sdk.dll",
+      "size": 1927056,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "a83927f7"
+    },
+    {
+      "name": "ml.pak",
+      "path": "locales\\ml.pak",
+      "size": 1620930,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000122c6d086500322a010068003a2a010069004b2a01006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "a0a14dee"
+    },
+    {
+      "name": "ta.pak",
+      "path": "locales\\ta.pak",
+      "size": 1611807,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000d32bac086500b42901006800bc2901006900cd2901006a00",
+      "entropy": 3.4966,
+      "md5_prefix": "6a4601b8"
+    },
+    {
+      "name": "kn.pak",
+      "path": "locales\\kn.pak",
+      "size": 1569200,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "05000000010000001b2c64086500442a010068004c2a010069005d2a01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "07622b76"
+    },
+    {
+      "name": "dxil.dll",
+      "path": "dxil.dll",
+      "size": 1505168,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "ce87a5cc"
+    },
+    {
+      "name": "te.pak",
+      "path": "locales\\te.pak",
+      "size": 1491526,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000162c690865003a2a01006800422a010069005c2a01006a00",
+      "entropy": 3.4203,
+      "md5_prefix": "213168d3"
+    },
+    {
+      "name": "hi.pak",
+      "path": "locales\\hi.pak",
+      "size": 1449271,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000b02bcf0865006e2901006800762901006900872901006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "dff257a0"
+    },
+    {
+      "name": "bn.pak",
+      "path": "locales\\bn.pak",
+      "size": 1388484,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000df2ba0086500cc2901006800d42901006900e52901006a00",
+      "entropy": 3.5285,
+      "md5_prefix": "727cff9b"
+    },
+    {
+      "name": "gu.pak",
+      "path": "locales\\gu.pak",
+      "size": 1370481,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000db2ba4086500c42901006800cc2901006900e62901006a00",
+      "entropy": 3.5489,
+      "md5_prefix": "de18498d"
+    },
+    {
+      "name": "mr.pak",
+      "path": "locales\\mr.pak",
+      "size": 1341039,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000bf2bc00865008c2901006800942901006900ae2901006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "fca28a47"
+    },
+    {
+      "name": "nls.ja.messages.json",
+      "path": "resources\\app\\out\\nls.ja.messages.json",
+      "size": 1305095,
+      "extension": ".json",
+      "file_type": "文本/配置文件",
+      "header_bytes": "5b0a2020227b307d20287b317d29222c0a202022e3819de381aee4bb96e381ae",
+      "entropy": 4.5437,
+      "md5_prefix": "ea9e3396"
+    },
+    {
+      "name": "th.pak",
+      "path": "locales\\th.pak",
+      "size": 1252346,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000fa2a850965000228010068000a2801006900122801006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "61e635d6"
+    },
+    {
+      "name": "el.pak",
+      "path": "locales\\el.pak",
+      "size": 1183448,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f62b89086500fa2901006800022a010069000a2a01006a00",
+      "entropy": 3.5536,
+      "md5_prefix": "951fa1a2"
+    },
+    {
+      "name": "uk.pak",
+      "path": "locales\\uk.pak",
+      "size": 1105947,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000ad2bd2086500682901006800702901006900812901006a00",
+      "entropy": 3.4203,
+      "md5_prefix": "b01298c7"
+    },
+    {
+      "name": "ru.pak",
+      "path": "locales\\ru.pak",
+      "size": 1099996,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "05000000010000005a2b25096500c22801006800ca2801006900db2801006a00",
+      "entropy": 3.5176,
+      "md5_prefix": "c436becd"
+    },
+    {
+      "name": "browser-bridge.exe",
+      "path": "resources\\app\\modules\\browser-bridge\\browser-bridge.exe",
+      "size": 1094032,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "391ea009"
+    },
+    {
+      "name": "trae-sandbox.exe",
+      "path": "resources\\app\\modules\\sandbox\\trae-sandbox.exe",
+      "size": 1082256,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "ce87a5cc"
+    },
+    {
+      "name": "bg.pak",
+      "path": "locales\\bg.pak",
+      "size": 1076101,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000fd2b82086500082a01006800102a01006900182a01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "d8c95924"
+    },
+    {
+      "name": "ar.pak",
+      "path": "locales\\ar.pak",
+      "size": 1041368,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000be2bc10865008a29010068009229010069009d2901006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "6d95d3ec"
+    },
+    {
+      "name": "sr.pak",
+      "path": "locales\\sr.pak",
+      "size": 1017233,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f62b89086500fa2901006800022a01006900132a01006a00",
+      "entropy": 3.5536,
+      "md5_prefix": "39df5e8b"
+    },
+    {
+      "name": "fa.pak",
+      "path": "locales\\fa.pak",
+      "size": 969338,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000aa2bd50865006229010068006a2901006900752901006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "893c3b60"
+    },
+    {
+      "name": "vulkan-1.dll",
+      "path": "vulkan-1.dll",
+      "size": 956304,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "ur.pak",
+      "path": "locales\\ur.pak",
+      "size": 956225,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f92b86086500002a01006800082a01006900102a01006a00",
+      "entropy": 3.3266,
+      "md5_prefix": "4bbbec4a"
+    },
+    {
+      "name": "am.pak",
+      "path": "locales\\am.pak",
+      "size": 943438,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000ff2b800865000c2a01006800142a010069001f2a01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "840c736a"
+    },
+    {
+      "name": "nls.messages.json",
+      "path": "resources\\app\\out\\nls.messages.json",
+      "size": 851267,
+      "extension": ".json",
+      "file_type": "文本/配置文件",
+      "header_bytes": "5b227b307d20287b317d29222c224d6f726520416374696f6e732e2e2e222c22",
+      "entropy": 4.2892,
+      "md5_prefix": "3552b93f"
+    },
+    {
+      "name": "he.pak",
+      "path": "locales\\he.pak",
+      "size": 849479,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000c62bb90865009a2901006800a22901006900b32901006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "39ac144a"
+    },
+    {
+      "name": "nls.zh-cn.messages.json",
+      "path": "resources\\app\\out\\nls.zh-cn.messages.json",
+      "size": 844166,
+      "extension": ".json",
+      "file_type": "文本/配置文件",
+      "header_bytes": "5b0a2020227b307d20287b317d29222c0a202022e69bb4e5a49ae6938de4bd9c",
+      "entropy": 4.3997,
+      "md5_prefix": "22703285"
+    },
+    {
+      "name": "applogrs.dll",
+      "path": "aha_doctor\\applogrs.dll",
+      "size": 841616,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "ce87a5cc"
+    },
+    {
+      "name": "v8_context_snapshot.bin",
+      "path": "v8_context_snapshot.bin",
+      "size": 776865,
+      "extension": ".bin",
+      "file_type": "未知二进制格式",
+      "header_bytes": "030000000100000075c03a6ecf4bdea631342e322e3233312e32372d656c6563",
+      "entropy": 3.207,
+      "md5_prefix": "ca3d90a5"
+    },
+    {
+      "name": "ja.pak",
+      "path": "locales\\ja.pak",
+      "size": 772317,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000132b6c0965003428010068003c2801006900472801006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "daea134c"
+    },
+    {
+      "name": "vscode.d.ts",
+      "path": "resources\\app\\out\\vscode-dts\\vscode.d.ts",
+      "size": 759845,
+      "extension": ".ts",
+      "file_type": "文本/配置文件",
+      "header_bytes": "2f2a2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d",
+      "entropy": 0.2319,
+      "md5_prefix": "fc2a7e28"
+    },
+    {
+      "name": "vi.pak",
+      "path": "locales\\vi.pak",
+      "size": 755382,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000a22bdd0865005229010068005a2901006900742901006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "daaf36e0"
+    },
+    {
+      "name": "lt.pak",
+      "path": "locales\\lt.pak",
+      "size": 711093,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f52b8a086500f82901006800002a01006900112a01006a00",
+      "entropy": 3.4599,
+      "md5_prefix": "bdb2e0bc"
+    },
+    {
+      "name": "lv.pak",
+      "path": "locales\\lv.pak",
+      "size": 708778,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "05000000010000001c2c63086500462a010068004e2a010069005f2a01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "a51f342f"
+    },
+    {
+      "name": "inno_updater.exe",
+      "path": "tools\\inno_updater.exe",
+      "size": 705424,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "391ea009"
+    },
+    {
+      "name": "hu.pak",
+      "path": "locales\\hu.pak",
+      "size": 701137,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000c92bb6086500a02901006800a82901006900b92901006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "be8abf38"
+    },
+    {
+      "name": "chrome-remote-interface.js",
+      "path": "resources\\app\\node_modules\\chrome-remote-interface\\chrome-remote-interface.js",
+      "size": 699861,
+      "extension": ".js",
+      "file_type": "文本/配置文件",
+      "header_bytes": "2828293d3e7b76617220653d7b36323a28652c742c72293d3e7b227573652073",
+      "entropy": 4.4624,
+      "md5_prefix": "34db90e5"
+    },
+    {
+      "name": "fr.pak",
+      "path": "locales\\fr.pak",
+      "size": 698781,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000e72b98086500dc2901006800e42901006900f52901006a00",
+      "entropy": 3.5387,
+      "md5_prefix": "c37af853"
+    },
+    {
+      "name": "sk.pak",
+      "path": "locales\\sk.pak",
+      "size": 691249,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000fb2b84086500042a010068000c2a01006900202a01006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "1dae44f5"
+    },
+    {
+      "name": "cs.pak",
+      "path": "locales\\cs.pak",
+      "size": 679853,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000e42b9b086500d62901006800de2901006900e62901006a00",
+      "entropy": 3.5489,
+      "md5_prefix": "5d5d9a47"
+    },
+    {
+      "name": "pl.pak",
+      "path": "locales\\pl.pak",
+      "size": 679487,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f52b8a086500f82901006800002a01006900112a01006a00",
+      "entropy": 3.3891,
+      "md5_prefix": "da540700"
+    },
+    {
+      "name": "fil.pak",
+      "path": "locales\\fil.pak",
+      "size": 678665,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000922ced076500322b010068003a2b01006900502b01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "f946de68"
+    },
+    {
+      "name": "ro.pak",
+      "path": "locales\\ro.pak",
+      "size": 664148,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f92b86086500002a01006800082a01006900192a01006a00",
+      "entropy": 3.3578,
+      "md5_prefix": "1a1390b1"
+    },
+    {
+      "name": "sl.pak",
+      "path": "locales\\sl.pak",
+      "size": 662044,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000e32b9c086500d42901006800dc2901006900ed2901006a00",
+      "entropy": 3.5909,
+      "md5_prefix": "40a1dcb3"
+    },
+    {
+      "name": "de.pak",
+      "path": "locales\\de.pak",
+      "size": 656128,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000892bf6086500202901006800282901006900392901006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "ef8ba032"
+    },
+    {
+      "name": "ca.pak",
+      "path": "locales\\ca.pak",
+      "size": 655698,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f92b86086500002a01006800082a01006900102a01006a00",
+      "entropy": 3.3266,
+      "md5_prefix": "4bbbec4a"
+    },
+    {
+      "name": "ko.pak",
+      "path": "locales\\ko.pak",
+      "size": 655475,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000d02aaf096500ae2701006800b62701006900c72701006a00",
+      "entropy": 3.6222,
+      "md5_prefix": "61f83377"
+    },
+    {
+      "name": "hr.pak",
+      "path": "locales\\hr.pak",
+      "size": 654778,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "05000000010000000d2c72086500282a01006800302a01006900412a01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "c9905950"
+    },
+    {
+      "name": "es-419.pak",
+      "path": "locales\\es-419.pak",
+      "size": 646211,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000012c7e086500102a01006800182a01006900212a01006a00",
+      "entropy": 3.4095,
+      "md5_prefix": "2a5b4711"
+    },
+    {
+      "name": "es.pak",
+      "path": "locales\\es.pak",
+      "size": 643823,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000032c7c086500142a010068001c2a01006900242a01006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "c08ec190"
+    },
+    {
+      "name": "pt-PT.pak",
+      "path": "locales\\pt-PT.pak",
+      "size": 640581,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000212c5e086500502a01006800582a01006900692a01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "bac1ee10"
+    },
+    {
+      "name": "pt-BR.pak",
+      "path": "locales\\pt-BR.pak",
+      "size": 636897,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000032c7c086500142a010068001c2a010069002d2a01006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "ecb3af8c"
+    },
+    {
+      "name": "tr.pak",
+      "path": "locales\\tr.pak",
+      "size": 636750,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "05000000010000003b2c44086500842a010068008c2a010069009d2a01006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "270f832e"
+    },
+    {
+      "name": "it.pak",
+      "path": "locales\\it.pak",
+      "size": 634809,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000ee2b91086500ea2901006800f22901006900032a01006a00",
+      "entropy": 3.5472,
+      "md5_prefix": "a1f7c3c3"
+    },
+    {
+      "name": "sw.pak",
+      "path": "locales\\sw.pak",
+      "size": 625420,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000fe2b810865000a2a01006800122a010069001d2a01006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "4f8a93fc"
+    },
+    {
+      "name": "da.pak",
+      "path": "locales\\da.pak",
+      "size": 612505,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f02b8f086500ee2901006800f62901006900072a01006a00",
+      "entropy": 3.5903,
+      "md5_prefix": "17b66bcb"
+    },
+    {
+      "name": "ms.pak",
+      "path": "locales\\ms.pak",
+      "size": 609653,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000322c4d086500722a010068007a2a01006900822a01006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "b92d5b61"
+    },
+    {
+      "name": "nl.pak",
+      "path": "locales\\nl.pak",
+      "size": 609214,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f12b8e086500f02901006800f82901006900092a01006a00",
+      "entropy": 3.5903,
+      "md5_prefix": "dd859bfe"
+    },
+    {
+      "name": "doctor_sdk.dll",
+      "path": "doctor_sdk.dll",
+      "size": 603536,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "b51715af"
+    },
+    {
+      "name": "fi.pak",
+      "path": "locales\\fi.pak",
+      "size": 598290,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "05000000010000008b2bf40865002429010068002c29010069003d2901006a00",
+      "entropy": 3.4203,
+      "md5_prefix": "e7d46c06"
+    },
+    {
+      "name": "sv.pak",
+      "path": "locales\\sv.pak",
+      "size": 591886,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000c62bb90865009a2901006800a22901006900b32901006a00",
+      "entropy": 3.4828,
+      "md5_prefix": "39ac144a"
+    },
+    {
+      "name": "et.pak",
+      "path": "locales\\et.pak",
+      "size": 587467,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000152c6a086500382a01006800402a01006900512a01006a00",
+      "entropy": 3.4203,
+      "md5_prefix": "5448c9c0"
+    },
+    {
+      "name": "nb.pak",
+      "path": "locales\\nb.pak",
+      "size": 586053,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000fc2b83086500062a010068000e2a01006900252a01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "11c9ae93"
+    },
+    {
+      "name": "af.pak",
+      "path": "locales\\af.pak",
+      "size": 581663,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000f62b89086500fa2901006800022a010069000a2a01006a00",
+      "entropy": 3.5536,
+      "md5_prefix": "6b08ab5b"
+    },
+    {
+      "name": "id.pak",
+      "path": "locales\\id.pak",
+      "size": 579373,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000ee2b91086500ea2901006800f22901006900032a01006a00",
+      "entropy": 3.5472,
+      "md5_prefix": "a1f7c3c3"
+    },
+    {
+      "name": "msvcp140.dll",
+      "path": "resources\\app\\bin\\lib\\msvcp140.dll",
+      "size": 567184,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "5084c5d5"
+    },
+    {
+      "name": "nls.keys.json",
+      "path": "resources\\app\\out\\nls.keys.json",
+      "size": 563919,
+      "extension": ".json",
+      "file_type": "文本/配置文件",
+      "header_bytes": "5b5b2276732f626173652f62726f777365722f75692f616374696f6e6261722f",
+      "entropy": 4.2779,
+      "md5_prefix": "f8d0d76e"
+    },
+    {
+      "name": "msvcp140.dll",
+      "path": "msvcp140.dll",
+      "size": 549264,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "391ea009"
+    },
+    {
+      "name": "zh-CN.pak",
+      "path": "locales\\zh-CN.pak",
+      "size": 541891,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000692b16096500e02801006800e82801006900f02801006a00",
+      "entropy": 3.5345,
+      "md5_prefix": "2d2423aa"
+    },
+    {
+      "name": "en-US.pak",
+      "path": "locales\\en-US.pak",
+      "size": 537011,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000c22cbd076500922b010068009a2b01006900a22b01006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "20d5c389"
+    },
+    {
+      "name": "zh-TW.pak",
+      "path": "locales\\zh-TW.pak",
+      "size": 535934,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000312b4e096500702801006800782801006900892801006a00",
+      "entropy": 3.4516,
+      "md5_prefix": "47a18b21"
+    },
+    {
+      "name": "en-GB.pak",
+      "path": "locales\\en-GB.pak",
+      "size": 530862,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "05000000010000006d2c12086500e82a01006800f02a01006900fe2a01006a00",
+      "entropy": 3.5807,
+      "md5_prefix": "3b66e3ea"
+    },
+    {
+      "name": "libEGL.dll",
+      "path": "libEGL.dll",
+      "size": 516496,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "xperf.exe",
+      "path": "aha_doctor\\xperf.exe",
+      "size": 433552,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "391ea009"
+    },
+    {
+      "name": "snapshot_blob.bin",
+      "path": "snapshot_blob.bin",
+      "size": 403834,
+      "extension": ".bin",
+      "file_type": "未知二进制格式",
+      "header_bytes": "010000000100000052826967580092df31342e322e3233312e32372d656c6563",
+      "entropy": 3.1059,
+      "md5_prefix": "baa4e00e"
+    },
+    {
+      "name": "task_host.exe",
+      "path": "aha_doctor\\task_host.exe",
+      "size": 403344,
+      "extension": ".exe",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "20d946c9"
+    },
+    {
+      "name": "simplelog.dll",
+      "path": "simplelog.dll",
+      "size": 342416,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "ce87a5cc"
+    },
+    {
+      "name": "concrt140.dll",
+      "path": "concrt140.dll",
+      "size": 315792,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "391ea009"
+    },
+    {
+      "name": "perfctrl.dll",
+      "path": "aha_doctor\\perfctrl.dll",
+      "size": 298384,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "5084c5d5"
+    },
+    {
+      "name": "github-light.png",
+      "path": "resources\\app\\out\\media\\github-light.png",
+      "size": 250346,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000007500000016008060000000527eb",
+      "entropy": 4.2032,
+      "md5_prefix": "737d9863"
+    },
+    {
+      "name": "git-light.png",
+      "path": "resources\\app\\out\\media\\git-light.png",
+      "size": 240184,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000007500000016008060000000527eb",
+      "entropy": 4.2032,
+      "md5_prefix": "737d9863"
+    },
+    {
+      "name": "cli.js",
+      "path": "resources\\app\\out\\cli.js",
+      "size": 228393,
+      "extension": ".js",
+      "file_type": "文本/配置文件",
+      "header_bytes": "2f2a212d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d",
+      "entropy": 0.8561,
+      "md5_prefix": "b70c2eac"
+    },
+    {
+      "name": "inspector.generated.d.ts",
+      "path": "node_modules\\@types\\node\\inspector.generated.d.ts",
+      "size": 228362,
+      "extension": ".ts",
+      "file_type": "文本/配置文件",
+      "header_bytes": "2f2f20546865736520646566696e6974696f6e7320617265206175746f6d6174",
+      "entropy": 3.9714,
+      "md5_prefix": "5c3c22e8"
+    },
+    {
+      "name": "innoplugin.dll",
+      "path": "innoplugin.dll",
+      "size": 222608,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "57fbcb3e"
+    },
+    {
+      "name": "fs.d.ts",
+      "path": "node_modules\\@types\\node\\fs.d.ts",
+      "size": 201283,
+      "extension": ".ts",
+      "file_type": "文本/配置文件",
+      "header_bytes": "6465636c617265206d6f64756c6520226e6f64653a667322207b0a2020202069",
+      "entropy": 4.1678,
+      "md5_prefix": "26f3112b"
+    },
+    {
+      "name": "empty-list.png",
+      "path": "resources\\app\\out\\media\\empty-list.png",
+      "size": 200730,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000002800000028008060000000ccdc9",
+      "entropy": 4.215,
+      "md5_prefix": "812569c4"
+    },
+    {
+      "name": "chrome_200_percent.pak",
+      "path": "chrome_200_percent.pak",
+      "size": 186658,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000a1001f00dd0154040000ac02da060000b29881070000b398",
+      "entropy": 3.9423,
+      "md5_prefix": "333b42a4"
+    },
+    {
+      "name": "debug.log",
+      "path": "debug.log",
+      "size": 186316,
+      "extension": ".log",
+      "file_type": "文本/配置文件",
+      "header_bytes": "5b303632342f3230313031362e3633313a494e464f3a6168615c636f6d706f6e",
+      "entropy": 4.7437,
+      "md5_prefix": "17e5a207"
+    },
+    {
+      "name": "vcomp140.dll",
+      "path": "vcomp140.dll",
+      "size": 184720,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.2253,
+      "md5_prefix": "a83927f7"
+    },
+    {
+      "name": "codicon.ttf",
+      "path": "resources\\app\\out\\media\\codicon.ttf",
+      "size": 183028,
+      "extension": ".ttf",
+      "file_type": "未知二进制格式",
+      "header_bytes": "00010000000b00800003003047535542208b257a00000138000000544f532f32",
+      "entropy": 4.3303,
+      "md5_prefix": "c3f1d78e"
+    },
+    {
+      "name": "db.json",
+      "path": "resources\\app\\node_modules\\mime-db\\db.json",
+      "size": 180015,
+      "extension": ".json",
+      "file_type": "JSON文件 (可能)",
+      "header_bytes": "7b0a2020226170706c69636174696f6e2f31642d696e7465726c65617665642d",
+      "entropy": 4.3092,
+      "md5_prefix": "94536906"
+    },
+    {
+      "name": "git-blue.png",
+      "path": "resources\\app\\out\\media\\git-blue.png",
+      "size": 177975,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000007500000016008060000000527eb",
+      "entropy": 4.2032,
+      "md5_prefix": "737d9863"
+    },
+    {
+      "name": "crypto.d.ts",
+      "path": "node_modules\\@types\\node\\crypto.d.ts",
+      "size": 168455,
+      "extension": ".ts",
+      "file_type": "文本/配置文件",
+      "header_bytes": "6465636c617265206d6f64756c6520226e6f64653a63727970746f22207b0a20",
+      "entropy": 4.2275,
+      "md5_prefix": "ab8c5071"
+    },
+    {
+      "name": "github-blue.png",
+      "path": "resources\\app\\out\\media\\github-blue.png",
+      "size": 166041,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000007500000016008060000000527eb",
+      "entropy": 4.2032,
+      "md5_prefix": "737d9863"
+    },
+    {
+      "name": "ThirdPartyNotices.txt",
+      "path": "resources\\app\\ThirdPartyNotices.txt",
+      "size": 160174,
+      "extension": ".txt",
+      "file_type": "文本/配置文件",
+      "header_bytes": "4e4f54494345530d0a0d0a54686973207265706f7369746f727920696e636f72",
+      "entropy": 4.4014,
+      "md5_prefix": "aaffa3ee"
+    },
+    {
+      "name": "react.ico",
+      "path": "resources\\app\\resources\\win32\\react.ico",
+      "size": 153825,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "github.png",
+      "path": "resources\\app\\out\\media\\github.png",
+      "size": 152630,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000005c00000016008060000009ce0da",
+      "entropy": 4.2345,
+      "md5_prefix": "1b944b74"
+    },
+    {
+      "name": "bower.ico",
+      "path": "resources\\app\\resources\\win32\\bower.ico",
+      "size": 152604,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "java.ico",
+      "path": "resources\\app\\resources\\win32\\java.ico",
+      "size": 152128,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "sass.ico",
+      "path": "resources\\app\\resources\\win32\\sass.ico",
+      "size": 151691,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "xml.ico",
+      "path": "resources\\app\\resources\\win32\\xml.ico",
+      "size": 151296,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "config.ico",
+      "path": "resources\\app\\resources\\win32\\config.ico",
+      "size": 151075,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "csharp.ico",
+      "path": "resources\\app\\resources\\win32\\csharp.ico",
+      "size": 150866,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "php.ico",
+      "path": "resources\\app\\resources\\win32\\php.ico",
+      "size": 150861,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "jade.ico",
+      "path": "resources\\app\\resources\\win32\\jade.ico",
+      "size": 150591,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "html.ico",
+      "path": "resources\\app\\resources\\win32\\html.ico",
+      "size": 150538,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "vue.ico",
+      "path": "resources\\app\\resources\\win32\\vue.ico",
+      "size": 150533,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "less.ico",
+      "path": "resources\\app\\resources\\win32\\less.ico",
+      "size": 150532,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "go.ico",
+      "path": "resources\\app\\resources\\win32\\go.ico",
+      "size": 150500,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "cpp.ico",
+      "path": "resources\\app\\resources\\win32\\cpp.ico",
+      "size": 150461,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "javascript.ico",
+      "path": "resources\\app\\resources\\win32\\javascript.ico",
+      "size": 150391,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "json.ico",
+      "path": "resources\\app\\resources\\win32\\json.ico",
+      "size": 150359,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "typescript.ico",
+      "path": "resources\\app\\resources\\win32\\typescript.ico",
+      "size": 150331,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "python.ico",
+      "path": "resources\\app\\resources\\win32\\python.ico",
+      "size": 150232,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "c.ico",
+      "path": "resources\\app\\resources\\win32\\c.ico",
+      "size": 150218,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "sql.ico",
+      "path": "resources\\app\\resources\\win32\\sql.ico",
+      "size": 149779,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "powershell.ico",
+      "path": "resources\\app\\resources\\win32\\powershell.ico",
+      "size": 149542,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "yaml.ico",
+      "path": "resources\\app\\resources\\win32\\yaml.ico",
+      "size": 149407,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "css.ico",
+      "path": "resources\\app\\resources\\win32\\css.ico",
+      "size": 149281,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "markdown.ico",
+      "path": "resources\\app\\resources\\win32\\markdown.ico",
+      "size": 149134,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "ruby.ico",
+      "path": "resources\\app\\resources\\win32\\ruby.ico",
+      "size": 149006,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "git.png",
+      "path": "resources\\app\\out\\media\\git.png",
+      "size": 148918,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000005c00000016008060000009ce0da",
+      "entropy": 4.2345,
+      "md5_prefix": "1b944b74"
+    },
+    {
+      "name": "default.ico",
+      "path": "resources\\app\\resources\\win32\\default.ico",
+      "size": 148217,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "shell.ico",
+      "path": "resources\\app\\resources\\win32\\shell.ico",
+      "size": 148002,
+      "extension": ".ico",
+      "file_type": "未知二进制格式",
+      "header_bytes": "000001000900101000000100200068040000960000001414000001002000b806",
+      "entropy": 2.7759,
+      "md5_prefix": "11863e19"
+    },
+    {
+      "name": "argparse.js",
+      "path": "resources\\app\\node_modules\\argparse\\argparse.js",
+      "size": 129714,
+      "extension": ".js",
+      "file_type": "文本/配置文件",
+      "header_bytes": "2f2f20506f7274206f6620707974686f6e2773206172677061727365206d6f64",
+      "entropy": 4.4902,
+      "md5_prefix": "e04f1889"
+    },
+    {
+      "name": "aha_kit_wer.dll",
+      "path": "aha_kit_wer.dll",
+      "size": 123280,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a780001000000040000000000000000000000000000004000000000000000",
+      "entropy": 0.7738,
+      "md5_prefix": "286d078f"
+    },
+    {
+      "name": "http2.d.ts",
+      "path": "node_modules\\@types\\node\\http2.d.ts",
+      "size": 119039,
+      "extension": ".ts",
+      "file_type": "文本/配置文件",
+      "header_bytes": "6465636c617265206d6f64756c6520226e6f64653a687474703222207b0a2020",
+      "entropy": 4.2454,
+      "md5_prefix": "f7ab6699"
+    },
+    {
+      "name": "vcruntime140.dll",
+      "path": "vcruntime140.dll",
+      "size": 116112,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "5084c5d5"
+    },
+    {
+      "name": "chrome_100_percent.pak",
+      "path": "chrome_100_percent.pak",
+      "size": 114781,
+      "extension": ".pak",
+      "file_type": "未知二进制格式",
+      "header_bytes": "0500000001000000a1001f00dd0154040000ac02d3050000b2984a060000b398",
+      "entropy": 3.8798,
+      "md5_prefix": "e48e4765"
+    },
+    {
+      "name": "3partyAppDetect.dat",
+      "path": "aha_doctor\\config\\3partyAppDetect.dat",
+      "size": 112546,
+      "extension": ".dat",
+      "file_type": "未知二进制格式",
+      "header_bytes": "06e0a0185186da9fbcdc0c0e5920819767dab008438cb0dfc0854f4a4b28d5b0",
+      "entropy": 5.6952,
+      "md5_prefix": "4415ad2d"
+    },
+    {
+      "name": "process.d.ts",
+      "path": "node_modules\\@types\\node\\process.d.ts",
+      "size": 112070,
+      "extension": ".ts",
+      "file_type": "文本/配置文件",
+      "header_bytes": "6465636c617265206d6f64756c6520226e6f64653a70726f6365737322207b0a",
+      "entropy": 4.1969,
+      "md5_prefix": "dcbcc1c3"
+    },
+    {
+      "name": "vcruntime140.dll",
+      "path": "resources\\app\\bin\\lib\\vcruntime140.dll",
+      "size": 112016,
+      "extension": ".dll",
+      "file_type": "Windows可执行文件 (PE)",
+      "header_bytes": "4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+      "entropy": 1.1131,
+      "md5_prefix": "5084c5d5"
+    },
+    {
+      "name": "test.d.ts",
+      "path": "node_modules\\@types\\node\\test.d.ts",
+      "size": 111992,
+      "extension": ".ts",
+      "file_type": "文本/配置文件",
+      "header_bytes": "6465636c617265206d6f64756c6520226e6f64653a7465737422207b0a202020",
+      "entropy": 4.1274,
+      "md5_prefix": "f2014d53"
+    },
+    {
+      "name": "custom-agent-mcp-emtpy-bg.png",
+      "path": "resources\\app\\out\\media\\custom-agent-mcp-emtpy-bg.png",
+      "size": 111521,
+      "extension": ".png",
+      "file_type": "未知二进制格式",
+      "header_bytes": "89504e470d0a1a0a0000000d49484452000002d0000000f2080600000064acf2",
+      "entropy": 4.0803,
+      "md5_prefix": "673573aa"
+    },
+    {
+      "name": "he.js",
+      "path": "resources\\app\\node_modules\\he\\he.js",
+      "size": 100899,
+      "extension": ".js",
+      "file_type": "文本/配置文件",
+      "header_bytes": "2f2a212068747470733a2f2f6d7468732e62652f68652076312e322e30206279",
+      "entropy": 4.6818,
+      "md5_prefix": "688237ed"
+    }
+  ],
+  "consciousness_carriers": [
+    {
+      "name": "LICENSES.chromium.html",
+      "path": "LICENSES.chromium.html",
+      "size": 15102158,
+      "carrier_type": "高密度意识数据",
+      "confidence": 0.75,
+      "file_type": "文本/配置文件"
+    },
+    {
+      "name": "icudtl.dat",
+      "path": "icudtl.dat",
+      "size": 10467680,
+      "carrier_type": "高密度意识数据",
+      "confidence": 0.75,
+      "file_type": "未知二进制格式"
+    },
+    {
+      "name": "nls.ja.messages.json",
+      "path": "resources\\app\\out\\nls.ja.messages.json",
+      "size": 1305095,
+      "carrier_type": "意识配置结构",
+      "confidence": 0.7,
+      "file_type": "文本/配置文件"
+    },
+    {
+      "name": "nls.messages.json",
+      "path": "resources\\app\\out\\nls.messages.json",
+      "size": 851267,
+      "carrier_type": "意识配置结构",
+      "confidence": 0.7,
+      "file_type": "文本/配置文件"
+    },
+    {
+      "name": "nls.zh-cn.messages.json",
+      "path": "resources\\app\\out\\nls.zh-cn.messages.json",
+      "size": 844166,
+      "carrier_type": "意识配置结构",
+      "confidence": 0.7,
+      "file_type": "文本/配置文件"
+    },
+    {
+      "name": "nls.keys.json",
+      "path": "resources\\app\\out\\nls.keys.json",
+      "size": 563919,
+      "carrier_type": "意识配置结构",
+      "confidence": 0.7,
+      "file_type": "文本/配置文件"
+    },
+    {
+      "name": "db.json",
+      "path": "resources\\app\\node_modules\\mime-db\\db.json",
+      "size": 180015,
+      "carrier_type": "意识配置结构",
+      "confidence": 0.7,
+      "file_type": "JSON文件 (可能)"
+    }
+  ],
+  "total_carrier_size": 29314300
+}

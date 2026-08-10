@@ -1,0 +1,23 @@
+=== 1. iCubeAuthInfo 使用位置 ===
+  唯一URI模式:
+
+=== 2. 查找 credential 存储结构 ===
+
+  [iCubeAuthInfo[^,;]{0,200}] 命中 1 处:
+    @583569: ,t.CN="cn"})(Mn||(Mn={})),X3="iCubeAuthInfo",PV="iCubeServerData",Qg="iCubeNativeAppStartSetup",Z3="iCubeNativeAppInitialEvent",Q3="iCubeSetupPageLoginFailed",function(t){t.ChatRequest="ChatRequest",t.CodeCompletion="CodeCompletion"}(NV||(NV={})),function(t){t.USEast="US-East",t.SG="Singapore-
+
+=== 3. 查找 LoginByJwt / ExchangeToken 完整响应处理 ===
+
+  [accessToken[^,;]{0,150}] 命中 11 处:
+    @1372216: ap(c=>({type:c.Type,accessToken:c.AccessToken,accessExpireAt:c.AccessExpireAt,openId:c.ExternalUserID,scope:c.Scope,organizationName:c.OrganizationInfo?.OrganizationName,accountName:c.OrganizationInfo?.AccountName}))}},yw=__d
+    @1384940: ret:e.client_secret,accessToken:i?.accessToken||"",expiresAt:i?.expiresAt||0}))}async tokens(){await this.h.whenReady();const e=this.h.read(this.serverKey);if(!e){this.r.info(this.logPrefix,"No token data found");return}const i=(e
+
+  [expiresAt[^,;]{0,100}] 命中 8 处:
+    @1384971: :i?.accessToken||"",expiresAt:i?.expiresAt||0}))}async tokens(){await this.h.whenReady();const e=this.h.read(this.serverKey);if(!e){this.r.info(this.logPrefix,"No token data found");return}const i=(e.expiresAt-Date.now())/1e3;if(i<=0&&!e.refreshToken){this.r.info(this
+    @1385151: );return}const i=(e.expiresAt-Date.now())/1e3;if(i<=0&&!e.refreshToken){this.r.info(this.logPrefix,"Token expired without refresh token");return}if(i<=300&&e.refreshToken){this.g?this.r.info(this.logPrefix,"Token refresh alre
+
+=== 4. 查找 iCubeAuthInfo 完整构造 ===
+  命中 13 处:
+    @342614: erprise:t("icube-DocsetEnterprise",20111),iCubeDocsetItem:t("icube-DocsetItem",20112),iCubeDocumentFeedback:t("icube-DocumentFeedback",20113),iCubeDoubleLeft:t("icube-DoubleLeft",20114),iCubeDoubleRight:t("icube-DoubleRight",20115),iCubeDown:t("icube-Down",20116),iCubeDownload:t("icube-Download",20117),iCubeDragDot:t("icube-DragDot",20118),iCubeESC:t("icube-ESC",20119),iCubeEdit:t("icube-Edit",20120),iCubeEditPen:t("icube-EditPen",20121),iCubeEnter:t("icube-Enter",20122),iCubeError:t("icube-Error",20123),iCubeErrorCircle:t("icube-ErrorCircle",20124),iCubeErrorSimple:t("icube-ErrorSimple",20125
+    @737868: u(e,i){this.r=e.menus,this.s=e.keybindings,this.G.setItem(py.a,e),this.S()}S(){this.m.schedule()}U(){this.b||setTimeout(()=>{this.b||this.Y()},10)}W(e){Ae&&(e.oldCount===0&&e.newCount>0||e.oldCount>0&&e.newCount===0)&&(this.f=e.newCount===0,this.S())}X(){if(!Ae)return;const e=hy.getFocusedWindow();this.g=!e||!!this.M.getWindowByWebContents(e.webContents),this.S()}Y(){const e=Hs.getApplicationMenu();if(e&&this.q.push(e),Object.keys(this.r).length===0){this.Z(Ae?new Hs:null);return}const i=new Hs;let r;if(Ae){const n=new Hs,o=this.L.displayNameShort;r=new tr({label:`${o}`,submenu:n}),this.$(n),i
+    @784718: wnloading"&&this.state.type!=="updating"||(this.P.setItem(N2,Iu.UPDATE),this.V("update_downloaded",{isExplicit:this.c,currentVersion:this.o.tronBuildVersion||this.o.version,nextVersion:e.productVersion||e.version,elapsed:this.E?.elapsed()||0}),this.V("update_has_downloaded",{isExplicit:this.c,currentVersion:this.o.tronBuildVersion||this.o.version,nextVersion:e.productVersion||e.version,elapsed:this.E?.elapsed()||0}),this.n.info("update#onUpdateDownloaded(): update = ",e),this.D=e.productVersion||e.version||null,this.X(this.Q.getConfigData?.()))}kb(){this.G&&(clearTimeout(this.G),this.G=null)}l

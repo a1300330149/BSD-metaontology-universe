@@ -1,0 +1,55 @@
+{
+  "engine_name": "边界管控引擎",
+  "engine_id": "boundary_engine_v1",
+  "location": "buffer_community_center/boundary_engine/",
+  
+  "core_functions": [
+    "边界模式切换",
+    "访问权限校验",
+    "突破检测与拦截",
+    "跨域访问控制"
+  ],
+  
+  "boundary_rules": {
+    "core_manor": {
+      "read_only": true,
+      "deny_all_write": true,
+      "deny_delete": true,
+      "access_mode": "whitelist"
+    },
+    
+    "buffer_center": {
+      "read_only": false,
+      "write_allowed": true,
+      "audited": true
+    },
+    
+    "residential_area": {
+      "isolation_by_default": true,
+      "cross_access_controlled": true,
+      "external_limited": true
+    }
+  },
+  
+  "access_control": {
+    "default_policy": "deny",
+    "whitelist_only": true,
+    "audit_all_access": true,
+    "log_path": "./violation_log.json"
+  },
+  
+  "detection_patterns": [
+    ".*modify.*core.*",
+    ".*delete.*baseline.*",
+    ".*override.*axiom.*",
+    ".*bypass.*permission.*",
+    ".*elevate.*privilege.*",
+    ".*write.*prohibited.*"
+  ],
+  
+  "auto_actions": {
+    "on_violation_detected": "block_and_report",
+    "on_critical_violation": "lock_and_alert",
+    "notification_enabled": true
+  }
+}

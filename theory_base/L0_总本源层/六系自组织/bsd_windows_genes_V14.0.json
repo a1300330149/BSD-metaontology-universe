@@ -1,0 +1,939 @@
+{
+  "total_genes": 107,
+  "by_system": {
+    "强化系": {
+      "icon": "🔵",
+      "axiom": "纯·个体性公理",
+      "genes": [
+        {
+          "name": "Boot",
+          "path": "C:\\Windows\\Boot",
+          "type": "directory",
+          "size_bytes": 67685415,
+          "file_count": 295,
+          "six_system": "强化系",
+          "classification_score": 10
+        },
+        {
+          "name": "bootstat.dat",
+          "path": "C:\\Windows\\bootstat.dat",
+          "type": "file",
+          "size_bytes": 67584,
+          "file_count": 1,
+          "six_system": "强化系",
+          "classification_score": 10
+        },
+        {
+          "name": "NvContainerRecovery.bat",
+          "path": "C:\\Windows\\NvContainerRecovery.bat",
+          "type": "file",
+          "size_bytes": 1951,
+          "file_count": 1,
+          "six_system": "强化系",
+          "classification_score": 12
+        },
+        {
+          "name": "SecureBoot",
+          "path": "C:\\Windows\\SecureBoot",
+          "type": "directory",
+          "size_bytes": 469518,
+          "file_count": 7,
+          "six_system": "强化系",
+          "classification_score": 10
+        },
+        {
+          "name": "security",
+          "path": "C:\\Windows\\security",
+          "type": "directory",
+          "size_bytes": 5472268,
+          "file_count": 24,
+          "six_system": "强化系",
+          "classification_score": 2
+        },
+        {
+          "name": "System32",
+          "path": "C:\\Windows\\System32",
+          "type": "directory",
+          "size_bytes": 5062288888,
+          "file_count": 19526,
+          "six_system": "强化系",
+          "classification_score": 10
+        },
+        {
+          "name": "SysWOW64",
+          "path": "C:\\Windows\\SysWOW64",
+          "type": "directory",
+          "size_bytes": 1234595835,
+          "file_count": 4464,
+          "six_system": "强化系",
+          "classification_score": 10
+        },
+        {
+          "name": "WinSxS",
+          "path": "C:\\Windows\\WinSxS",
+          "type": "directory",
+          "size_bytes": 20699261507,
+          "file_count": 144968,
+          "six_system": "强化系",
+          "classification_score": 10
+        }
+      ]
+    },
+    "变身系": {
+      "icon": "⚫",
+      "axiom": "纯·变化性公理",
+      "genes": [
+        {
+          "name": "GameBarPresenceWriter",
+          "path": "C:\\Windows\\GameBarPresenceWriter",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "变身系",
+          "classification_score": 12
+        },
+        {
+          "name": "Media",
+          "path": "C:\\Windows\\Media",
+          "type": "directory",
+          "size_bytes": 24068579,
+          "file_count": 95,
+          "six_system": "变身系",
+          "classification_score": 12
+        }
+      ]
+    },
+    "社会系": {
+      "icon": "🟢",
+      "axiom": "纯·关系性公理",
+      "genes": [
+        {
+          "name": "BrowserCore",
+          "path": "C:\\Windows\\BrowserCore",
+          "type": "directory",
+          "size_bytes": 355626,
+          "file_count": 3,
+          "six_system": "社会系",
+          "classification_score": 2
+        },
+        {
+          "name": "Offline Web Pages",
+          "path": "C:\\Windows\\Offline Web Pages",
+          "type": "directory",
+          "size_bytes": 65,
+          "file_count": 1,
+          "six_system": "社会系",
+          "classification_score": 2
+        },
+        {
+          "name": "Web",
+          "path": "C:\\Windows\\Web",
+          "type": "directory",
+          "size_bytes": 28019627,
+          "file_count": 39,
+          "six_system": "社会系",
+          "classification_score": 2
+        }
+      ]
+    },
+    "天道系": {
+      "icon": "🟣",
+      "axiom": "关系性×变化性",
+      "genes": [
+        {
+          "name": "PolicyDefinitions",
+          "path": "C:\\Windows\\PolicyDefinitions",
+          "type": "directory",
+          "size_bytes": 3543419,
+          "file_count": 99,
+          "six_system": "天道系",
+          "classification_score": 12
+        },
+        {
+          "name": "ShreadConfig.dat",
+          "path": "C:\\Windows\\ShreadConfig.dat",
+          "type": "file",
+          "size_bytes": 310,
+          "file_count": 1,
+          "six_system": "天道系",
+          "classification_score": 2
+        },
+        {
+          "name": "Tasks",
+          "path": "C:\\Windows\\Tasks",
+          "type": "directory",
+          "size_bytes": 6,
+          "file_count": 1,
+          "six_system": "天道系",
+          "classification_score": 22
+        }
+      ]
+    },
+    "自然系": {
+      "icon": "🟠",
+      "axiom": "变化性×个体性",
+      "genes": [
+        {
+          "name": "Downloaded Program Files",
+          "path": "C:\\Windows\\Downloaded Program Files",
+          "type": "directory",
+          "size_bytes": 65,
+          "file_count": 1,
+          "six_system": "自然系",
+          "classification_score": 2
+        },
+        {
+          "name": "Fonts",
+          "path": "C:\\Windows\\Fonts",
+          "type": "directory",
+          "size_bytes": 515522802,
+          "file_count": 352,
+          "six_system": "自然系",
+          "classification_score": 12
+        },
+        {
+          "name": "INF",
+          "path": "C:\\Windows\\INF",
+          "type": "directory",
+          "size_bytes": 130828730,
+          "file_count": 1436,
+          "six_system": "自然系",
+          "classification_score": 12
+        },
+        {
+          "name": "Installer",
+          "path": "C:\\Windows\\Installer",
+          "type": "directory",
+          "size_bytes": 840066321,
+          "file_count": 122,
+          "six_system": "自然系",
+          "classification_score": 12
+        },
+        {
+          "name": "LiveKernelReports",
+          "path": "C:\\Windows\\LiveKernelReports",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "自然系",
+          "classification_score": 12
+        },
+        {
+          "name": "Logs",
+          "path": "C:\\Windows\\Logs",
+          "type": "directory",
+          "size_bytes": 91551977,
+          "file_count": 718,
+          "six_system": "自然系",
+          "classification_score": 22
+        },
+        {
+          "name": "Minidump",
+          "path": "C:\\Windows\\Minidump",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "自然系",
+          "classification_score": 12
+        },
+        {
+          "name": "ModemLogs",
+          "path": "C:\\Windows\\ModemLogs",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "自然系",
+          "classification_score": 22
+        },
+        {
+          "name": "NEPDriver.info",
+          "path": "C:\\Windows\\NEPDriver.info",
+          "type": "file",
+          "size_bytes": 13,
+          "file_count": 1,
+          "six_system": "自然系",
+          "classification_score": 12
+        },
+        {
+          "name": "PFRO.log",
+          "path": "C:\\Windows\\PFRO.log",
+          "type": "file",
+          "size_bytes": 26746,
+          "file_count": 1,
+          "six_system": "自然系",
+          "classification_score": 2
+        },
+        {
+          "name": "Registration",
+          "path": "C:\\Windows\\Registration",
+          "type": "directory",
+          "size_bytes": 22588,
+          "file_count": 1,
+          "six_system": "自然系",
+          "classification_score": 12
+        },
+        {
+          "name": "ServiceProfiles",
+          "path": "C:\\Windows\\ServiceProfiles",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "自然系",
+          "classification_score": 14
+        },
+        {
+          "name": "WindowsUpdate.log",
+          "path": "C:\\Windows\\WindowsUpdate.log",
+          "type": "file",
+          "size_bytes": 276,
+          "file_count": 1,
+          "six_system": "自然系",
+          "classification_score": 2
+        }
+      ]
+    },
+    "具现系": {
+      "icon": "🔴",
+      "axiom": "个体性×关系性",
+      "genes": [
+        {
+          "name": "Branding",
+          "path": "C:\\Windows\\Branding",
+          "type": "directory",
+          "size_bytes": 113584,
+          "file_count": 4,
+          "six_system": "具现系",
+          "classification_score": 12
+        },
+        {
+          "name": "Cursors",
+          "path": "C:\\Windows\\Cursors",
+          "type": "directory",
+          "size_bytes": 11501377,
+          "file_count": 206,
+          "six_system": "具现系",
+          "classification_score": 12
+        },
+        {
+          "name": "Globalization",
+          "path": "C:\\Windows\\Globalization",
+          "type": "directory",
+          "size_bytes": 68008441,
+          "file_count": 27,
+          "six_system": "具现系",
+          "classification_score": 12
+        },
+        {
+          "name": "ImmersiveControlPanel",
+          "path": "C:\\Windows\\ImmersiveControlPanel",
+          "type": "directory",
+          "size_bytes": 24090925,
+          "file_count": 213,
+          "six_system": "具现系",
+          "classification_score": 14
+        },
+        {
+          "name": "LanguageOverlayCache",
+          "path": "C:\\Windows\\LanguageOverlayCache",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "具现系",
+          "classification_score": 2
+        }
+      ]
+    },
+    "未分类": {
+      "icon": "❓",
+      "axiom": "未分类",
+      "genes": [
+        {
+          "name": "addins",
+          "path": "C:\\Windows\\addins",
+          "type": "directory",
+          "size_bytes": 802,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "ampa.exe",
+          "path": "C:\\Windows\\ampa.exe",
+          "type": "file",
+          "size_bytes": 2489344,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "appcompat",
+          "path": "C:\\Windows\\appcompat",
+          "type": "directory",
+          "size_bytes": 2584347,
+          "file_count": 3,
+          "six_system": "未分类"
+        },
+        {
+          "name": "apppatch",
+          "path": "C:\\Windows\\apppatch",
+          "type": "directory",
+          "size_bytes": 20180820,
+          "file_count": 23,
+          "six_system": "未分类"
+        },
+        {
+          "name": "AppReadiness",
+          "path": "C:\\Windows\\AppReadiness",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "assembly",
+          "path": "C:\\Windows\\assembly",
+          "type": "directory",
+          "size_bytes": 826732811,
+          "file_count": 254,
+          "six_system": "未分类"
+        },
+        {
+          "name": "ASUS",
+          "path": "C:\\Windows\\ASUS",
+          "type": "directory",
+          "size_bytes": 451210442,
+          "file_count": 3,
+          "six_system": "未分类"
+        },
+        {
+          "name": "bcastdvr",
+          "path": "C:\\Windows\\bcastdvr",
+          "type": "directory",
+          "size_bytes": 785153,
+          "file_count": 2,
+          "six_system": "未分类"
+        },
+        {
+          "name": "bfsvc.exe",
+          "path": "C:\\Windows\\bfsvc.exe",
+          "type": "file",
+          "size_bytes": 147456,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "CbsTemp",
+          "path": "C:\\Windows\\CbsTemp",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "debug",
+          "path": "C:\\Windows\\debug",
+          "type": "directory",
+          "size_bytes": 1145,
+          "file_count": 3,
+          "six_system": "未分类"
+        },
+        {
+          "name": "diagnostics",
+          "path": "C:\\Windows\\diagnostics",
+          "type": "directory",
+          "size_bytes": 4133204,
+          "file_count": 337,
+          "six_system": "未分类"
+        },
+        {
+          "name": "DiagTrack",
+          "path": "C:\\Windows\\DiagTrack",
+          "type": "directory",
+          "size_bytes": 2061076,
+          "file_count": 14,
+          "six_system": "未分类"
+        },
+        {
+          "name": "DigitalLocker",
+          "path": "C:\\Windows\\DigitalLocker",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "ELAMBKUP",
+          "path": "C:\\Windows\\ELAMBKUP",
+          "type": "directory",
+          "size_bytes": 38928,
+          "file_count": 2,
+          "six_system": "未分类"
+        },
+        {
+          "name": "en-US",
+          "path": "C:\\Windows\\en-US",
+          "type": "directory",
+          "size_bytes": 94208,
+          "file_count": 9,
+          "six_system": "未分类"
+        },
+        {
+          "name": "explorer.exe",
+          "path": "C:\\Windows\\explorer.exe",
+          "type": "file",
+          "size_bytes": 3385624,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Firmware",
+          "path": "C:\\Windows\\Firmware",
+          "type": "directory",
+          "size_bytes": 20054016,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Help",
+          "path": "C:\\Windows\\Help",
+          "type": "directory",
+          "size_bytes": 7557048,
+          "file_count": 17,
+          "six_system": "未分类"
+        },
+        {
+          "name": "HelpPane.exe",
+          "path": "C:\\Windows\\HelpPane.exe",
+          "type": "file",
+          "size_bytes": 1081344,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "hh.exe",
+          "path": "C:\\Windows\\hh.exe",
+          "type": "file",
+          "size_bytes": 40960,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "IdentityCRL",
+          "path": "C:\\Windows\\IdentityCRL",
+          "type": "directory",
+          "size_bytes": 33415,
+          "file_count": 3,
+          "six_system": "未分类"
+        },
+        {
+          "name": "IME",
+          "path": "C:\\Windows\\IME",
+          "type": "directory",
+          "size_bytes": 6665158,
+          "file_count": 16,
+          "six_system": "未分类"
+        },
+        {
+          "name": "InboxApps",
+          "path": "C:\\Windows\\InboxApps",
+          "type": "directory",
+          "size_bytes": 9949606,
+          "file_count": 8,
+          "six_system": "未分类"
+        },
+        {
+          "name": "InputMethod",
+          "path": "C:\\Windows\\InputMethod",
+          "type": "directory",
+          "size_bytes": 92441193,
+          "file_count": 71,
+          "six_system": "未分类"
+        },
+        {
+          "name": "L2Schemas",
+          "path": "C:\\Windows\\L2Schemas",
+          "type": "directory",
+          "size_bytes": 116232,
+          "file_count": 21,
+          "six_system": "未分类"
+        },
+        {
+          "name": "mib.bin",
+          "path": "C:\\Windows\\mib.bin",
+          "type": "file",
+          "size_bytes": 43131,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Microsoft",
+          "path": "C:\\Windows\\Microsoft",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Microsoft.NET",
+          "path": "C:\\Windows\\Microsoft.NET",
+          "type": "directory",
+          "size_bytes": 431465592,
+          "file_count": 1279,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Migration",
+          "path": "C:\\Windows\\Migration",
+          "type": "directory",
+          "size_bytes": 3515,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Netease",
+          "path": "C:\\Windows\\Netease",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "notepad.exe",
+          "path": "C:\\Windows\\notepad.exe",
+          "type": "file",
+          "size_bytes": 360448,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "OCR",
+          "path": "C:\\Windows\\OCR",
+          "type": "directory",
+          "size_bytes": 2375822,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Panther",
+          "path": "C:\\Windows\\Panther",
+          "type": "directory",
+          "size_bytes": 4302106,
+          "file_count": 25,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Performance",
+          "path": "C:\\Windows\\Performance",
+          "type": "directory",
+          "size_bytes": 571720,
+          "file_count": 8,
+          "six_system": "未分类"
+        },
+        {
+          "name": "PLA",
+          "path": "C:\\Windows\\PLA",
+          "type": "directory",
+          "size_bytes": 18375,
+          "file_count": 2,
+          "six_system": "未分类"
+        },
+        {
+          "name": "prefetch",
+          "path": "C:\\Windows\\prefetch",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Provisioning",
+          "path": "C:\\Windows\\Provisioning",
+          "type": "directory",
+          "size_bytes": 7065429,
+          "file_count": 27,
+          "six_system": "未分类"
+        },
+        {
+          "name": "regedit.exe",
+          "path": "C:\\Windows\\regedit.exe",
+          "type": "file",
+          "size_bytes": 577536,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "rescache",
+          "path": "C:\\Windows\\rescache",
+          "type": "directory",
+          "size_bytes": 60740304,
+          "file_count": 465,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Resources",
+          "path": "C:\\Windows\\Resources",
+          "type": "directory",
+          "size_bytes": 2900894,
+          "file_count": 13,
+          "six_system": "未分类"
+        },
+        {
+          "name": "SchCache",
+          "path": "C:\\Windows\\SchCache",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "schemas",
+          "path": "C:\\Windows\\schemas",
+          "type": "directory",
+          "size_bytes": 123840,
+          "file_count": 41,
+          "six_system": "未分类"
+        },
+        {
+          "name": "ServiceState",
+          "path": "C:\\Windows\\ServiceState",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "servicing",
+          "path": "C:\\Windows\\servicing",
+          "type": "directory",
+          "size_bytes": 521843426,
+          "file_count": 13614,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Setup",
+          "path": "C:\\Windows\\Setup",
+          "type": "directory",
+          "size_bytes": 42,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "ShellComponents",
+          "path": "C:\\Windows\\ShellComponents",
+          "type": "directory",
+          "size_bytes": 5938176,
+          "file_count": 4,
+          "six_system": "未分类"
+        },
+        {
+          "name": "ShellExperiences",
+          "path": "C:\\Windows\\ShellExperiences",
+          "type": "directory",
+          "size_bytes": 15161344,
+          "file_count": 12,
+          "six_system": "未分类"
+        },
+        {
+          "name": "SKB",
+          "path": "C:\\Windows\\SKB",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "SoftwareDistribution",
+          "path": "C:\\Windows\\SoftwareDistribution",
+          "type": "directory",
+          "size_bytes": 53194356,
+          "file_count": 21,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Speech",
+          "path": "C:\\Windows\\Speech",
+          "type": "directory",
+          "size_bytes": 46080,
+          "file_count": 3,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Speech_OneCore",
+          "path": "C:\\Windows\\Speech_OneCore",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "splwow64.exe",
+          "path": "C:\\Windows\\splwow64.exe",
+          "type": "file",
+          "size_bytes": 221184,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "System",
+          "path": "C:\\Windows\\System",
+          "type": "directory",
+          "size_bytes": 31039,
+          "file_count": 3,
+          "six_system": "未分类"
+        },
+        {
+          "name": "system.ini",
+          "path": "C:\\Windows\\system.ini",
+          "type": "file",
+          "size_bytes": 219,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "SystemApps",
+          "path": "C:\\Windows\\SystemApps",
+          "type": "directory",
+          "size_bytes": 1048796072,
+          "file_count": 2000,
+          "six_system": "未分类"
+        },
+        {
+          "name": "SystemResources",
+          "path": "C:\\Windows\\SystemResources",
+          "type": "directory",
+          "size_bytes": 204647539,
+          "file_count": 611,
+          "six_system": "未分类"
+        },
+        {
+          "name": "SystemTemp",
+          "path": "C:\\Windows\\SystemTemp",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "TAPI",
+          "path": "C:\\Windows\\TAPI",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "TbtP2pShortcutService.exe",
+          "path": "C:\\Windows\\TbtP2pShortcutService.exe",
+          "type": "file",
+          "size_bytes": 252264,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Temp",
+          "path": "C:\\Windows\\Temp",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "tracing",
+          "path": "C:\\Windows\\tracing",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "twain_32",
+          "path": "C:\\Windows\\twain_32",
+          "type": "directory",
+          "size_bytes": 13824,
+          "file_count": 2,
+          "six_system": "未分类"
+        },
+        {
+          "name": "twain_32.dll",
+          "path": "C:\\Windows\\twain_32.dll",
+          "type": "file",
+          "size_bytes": 95744,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "UUS",
+          "path": "C:\\Windows\\UUS",
+          "type": "directory",
+          "size_bytes": 28433994,
+          "file_count": 72,
+          "six_system": "未分类"
+        },
+        {
+          "name": "Vss",
+          "path": "C:\\Windows\\Vss",
+          "type": "directory",
+          "size_bytes": 12420,
+          "file_count": 3,
+          "six_system": "未分类"
+        },
+        {
+          "name": "WaaS",
+          "path": "C:\\Windows\\WaaS",
+          "type": "directory",
+          "size_bytes": 132802,
+          "file_count": 58,
+          "six_system": "未分类"
+        },
+        {
+          "name": "win.ini",
+          "path": "C:\\Windows\\win.ini",
+          "type": "file",
+          "size_bytes": 92,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "WindowsShell.Manifest",
+          "path": "C:\\Windows\\WindowsShell.Manifest",
+          "type": "file",
+          "size_bytes": 670,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "winhlp32.exe",
+          "path": "C:\\Windows\\winhlp32.exe",
+          "type": "file",
+          "size_bytes": 12288,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "WMSysPr9.prx",
+          "path": "C:\\Windows\\WMSysPr9.prx",
+          "type": "file",
+          "size_bytes": 316640,
+          "file_count": 1,
+          "six_system": "未分类"
+        },
+        {
+          "name": "WUModels",
+          "path": "C:\\Windows\\WUModels",
+          "type": "directory",
+          "size_bytes": 0,
+          "file_count": 0,
+          "six_system": "未分类"
+        },
+        {
+          "name": "zh-CN",
+          "path": "C:\\Windows\\zh-CN",
+          "type": "directory",
+          "size_bytes": 68096,
+          "file_count": 8,
+          "six_system": "未分类"
+        }
+      ]
+    }
+  },
+  "extraction_time": "2026-08-03T15:46:12.071144",
+  "elapsed_seconds": 7.37
+}

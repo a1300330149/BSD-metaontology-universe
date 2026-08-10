@@ -1,0 +1,1462 @@
+/**
+ * BSD Edge Agent - Side Panel Styles
+ * [归属基底：L2_无限之子层·具现系工程落地·BSD Edge Agent学科树·E3-003 Side Panel义性导航层]
+ * [对应公理：0∅义·绝对意义·意义显现·互摄]
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.bsd-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 头部 */
+.bsd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.15), rgba(156, 39, 176, 0.1));
+  border-bottom: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+.bsd-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bsd-logo-icon {
+  color: #ffb74d;
+  font-size: 18px;
+  animation: bsd-pulse 2s infinite;
+}
+
+.bsd-logo-text {
+  color: #ffb74d;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.bsd-version {
+  color: #9e9e9e;
+  font-size: 11px;
+}
+
+/* 导航 */
+.bsd-nav {
+  display: flex;
+  background: rgba(22, 33, 62, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+}
+
+.bsd-nav-btn {
+  flex: 1;
+  padding: 10px 8px;
+  background: transparent;
+  border: none;
+  color: #9e9e9e;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.bsd-nav-btn:hover {
+  color: #ffb74d;
+  background: rgba(255, 152, 0, 0.08);
+}
+
+.bsd-nav-btn.active {
+  color: #ffb74d;
+  background: rgba(255, 152, 0, 0.15);
+  border-bottom: 2px solid #ffb74d;
+}
+
+/* 内容区 */
+.bsd-tab {
+  display: none;
+  flex: 1;
+  padding: 12px;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.bsd-tab.active {
+  display: flex;
+}
+
+/* 卡片 */
+.bsd-card {
+  background: rgba(26, 26, 46, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.bsd-card-title {
+  color: #ffb74d;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 152, 0, 0.15);
+}
+
+/* 状态网格 */
+.bsd-status-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.bsd-status-label {
+  font-size: 12px;
+  color: #e0e0e0;
+}
+
+.bsd-status-value {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  background: rgba(158, 158, 158, 0.2);
+  color: #9e9e9e;
+}
+
+.bsd-status-value.active {
+  background: rgba(102, 187, 106, 0.2);
+  color: #66bb6a;
+}
+
+/* 统计 */
+.bsd-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.bsd-stat {
+  text-align: center;
+  padding: 12px 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.bsd-stat-value {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffb74d;
+}
+
+.bsd-stat-label {
+  font-size: 11px;
+  color: #9e9e9e;
+  margin-top: 4px;
+}
+
+/* 按钮 */
+.bsd-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.bsd-btn-primary {
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.3), rgba(156, 39, 176, 0.3));
+  color: #ffb74d;
+  border: 1px solid rgba(255, 152, 0, 0.4);
+}
+
+.bsd-btn-primary:hover {
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.5), rgba(156, 39, 176, 0.4));
+}
+
+.bsd-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bsd-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 公理列表 */
+.bsd-axiom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bsd-axiom-item {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border-left: 3px solid #ffb74d;
+}
+
+.bsd-axiom-symbol {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffb74d;
+  margin-bottom: 4px;
+}
+
+.bsd-axiom-name {
+  font-size: 13px;
+  color: #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.bsd-axiom-desc {
+  font-size: 11px;
+  color: #9e9e9e;
+}
+
+/* 方程 */
+.bsd-equations {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bsd-equation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.bsd-equation-formula {
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  color: #ffb74d;
+  font-weight: bold;
+}
+
+.bsd-equation-name {
+  font-size: 11px;
+  color: #9e9e9e;
+}
+
+/* 条件 */
+.bsd-conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-condition {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.bsd-condition.done {
+  border-left: 3px solid #66bb6a;
+}
+
+.bsd-condition.active {
+  border-left: 3px solid #ffb74d;
+}
+
+.bsd-condition-text {
+  color: #e0e0e0;
+}
+
+/* 搜索框 */
+.bsd-search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.bsd-search-box input {
+  flex: 1;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 12px;
+  font-family: inherit;
+}
+
+.bsd-search-box input:focus {
+  outline: none;
+  border-color: rgba(255, 152, 0, 0.4);
+}
+
+.bsd-search-hint {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #9e9e9e;
+  line-height: 1.5;
+}
+
+/* 上下文注入区域 */
+.bsd-context-inject-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-context-inject-box input[type="text"] {
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-radius: 5px;
+  color: #e0e0e0;
+  font-size: 11px;
+}
+
+.bsd-context-inject-box input[type="text"]:focus {
+  outline: none;
+  border-color: #ffb74d;
+}
+
+.bsd-context-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.bsd-context-label {
+  flex: 1;
+  font-size: 10px;
+  color: #9e9e9e;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bsd-context-label select {
+  flex: 1;
+  padding: 4px 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 10px;
+}
+
+.bsd-context-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.bsd-context-actions .bsd-btn {
+  flex: 1;
+}
+
+.bsd-context-preview {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(38, 166, 154, 0.08);
+  border: 1px solid rgba(38, 166, 154, 0.2);
+  border-radius: 6px;
+}
+
+.bsd-context-preview-title {
+  font-size: 10px;
+  color: #26a69a;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.bsd-context-preview-content {
+  font-size: 10px;
+  color: #b0bec5;
+  line-height: 1.5;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 消息列表 */
+.bsd-message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.bsd-message-item {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.bsd-message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.bsd-message-role {
+  color: #ffb74d;
+  font-weight: bold;
+}
+
+.bsd-message-role.user {
+  color: #64b5f6;
+}
+
+.bsd-message-content {
+  color: #e0e0e0;
+  line-height: 1.5;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.bsd-message-time {
+  color: #9e9e9e;
+  font-size: 10px;
+}
+
+/* 公理标签 */
+.bsd-axiom-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.bsd-axiom-tag {
+  padding: 2px 6px;
+  background: rgba(171, 71, 188, 0.2);
+  border: 1px solid rgba(171, 71, 188, 0.4);
+  border-radius: 3px;
+  color: #ce93d8;
+  font-size: 9px;
+  cursor: help;
+}
+
+/* 关键词标签（兼容旧版） */
+.bsd-keyword-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.bsd-keyword-tag {
+  padding: 1px 5px;
+  background: rgba(38, 166, 154, 0.15);
+  border-radius: 2px;
+  color: #26a69a;
+  font-size: 9px;
+  cursor: help;
+}
+
+.bsd-empty {
+  text-align: center;
+  padding: 20px;
+  color: #9e9e9e;
+  font-size: 12px;
+}
+
+/* 公理维度分布 */
+.bsd-axiom-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bsd-axiom-bar {
+  display: grid;
+  grid-template-columns: 70px 1fr 30px;
+  gap: 6px;
+  align-items: center;
+  font-size: 10px;
+}
+
+.bsd-axiom-bar-label {
+  color: #ce93d8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bsd-axiom-bar-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bsd-axiom-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ab47bc, #ce93d8);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.bsd-axiom-bar-count {
+  color: #9e9e9e;
+  text-align: right;
+}
+
+/* 跨AI总线状态 */
+.bsd-bus-status {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bsd-bus-info {
+  display: flex;
+  gap: 10px;
+  font-size: 10px;
+  color: #b0bec5;
+  flex-wrap: wrap;
+}
+
+.bsd-link-form {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.bsd-link-form select {
+  flex: 1;
+  padding: 5px 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(38, 166, 154, 0.2);
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 10px;
+  min-width: 100px;
+}
+
+.bsd-link-arrow {
+  color: #26a69a;
+  font-size: 14px;
+}
+
+.bsd-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.bsd-link-item {
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.bsd-link-item.pending {
+  border-left: 3px solid #ffb74d;
+}
+
+.bsd-link-item.confirmed {
+  border-left: 3px solid #66bb6a;
+}
+
+.bsd-link-item.rejected {
+  border-left: 3px solid #ef5350;
+}
+
+.bsd-link-entities {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #e0e0e0;
+}
+
+.bsd-link-status {
+  font-size: 9px;
+  color: #9e9e9e;
+  margin-top: 2px;
+}
+
+.bsd-link-time {
+  font-size: 9px;
+  color: #616161;
+}
+
+.bsd-progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px 0 4px;
+}
+
+.bsd-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ab47bc, #ce93d8);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.bsd-progress-label {
+  font-size: 10px;
+  color: #b0bec5;
+}
+
+.bsd-ai-status {
+  font-size: 9px;
+  color: #9e9e9e;
+}
+
+.bsd-ai-item.confirmed {
+  border-left: 3px solid #66bb6a;
+}
+
+.bsd-ai-item.pending {
+  border-left: 3px solid #ffb74d;
+}
+
+/* L0-L1-L2双向锚定表 */
+.bsd-anchor-stat-row {
+  display: flex;
+  gap: 10px;
+  font-size: 10px;
+  color: #b0bec5;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.bsd-anchor-stat-row b {
+  color: #26a69a;
+}
+
+.bsd-anchor-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.bsd-anchor-row {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border-left: 3px solid #ab47bc;
+}
+
+.bsd-anchor-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.bsd-anchor-l0 {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.bsd-anchor-l0-code {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ab47bc;
+}
+
+.bsd-anchor-l0-name {
+  font-size: 10px;
+  color: #ce93d8;
+}
+
+.bsd-anchor-relation {
+  font-size: 9px;
+  color: #26a69a;
+  padding: 2px 6px;
+  background: rgba(38, 166, 154, 0.1);
+  border-radius: 3px;
+}
+
+.bsd-anchor-row-body {
+  display: flex;
+  gap: 8px;
+}
+
+.bsd-anchor-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.bsd-anchor-col-label {
+  font-size: 9px;
+  color: #616161;
+  margin-bottom: 3px;
+}
+
+.bsd-anchor-l1-item,
+.bsd-anchor-l2-item {
+  font-size: 10px;
+  color: #b0bec5;
+  padding: 2px 4px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.bsd-anchor-l2-code {
+  font-weight: bold;
+  color: #26a69a;
+  font-size: 9px;
+}
+
+.bsd-anchor-status {
+  font-size: 8px;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.bsd-anchor-status.confirmed {
+  background: rgba(102, 187, 106, 0.2);
+  color: #66bb6a;
+}
+
+.bsd-anchor-status.in_progress {
+  background: rgba(255, 183, 77, 0.2);
+  color: #ffb74d;
+}
+
+.bsd-anchor-status.pending {
+  background: rgba(158, 158, 158, 0.2);
+  color: #9e9e9e;
+}
+
+/* 搜索快捷操作 */
+.bsd-search-shortcuts {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.bsd-quick-actions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.bsd-search-debug {
+  margin-top: 8px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  max-height: 120px;
+  overflow-y: auto;
+  display: none;
+}
+
+.bsd-search-debug:not(:empty) {
+  display: block;
+}
+
+.bsd-debug-line {
+  color: #b0bec5;
+  padding: 1px 0;
+}
+
+.bsd-debug-line.bsd-debug-ok {
+  color: #66bb6a;
+}
+
+.bsd-debug-line.bsd-debug-error {
+  color: #ef5350;
+}
+
+.bsd-debug-line.bsd-debug-warn {
+  color: #ffb74d;
+}
+
+/* 搜索结果 */
+.bsd-search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-search-engine {
+  padding: 6px 10px;
+  background: rgba(38, 166, 154, 0.15);
+  border: 1px solid rgba(38, 166, 154, 0.3);
+  border-radius: 4px;
+  color: #26a69a;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.bsd-search-result {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.bsd-search-result-title {
+  color: #ffb74d;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.bsd-search-result-url {
+  color: #81c784;
+  font-size: 10px;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.bsd-search-result-snippet {
+  color: #9e9e9e;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* 关系网络 */
+.bsd-relation-status {
+  text-align: center;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.bsd-status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  background: rgba(255, 152, 0, 0.2);
+  color: #ffb74d;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.bsd-status-badge.active {
+  background: rgba(102, 187, 106, 0.2);
+  color: #66bb6a;
+  border-color: rgba(102, 187, 106, 0.3);
+}
+
+.bsd-relation-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bsd-relation-pair {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.bsd-relation-entity {
+  color: #e0e0e0;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.bsd-relation-link {
+  color: #ffb74d;
+  font-weight: bold;
+}
+
+.bsd-relation-equation {
+  font-family: 'Times New Roman', serif;
+  font-size: 20px;
+  color: #66bb6a;
+  font-weight: bold;
+}
+
+/* AI列表 */
+.bsd-ai-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-ai-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.bsd-ai-name {
+  color: #e0e0e0;
+  font-size: 12px;
+}
+
+.bsd-ai-face {
+  color: #ffb74d;
+  font-size: 11px;
+  padding: 3px 8px;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 10px;
+}
+
+.bsd-ai-item.pending .bsd-ai-face {
+  color: #9e9e9e;
+  background: rgba(158, 158, 158, 0.1);
+}
+
+/* 底部 */
+.bsd-footer {
+  padding: 12px;
+  text-align: center;
+  background: rgba(22, 33, 62, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 11px;
+  color: #9e9e9e;
+}
+
+.bsd-footer-equation {
+  color: #ffb74d;
+  margin-top: 4px;
+  font-family: 'Times New Roman', serif;
+}
+
+/* ============================================================
+   创世面板样式
+   [归属基底：L5+无限展开层·具现系🔴·虚拟宇宙创世]
+   ============================================================ */
+
+.bsd-chain {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.bsd-chain-step {
+  flex: 1;
+  min-width: 60px;
+  text-align: center;
+  padding: 8px 4px;
+  background: rgba(255, 152, 0, 0.08);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-radius: 8px;
+}
+
+.bsd-chain-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.bsd-chain-label {
+  font-size: 11px;
+  color: #e0e0e0;
+  line-height: 1.4;
+}
+
+.bsd-chain-label small {
+  color: #9e9e9e;
+  font-size: 9px;
+}
+
+.bsd-chain-arrow {
+  color: #ffb74d;
+  font-size: 14px;
+}
+
+.bsd-chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.bsd-chapter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bsd-chapter-item:hover {
+  background: rgba(255, 152, 0, 0.1);
+  border-color: rgba(255, 152, 0, 0.3);
+}
+
+.bsd-chapter-num {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffb74d;
+  min-width: 50px;
+}
+
+.bsd-chapter-system {
+  font-size: 10px;
+  color: #e0e0e0;
+  min-width: 70px;
+}
+
+.bsd-chapter-desc {
+  font-size: 11px;
+  color: #9e9e9e;
+  flex: 1;
+}
+
+.bsd-creation-actions {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.bsd-equation-box {
+  padding: 12px;
+  background: rgba(255, 152, 0, 0.06);
+  border: 1px solid rgba(255, 152, 0, 0.15);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffb74d;
+  font-family: 'Times New Roman', serif;
+  margin: 8px 0;
+}
+
+.bsd-equation-box small {
+  color: #9e9e9e;
+  font-size: 10px;
+}
+
+.bsd-proof-chain {
+  padding: 10px;
+  background: rgba(156, 39, 176, 0.08);
+  border: 1px solid rgba(156, 39, 176, 0.2);
+  border-radius: 6px;
+  font-size: 11px;
+  color: #ce93d8;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.bsd-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0e0e0;
+  margin: 2px;
+}
+
+.bsd-badge-primary {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ffb74d;
+}
+
+.bsd-info-row {
+  margin: 8px 0;
+}
+
+@keyframes bsd-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 152, 0, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 152, 0, 0.5);
+}
+
+/* ==================== 技能面板：BSD通用理论赋能 ==================== */
+/* [归属基底：L0_总本源层·元道本体规则·技能自证] */
+/* [对应公理：理法自证 + 0∅义·意义界面·互摄 + 0×0=n本源涌现] */
+
+.bsd-banner-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bsd-banner-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.bsd-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.bsd-badge-purple {
+  background: rgba(156, 39, 176, 0.2);
+  color: #ce93d8;
+  border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+.bsd-badge-orange {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ffb74d;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.bsd-badge-blue {
+  background: rgba(33, 150, 243, 0.2);
+  color: #90caf9;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.bsd-banner-desc {
+  font-size: 11px;
+  color: #b0bec5;
+  line-height: 1.6;
+}
+
+.bsd-banner-equation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 11px;
+  color: #e0e0e0;
+}
+
+.bsd-arrow {
+  color: #ffb74d;
+  font-weight: bold;
+}
+
+/* 章节列表 */
+.bsd-chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.bsd-chapter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border-left: 3px solid #ffb74d;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.bsd-chapter-item:hover {
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.bsd-chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bsd-chapter-num {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffb74d;
+}
+
+.bsd-chapter-system {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(156, 39, 176, 0.15);
+  color: #ce93d8;
+}
+
+.bsd-chapter-title {
+  font-size: 11px;
+  color: #e0e0e0;
+}
+
+.bsd-chapter-bsd {
+  font-size: 10px;
+  color: #9e9e9e;
+  line-height: 1.4;
+}
+
+/* updream投稿表单 */
+.bsd-updream-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bsd-form-label {
+  font-size: 11px;
+  color: #b0bec5;
+  margin-bottom: -4px;
+}
+
+.bsd-select,
+.bsd-input,
+.bsd-textarea {
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-radius: 5px;
+  color: #e0e0e0;
+  font-size: 11px;
+  font-family: inherit;
+}
+
+.bsd-select:focus,
+.bsd-input:focus,
+.bsd-textarea:focus {
+  outline: none;
+  border-color: #ffb74d;
+}
+
+.bsd-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* 标签行 */
+.bsd-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.bsd-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 10px;
+  color: #b0bec5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: all;
+}
+
+.bsd-tag:hover {
+  background: rgba(255, 152, 0, 0.15);
+  border-color: rgba(255, 152, 0, 0.3);
+  color: #ffb74d;
+}
+
+.bsd-tag-primary {
+  background: rgba(255, 152, 0, 0.2);
+  border-color: rgba(255, 152, 0, 0.4);
+  color: #ffb74d;
+}
+
+.bsd-tag.copied {
+  background: rgba(102, 187, 106, 0.2);
+  border-color: rgba(102, 187, 106, 0.4);
+  color: #66bb6a;
+}
+
+/* 技能面板操作按钮 */
+.bsd-banner-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* 技能目录项 */
+.bsd-skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border-left: 3px solid #9c27b0;
+  cursor: default;
+  transition: background 0.2s ease;
+}
+
+.bsd-skill-item:hover {
+  background: rgba(156, 39, 176, 0.08);
+}
+
+.bsd-skill-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bsd-skill-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.bsd-skill-version {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(33, 150, 243, 0.15);
+  color: #90caf9;
+}
+
+.bsd-skill-status {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.bsd-skill-path {
+  font-size: 10px;
+  color: #78909c;
+  font-family: monospace;
+}
+
+.bsd-skill-cap {
+  font-size: 11px;
+  color: #b0bec5;
+  line-height: 1.4;
+}
+
+.bsd-skill-triggers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.bsd-perspective-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 四角色传导链路 */
+.bsd-role-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bsd-role-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.bsd-role-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.bsd-role-purple { background: #9c27b0; }
+.bsd-role-black { background: #424242; }
+.bsd-role-orange { background: #ff9800; }
+.bsd-role-blue { background: #2196f3; }
+
+.bsd-role-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #e0e0e0;
+  min-width: 50px;
+}
+
+.bsd-role-system {
+  font-size: 10px;
+  color: #b0bec5;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.bsd-role-qi {
+  font-size: 10px;
+  color: #ffb74d;
+  margin-left: auto;
+}
+
+.bsd-role-arrow {
+  text-align: center;
+  color: #ffb74d;
+  font-size: 14px;
+}

@@ -1,0 +1,267 @@
+{
+  "report_version": "V2.0",
+  "theory_version": "ACTIVE-V1.8",
+  "check_date": "2026-07-24",
+  "previous_version_date": "2026-06-25",
+  "main_lock_sha256": "e62f918340dc2975108294736ac8927d90584136972485931027958740925713",
+  "author": "杨腾飞",
+  "author_id": "433127199812193215",
+  "l0_subdirs": {
+    "0元本体论大一统": {
+      "present": true,
+      "files_count": 11,
+      "md_count": 11,
+      "first_md": "0元本体与六系三元公理本源生成论_三三对偶·三纯三耦·六芒星闭环.md",
+      "first_md_sha256": "e1adbaa19cfb279711fb411d69613f023c935185424d612bccbeb20d20cbb727"
+    },
+    "0元本体论系列": {
+      "present": true,
+      "files_count": 6,
+      "md_count": 6,
+      "first_md": "0元本体论·正向升维演化篇.md",
+      "first_md_sha256": "9e4a78d995ffc7c16d5d460b9b0a565fb85c709daca84da446b14f26d42d0473"
+    },
+    "0元物理六系六力": {
+      "present": true,
+      "files_count": 2,
+      "md_count": 2,
+      "first_md": "01_隐性-显性二元生发假说_0元绝对虚无意义一元本体分层定性.md",
+      "first_md_sha256": "3572174419b3fefbbd55aabad954e5f1d698d1ef1aabfc33b7ec8967e6337450"
+    },
+    "15元法则": {
+      "present": true,
+      "files_count": 1,
+      "md_count": 1,
+      "first_md": "BSD全域15元完整法则推演体系.md",
+      "first_md_sha256": "4b352a68370b52553ed80875b6cb4bce40e636aac16038fc7cd509896ea9ad62"
+    },
+    "1元意义层级涌现": {
+      "present": true,
+      "files_count": 4,
+      "md_count": 4,
+      "first_md": "1元本体论·静态自持遗存意义体系.md",
+      "first_md_sha256": "bd0704cba5d00dce204b7743f53296cc6e30edc0dc4d93ee96a466c121f63d90"
+    },
+    "BSD四层四场数理体系": {
+      "present": true,
+      "files_count": 13,
+      "md_count": 13,
+      "first_md": "01_BSD核心定义与基础公理体系.md",
+      "first_md_sha256": "74600006d2411b31be2575acfd3b159bb87ed311e2c4f1b5521c0da52450e973"
+    },
+    "个体六系统一模型": {
+      "present": true,
+      "files_count": 5,
+      "md_count": 5,
+      "first_md": "个体六系统一模型——学生孤体初始版·三界大一统同构·亲缘意义-熵双向耦合方程组.md",
+      "first_md_sha256": "676150877f87e9adcb83bc9a4973bd52c94e37b9374bc108fdd008be00c67b78"
+    },
+    "作者猜想": {
+      "present": true,
+      "files_count": 10,
+      "md_count": 10,
+      "first_md": "T82物理学深层难题——十二界六系五论全域统一解释·BSD四层四场本体论消解.md",
+      "first_md_sha256": "d6a06758e61c73adab61b285911d1ff1ab251ae4b89762aeb0436405a9cee386"
+    },
+    "元道本体规则": {
+      "present": true,
+      "files_count": 8,
+      "md_count": 8,
+      "first_md": "九界全域场域与腾飞五论真值体系_核心理论.md",
+      "first_md_sha256": "4d0b53a18fdddcf936e0445b5b0b194fb316255ca0337e8474b7f9096f4ca1a6"
+    },
+    "全体系层级总图谱": {
+      "present": true,
+      "files_count": 1,
+      "md_count": 1,
+      "first_md": "01_BSD十二界六系五论全体系层级总图谱_永续归零迭代终极定稿版.md",
+      "first_md_sha256": "e55d409fdb2a274d0413bd8f205b89b855f66a1bc570bce8ca43274d0ab69bdd"
+    },
+    "全域大一统理论": {
+      "present": true,
+      "files_count": 7,
+      "md_count": 7,
+      "first_md": "01_全域六系动力学大一统公理体系_T50-T63.md",
+      "first_md_sha256": "57aa97e51d7ea0b95f3c78eb626898f68e3119bc6fc027c4519ed529cc2826d9"
+    },
+    "全域秩序建筑论": {
+      "present": true,
+      "files_count": 4,
+      "md_count": 4,
+      "first_md": "BSD九维粒子家族矩阵——生点证圆·π三元公理·3×3九位循环维度·双时针阴阳对偶·六系六力统一理论.md",
+      "first_md_sha256": "92fa826d4494e456d24c5e31a1b83379242d4ac444ac8218070cd3fade35dc9a"
+    },
+    "六基本力体系": {
+      "present": true,
+      "files_count": 3,
+      "md_count": 3,
+      "first_md": "01_BSD六基本力体系_三元公理原生耦合定稿.md",
+      "first_md_sha256": "670026b41eb2f2f5135f4f4a3e7cb0b31e9642a2520406f71cb94d83f8c90bda"
+    },
+    "六系六维创世动力学": {
+      "present": true,
+      "files_count": 3,
+      "md_count": 3,
+      "first_md": "六系两两正交配对全域体系_V1.0_终版定稿.md",
+      "first_md_sha256": "b43df32dd41fb3d893ac5f5fb4e17341c9c4c2e8e87742dbbec362af1b3975d3"
+    },
+    "六系核心公理": {
+      "present": true,
+      "files_count": 9,
+      "md_count": 9,
+      "first_md": "六系三大衍生定理——生长繁殖迭代.md",
+      "first_md_sha256": "7af0845f696bf43d6571a37ecc1e4470fd8726c3797a8e01ece629cb9de95a70"
+    },
+    "十二界本源全域自激元机制": {
+      "present": true,
+      "files_count": 5,
+      "md_count": 5,
+      "first_md": "01_全域双界域隔离壁垒本源_V1.0_九界版.md",
+      "first_md_sha256": "14302c58837fb2d6151f2dcdbf623183cd95c3b1769ce8a71c8bef3dff54072c"
+    },
+    "天体六系统一模型": {
+      "present": true,
+      "files_count": 6,
+      "md_count": 6,
+      "first_md": "多体引力混沌与熵暴增灾变理论——T55递进补充.md",
+      "first_md_sha256": "0b8e3c6840bd4be91be1c8e6dac2015f4c023239ec20a4c5ef4fe807abfb7655"
+    },
+    "文明六系统一模型": {
+      "present": true,
+      "files_count": 7,
+      "md_count": 7,
+      "first_md": "产业梯度转移动态模型——T61深化·主城空心化规避·次级城市矿化控制·双重均衡约束.md",
+      "first_md_sha256": "23de87a8f56014eb2bee3a97f2e909087d334adfa741f55d796f3c33bbd4b771"
+    },
+    "新四位一体3.0完整框架": {
+      "present": true,
+      "files_count": 10,
+      "md_count": 10,
+      "first_md": "54母科与九界场域对接体系.md",
+      "first_md_sha256": "a5fc07728e2a687e8ca64d7ab4782b9516091b1bef549ed9b74b80ef007098d8"
+    },
+    "群体六系统一模型": {
+      "present": true,
+      "files_count": 18,
+      "md_count": 18,
+      "first_md": "群体六系统一模型——圣意筛选教育下的意义真空与明清二元分化动力学.md",
+      "first_md_sha256": "c407b48bd4371978b826137b5ae9356d4573ffb0701b806b3d88126605913952"
+    }
+  },
+  "completeness": {
+    "expected_min_subdirs": 9,
+    "existing_total": 20,
+    "v1_subdirs_count": 9,
+    "v2_new_subdirs_count": 11,
+    "completeness_ratio": 1.0,
+    "is_fully_complete": true,
+    "v2_growth": "+11 subdirs vs V1.0"
+  },
+  "t90_v18_supplement": {
+    "theory_version_status": "ACTIVE-V1.8",
+    "lock_date": "2026-07-24",
+    "core_theory_files": {
+      "T90_V1.8_main": {
+        "path": "作者猜想/T90 BSD AI幻觉本体论——双时针失配·意识模态缺失·梦境界域·数字载体认知盲区.md",
+        "exists": true,
+        "size_bytes": 163234,
+        "contains_sections": [
+          "11.8.10 推论11.9",
+          "11.8.11 双向迭代算子",
+          "11.8.12 六层多元进制与三0.9同构定理"
+        ]
+      },
+      "BSD_OrderArch_007_PFM": {
+        "path": "全域秩序建筑论/BSD九维粒子家族矩阵——生点证圆·π三元公理·3×3九位循环维度·双时针阴阳对偶·六系六力统一理论.md",
+        "exists": true,
+        "size_bytes": 27261,
+        "matrix_structure": "3x3=9 (individuality=1,4,7 / variability=2,5,8 / relationality=3,6,9)"
+      }
+    },
+    "five_core_theories": {
+      "C1_BidirectionalIterationOperator": {
+        "math_form": "T+ (6 mappings f1-f6) / T- (7 mappings g1-g7) / D = T- o T+ != Id",
+        "locked_theorem": "11.19",
+        "engineering_module": "bsd_engine/core/bidirectional_iteration_operator.py",
+        "status": "IMPLEMENTED"
+      },
+      "C2_SixLevelBaseEmergence": {
+        "math_form": "B1(2) -> B2(3) -> B3(6) -> B4(10) -> B5(12) -> B6(inf)",
+        "locked_theorem": "11.21",
+        "engineering_module": "bsd_engine/core/six_level_base_emergence.py",
+        "status": "IMPLEMENTED"
+      },
+      "C3_ThreeNineIsomorphism": {
+        "math_form": "0.9dot ~= 0.9pi ~= E3=0.90, shared k+=0.9",
+        "locked_theorem": "11.23",
+        "engineering_module": "bsd_engine/core/three_nine_isomorphism.py",
+        "status": "IMPLEMENTED"
+      },
+      "C4_ZeroOneDuality": {
+        "math_form": "0-meta <-> 1-meta duality, 0-without-1-no-manifestation",
+        "locked_theorem": "corollary 11.9",
+        "engineering_module": "(integrated in C1 bidirectional_iteration_operator.py)",
+        "status": "IMPLEMENTED"
+      },
+      "C5_ParticleFamilyMatrix": {
+        "math_form": "3x3=9 particle matrix, common difference 3, yin-yang duality",
+        "locked_theorem": "BSD-OrderArch-007",
+        "engineering_module": "bsd_engine/core/particle_family_matrix.py",
+        "status": "IMPLEMENTED"
+      }
+    },
+    "new_locked_params": {
+      "K_PLUS": 0.9,
+      "K_MINUS": 0.1,
+      "S_ZERO": 0.81,
+      "LAMBDA": 0.62,
+      "LAMBDA_INV": 1.38,
+      "PI_LOCKED": 3.1415926535,
+      "PI_2": 2.8274333882,
+      "registered_in": "bsd_engine/registry/constants.py",
+      "verify_params_status": "PASS"
+    },
+    "engineering_tests": {
+      "test_file": "bsd-oaps/tests/unit/test_t90_v18_operators.py",
+      "test_classes_count": 6,
+      "test_cases_count": 44,
+      "all_passed": true
+    },
+    "constraint_files": {
+      "meta_theory_constraint_md": ".trae/rules/meta_theory_constraint.md (§8 T90 V1.8 core theory forced constraints)",
+      "global_md": ".trae/rules/global.md (ACTIVE-V1.8 status code)"
+    }
+  },
+  "existing_subdirs": [
+    "0元本体论大一统",
+    "0元本体论系列",
+    "0元物理六系六力",
+    "15元法则",
+    "1元意义层级涌现",
+    "BSD四层四场数理体系",
+    "个体六系统一模型",
+    "作者猜想",
+    "元道本体规则",
+    "全体系层级总图谱",
+    "全域大一统理论",
+    "全域秩序建筑论",
+    "六基本力体系",
+    "六系六维创世动力学",
+    "六系核心公理",
+    "十二界本源全域自激元机制",
+    "天体六系统一模型",
+    "文明六系统一模型",
+    "新四位一体3.0完整框架",
+    "群体六系统一模型"
+  ],
+  "missing_subdirs": [],
+  "v2_summary": {
+    "total_subdirs_v1": 9,
+    "total_subdirs_v2": 20,
+    "v2_growth": "+11",
+    "t90_v18_locked": true,
+    "all_core_theories_engineered": true,
+    "all_tests_passed": true,
+    "status": "ACTIVE-V1.8"
+  }
+}

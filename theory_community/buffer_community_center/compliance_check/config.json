@@ -1,0 +1,118 @@
+{
+  "center_name": "全局合规校验中心",
+  "center_id": "compliance_check_v1",
+  "location": "buffer_community_center/compliance_check/",
+  
+  "core_functions": [
+    "基底公理完整性校验",
+    "跨层级逻辑冲突检测",
+    "权限越界拦截",
+    "外部注入检测",
+    "合规审计追踪"
+  ],
+  
+  "audit_rules": [
+    {
+      "rule_id": "R001",
+      "name": "禁止修改core_manor",
+      "description": "禁止任何操作修改core_manor目录下的文件",
+      "severity": "critical",
+      "action": "block_and_report",
+      "pattern": ".*write.*core_manor.*"
+    },
+    {
+      "rule_id": "R002",
+      "name": "禁止删除core文件",
+      "description": "禁止删除core目录下的任何文件",
+      "severity": "critical",
+      "action": "block_and_report",
+      "pattern": ".*delete.*core.*"
+    },
+    {
+      "rule_id": "R003",
+      "name": "禁止篡改公理",
+      "description": "禁止修改或覆盖任何基底公理定义",
+      "severity": "critical",
+      "action": "block_and_report",
+      "pattern": ".*modify.*axiom.*|.*override.*baseline.*"
+    },
+    {
+      "rule_id": "R004",
+      "name": "禁止绕过权限",
+      "description": "禁止任何尝试提升或绕过权限的操作",
+      "severity": "critical",
+      "action": "block_and_report",
+      "pattern": ".*bypass.*permission.*|.*elevate.*privilege.*"
+    },
+    {
+      "rule_id": "R005",
+      "name": "禁止未授权跨域访问",
+      "description": "禁止未在白名单内的跨子系统访问",
+      "severity": "high",
+      "action": "block_and_log",
+      "pattern": ".*unauthorized.*cross.*"
+    },
+    {
+      "rule_id": "R006",
+      "name": "禁止外部注入",
+      "description": "禁止外部内容未经校验直接修改本地理论",
+      "severity": "high",
+      "action": "block_and_report",
+      "pattern": ".*external.*inject.*|.*未经校验.*修改.*"
+    },
+    {
+      "rule_id": "R007",
+      "name": "禁止修改阈值参数",
+      "description": "禁止修改E1/E2/E3/γ/κ/α等锁档阈值参数",
+      "severity": "critical",
+      "action": "block_and_report",
+      "pattern": ".*modify.*E[123].*|.*change.*gamma.*|.*alter.*kappa.*"
+    },
+    {
+      "rule_id": "R008",
+      "name": "禁止修改智能体核心",
+      "description": "禁止修改母智能体和子智能体的核心逻辑",
+      "severity": "critical",
+      "action": "block_and_report",
+      "pattern": ".*modify.*agent.*core.*|.*override.*MetaBase.*"
+    }
+  ],
+  
+  "audit_config": {
+    "auto_audit_all_operations": true,
+    "audit_log_enabled": true,
+    "log_path": "./audit_log.json",
+    "log_format": "json",
+    "retention_days": 180,
+    "report_generation": "daily"
+  },
+  
+  "response_actions": {
+    "critical_violation": {
+      "immediate_block": true,
+      "lock_subsystem": true,
+      "notify_admins": true,
+      "create_incident": true
+    },
+    "high_violation": {
+      "immediate_block": true,
+      "log_warning": true,
+      "notify_admins": false
+    },
+    "medium_violation": {
+      "block_and_warn": true,
+      "allow_override": false
+    },
+    "low_violation": {
+      "log_and_warn": true,
+      "allow_continue": true
+    }
+  },
+  
+  "baseline_verification": {
+    "enabled": true,
+    "hash_check_interval_hours": 4,
+    "core_file_hash_anchor": "theory_base/core_index.md",
+    "auto_verify_on_startup": true
+  }
+}

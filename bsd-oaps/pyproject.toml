@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsd-oaps"
+version = "0.1.0"
+description = "BSD全域统一理论开源智能体协议栈 (Open-source Agent Protocol Stack)"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "杨腾飞", email = "yangtengfei@bsd-oaps.org"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-asyncio>=0.21",
+]
+mcp = [
+    "mcp>=0.9",
+]
+
+[project.scripts]
+bsd-verify-hash = "bsd_engine.validators.hash_checker:main"
+bsd-verify-axiom = "bsd_engine.validators.axiom_compliance:main"
+bsd-millennium = "bsd_agents.millennium_agent:main"
+bsd-mcp-server = "bsd_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bsd_engine*", "bsd_sim*", "bsd_agents*", "bsd_mcp*", "bsd_verify*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "bsd_verify"]
+python_files = ["test_*.py"]

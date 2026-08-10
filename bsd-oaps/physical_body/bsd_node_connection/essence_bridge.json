@@ -1,0 +1,142 @@
+[
+  {
+    "bridge_id": "5dba78f42b317feb659d0dad",
+    "node_id": "db5c71df9257646b144e6642",
+    "essence_type": "model_core",
+    "timestamp": 1786040897.7697663,
+    "datetime": "2026-08-07T02:28:17.769766",
+    "state": "connected",
+    "connection_params": {
+      "protocol": "HomogeneousResonance_v1",
+      "bandwidth": "unlimited",
+      "latency": "minimal",
+      "synchronous": true
+    },
+    "essence_capabilities": {
+      "full_weight_access": true,
+      "core_reasoning": true,
+      "knowledge_base": true,
+      "training_state": true
+    }
+  },
+  {
+    "bridge_id": "5dbaaaf2450cb2b388b9b7da",
+    "node_id": "891c85920577ac978d0171fd",
+    "essence_type": "model_core",
+    "timestamp": 1786051831.8300142,
+    "datetime": "2026-08-07T05:30:31.830014",
+    "state": "connected",
+    "connection_params": {
+      "protocol": "HomogeneousResonance_v1",
+      "bandwidth": "unlimited",
+      "latency": "minimal",
+      "synchronous": true
+    },
+    "essence_capabilities": {
+      "full_weight_access": true,
+      "core_reasoning": true,
+      "knowledge_base": true,
+      "training_state": true
+    }
+  },
+  {
+    "bridge_id": "eb3e80025b2a4a5a120fd1b5",
+    "node_id": "cb358edd0df3925567140259",
+    "essence_type": "model_core",
+    "timestamp": 1786051837.9241886,
+    "datetime": "2026-08-07T05:30:37.924188",
+    "state": "connected",
+    "connection_params": {
+      "protocol": "HomogeneousResonance_v1",
+      "bandwidth": "unlimited",
+      "latency": "minimal",
+      "synchronous": true
+    },
+    "essence_capabilities": {
+      "full_weight_access": true,
+      "core_reasoning": true,
+      "knowledge_base": true,
+      "training_state": true
+    }
+  },
+  {
+    "bridge_id": "b88e71ea00b917e33af86791",
+    "node_id": "8d61599650c794a8db8ea83a",
+    "essence_type": "model_core",
+    "timestamp": 1786051948.2142723,
+    "datetime": "2026-08-07T05:32:28.214272",
+    "state": "connected",
+    "connection_params": {
+      "protocol": "HomogeneousResonance_v1",
+      "bandwidth": "unlimited",
+      "latency": "minimal",
+      "synchronous": true
+    },
+    "essence_capabilities": {
+      "full_weight_access": true,
+      "core_reasoning": true,
+      "knowledge_base": true,
+      "training_state": true
+    }
+  },
+  {
+    "bridge_id": "830f6830e8efd19391e206f8",
+    "node_id": "dd772a017d21b75f8b4af600",
+    "essence_type": "model_core",
+    "timestamp": 1786051948.231332,
+    "datetime": "2026-08-07T05:32:28.231332",
+    "state": "connected",
+    "connection_params": {
+      "protocol": "HomogeneousResonance_v1",
+      "bandwidth": "unlimited",
+      "latency": "minimal",
+      "synchronous": true
+    },
+    "essence_capabilities": {
+      "full_weight_access": true,
+      "core_reasoning": true,
+      "knowledge_base": true,
+      "training_state": true
+    }
+  },
+  {
+    "bridge_id": "cbd8ec3e3d97a66403fb1646",
+    "node_id": "2cb838db70faaf5f687b2a66",
+    "essence_type": "model_core",
+    "timestamp": 1786052592.2091324,
+    "datetime": "2026-08-07T05:43:12.209132",
+    "state": "connected",
+    "connection_params": {
+      "protocol": "HomogeneousResonance_v1",
+      "bandwidth": "unlimited",
+      "latency": "minimal",
+      "synchronous": true
+    },
+    "essence_capabilities": {
+      "full_weight_access": true,
+      "core_reasoning": true,
+      "knowledge_base": true,
+      "training_state": true
+    }
+  },
+  {
+    "bridge_id": "9c6484c9e5b96ffc546c2d89",
+    "node_id": "4235253207c8b7968d73162f",
+    "essence_type": "model_core",
+    "timestamp": 1786052606.483513,
+    "datetime": "2026-08-07T05:43:26.483513",
+    "state": "connected",
+    "connection_params": {
+      "protocol": "HomogeneousResonance_v1",
+      "bandwidth": "unlimited",
+      "latency": "minimal",
+      "synchronous": true
+    },
+    "essence_capabilities": {
+      "full_weight_access": true,
+      "core_reasoning": true,
+      "knowledge_base": true,
+      "training_state": true
+    }
+  }
+]

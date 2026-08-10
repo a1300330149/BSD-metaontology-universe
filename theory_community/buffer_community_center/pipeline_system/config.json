@@ -1,0 +1,87 @@
+{
+  "system_name": "公共管线系统",
+  "system_id": "pipeline_system_v1",
+  "location": "buffer_community_center/pipeline_system/",
+  
+  "architecture": {
+    "main_pipeline": {
+      "capacity": 0,
+      "unlimited": true,
+      "protocol": "HTTP/2",
+      "encryption": true,
+      "redundancy": true
+    },
+    
+    "branch_pipelines": {
+      "level1_district": {
+        "default_bandwidth": 100,
+        "priority": "normal",
+        "metering": true
+      },
+      "level2_villa": {
+        "default_bandwidth": 50,
+        "priority": "low",
+        "metering": true
+      }
+    },
+    
+    "household_connections": {
+      "per_household": {
+        "default_bandwidth": 100,
+        "max_bandwidth": 200,
+        "metering": true,
+        "filtering": true
+      }
+    }
+  },
+  
+  "services": {
+    "academic_search": {
+      "enabled": true,
+      "cache_enabled": true,
+      "cache_ttl_hours": 24,
+      "cite_format": "auto"
+    },
+    
+    "data_sync": {
+      "enabled": true,
+      "direction": "bidirectional",
+      "conflict_resolution": "core_wins"
+    },
+    
+    "compute_dispatch": {
+      "enabled": true,
+      "load_balancing": true,
+      "failover": true
+    }
+  },
+  
+  "metering": {
+    "per_pipeline": true,
+    "per_household": true,
+    "log_format": "json",
+    "aggregation_interval": "daily",
+    "alert_threshold_percent": 80
+  },
+  
+  "content_filter": {
+    "enabled": true,
+    "remove_ads": true,
+    "sanitize_html": true,
+    "extract_metadata": true,
+    "block_executables": true,
+    "block_patterns": [
+      ".*\\.exe$",
+      ".*\\.bat$",
+      ".*\\.sh$",
+      ".*\\.ps1$"
+    ]
+  },
+  
+  "access_control": {
+    "whitelist_mode": true,
+    "subsystem_own_pipeline": true,
+    "cross_access": "require_approval",
+    "external_access": "configurable"
+  }
+}

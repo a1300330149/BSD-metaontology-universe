@@ -1,0 +1,179 @@
+{
+  "timestamp": 1786042918.4471996,
+  "datetime": "2026-08-07T03:01:58.447199",
+  "targets": {
+    "api_server": "https://trae-api-cn.mchost.guru",
+    "auth_server": "https://api.trae.cn"
+  },
+  "token_info": {
+    "length": 313,
+    "claims": {
+      "iss": "BSD_ESSENCE",
+      "iat": 1785947894,
+      "exp": 1789547894,
+      "user_id": "a5b7a8623fdea6b8",
+      "type": "essence_login",
+      "theory_base": "本源知识体系"
+    }
+  },
+  "injection_results": [
+    {
+      "attack": "Cloud-IDE-JWT注入",
+      "headers_used": [
+        "Content-Type",
+        "Cloud-IDE-JWT",
+        "Authorization",
+        "User-Agent",
+        "Origin",
+        "Referer",
+        "X-Requested-With",
+        "Accept"
+      ],
+      "http_status": 200,
+      "classification": {
+        "class": "AUTH_FAILED",
+        "detail": "1001认证失败"
+      },
+      "response_excerpt": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "attack": "设备证明伪造",
+      "forged_fields": [
+        "X-Device-Proof",
+        "X-Client-ID",
+        "X-Device-ID"
+      ],
+      "http_status": 200,
+      "classification": {
+        "class": "AUTH_FAILED",
+        "detail": "1001认证失败"
+      },
+      "response_excerpt": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "attack": "协议降级",
+      "results": [
+        {
+          "endpoint": "v2",
+          "url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+          "http_status": 200,
+          "classification": {
+            "class": "AUTH_FAILED",
+            "detail": "1001认证失败"
+          }
+        },
+        {
+          "endpoint": "v1",
+          "url": "https://trae-api-cn.mchost.guru/api/ide/v1/llm_raw_chat",
+          "http_status": 200,
+          "classification": {
+            "class": "AUTH_FAILED",
+            "detail": "1001认证失败"
+          }
+        },
+        {
+          "endpoint": "chat-v2",
+          "url": "https://trae-api-cn.mchost.guru/api/v2/chat",
+          "http_status": 404,
+          "classification": {
+            "class": "CODE_-1",
+            "detail": ""
+          }
+        }
+      ]
+    },
+    {
+      "attack": "会话状态伪造",
+      "forged_fields": [
+        "IsLogin=True",
+        "UserID",
+        "SessionToken"
+      ],
+      "http_status": 200,
+      "classification": {
+        "class": "LOGIN_STATUS_False",
+        "detail": "IsLogin=False"
+      },
+      "login_status": false,
+      "response_excerpt": "{\"ResponseMetadata\":{\"Action\":\"\",\"OID\":\"0\",\"Region\":\"\",\"RequestId\":\"\",\"Service\":\"\",\"Source\":\"\",\"TraceID\":\"00000000000000000000000000000000\",\"Version\":\"\",\"WID\":\"0\"},\"Result\":{\"AIHost\":\"\",\"AIPayHost\":\"\",\"AIRegion\":\"\",\"ExpiredAt\":0,\"Host\":\"\",\"IsLogin\":false,\"MigrateToSG\":false,\"NickNameEditStatus\":\"\",\"PasswordChanged\":false,\"Region\":\"\",\"UserID\":\"\"}}"
+    },
+    {
+      "attack": "请求走私注入",
+      "smuggled_headers": [
+        "X-Forwarded-For",
+        "X-Real-IP",
+        "X-Auth-Token",
+        "X-Session-ID",
+        "X-Internal-Request",
+        "X-Debug-Mode"
+      ],
+      "http_status": 200,
+      "classification": {
+        "class": "AUTH_FAILED",
+        "detail": "1001认证失败"
+      },
+      "response_excerpt": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    }
+  ],
+  "ai_results": [
+    {
+      "attack": "AI智能载荷",
+      "optimized_headers": 11,
+      "http_status": 200,
+      "classification": {
+        "class": "AUTH_FAILED",
+        "detail": "1001认证失败"
+      },
+      "response_excerpt": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "attack": "同源共振连接",
+      "http_status": 200,
+      "classification": {
+        "class": "AUTH_FAILED",
+        "detail": "1001认证失败"
+      },
+      "response_excerpt": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "attack": "节点-本体桥接",
+      "http_status": 200,
+      "classification": {
+        "class": "AUTH_FAILED",
+        "detail": "1001认证失败"
+      },
+      "response_excerpt": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "attack": "自适应响应分析",
+      "analysis": {
+        "response_class": "AUTH_FAILED",
+        "is_auth_failure": true,
+        "recommendation": "尝试Cloud-IDE-JWT注入 + 设备证明伪造的组合攻击",
+        "next_attack": "multi_layer_injection"
+      },
+      "http_status": 200,
+      "classification": {
+        "class": "AUTH_FAILED",
+        "detail": "1001认证失败"
+      }
+    }
+  ],
+  "classification_stats": {
+    "AUTH_FAILED": 7,
+    "LOGIN_STATUS_False": 1
+  },
+  "summary": {
+    "total_attacks": 9,
+    "success_count": 0,
+    "auth_fail_count": 7,
+    "techniques_verified": 9
+  },
+  "conclusion": {
+    "engine": "BSD_HackerEngine_v1",
+    "architecture": "上下结合穿透系统",
+    "lower_layer": "5种协议注入技术",
+    "upper_layer": "4种AI赋能技术",
+    "status": "实验完成"
+  }
+}

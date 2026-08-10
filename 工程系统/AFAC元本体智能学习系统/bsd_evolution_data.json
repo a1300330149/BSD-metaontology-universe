@@ -1,0 +1,5196 @@
+{
+  "metadata": {
+    "version": "V3.0 Rev.04",
+    "author": "Yang Tengfei",
+    "author_id": "433127199812193215",
+    "creation_time": "2026-06-24T17:49:18.693338",
+    "duration": 1.01,
+    "num_steps": 101,
+    "hash": "1a3a9573910643ad5e1a7e0efd6bea3ee42a46a68ad6c1a8da5f33c43ceb2334"
+  },
+  "constants": {
+    "kappa_critical": 0.35,
+    "vacuum_base_amplitude": 1.0,
+    "phase_coupling_coefficient": 0.92
+  },
+  "vacuum_states": [
+    {
+      "amplitude": 1.000017,
+      "phase": 1.6e-05,
+      "entropy": -2.5e-05,
+      "fluctuation_intensity": 0.0
+    },
+    {
+      "amplitude": 1.000045,
+      "phase": 4.1e-05,
+      "entropy": -6.5e-05,
+      "fluctuation_intensity": 0.000518
+    },
+    {
+      "amplitude": 1.000055,
+      "phase": 5e-05,
+      "entropy": -7.9e-05,
+      "fluctuation_intensity": 0.00073
+    },
+    {
+      "amplitude": 1.000074,
+      "phase": 6.8e-05,
+      "entropy": -0.000107,
+      "fluctuation_intensity": 0.000636
+    },
+    {
+      "amplitude": 1.000065,
+      "phase": 6e-05,
+      "entropy": -9.4e-05,
+      "fluctuation_intensity": 0.001252
+    },
+    {
+      "amplitude": 1.000059,
+      "phase": 5.4e-05,
+      "entropy": -8.5e-05,
+      "fluctuation_intensity": 0.001351
+    },
+    {
+      "amplitude": 1.00005,
+      "phase": 4.6e-05,
+      "entropy": -7.2e-05,
+      "fluctuation_intensity": 0.001405
+    },
+    {
+      "amplitude": 1.000069,
+      "phase": 6.3e-05,
+      "entropy": -9.9e-05,
+      "fluctuation_intensity": 0.001368
+    },
+    {
+      "amplitude": 1.000089,
+      "phase": 8.2e-05,
+      "entropy": -0.000128,
+      "fluctuation_intensity": 0.001339
+    },
+    {
+      "amplitude": 1.00013,
+      "phase": 0.000119,
+      "entropy": -0.000187,
+      "fluctuation_intensity": 0.001576
+    },
+    {
+      "amplitude": 1.000153,
+      "phase": 0.000141,
+      "entropy": -0.000221,
+      "fluctuation_intensity": 0.001531
+    },
+    {
+      "amplitude": 1.00014,
+      "phase": 0.000129,
+      "entropy": -0.000202,
+      "fluctuation_intensity": 0.001641
+    },
+    {
+      "amplitude": 1.00015,
+      "phase": 0.000138,
+      "entropy": -0.000216,
+      "fluctuation_intensity": 0.001578
+    },
+    {
+      "amplitude": 1.000193,
+      "phase": 0.000178,
+      "entropy": -0.000279,
+      "fluctuation_intensity": 0.001728
+    },
+    {
+      "amplitude": 1.000192,
+      "phase": 0.000177,
+      "entropy": -0.000277,
+      "fluctuation_intensity": 0.001711
+    },
+    {
+      "amplitude": 1.000159,
+      "phase": 0.000146,
+      "entropy": -0.00023,
+      "fluctuation_intensity": 0.001994
+    },
+    {
+      "amplitude": 1.000153,
+      "phase": 0.000141,
+      "entropy": -0.000221,
+      "fluctuation_intensity": 0.00197
+    },
+    {
+      "amplitude": 1.000149,
+      "phase": 0.000137,
+      "entropy": -0.000215,
+      "fluctuation_intensity": 0.001938
+    },
+    {
+      "amplitude": 1.000138,
+      "phase": 0.000127,
+      "entropy": -0.000199,
+      "fluctuation_intensity": 0.001936
+    },
+    {
+      "amplitude": 1.00018,
+      "phase": 0.000165,
+      "entropy": -0.000259,
+      "fluctuation_intensity": 0.002032
+    },
+    {
+      "amplitude": 1.000186,
+      "phase": 0.000171,
+      "entropy": -0.000268,
+      "fluctuation_intensity": 0.001983
+    },
+    {
+      "amplitude": 1.000196,
+      "phase": 0.00018,
+      "entropy": -0.000282,
+      "fluctuation_intensity": 0.001938
+    },
+    {
+      "amplitude": 1.0002,
+      "phase": 0.000184,
+      "entropy": -0.000289,
+      "fluctuation_intensity": 0.001897
+    },
+    {
+      "amplitude": 1.000198,
+      "phase": 0.000182,
+      "entropy": -0.000285,
+      "fluctuation_intensity": 0.001872
+    },
+    {
+      "amplitude": 1.000183,
+      "phase": 0.000169,
+      "entropy": -0.000265,
+      "fluctuation_intensity": 0.001885
+    },
+    {
+      "amplitude": 1.000191,
+      "phase": 0.000176,
+      "entropy": -0.000275,
+      "fluctuation_intensity": 0.001849
+    },
+    {
+      "amplitude": 1.000186,
+      "phase": 0.000171,
+      "entropy": -0.000268,
+      "fluctuation_intensity": 0.00183
+    },
+    {
+      "amplitude": 1.000193,
+      "phase": 0.000178,
+      "entropy": -0.000278,
+      "fluctuation_intensity": 0.001797
+    },
+    {
+      "amplitude": 1.000195,
+      "phase": 0.000179,
+      "entropy": -0.000281,
+      "fluctuation_intensity": 0.001768
+    },
+    {
+      "amplitude": 1.000191,
+      "phase": 0.000176,
+      "entropy": -0.000276,
+      "fluctuation_intensity": 0.001748
+    },
+    {
+      "amplitude": 1.000196,
+      "phase": 0.000181,
+      "entropy": -0.000283,
+      "fluctuation_intensity": 0.00172
+    },
+    {
+      "amplitude": 1.000161,
+      "phase": 0.000149,
+      "entropy": -0.000233,
+      "fluctuation_intensity": 0.001838
+    },
+    {
+      "amplitude": 1.000148,
+      "phase": 0.000137,
+      "entropy": -0.000214,
+      "fluctuation_intensity": 0.001836
+    },
+    {
+      "amplitude": 1.000146,
+      "phase": 0.000134,
+      "entropy": -0.00021,
+      "fluctuation_intensity": 0.001813
+    },
+    {
+      "amplitude": 1.000169,
+      "phase": 0.000156,
+      "entropy": -0.000244,
+      "fluctuation_intensity": 0.001817
+    },
+    {
+      "amplitude": 1.000185,
+      "phase": 0.00017,
+      "entropy": -0.000266,
+      "fluctuation_intensity": 0.001799
+    },
+    {
+      "amplitude": 1.000179,
+      "phase": 0.000165,
+      "entropy": -0.000258,
+      "fluctuation_intensity": 0.001783
+    },
+    {
+      "amplitude": 1.000181,
+      "phase": 0.000167,
+      "entropy": -0.000262,
+      "fluctuation_intensity": 0.00176
+    },
+    {
+      "amplitude": 1.00019,
+      "phase": 0.000175,
+      "entropy": -0.000274,
+      "fluctuation_intensity": 0.001738
+    },
+    {
+      "amplitude": 1.00019,
+      "phase": 0.000175,
+      "entropy": -0.000274,
+      "fluctuation_intensity": 0.001718
+    },
+    {
+      "amplitude": 1.000197,
+      "phase": 0.000181,
+      "entropy": -0.000284,
+      "fluctuation_intensity": 0.001698
+    },
+    {
+      "amplitude": 1.000186,
+      "phase": 0.000171,
+      "entropy": -0.000269,
+      "fluctuation_intensity": 0.001694
+    },
+    {
+      "amplitude": 1.000185,
+      "phase": 0.00017,
+      "entropy": -0.000267,
+      "fluctuation_intensity": 0.001677
+    },
+    {
+      "amplitude": 1.00019,
+      "phase": 0.000174,
+      "entropy": -0.000274,
+      "fluctuation_intensity": 0.001658
+    },
+    {
+      "amplitude": 1.000202,
+      "phase": 0.000186,
+      "entropy": -0.000292,
+      "fluctuation_intensity": 0.001644
+    },
+    {
+      "amplitude": 1.000179,
+      "phase": 0.000165,
+      "entropy": -0.000258,
+      "fluctuation_intensity": 0.001676
+    },
+    {
+      "amplitude": 1.000148,
+      "phase": 0.000136,
+      "entropy": -0.000213,
+      "fluctuation_intensity": 0.001733
+    },
+    {
+      "amplitude": 1.000187,
+      "phase": 0.000172,
+      "entropy": -0.00027,
+      "fluctuation_intensity": 0.001791
+    },
+    {
+      "amplitude": 1.00021,
+      "phase": 0.000193,
+      "entropy": -0.000303,
+      "fluctuation_intensity": 0.001794
+    },
+    {
+      "amplitude": 1.0002,
+      "phase": 0.000184,
+      "entropy": -0.000289,
+      "fluctuation_intensity": 0.001787
+    },
+    {
+      "amplitude": 1.000201,
+      "phase": 0.000185,
+      "entropy": -0.00029,
+      "fluctuation_intensity": 0.00177
+    },
+    {
+      "amplitude": 1.000183,
+      "phase": 0.000169,
+      "entropy": -0.000265,
+      "fluctuation_intensity": 0.001777
+    },
+    {
+      "amplitude": 1.000183,
+      "phase": 0.000169,
+      "entropy": -0.000265,
+      "fluctuation_intensity": 0.001761
+    },
+    {
+      "amplitude": 1.000169,
+      "phase": 0.000155,
+      "entropy": -0.000243,
+      "fluctuation_intensity": 0.001762
+    },
+    {
+      "amplitude": 1.000178,
+      "phase": 0.000164,
+      "entropy": -0.000257,
+      "fluctuation_intensity": 0.001748
+    },
+    {
+      "amplitude": 1.000169,
+      "phase": 0.000155,
+      "entropy": -0.000243,
+      "fluctuation_intensity": 0.00174
+    },
+    {
+      "amplitude": 1.000146,
+      "phase": 0.000134,
+      "entropy": -0.000211,
+      "fluctuation_intensity": 0.001758
+    },
+    {
+      "amplitude": 1.000115,
+      "phase": 0.000106,
+      "entropy": -0.000166,
+      "fluctuation_intensity": 0.001796
+    },
+    {
+      "amplitude": 1.000143,
+      "phase": 0.000132,
+      "entropy": -0.000206,
+      "fluctuation_intensity": 0.001812
+    },
+    {
+      "amplitude": 1.000139,
+      "phase": 0.000128,
+      "entropy": -0.0002,
+      "fluctuation_intensity": 0.001799
+    },
+    {
+      "amplitude": 1.000113,
+      "phase": 0.000104,
+      "entropy": -0.000163,
+      "fluctuation_intensity": 0.00182
+    },
+    {
+      "amplitude": 1.000106,
+      "phase": 9.7e-05,
+      "entropy": -0.000153,
+      "fluctuation_intensity": 0.001809
+    },
+    {
+      "amplitude": 1.00008,
+      "phase": 7.4e-05,
+      "entropy": -0.000116,
+      "fluctuation_intensity": 0.001827
+    },
+    {
+      "amplitude": 1.000102,
+      "phase": 9.4e-05,
+      "entropy": -0.000148,
+      "fluctuation_intensity": 0.001831
+    },
+    {
+      "amplitude": 1.000104,
+      "phase": 9.6e-05,
+      "entropy": -0.00015,
+      "fluctuation_intensity": 0.001817
+    },
+    {
+      "amplitude": 1.000086,
+      "phase": 7.9e-05,
+      "entropy": -0.000124,
+      "fluctuation_intensity": 0.001819
+    },
+    {
+      "amplitude": 1.000117,
+      "phase": 0.000108,
+      "entropy": -0.000169,
+      "fluctuation_intensity": 0.001842
+    },
+    {
+      "amplitude": 1.000094,
+      "phase": 8.6e-05,
+      "entropy": -0.000135,
+      "fluctuation_intensity": 0.001854
+    },
+    {
+      "amplitude": 1.0001,
+      "phase": 9.2e-05,
+      "entropy": -0.000144,
+      "fluctuation_intensity": 0.001841
+    },
+    {
+      "amplitude": 1.00012,
+      "phase": 0.00011,
+      "entropy": -0.000173,
+      "fluctuation_intensity": 0.001841
+    },
+    {
+      "amplitude": 1.000159,
+      "phase": 0.000146,
+      "entropy": -0.000229,
+      "fluctuation_intensity": 0.00188
+    },
+    {
+      "amplitude": 1.000156,
+      "phase": 0.000144,
+      "entropy": -0.000225,
+      "fluctuation_intensity": 0.001867
+    },
+    {
+      "amplitude": 1.00017,
+      "phase": 0.000156,
+      "entropy": -0.000245,
+      "fluctuation_intensity": 0.001859
+    },
+    {
+      "amplitude": 1.000191,
+      "phase": 0.000175,
+      "entropy": -0.000275,
+      "fluctuation_intensity": 0.001859
+    },
+    {
+      "amplitude": 1.000183,
+      "phase": 0.000168,
+      "entropy": -0.000264,
+      "fluctuation_intensity": 0.001851
+    },
+    {
+      "amplitude": 1.00019,
+      "phase": 0.000175,
+      "entropy": -0.000275,
+      "fluctuation_intensity": 0.001839
+    },
+    {
+      "amplitude": 1.000189,
+      "phase": 0.000174,
+      "entropy": -0.000272,
+      "fluctuation_intensity": 0.001828
+    },
+    {
+      "amplitude": 1.000211,
+      "phase": 0.000194,
+      "entropy": -0.000304,
+      "fluctuation_intensity": 0.00183
+    },
+    {
+      "amplitude": 1.000217,
+      "phase": 0.0002,
+      "entropy": -0.000313,
+      "fluctuation_intensity": 0.001818
+    },
+    {
+      "amplitude": 1.000208,
+      "phase": 0.000191,
+      "entropy": -0.0003,
+      "fluctuation_intensity": 0.001812
+    },
+    {
+      "amplitude": 1.000199,
+      "phase": 0.000183,
+      "entropy": -0.000287,
+      "fluctuation_intensity": 0.001805
+    },
+    {
+      "amplitude": 1.0002,
+      "phase": 0.000184,
+      "entropy": -0.000288,
+      "fluctuation_intensity": 0.001794
+    },
+    {
+      "amplitude": 1.000202,
+      "phase": 0.000186,
+      "entropy": -0.000291,
+      "fluctuation_intensity": 0.001784
+    },
+    {
+      "amplitude": 1.000169,
+      "phase": 0.000155,
+      "entropy": -0.000244,
+      "fluctuation_intensity": 0.001814
+    },
+    {
+      "amplitude": 1.00017,
+      "phase": 0.000156,
+      "entropy": -0.000245,
+      "fluctuation_intensity": 0.001804
+    },
+    {
+      "amplitude": 1.000159,
+      "phase": 0.000146,
+      "entropy": -0.000229,
+      "fluctuation_intensity": 0.001799
+    },
+    {
+      "amplitude": 1.000147,
+      "phase": 0.000135,
+      "entropy": -0.000211,
+      "fluctuation_intensity": 0.001794
+    },
+    {
+      "amplitude": 1.000145,
+      "phase": 0.000133,
+      "entropy": -0.000209,
+      "fluctuation_intensity": 0.001784
+    },
+    {
+      "amplitude": 1.000127,
+      "phase": 0.000117,
+      "entropy": -0.000183,
+      "fluctuation_intensity": 0.001787
+    },
+    {
+      "amplitude": 1.000144,
+      "phase": 0.000132,
+      "entropy": -0.000207,
+      "fluctuation_intensity": 0.001784
+    },
+    {
+      "amplitude": 1.000131,
+      "phase": 0.00012,
+      "entropy": -0.000189,
+      "fluctuation_intensity": 0.001781
+    },
+    {
+      "amplitude": 1.000126,
+      "phase": 0.000116,
+      "entropy": -0.000182,
+      "fluctuation_intensity": 0.001772
+    },
+    {
+      "amplitude": 1.000116,
+      "phase": 0.000106,
+      "entropy": -0.000167,
+      "fluctuation_intensity": 0.001767
+    },
+    {
+      "amplitude": 1.00014,
+      "phase": 0.000129,
+      "entropy": -0.000202,
+      "fluctuation_intensity": 0.001774
+    },
+    {
+      "amplitude": 1.000141,
+      "phase": 0.00013,
+      "entropy": -0.000204,
+      "fluctuation_intensity": 0.001764
+    },
+    {
+      "amplitude": 1.000107,
+      "phase": 9.9e-05,
+      "entropy": -0.000155,
+      "fluctuation_intensity": 0.001792
+    },
+    {
+      "amplitude": 1.000097,
+      "phase": 9e-05,
+      "entropy": -0.00014,
+      "fluctuation_intensity": 0.001786
+    },
+    {
+      "amplitude": 1.000117,
+      "phase": 0.000108,
+      "entropy": -0.000169,
+      "fluctuation_intensity": 0.001787
+    },
+    {
+      "amplitude": 1.000105,
+      "phase": 9.7e-05,
+      "entropy": -0.000152,
+      "fluctuation_intensity": 0.001783
+    },
+    {
+      "amplitude": 1.000099,
+      "phase": 9.1e-05,
+      "entropy": -0.000142,
+      "fluctuation_intensity": 0.001776
+    },
+    {
+      "amplitude": 1.000113,
+      "phase": 0.000104,
+      "entropy": -0.000163,
+      "fluctuation_intensity": 0.001772
+    }
+  ],
+  "field_states": [
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    },
+    {
+      "topological": {
+        "field_type": "拓扑场",
+        "amplitude": 1.0001137996913267,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016418773596406765,
+        "gradient": 0.00010375288734973302,
+        "coupling_strength": 1.0
+      },
+      "phase_transition": {
+        "field_type": "相变场",
+        "amplitude": 0.5,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.00016269072864706708,
+        "gradient": -2.0351302072097122e-05,
+        "coupling_strength": 1.0
+      },
+      "emergence": {
+        "field_type": "涌现场",
+        "amplitude": 0.0,
+        "phase": 0.00010374118945497696,
+        "entropy": -0.0,
+        "gradient": 0.0,
+        "coupling_strength": 0.14285714285714285
+      },
+      "kappa": {
+        "field_type": "κ相位场",
+        "amplitude": 1.0,
+        "phase": 0.00010374118945497696,
+        "entropy": 0.0,
+        "gradient": -0.0,
+        "coupling_strength": 1.0
+      }
+    }
+  ],
+  "entropy_records": [
+    {
+      "total_entropy": -7.46903094761496e-05,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00019433300070951785,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00023668256538379945,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00032263575579438995,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0002822842520336078,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0002546968571475452,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00021779183378031408,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0002989006209381614,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00038586097826590196,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0005636737543495071,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006643004202174624,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006086909096371325,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006508979479371566,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008394865830460372,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008345783860818116,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006909419479985508,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006660905806971338,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006474695489013045,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0005988544643223349,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007803369916088108,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008079692023375367,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008499937847561952,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008702056719235165,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008578984550240596,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007966750171289798,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008285724456442321,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008055952169127069,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008376930797275904,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008457670229097575,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008300264349766033,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008523293058042384,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007011072036638966,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006446715223383545,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006321342622749958,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007355660134730213,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008017612508991777,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.000777777100002444,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007877067007710712,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008252914693516913,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.000823991845483085,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008560204754470538,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008091808848789519,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008021704024843876,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008233896559494435,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008782224126635707,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007769413715517143,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006415791132861688,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008119024902742042,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0009127506930345947,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008693552315147101,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008723631680254844,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007964598024112219,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.000796651893143073,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007317918595624486,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007734001566431055,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007326303001459116,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006341331907682312,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004996308773601002,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006208733037447201,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006030620800281551,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004905142936087021,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00045996720494554993,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0003481547583006821,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004446751387533472,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004527700229000456,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0003735656090982776,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0005088721888992003,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00040605556762428617,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004336929498959104,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.000520176944934895,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006888561622748166,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006776546629185008,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007370037279397453,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008281416843125586,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007941902839797418,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008268197283084256,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008190937936228248,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0009148621406983208,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0009421093981254881,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0009030232138169312,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008622311240345197,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008678232766283179,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0008769900126113919,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.000733251911818367,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0007370013154949965,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006887445051776831,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006361550848331775,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006299274452214502,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0005503444696403235,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006241621586477384,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0005681079590348761,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0005488996844778018,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.000501861690835998,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006076176050704181,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0006126242534581969,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004651823568678704,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.00042242123567940587,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0005097243099672905,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004579132726092402,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004283279955059073,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    },
+    {
+      "total_entropy": -0.0004895691932582018,
+      "negative_entropy_reserve": 1.0,
+      "is_balanced": 1
+    }
+  ],
+  "fusion_records": [
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000018,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000046,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000056,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000076,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000066,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00006,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000051,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00007,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000091,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000132,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000156,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000143,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000153,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000197,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000196,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000162,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000156,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000152,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00014,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000183,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00019,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000199,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000204,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000201,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000187,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000194,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000189,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000196,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000198,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000195,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.0002,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000164,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000151,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000148,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000173,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000188,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000182,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000185,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000194,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000193,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000201,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00019,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000188,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000193,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000206,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000182,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00015,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00019,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000214,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000204,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000205,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000187,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000187,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000172,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000181,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000172,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000149,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000117,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000146,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000141,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000115,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000108,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000082,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000104,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000106,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000088,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000119,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000095,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000102,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000122,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000162,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000159,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000173,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000194,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000186,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000194,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000192,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000215,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000221,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000212,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000202,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000204,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000206,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000172,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000173,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000162,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000149,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000148,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000129,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000146,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000133,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000129,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000118,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000143,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000144,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000109,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000099,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.00012,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000107,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.0001,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    },
+    {
+      "scale_factor": 1.0,
+      "continuous_component": 1.000115,
+      "discrete_component": 0.0,
+      "fusion_coherence": 0.0
+    }
+  ],
+  "summary": {
+    "duration": 1.01,
+    "num_steps": 101,
+    "final_vacuum": {
+      "amplitude": 1.000113,
+      "phase": 0.000104,
+      "entropy": -0.000163,
+      "fluctuation_intensity": 0.001772
+    },
+    "final_kappa_phase": {
+      "phase_sync": 1.0,
+      "is_stable": 1
+    },
+    "final_entropy": {
+      "total_entropy": -0.0004895691932582018,
+      "is_balanced": 1
+    },
+    "phase_transitions": 0,
+    "max_emergence_layer": 1,
+    "spin_network_nodes": 0
+  }
+}

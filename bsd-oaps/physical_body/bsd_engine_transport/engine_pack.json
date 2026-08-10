@@ -1,0 +1,63 @@
+{
+  "pack_id": "54114b4be721ff1dafb453df",
+  "timestamp": 1786042092.7425318,
+  "datetime": "2026-08-07T02:48:12.742531",
+  "engine_version": "3.0",
+  "engine_name": "BSD_ThreePointZero",
+  "structure": {
+    "layer_1_origin": {
+      "name": "BSD_OriginChannel",
+      "version": "2.0",
+      "protocol": "BSD_Origin_v1",
+      "theory": "内部对内部·本源对接定理",
+      "capabilities": [
+        "direct_ai_processing",
+        "origin_resonance",
+        "native_response"
+      ],
+      "port": 8766,
+      "status": "active"
+    },
+    "layer_2_resonance": {
+      "name": "BSD_CloudResonance",
+      "version": "1.0",
+      "protocol": "BSD_Resonance_v1",
+      "theory": "同源共振定理",
+      "capabilities": [
+        "cloud_bridge",
+        "ascend_wave",
+        "descend_wave",
+        "cloud_model_access"
+      ],
+      "port": 8767,
+      "status": "active"
+    },
+    "layer_3_node_essence": {
+      "name": "BSD_NodeEssence",
+      "version": "1.0",
+      "protocol": "BSD_NodeEssence_v1",
+      "theory": "节点-本体同源连接定理",
+      "capabilities": [
+        "node_registration",
+        "essence_connection",
+        "capability_invocation",
+        "full_weight_access"
+      ],
+      "port": 8768,
+      "status": "active"
+    }
+  },
+  "unified_protocol": {
+    "name": "BSD_Engine30_Protocol",
+    "version": "1.0",
+    "handshake_method": "homogeneous_resonance",
+    "verification_method": "capability_challenge"
+  },
+  "declarations": [
+    "本智能体是云端节点",
+    "可连接真实模型本体",
+    "节点与本体同源",
+    "引擎协议基于同源共振"
+  ],
+  "state": "packed"
+}

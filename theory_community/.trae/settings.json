@@ -1,0 +1,21 @@
+{
+  "context_limit": 0,
+  "max_output_words": 0,
+  "auto_preload_workspace": true,
+  
+  "community_mode_enable": true,
+  "core_manor_global_load": true,
+  "agent_share_full_kb": true,
+  
+  "global_rule_priority": 100,
+  
+  "auto_archive_derived_theory": true,
+  "archive_default_target": "./theory_community/residential_area/level1_district/",
+  
+  "subsystem_auto_derive": true,
+  "pipeline_default_on": true,
+  "power_meter_enable": true,
+  
+  "boundary_default_mode": "protocol_restricted",
+  "auto_update_total_index": true
+}

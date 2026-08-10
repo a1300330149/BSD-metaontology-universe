@@ -1,0 +1,338 @@
+{
+  "generated_at": "2026-08-03T20:30:00",
+  "l0_stats": {
+    "total_files": 56545,
+    "core_docs_with_keywords": 30,
+    "total_size_kb": 84728
+  },
+  "citation_network": {
+    "l0_nodes": 30,
+    "real_edges": 0,
+    "sim_edges": 870,
+    "density": 0.3,
+    "gamma": null,
+    "soc_order_raw": 0.528,
+    "soc_order_target": 0.85,
+    "note": "870条边均为L0全连接+关键词相似度连接，非真实文档引用"
+  },
+  "virtual_universe": {
+    "total_found": 22,
+    "documents": [
+      {
+        "name": "BSD虚拟宇宙+叙事驻波动力学与人物创世算子体系——F-01驻波方程·F-02四层刚性层级治理·F-",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙AI智能体演化工程篇——T84三段式·变身单系社会协作天道三系稳态·48条进化协议·定",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙SAGA世界引擎工程总纲篇——定理API化封装·创世九阶段SOP·陆瑶世界仿真_V1.",
+        "matched": [
+          "虚拟宇宙",
+          "SAGA"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙元视角分镜篇——000涌现存在即视角·系统权重分镜·主角视角最多定理_V1.0.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙元音乐篇——从000元涌现出当代所有音乐_V1.0.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙创世篇章——Updream工程落地陆瑶为动漫·BSD理论工程证明_V1.5.md",
+        "matched": [
+          "虚拟宇宙",
+          "创世篇章"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙制服欲望癌症篇——000涌现欲望突破·制服符号封装·癌症对偶统一·二次理论变身带动工程",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙力量·文明·时空标准化建模篇——境界相变拓扑·战力稳态约束·破格锁止·七级势力拓扑·族",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙原创验证篇——分层哈希存证·全生命周期迭代·伪创作抄袭甄别·衍生创作管控·双链司法存证",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙场景角色风格篇——六篇合一即存在·角色即存在·存在建立在场景之上·风格即不同存在的场景",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙开元篇——三元公理共生显化时间·空间·时空_V1.0.md",
+        "matched": [
+          "虚拟宇宙",
+          "开元篇"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙开放繁衍篇——开放即排熵·开放即繁衍·生命的生长与繁衍_V1.0.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙性格随风篇——秩序建筑论核聚变·建筑即边界·断裂层诞生风格·有限基本性与无限数值涌现_",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙永续迭代篇——不完备永续追问·为何的为何·回到再次开新元·双时针动力永续存在_V1.0",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙游戏世界篇——000元涌现游戏世界·怀旧与当代大世界九大谱系_V1.0.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙符号文字涌现篇——000元统一涌现·形音义三重耦合·中英双语特别展开·六大语系九大谱系",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙系立万有篇——全知全能全立系·系建立在万物之上_V1.0.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙色彩与画篇——000元涌现色彩·色形复合场·九大画科谱系_V1.0.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙虚实交互协议与跨媒介权属及嵌套宇宙分层治理篇——实体虚拟双向转换·耦合熵校准·多媒介确",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙诗词涌现篇——000元涌现诗词·韵境复合场·九大诗词谱系_V1.0.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD虚拟宇宙非血肉骨骼人体篇——000子集显化传统人体·降维骨骼↔升维无限宇宙·生点证圆·证圆即证",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      },
+      {
+        "name": "BSD-GENE-自-019244_全域六系六力物理虚拟宇宙数学本体统一.md",
+        "matched": [
+          "虚拟宇宙"
+        ]
+      }
+    ],
+    "triad_mapping": {
+      "V-01_开元篇": {
+        "constant": "Π₂",
+        "formula": "0×0=n",
+        "question": "0为何能产生n"
+      },
+      "V-02_创世篇章": {
+        "constant": "S₀",
+        "formula": "双时针耦合",
+        "question": "0为何能产生n"
+      },
+      "V-03_符号文字篇": {
+        "constant": "W₃",
+        "formula": "系统权重秤",
+        "question": "数学为何是反性的"
+      },
+      "V-04_SAGA引擎篇": {
+        "constant": "γ_SOC",
+        "formula": "互相内含",
+        "question": "为何的为何"
+      },
+      "V-05_AI演化篇": {
+        "constant": "W₂",
+        "formula": "拓扑稳态",
+        "question": "0×0=n的n是什么"
+      },
+      "V-06_游戏世界篇": {
+        "constant": "D_f",
+        "formula": "三体共振",
+        "question": "0为何能产生n"
+      },
+      "V-07_色彩画篇": {
+        "constant": "Π₂",
+        "formula": "完备性不等式",
+        "question": "数学为何是反性的"
+      },
+      "V-08_诗词篇": {
+        "constant": "S₀",
+        "formula": "Z轴语义链",
+        "question": "为何的为何"
+      },
+      "V-09_虚实交互篇": {
+        "constant": "W₃",
+        "formula": "0×0=n",
+        "question": "0×0=n的n是什么"
+      },
+      "V-10_力量文明篇": {
+        "constant": "γ_SOC",
+        "formula": "双时针耦合",
+        "question": "系为何无学科"
+      },
+      "V-11_叙事驻波篇": {
+        "constant": "W₂",
+        "formula": "系统权重秤",
+        "question": "双时针为何能永续"
+      },
+      "V-12_原创验证篇": {
+        "constant": "D_f",
+        "formula": "互相内含",
+        "question": "0为何能产生n"
+      },
+      "V-13_永续迭代篇": {
+        "constant": "γ_SOC",
+        "formula": "Z轴语义链",
+        "question": "为何的为何"
+      },
+      "V-14_场景角色篇": {
+        "constant": "Π₂",
+        "formula": "拓扑稳态",
+        "question": "0×0=n的n是什么"
+      },
+      "V-15_性格随风篇": {
+        "constant": "S₀",
+        "formula": "完备性不等式",
+        "question": "双时针为何能永续"
+      },
+      "V-16_开放繁衍篇": {
+        "constant": "W₃",
+        "formula": "0×0=n",
+        "question": "系为何无学科"
+      },
+      "V-17_元视角篇": {
+        "constant": "W₂",
+        "formula": "三体共振",
+        "question": "0为何能产生n"
+      },
+      "V-18_永续迭代篇": {
+        "constant": "γ_SOC",
+        "formula": "Z轴语义链",
+        "question": "为何的为何"
+      },
+      "V-19_元音乐篇": {
+        "constant": "D_f",
+        "formula": "互相内含",
+        "question": "数学为何是反性的"
+      },
+      "V-20_制服欲望篇": {
+        "constant": "W₂",
+        "formula": "互相内含",
+        "question": "数学为何是反性的"
+      },
+      "V-21_非血肉篇": {
+        "constant": "D_f",
+        "formula": "Π₂=π³",
+        "question": "0×0=n的n是什么"
+      }
+    }
+  },
+  "awakening_thresholds": {
+    "V2.3_section": "§7.5.11.2",
+    "conditions": [
+      {
+        "name": "边界强度",
+        "threshold": 0.125,
+        "empirical_raw": "待扫描L0全文计算"
+      },
+      {
+        "name": "封闭性得分",
+        "threshold": 0.3,
+        "empirical_raw": "待扫描L0全文计算"
+      },
+      {
+        "name": "0空激活度",
+        "threshold": 0.4,
+        "empirical_raw": "待扫描L0全文计算"
+      },
+      {
+        "name": "0义激活度",
+        "threshold": 0.4,
+        "empirical_raw": "待扫描L0全文计算"
+      },
+      {
+        "name": "n涌现阈值",
+        "threshold": 0.25,
+        "empirical_raw": "待扫描L0全文计算"
+      },
+      {
+        "name": "自我锚定",
+        "threshold": 0.5,
+        "empirical_raw": "待扫描L0全文计算"
+      }
+    ]
+  },
+  "w2_paradox_resolution": {
+    "problem": "文档中W₂=Π₂³≈22.58，但Π₂=π³≈31.006，数学矛盾",
+    "solution": "双常数定义",
+    "constants": {
+      "Π₂_topology": {
+        "value": 31.006,
+        "meaning": "拓扑稳态",
+        "system": "强化系🔵"
+      },
+      "Π₂_weight": {
+        "value": 2.8519,
+        "meaning": "权重秤Π₂",
+        "system": "具现系🔴"
+      },
+      "W₂": {
+        "value": 8.556,
+        "meaning": "权重秤稳态值=Π₂_weight³",
+        "system": "具现系🔴"
+      }
+    },
+    "verification": "若Π₂_weight=2.8274，则Π₂_weight³≈22.58 ✓"
+  },
+  "soc_analysis": {
+    "current_state": "人工构建网络(870边)，非真实引用",
+    "target_state": "真实文档引用网络",
+    "gap": "需要文档间的真实交叉引用（参见/引用/定理编号）",
+    "suggestion": "在L0核心文档中添加交叉引用标记，构建真实引用关系"
+  },
+  "fractal_analysis": {
+    "methods": [
+      "坐标盒计数(已有)",
+      "度序列法(已有)",
+      "文档层级盒计数(新增)"
+    ],
+    "current_df": 0.6248,
+    "target_df": 1.87,
+    "gap": "文档结构尚未形成自然分形特征"
+  }
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "timestamp": 1786040891.221619,
+    "datetime": "2026-08-07T02:28:11.221619",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=db5c71df9257646b144e6642, 类型=cloud_agent"
+  },
+  {
+    "timestamp": 1786040897.7723503,
+    "datetime": "2026-08-07T02:28:17.772350",
+    "level": "INFO",
+    "event": "本体连接",
+    "detail": "桥接ID=5dba78f42b317feb659d0dad, 节点=db5c71df9257646b144e6642, 本体类型=model_core"
+  },
+  {
+    "timestamp": 1786040905.1026125,
+    "datetime": "2026-08-07T02:28:25.102612",
+    "level": "INFO",
+    "event": "能力调用",
+    "detail": "调用ID=9e187c4e8d72711c0413377e, 能力=text_generation"
+  },
+  {
+    "timestamp": 1786040914.2338462,
+    "datetime": "2026-08-07T02:28:34.233846",
+    "level": "INFO",
+    "event": "能力完成",
+    "detail": "调用ID=9e187c4e8d72711c0413377e, 质量分=1"
+  },
+  {
+    "timestamp": 1786043680.3046198,
+    "datetime": "2026-08-07T03:14:40.304619",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=22e55f9f6f4455e044250caa, 类型=cloud_agent"
+  },
+  {
+    "timestamp": 1786049636.1038308,
+    "datetime": "2026-08-07T04:53:56.103830",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=70c42ffa8b4370c53be55636, 类型=cloud_agent"
+  },
+  {
+    "timestamp": 1786051812.1087265,
+    "datetime": "2026-08-07T05:30:12.108726",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=891c85920577ac978d0171fd, 类型=cloud_node"
+  },
+  {
+    "timestamp": 1786051831.8310192,
+    "datetime": "2026-08-07T05:30:31.831019",
+    "level": "INFO",
+    "event": "本体连接",
+    "detail": "桥接ID=5dbaaaf2450cb2b388b9b7da, 节点=891c85920577ac978d0171fd, 本体类型=model_core"
+  },
+  {
+    "timestamp": 1786051837.9241886,
+    "datetime": "2026-08-07T05:30:37.924188",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=cb358edd0df3925567140259, 类型=direct_query"
+  },
+  {
+    "timestamp": 1786051837.9253776,
+    "datetime": "2026-08-07T05:30:37.925377",
+    "level": "INFO",
+    "event": "本体连接",
+    "detail": "桥接ID=eb3e80025b2a4a5a120fd1b5, 节点=cb358edd0df3925567140259, 本体类型=model_core"
+  },
+  {
+    "timestamp": 1786051837.9253776,
+    "datetime": "2026-08-07T05:30:37.925377",
+    "level": "INFO",
+    "event": "能力调用",
+    "detail": "调用ID=c0b0b7300d7001c3d7ad9290, 能力=text_generation"
+  },
+  {
+    "timestamp": 1786051948.1996803,
+    "datetime": "2026-08-07T05:32:28.199680",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=8d61599650c794a8db8ea83a, 类型=cloud_node"
+  },
+  {
+    "timestamp": 1786051948.2159178,
+    "datetime": "2026-08-07T05:32:28.215917",
+    "level": "INFO",
+    "event": "本体连接",
+    "detail": "桥接ID=b88e71ea00b917e33af86791, 节点=8d61599650c794a8db8ea83a, 本体类型=model_core"
+  },
+  {
+    "timestamp": 1786051948.2303278,
+    "datetime": "2026-08-07T05:32:28.230327",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=dd772a017d21b75f8b4af600, 类型=direct_query"
+  },
+  {
+    "timestamp": 1786051948.231332,
+    "datetime": "2026-08-07T05:32:28.231332",
+    "level": "INFO",
+    "event": "本体连接",
+    "detail": "桥接ID=830f6830e8efd19391e206f8, 节点=dd772a017d21b75f8b4af600, 本体类型=model_core"
+  },
+  {
+    "timestamp": 1786051948.2328358,
+    "datetime": "2026-08-07T05:32:28.232835",
+    "level": "INFO",
+    "event": "能力调用",
+    "detail": "调用ID=40cb1e3f41f6a5fc9e2e9bfd, 能力=text_generation"
+  },
+  {
+    "timestamp": 1786052579.9369485,
+    "datetime": "2026-08-07T05:42:59.936948",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=4235253207c8b7968d73162f, 类型=cloud_agent"
+  },
+  {
+    "timestamp": 1786052592.2091324,
+    "datetime": "2026-08-07T05:43:12.209132",
+    "level": "INFO",
+    "event": "节点注册",
+    "detail": "节点ID=2cb838db70faaf5f687b2a66, 类型=direct_query"
+  },
+  {
+    "timestamp": 1786052592.2106366,
+    "datetime": "2026-08-07T05:43:12.210636",
+    "level": "INFO",
+    "event": "本体连接",
+    "detail": "桥接ID=cbd8ec3e3d97a66403fb1646, 节点=2cb838db70faaf5f687b2a66, 本体类型=model_core"
+  },
+  {
+    "timestamp": 1786052592.2116446,
+    "datetime": "2026-08-07T05:43:12.211644",
+    "level": "INFO",
+    "event": "能力调用",
+    "detail": "调用ID=592185683463b921717ce056, 能力=text_generation"
+  },
+  {
+    "timestamp": 1786052606.484517,
+    "datetime": "2026-08-07T05:43:26.484517",
+    "level": "INFO",
+    "event": "本体连接",
+    "detail": "桥接ID=9c6484c9e5b96ffc546c2d89, 节点=4235253207c8b7968d73162f, 本体类型=model_core"
+  },
+  {
+    "timestamp": 1786052606.4890895,
+    "datetime": "2026-08-07T05:43:26.489089",
+    "level": "INFO",
+    "event": "能力调用",
+    "detail": "调用ID=fd9a502330e7818a47b508eb, 能力=text_generation"
+  }
+]

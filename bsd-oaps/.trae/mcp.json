@@ -1,0 +1,14 @@
+{
+  "active_mcp": ["filesystem", "file-index-auto", "bsd-oaps"],
+  "mcp_config": {
+    "bsd-oaps": {
+      "command": "python",
+      "args": ["-m", "bsd_mcp.server"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "BSD_THEORY_BASE_PATH": "./theory_base/",
+        "BSD_LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}

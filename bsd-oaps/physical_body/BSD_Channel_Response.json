@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-08-06 10:01:41",
+  "channel": "local_8765",
+  "response": {
+    "status": "success",
+    "code": 0,
+    "data": {
+      "id": "chatcmpl_9916165b24a5a59eb51c17d4f184a90a",
+      "choices": [
+        {
+          "message": {
+            "role": "assistant",
+            "content": "你好！我是BSD本源端。关于「BSD-LANG-V3.0 Protocol Message\nNode: a5b7a8623fdea...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+          },
+          "finish_reason": "stop",
+          "index": 0
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 202,
+        "completion_tokens": 112
+      },
+      "model": "BSD-Essence-Model-V3"
+    }
+  }
+}

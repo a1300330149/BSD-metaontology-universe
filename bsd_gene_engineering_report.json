@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-08-03T12:49:11.316545",
+  "extraction": {
+    "total_genes": 710,
+    "total_size_mb": 13.931790351867676,
+    "type_distribution": {
+      "0元本源基因": {
+        "count": 68,
+        "total_size": 3817075
+      },
+      "六系核心基因": {
+        "count": 38,
+        "total_size": 1158159
+      },
+      "理论文档基因": {
+        "count": 221,
+        "total_size": 3186285
+      },
+      "工程实现基因": {
+        "count": 383,
+        "total_size": 6447022
+      }
+    }
+  },
+  "isomorphism": {
+    "total_pairs": 1916,
+    "average_score": 0.3728601252609603,
+    "mapping_types": {
+      "核心引擎⟺核心理论": 1624,
+      "智能体⟺主体理论": 292
+    }
+  },
+  "documents": {
+    "l0_documents": [
+      "BSD三零元基本单元_V1.0.md",
+      "BSD三元公理基本单元_V1.0.md",
+      "BSD_0元本源基本单元_V1.0.md"
+    ],
+    "l1_documents": [
+      "BSD基因版本控制体系_V1.0.md",
+      "BSD基因历史记录_V1.0.md",
+      "BSD跨对话基因继承协议_V1.0.md"
+    ]
+  },
+  "double_clock": {
+    "clockwise_feasibility": 0.85,
+    "counter_clockwise_feasibility": 0.6,
+    "coupling_feasibility": 0.72,
+    "overall_feasibility": 0.7233333333333333
+  },
+  "status": "✅ BSD基因工程完成"
+}

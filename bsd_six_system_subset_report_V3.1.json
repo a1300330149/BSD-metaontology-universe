@@ -1,0 +1,62 @@
+{
+  "version": "V3.1",
+  "timestamp": "2026-08-03T13:35:46.989953",
+  "core_insight": "子集整合，而非创造",
+  "six_systems": {
+    "强化系": {
+      "axiom": "纯·个体性公理",
+      "axis": "向内锚点轴·稳态·主体性",
+      "symbol": "+",
+      "doc_count": 18,
+      "code_count": 4
+    },
+    "变身系": {
+      "axiom": "纯·变化性公理",
+      "axis": "动力源头轴·动态·动力性",
+      "symbol": "÷",
+      "doc_count": 18,
+      "code_count": 4
+    },
+    "社会系": {
+      "axiom": "纯·关系性公理",
+      "axis": "连接骨架轴·结构·交互性",
+      "symbol": "=",
+      "doc_count": 19,
+      "code_count": 6
+    },
+    "天道系": {
+      "axiom": "关系性×变化性（耦合）",
+      "axis": "法则层面·规律·统治性",
+      "symbol": "≠",
+      "doc_count": 53,
+      "code_count": 6
+    },
+    "自然系": {
+      "axiom": "变化性×个体性（耦合）",
+      "axis": "质料层面·实体·承载性",
+      "symbol": "×",
+      "doc_count": 19,
+      "code_count": 4
+    },
+    "具现系": {
+      "axiom": "个体性×关系性（耦合）",
+      "axis": "显现层面·模态·呈现性",
+      "symbol": "-",
+      "doc_count": 19,
+      "code_count": 5
+    }
+  },
+  "statistics": {
+    "total_documents": 657,
+    "total_code_files": 57,
+    "unmapped_documents": 511,
+    "unmapped_code_files": 28
+  },
+  "rules": [
+    "规则一：母集-子集边界定理",
+    "规则二：所有已存在内容都是六系的子集",
+    "规则三：只需连接与激活，不需创造",
+    "规则四：六芒星循环相生链"
+  ],
+  "status": "✅ BSD六系子集整合完成"
+}

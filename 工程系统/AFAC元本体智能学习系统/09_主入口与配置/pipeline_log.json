@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-EFS",
+    "level": "success",
+    "message": "锁档哈希校验通过"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-EFS",
+    "level": "info",
+    "message": "开始执行完整六阶自治流水线"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-EFS",
+    "level": "info",
+    "message": "开始执行一阶实体拟合系统（FO-EFS）"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-EFS",
+    "level": "success",
+    "message": "代码理论绑定率达标：100.00% >= E1阈值0.35"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "SOD-DBS",
+    "level": "info",
+    "message": "开始执行二阶分布纠偏系统（SOD-DBS）"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "SOD-DBS",
+    "level": "warning",
+    "message": "发现1个参数冲突项"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "SOD-DBS",
+    "level": "info",
+    "message": "目录分层合规：core=3, entity=6, decision=3"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "TO-IDS",
+    "level": "info",
+    "message": "开始执行三阶智能决策系统（TO-IDS）"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "TO-IDS",
+    "level": "warning",
+    "message": "决策层缺失2个核心模块"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "TO-IDS",
+    "level": "success",
+    "message": "配置文件数量达标：5"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-CDGS",
+    "level": "info",
+    "message": "开始执行四阶跨域泛化系统（FO-CDGS）"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-CDGS",
+    "level": "success",
+    "message": "拓展模块数量达标：5/5"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-CDGS",
+    "level": "success",
+    "message": "core核心代码未被拓展模块侵入"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-ROS",
+    "level": "info",
+    "message": "开始执行五阶科研成果产出系统（FO-ROS）"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-ROS",
+    "level": "success",
+    "message": "输出文件数量达标：4/4"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "FO-ROS",
+    "level": "success",
+    "message": "验收报告已生成"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "SO-ARCLS",
+    "level": "info",
+    "message": "开始执行六阶自主科研闭环系统（SO-ARCLS）"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "SO-ARCLS",
+    "level": "info",
+    "message": "六阶流水线执行完成：PASS=3, WARNING=2, ERROR=0"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "SO-ARCLS",
+    "level": "success",
+    "message": "割裂缺陷报告已生成：理论代码割裂缺陷报告.md"
+  },
+  {
+    "timestamp": "2026-06-23 13:04:11",
+    "stage": "SO-ARCLS",
+    "level": "success",
+    "message": "验收报表已生成：output\\acceptance_report.json"
+  }
+]

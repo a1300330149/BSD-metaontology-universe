@@ -1,0 +1,7 @@
+{
+  "displayEntries": 4,
+  "dataFlow": 9,
+  "authInfo": 1,
+  "accountLogic": 25,
+  "conclusion": "需要正确处理 iCubeAuthInfo 中的 AHA 加密数据"
+}

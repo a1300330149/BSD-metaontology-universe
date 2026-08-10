@@ -1,0 +1,64 @@
+{
+  "subsystem_name": "全域秩序建筑论独栋",
+  "belong_district": "level1_district/05_哲学交叉小区",
+  "boundary_mode": "protocol_restricted",
+  
+  "core_access": {
+    "read_whitelist": [
+      "0元空无本源公理",
+      "本体平等权重差异原则",
+      "母子系统三级层级架构",
+      "意义大一统三元光谱",
+      "非人类中心主义立场",
+      "层级涌现公理"
+    ],
+    "modify_deny": true,
+    "data_direction": "down_only"
+  },
+  
+  "cross_subsystem": {
+    "access_whitelist": [
+      "level1_district/01_数理拓展小区/*",
+      "level1_district/02_跨尺度理论小区/*",
+      "level1_district/04_创世世界观小区/*"
+    ],
+    "access_blacklist": [
+      "level2_villa/*"
+    ],
+    "mutual_visit": true
+  },
+  
+  "external_pipeline": {
+    "enable": true,
+    "search_scope_whitelist": [
+      "哲学核心期刊",
+      "建筑现象学文献",
+      "系统科学论著",
+      "存在主义哲学",
+      "社会学经典理论"
+    ],
+    "content_filter": true,
+    "reverse_injection_protect": true,
+    "daily_power_quota": 100
+  },
+  
+  "breakthrough_protect": true,
+  "archive_standard": "衍生分册一级归档规范",
+  
+  "theory_category": {
+    "parent_types": ["世界观母类", "方法论母类", "实践论母类"],
+    "sub_type": "本体秩序哲学",
+    "source_trace": [
+      "世界观母类-元本体论层级架构",
+      "方法论母类-边界划分与断裂层构建方法",
+      "实践论母类-母子系统运维管控范式"
+    ]
+  },
+
+  "resident_agent": {
+    "name": "秩序建筑论专项推演子智能体",
+    "main_personality": "哲学型为主·语文型为辅",
+    "core_abilities": ["本体论推演", "秩序哲学建构", "交叉领域适配"],
+    "identity_id": "SUB-AGENT-PHI-001"
+  }
+}

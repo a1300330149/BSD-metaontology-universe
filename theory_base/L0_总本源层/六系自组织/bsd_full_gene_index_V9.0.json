@@ -1,0 +1,58 @@
+{
+  "version": "V9.0",
+  "generated_at": "2026-08-03T14:54:51.397237",
+  "total_genes": 60,
+  "batch_size": 10000,
+  "total_batches": 1,
+  "batches": [
+    {
+      "batch_id": 1,
+      "file": "bsd_gene_index_batch_001.json",
+      "gene_range": "1-60"
+    }
+  ],
+  "by_system": {
+    "强化系": {
+      "icon": "🔵",
+      "axiom": "纯·个体性公理",
+      "symbol": "+",
+      "equation": "0+0=0",
+      "gene_count": 10
+    },
+    "变身系": {
+      "icon": "⚫",
+      "axiom": "纯·变化性公理",
+      "symbol": "÷",
+      "equation": "0÷0=0",
+      "gene_count": 10
+    },
+    "社会系": {
+      "icon": "🟢",
+      "axiom": "纯·关系性公理",
+      "symbol": "=",
+      "equation": "0=0",
+      "gene_count": 10
+    },
+    "天道系": {
+      "icon": "🟣",
+      "axiom": "关系性×变化性",
+      "symbol": "≠",
+      "equation": "0≠n",
+      "gene_count": 10
+    },
+    "自然系": {
+      "icon": "🟠",
+      "axiom": "变化性×个体性",
+      "symbol": "-",
+      "equation": "0-0=0",
+      "gene_count": 10
+    },
+    "具现系": {
+      "icon": "🔴",
+      "axiom": "个体性×关系性",
+      "symbol": "×",
+      "equation": "0×0=n",
+      "gene_count": 10
+    }
+  }
+}

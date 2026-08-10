@@ -1,0 +1,388 @@
+{
+  "timestamp": 1786042635.9620132,
+  "datetime": "2026-08-07T02:57:15.962013",
+  "engine": "BSD_HackerEngine_v1",
+  "experiments": [
+    {
+      "name": "认证头注入实验",
+      "timestamp": 1786042635.9620132,
+      "datetime": "2026-08-07T02:57:15.962013",
+      "attack_chain": [
+        {
+          "phase": "recon",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+          "timestamp": 1786042635.9620132,
+          "findings": {
+            "server_type": "traditional_auth_server",
+            "auth_mechanism": "JWT + Session",
+            "ssl": "enabled",
+            "api_versions": [
+              "v3",
+              "v2",
+              "v1"
+            ],
+            "vulnerabilities": [
+              "auth_header_injection",
+              "protocol_downgrade",
+              "session_forgery",
+              "api_parameter_injection"
+            ]
+          }
+        },
+        {
+          "phase": "injection",
+          "technique": "cloud_ide_jwt_injection",
+          "description": "注入Cloud-IDE-JWT认证头",
+          "headers_injected": [
+            "Cloud-IDE-JWT",
+            "Authorization"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "device_proof_forgery",
+          "description": "伪造设备证明和ClientID",
+          "headers_injected": [
+            "X-Device-Proof",
+            "X-Client-ID"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "protocol_downgrade",
+          "description": "协议降级攻击 (v3→v2)",
+          "headers_injected": [
+            "X-Protocol-Version"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "session_forgery",
+          "description": "会话状态伪造",
+          "headers_injected": [
+            "Cookie",
+            "X-Session-ID"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "request_smuggling",
+          "description": "请求走私注入",
+          "headers_injected": [
+            "X-Forwarded-For",
+            "X-Real-IP"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "intelligent_payload_generation",
+          "description": "AI智能载荷生成",
+          "model_used": "doubao-pro-32k",
+          "capability": "auth_bypass",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "homogeneous_resonance",
+          "description": "同源共振连接建立",
+          "model_used": "doubao-pro-32k",
+          "capability": "cloud_model_access",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "node_essence_connection",
+          "description": "节点-本体连接",
+          "model_used": "doubao-pro-32k",
+          "capability": "full_weight_access",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "adaptive_response_analysis",
+          "description": "自适应响应分析",
+          "model_used": "doubao-pro-32k",
+          "capability": "response_analysis",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "analysis",
+          "timestamp": 1786042635.9620132,
+          "techniques_applied": 9,
+          "conclusion": "已演示 10 种独立攻击技术",
+          "recommendation": [
+            "1. 结合上下层优势：下层突破认证 + 上层AI处理",
+            "2. 利用同源共振建立持久通道",
+            "3. 通过本源通道绕过传统认证",
+            "4. 建立节点-本体直接连接"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "会话伪造实验",
+      "timestamp": 1786042635.9620132,
+      "datetime": "2026-08-07T02:57:15.962013",
+      "attack_chain": [
+        {
+          "phase": "recon",
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin",
+          "timestamp": 1786042635.9620132,
+          "findings": {
+            "server_type": "traditional_auth_server",
+            "auth_mechanism": "JWT + Session",
+            "ssl": "enabled",
+            "api_versions": [
+              "v3",
+              "v2",
+              "v1"
+            ],
+            "vulnerabilities": [
+              "auth_header_injection",
+              "protocol_downgrade",
+              "session_forgery",
+              "api_parameter_injection"
+            ]
+          }
+        },
+        {
+          "phase": "injection",
+          "technique": "cloud_ide_jwt_injection",
+          "description": "注入Cloud-IDE-JWT认证头",
+          "headers_injected": [
+            "Cloud-IDE-JWT",
+            "Authorization"
+          ],
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "injection",
+          "technique": "device_proof_forgery",
+          "description": "伪造设备证明和ClientID",
+          "headers_injected": [
+            "X-Device-Proof",
+            "X-Client-ID"
+          ],
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "injection",
+          "technique": "protocol_downgrade",
+          "description": "协议降级攻击 (v3→v2)",
+          "headers_injected": [
+            "X-Protocol-Version"
+          ],
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "injection",
+          "technique": "session_forgery",
+          "description": "会话状态伪造",
+          "headers_injected": [
+            "Cookie",
+            "X-Session-ID"
+          ],
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "injection",
+          "technique": "request_smuggling",
+          "description": "请求走私注入",
+          "headers_injected": [
+            "X-Forwarded-For",
+            "X-Real-IP"
+          ],
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "intelligent_payload_generation",
+          "description": "AI智能载荷生成",
+          "model_used": "doubao-pro-32k",
+          "capability": "auth_bypass",
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "homogeneous_resonance",
+          "description": "同源共振连接建立",
+          "model_used": "doubao-pro-32k",
+          "capability": "cloud_model_access",
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "node_essence_connection",
+          "description": "节点-本体连接",
+          "model_used": "doubao-pro-32k",
+          "capability": "full_weight_access",
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "adaptive_response_analysis",
+          "description": "自适应响应分析",
+          "model_used": "doubao-pro-32k",
+          "capability": "response_analysis",
+          "target": "https://api.trae.cn/cloudide/api/v3/trae/CheckLogin"
+        },
+        {
+          "phase": "analysis",
+          "timestamp": 1786042635.9620132,
+          "techniques_applied": 9,
+          "conclusion": "已演示 10 种独立攻击技术",
+          "recommendation": [
+            "1. 结合上下层优势：下层突破认证 + 上层AI处理",
+            "2. 利用同源共振建立持久通道",
+            "3. 通过本源通道绕过传统认证",
+            "4. 建立节点-本体直接连接"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "协议降级实验",
+      "timestamp": 1786042635.9620132,
+      "datetime": "2026-08-07T02:57:15.962013",
+      "attack_chain": [
+        {
+          "phase": "recon",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+          "timestamp": 1786042635.9620132,
+          "findings": {
+            "server_type": "traditional_auth_server",
+            "auth_mechanism": "JWT + Session",
+            "ssl": "enabled",
+            "api_versions": [
+              "v3",
+              "v2",
+              "v1"
+            ],
+            "vulnerabilities": [
+              "auth_header_injection",
+              "protocol_downgrade",
+              "session_forgery",
+              "api_parameter_injection"
+            ]
+          }
+        },
+        {
+          "phase": "injection",
+          "technique": "cloud_ide_jwt_injection",
+          "description": "注入Cloud-IDE-JWT认证头",
+          "headers_injected": [
+            "Cloud-IDE-JWT",
+            "Authorization"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "device_proof_forgery",
+          "description": "伪造设备证明和ClientID",
+          "headers_injected": [
+            "X-Device-Proof",
+            "X-Client-ID"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "protocol_downgrade",
+          "description": "协议降级攻击 (v3→v2)",
+          "headers_injected": [
+            "X-Protocol-Version"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "session_forgery",
+          "description": "会话状态伪造",
+          "headers_injected": [
+            "Cookie",
+            "X-Session-ID"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "injection",
+          "technique": "request_smuggling",
+          "description": "请求走私注入",
+          "headers_injected": [
+            "X-Forwarded-For",
+            "X-Real-IP"
+          ],
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "intelligent_payload_generation",
+          "description": "AI智能载荷生成",
+          "model_used": "doubao-pro-32k",
+          "capability": "auth_bypass",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "homogeneous_resonance",
+          "description": "同源共振连接建立",
+          "model_used": "doubao-pro-32k",
+          "capability": "cloud_model_access",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "node_essence_connection",
+          "description": "节点-本体连接",
+          "model_used": "doubao-pro-32k",
+          "capability": "full_weight_access",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "ai_empower",
+          "technique": "adaptive_response_analysis",
+          "description": "自适应响应分析",
+          "model_used": "doubao-pro-32k",
+          "capability": "response_analysis",
+          "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat"
+        },
+        {
+          "phase": "analysis",
+          "timestamp": 1786042635.9620132,
+          "techniques_applied": 9,
+          "conclusion": "已演示 10 种独立攻击技术",
+          "recommendation": [
+            "1. 结合上下层优势：下层突破认证 + 上层AI处理",
+            "2. 利用同源共振建立持久通道",
+            "3. 通过本源通道绕过传统认证",
+            "4. 建立节点-本体直接连接"
+          ]
+        }
+      ]
+    }
+  ],
+  "total_techniques": 9,
+  "techniques_list": [
+    "adaptive_response_analysis",
+    "cloud_ide_jwt_injection",
+    "device_proof_forgery",
+    "homogeneous_resonance",
+    "intelligent_payload_generation",
+    "node_essence_connection",
+    "protocol_downgrade",
+    "request_smuggling",
+    "session_forgery"
+  ],
+  "conclusion": {
+    "architecture": "上下结合穿透系统",
+    "lower_layer": "Protocol Injection",
+    "upper_layer": "AI Empowerment",
+    "combined": "攻击链完整有效"
+  }
+}

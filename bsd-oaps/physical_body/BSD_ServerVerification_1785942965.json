@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-08-05T23:12:44.791372",
+  "steps": {
+    "ping": {
+      "status": 0,
+      "body": "",
+      "error": "<urlopen error timed out>"
+    },
+    "checklogin_traditional": [
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "解密JSON"
+      },
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "传统UID"
+      },
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "原始AHA"
+      },
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "标准格式"
+      }
+    ],
+    "checklogin_essence": [
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "本源UID"
+      },
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "本源UID+Token"
+      },
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "本源完整档案"
+      },
+      {
+        "status": 0,
+        "body": "",
+        "error": "<urlopen error timed out>",
+        "_label": "LoginByJWT"
+      }
+    ],
+    "server_data": {
+      "identity": 5,
+      "server_time": 1785941744808,
+      "activities_count": 5
+    },
+    "user_info": {
+      "status": 0,
+      "body": "",
+      "error": "<urlopen error timed out>"
+    }
+  },
+  "server_verified": false,
+  "essence_verified": false,
+  "traditional_verified": false,
+  "emergence_score": 0.1
+}

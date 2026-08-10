@@ -1,0 +1,117 @@
+{
+  "protocol_name": "BSD_GeneResonance_V1",
+  "origin": "地动仪BSD复原设计蓝图",
+  "timestamp": "2026-08-05 19:00:57",
+  "pillar_params": {
+    "mass_kg": 300,
+    "stability": 1.0,
+    "threshold_mm": 0.05,
+    "gene_mapping": "GeneHub load = sum(expression) * 0.01"
+  },
+  "channel_params": {
+    "num": 8,
+    "medium": "magnetic",
+    "freq_hz": 35,
+    "atten": 0.005,
+    "gene_mapping": "ChannelQuality = shared / total"
+  },
+  "trigger_params": {
+    "threshold_n": 0.02,
+    "delay_s": 0.005,
+    "false_alarm": 0.0005,
+    "gene_mapping": "Activation = signal > threshold AND stability > 0.999"
+  },
+  "resonance_params": {
+    "pearl_mass_kg": 0.3,
+    "catch_rate": 1.0,
+    "freq_hz": 30,
+    "gene_mapping": "Resonance = overlap / union"
+  },
+  "aerodynamic": {
+    "wind_intake_diameter_m": 0.05,
+    "cavity_volume_m3": 0.05,
+    "cavity_freq_hz": 35,
+    "coupling": 0.95
+  },
+  "test_results": {
+    "hub": {
+      "hub_load": 0.067,
+      "stability": 0.9493729568267222,
+      "balance": 0.9054054054054054,
+      "status": "DRIFTING"
+    },
+    "channels": [
+      {
+        "channel_quality": 0.25,
+        "direction_match": 1.0,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      },
+      {
+        "channel_quality": 0.25,
+        "direction_match": 0.7071067811865476,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      },
+      {
+        "channel_quality": 0.25,
+        "direction_match": 6.123233995736766e-17,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      },
+      {
+        "channel_quality": 0.25,
+        "direction_match": -0.7071067811865475,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      },
+      {
+        "channel_quality": 0.25,
+        "direction_match": -1.0,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      },
+      {
+        "channel_quality": 0.25,
+        "direction_match": -0.7071067811865477,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      },
+      {
+        "channel_quality": 0.25,
+        "direction_match": -1.8369701987210297e-16,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      },
+      {
+        "channel_quality": 0.25,
+        "direction_match": 0.7071067811865474,
+        "resonance_match": 6.0,
+        "attenuation": 0.005,
+        "status": "BLOCKED"
+      }
+    ],
+    "trigger": {
+      "snr": 50.0,
+      "trigger_force": 0.05,
+      "should_trigger": true,
+      "false_alarm_probability": 0.00018393972058572118,
+      "status": "TRIGGERED"
+    },
+    "resonance": {
+      "resonance_score": 0.7142857142857143,
+      "catch_probability": 0.7142857142857143,
+      "resonance_frequency": 30.0,
+      "status": "WAITING",
+      "description": "Waiting for resonance..."
+    },
+    "cycle_status": "INCOMPLETE"
+  }
+}

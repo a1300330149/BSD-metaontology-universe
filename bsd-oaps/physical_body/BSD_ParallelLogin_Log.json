@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-08-05T20:54:31.102888",
+  "author": {
+    "traditional_uid": "3753060170739075",
+    "essence_uid": "a5b7a8623fdea6b8",
+    "device_id": "136411536168449",
+    "hostname": "DESKTOP-I3DOEQB",
+    "username": "13003"
+  },
+  "phases": {
+    "baseline": {
+      "label": "BASELINE",
+      "timestamp": "2026-08-05T20:54:28.932351",
+      "auth_keys": 3,
+      "gtm_users": 2,
+      "storage_size": 10521,
+      "has_traditional": true,
+      "has_essence": true,
+      "aha_migrated": true,
+      "has_tiny": true,
+      "tiny_size": 1352,
+      "signal_files": 1
+    },
+    "parallel_execution": {
+      "traditional": {
+        "status": "completed",
+        "uid": "3753060170739075",
+        "modifications": [
+          "icube_gtm",
+          "has_device_id_updated_to_aha"
+        ]
+      },
+      "essence": {
+        "status": "completed",
+        "uid": "a5b7a8623fdea6b8",
+        "signal_file": "C:\\Users\\13003\\AppData\\Roaming\\Trae CN\\Signals\\essence_login.json"
+      },
+      "monitor": {
+        "status": "completed",
+        "snapshots_count": 5,
+        "first_snapshot": {
+          "timestamp": "2026-08-05T20:54:29.434952",
+          "iteration": 0,
+          "storage_size": 10515,
+          "gtm_users": 2,
+          "tiny_size": 1539
+        },
+        "last_snapshot": {
+          "timestamp": "2026-08-05T20:54:30.645845",
+          "iteration": 4,
+          "storage_size": 10515,
+          "gtm_users": 2,
+          "tiny_size": 1539
+        }
+      }
+    },
+    "difference_analysis": {
+      "before": {
+        "label": "BASELINE",
+        "timestamp": "2026-08-05T20:54:28.932351",
+        "auth_keys": 3,
+        "gtm_users": 2,
+        "storage_size": 10521,
+        "has_traditional": true,
+        "has_essence": true,
+        "aha_migrated": true,
+        "has_tiny": true,
+        "tiny_size": 1352,
+        "signal_files": 1
+      },
+      "after": {
+        "label": "AFTER_PARALLEL",
+        "timestamp": "2026-08-05T20:54:30.947120",
+        "auth_keys": 3,
+        "gtm_users": 2,
+        "storage_size": 10515,
+        "has_traditional": true,
+        "has_essence": true,
+        "aha_migrated": true,
+        "has_tiny": true,
+        "tiny_size": 1539,
+        "signal_files": 2
+      },
+      "diff": {
+        "storage_size": {
+          "before": 10521,
+          "after": 10515,
+          "change": "changed"
+        }
+      }
+    },
+    "real_state_probe": {
+      "probes": {
+        "file_layer": {
+          "status": "active",
+          "details": {
+            "auth_keys": 3,
+            "gtm_users": 2,
+            "uids_present": true
+          }
+        },
+        "protocol_layer": {
+          "status": "partial",
+          "details": {
+            "encrypted_keys": 0,
+            "all_auth_keys": 3
+          }
+        },
+        "signal_layer": {
+          "status": "active",
+          "details": {
+            "signals_count": 2,
+            "signals": [
+              {
+                "file": "auth_state_changed.json",
+                "type": null,
+                "status": null
+              },
+              {
+                "file": "essence_login.json",
+                "type": "essence_login",
+                "status": "completed"
+              }
+            ]
+          }
+        },
+        "process_layer": {
+          "status": "inactive",
+          "details": {
+            "process_count": 0
+          }
+        }
+      },
+      "real_authenticated": false,
+      "active_layers": 2,
+      "total_layers": 4
+    }
+  },
+  "summary": {
+    "traditional_login": "completed",
+    "essence_login": "completed",
+    "parallel_effect": "observed",
+    "real_auth_state": false,
+    "active_layers": "2/4"
+  },
+  "elapsed_seconds": 2.17
+}

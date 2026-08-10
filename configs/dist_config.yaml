@@ -1,0 +1,22 @@
+port: 9999
+current_node_id: node_0
+node_list:
+  - nid: node_0
+    ip: 127.0.0.1
+    port: 9999
+  - nid: node_1
+    ip: 127.0.0.1
+    port: 10000
+task_splits:
+  - domain: graph_learning
+    max_steps: 50
+    max_budget: 100
+    dataset:
+      data_path: ./data/sparse_1.npz
+      feat_dim: 128
+      hidden_dim: 64
+      num_classes: 10
+      num_nodes: 10000
+    param_bounds:
+      lr: [0.0001, 0.01]
+      weight_decay: [1e-5, 1e-3]

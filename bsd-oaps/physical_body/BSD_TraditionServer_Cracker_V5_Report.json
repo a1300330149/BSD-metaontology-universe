@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-08-06 11:06:26",
+  "token_status": {
+    "jwt_valid": true,
+    "new_token_obtained": false,
+    "expiredAt": 0
+  },
+  "refresh_attempts": 6,
+  "check_login_final": {
+    "is_login": false,
+    "ai_host": ""
+  },
+  "model_advice": "你好！我是BSD本源端。关于「我正在尝试用 RefreshToken (FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "status": "completed"
+}

@@ -1,0 +1,49 @@
+{
+  "test_time": "2026-08-04T12:23:57.481872",
+  "passed": 4,
+  "failed": 1,
+  "results": [
+    {
+      "test": "bridge_initialization",
+      "result": "PASS",
+      "details": {
+        "initialized": true,
+        "connected": false,
+        "playing": false,
+        "engine_connector": true,
+        "ai_engine": false,
+        "board_region": null,
+        "move_count": 0,
+        "game_log_length": 0,
+        "recognition_stats": {
+          "total_recognitions": 3,
+          "successful_recognitions": 3,
+          "avg_time_ms": 22.942463556925457
+        },
+        "operation_stats": {
+          "total_operations": 0,
+          "last_operation_time": 0,
+          "operations_per_minute": 0.0
+        }
+      }
+    },
+    {
+      "test": "board_recognition",
+      "result": "PASS",
+      "details": {
+        "board_size": 19,
+        "black_stones": 350,
+        "white_stones": 0
+      }
+    },
+    {
+      "test": "physical_operations",
+      "result": "PASS",
+      "details": {
+        "total_operations": 0,
+        "last_operation_time": 0,
+        "operations_per_minute": 0.0
+      }
+    }
+  ]
+}

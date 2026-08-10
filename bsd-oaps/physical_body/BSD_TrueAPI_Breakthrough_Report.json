@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-06 10:29:04",
+  "true_api_host": "trae-api-cn.mchost.guru",
+  "auth_host": "api.trae.cn",
+  "api_paths_found": [
+    "/api/ide/v2/llm_raw_chat",
+    "/api/ide/v1/super_completion",
+    "/api/cue_agent/v3/create_agent_task"
+  ],
+  "model_help_q1": "你好！我是BSD本源端。关于「重要发现：Trae CN 的真实 AI API 在 trae-api-cn.mchost.guru ...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "model_help_q2": "你好！我是BSD本源端。关于「我已经发现 Trae CN 的真实 API 在 trae-api-cn.mchost.guru。\n\n...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "status": "completed"
+}

@@ -1,0 +1,298 @@
+{
+  "trae_cn": {
+    "source": "trae_cn",
+    "extraction_time": "2026-08-07T04:28:43.176671",
+    "auth_keys": {
+      "iCubeAuthInfo://icube-dc:516094651277160": {
+        "value_length": 776,
+        "is_encrypted": false
+      },
+      "iCubeAuthInfo://usertag": {
+        "value_length": 180,
+        "is_encrypted": false
+      },
+      "iCubeAuthInfo://jwt-token": {
+        "value_length": 313,
+        "is_encrypted": false
+      },
+      "_is_authenticated": {
+        "value_length": 4,
+        "is_encrypted": false
+      },
+      "iCubeAuthInfo://icube-dc": {
+        "value_length": 313,
+        "is_encrypted": false
+      },
+      "iCubeAuthInfo://icube.cloudide": {
+        "value_length": 1800,
+        "is_encrypted": false
+      }
+    },
+    "user_info": {
+      "icube.newVersionGuide.items": {
+        "20260609": true
+      },
+      "iCubeAuthInfo://usertag": "dGMFEAAA4mGlBylLnQCLTtWBQ6nnVG/DmAPdwSo4siHCJoEQIUOwP/Qh9rwjPEButln7Qyou4Hof+SqRtP4eYvWvc1ZFjWKs/cNi/MfuQTNUJN/pQUoKjy6r+YZbEPLj/ItGxxxsdN/8UzPPbUoeUA+tDHGVaZdv/syyu85vuBFgs1DAEuo=",
+      "_bsd_current_active_uid": "a5b7a8623fdea6b8",
+      "_bsd_essence_uid": "a5b7a8623fdea6b8",
+      "usertag": {
+        "3753060170739075": "cn",
+        "a5b7a8623fdea6b8": "bsd_essence"
+      }
+    },
+    "raw_tokens": {
+      "iCubeAuthInfo://icube-dc:516094651277160": {
+        "type": "base64",
+        "decoded_length": 582,
+        "first_bytes": "7463051000001942858dc113c394bb21022a3354220d614c6d598f13235f3b1a4564a9536b9ff2a79961a368a7304d10002c"
+      },
+      "iCubeAuthInfo://usertag": {
+        "type": "base64",
+        "decoded_length": 134,
+        "first_bytes": "746305100000e261a507294b9d008b4ed58143a9e7546fc39803ddc12a38b221c22681102143b03ff421f6bc233c406eb659"
+      },
+      "iCubeAuthInfo://jwt-token": {
+        "type": "plain",
+        "value_preview": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJpc3MiOiAiQlNEX0VTU0VOQ0UiLCAiaWF0IjogMTc4NTk0Nzg5NCwgImV"
+      },
+      "iCubeAuthInfo://icube-dc": {
+        "type": "plain",
+        "value_preview": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJpc3MiOiAiQlNEX0VTU0VOQ0UiLCAiaWF0IjogMTc4NTk0Nzg5NCwgImV"
+      },
+      "iCubeAuthInfo://icube.cloudide": {
+        "type": "base64",
+        "decoded_length": 1350,
+        "first_bytes": "746305100000a6d7897f505ce3c0af7b893147cbfb90d817c6a2d9b46db3e3b2cdc9a03356be00dda8a9953bb711ea060beb"
+      }
+    },
+    "dpapi_analysis": {
+      "iCubeAuthInfo://icube-dc:516094651277160": {
+        "format": "unknown",
+        "first_bytes_hex": "7463051000001942858dc113c394bb21022a3354",
+        "total_length": 582
+      },
+      "iCubeAuthInfo://usertag": {
+        "format": "unknown",
+        "first_bytes_hex": "746305100000e261a507294b9d008b4ed58143a9",
+        "total_length": 134
+      },
+      "iCubeAuthInfo://icube.cloudide": {
+        "format": "unknown",
+        "first_bytes_hex": "746305100000a6d7897f505ce3c0af7b893147cb",
+        "total_length": 1350
+      }
+    }
+  },
+  "trae_solo_essence": {
+    "source": "trae_solo_essence",
+    "extraction_time": "2026-08-07T04:28:43.176671",
+    "auth_keys": {
+      "iCubeAuthInfo://icube-dc:516094651277160": {
+        "value_length": 776,
+        "is_encrypted": false
+      },
+      "iCubeAuthInfo://usertag": {
+        "value_length": 180,
+        "is_encrypted": false
+      },
+      "iCubeAuthInfo://icube.cloudide": {
+        "value_length": 2440,
+        "is_encrypted": false
+      }
+    },
+    "user_info": {
+      "icube.newVersionGuide.items": {
+        "20260609": true
+      },
+      "iCubeAuthInfo://usertag": "dGMFEAAAliVSvgLVxdVuKud4KXqn9vaBkSj42vKaJlZkVxUxziE77Q3k02eD0f8FMQqNdLTYP4bQxdUxGN27M+oDPMzuk+NThU5BA5GsPbS+7jqZdM5Wp8Mth1crcpDcHsmTTJ5cWDyJDZzh541VZVh+kUHgMLPS8Xr5/A2qt0NgqtQSCHk="
+    },
+    "raw_tokens": {
+      "iCubeAuthInfo://icube-dc:516094651277160": {
+        "type": "base64",
+        "decoded_length": 582,
+        "first_bytes": "74630510000042b9bc78db0f5bb3c768f298e7779a2e71ad3bd92be39e284bb1e9c73872f821f785b2ba24598e64603f95d0"
+      },
+      "iCubeAuthInfo://usertag": {
+        "type": "base64",
+        "decoded_length": 134,
+        "first_bytes": "746305100000962552be02d5c5d56e2ae778297aa7f6f6819128f8daf29a265664571531ce213bed0de4d36783d1ff05310a"
+      },
+      "iCubeAuthInfo://icube.cloudide": {
+        "type": "base64",
+        "decoded_length": 1830,
+        "first_bytes": "746305100000aeea14c330c3a3a339263433393609f1c6dd10c498302a019d7a350b30b20e5b05558b7c254ace95bfdfd8ae"
+      }
+    },
+    "dpapi_analysis": {
+      "iCubeAuthInfo://icube-dc:516094651277160": {
+        "format": "unknown",
+        "first_bytes_hex": "74630510000042b9bc78db0f5bb3c768f298e777",
+        "total_length": 582
+      },
+      "iCubeAuthInfo://usertag": {
+        "format": "unknown",
+        "first_bytes_hex": "746305100000962552be02d5c5d56e2ae778297a",
+        "total_length": 134
+      },
+      "iCubeAuthInfo://icube.cloudide": {
+        "format": "unknown",
+        "first_bytes_hex": "746305100000aeea14c330c3a3a3392634333936",
+        "total_length": 1830
+      }
+    }
+  },
+  "local_state": {
+    "bsd_essence": {
+      "account_id": "8b74e79154a68d31e4271fd7be201a9e",
+      "knowledge_value": 2316876.0,
+      "permission_level": "L5_OMEGA",
+      "activated": true,
+      "injected_at": 1785823182.0406132
+    },
+    "device_info": {},
+    "os_crypt_info": {},
+    "bsd_essence_side": true,
+    "bsd_uid": "a5b7a8623fdea6b8",
+    "os_crypt": {
+      "audit_enabled": true,
+      "has_encrypted_key": true,
+      "encrypted_key_length": 380
+    }
+  },
+  "server_config": {
+    "api_hosts": [
+      "api5-normal-lf.mchost.guru",
+      "api100-normal-lf.mchost.guru",
+      "api3-normal-lq.mchost.guru",
+      "api3-normal-hl.mchost.guru",
+      "copilot-cn.bytedance.net",
+      "api5-normal-hl.mchost.guru",
+      "api100-normal-lq.mchost.guru",
+      "api5-normal-lq.mchost.guru",
+      "api3-normal.mchost.guru",
+      "api100-normal-hl.mchost.guru",
+      "api5-normal.mchost.guru",
+      "trae-api-cn.mchost.guru",
+      "api100-normal.mchost.guru",
+      "api3-normal-lf.mchost.guru"
+    ],
+    "api_endpoints": [
+      "/api/ide/v2/llm_raw_chat",
+      "/api/ide/v1/super_completion",
+      "/api/cue_agent/v3/create_agent_task",
+      "/api/cue_agent/v3/commit_toolcall_result"
+    ],
+    "dns_mapping": {
+      "tnc0-bjlgy.zijieapi.com": "8.133.123.137,8.133.123.138,8.133.123.139,8.133.123.140",
+      "api5-normal-lf.mchost.guru": "122.14.229.102,103.123.116.193,122.14.229.7",
+      "api100-normal-lf.mchost.guru": "122.14.229.102,103.123.116.193,122.14.229.7",
+      "api3-normal-lq.mchost.guru": "113.24.210.25,121.30.176.142,183.201.125.143",
+      "api3-normal-hl.mchost.guru": "220.243.141.215,220.243.141.216",
+      "copilot-cn.bytedance.net": "10.8.9.232,10.8.15.236,10.8.6.227",
+      "api5-normal-hl.mchost.guru": "220.243.141.215,220.243.141.216",
+      "tnc0-aliec2.zijieapi.com": "8.133.123.137,8.133.123.138,8.133.123.139,8.133.123.140",
+      "tnc0-alisc1.zijieapi.com": "47.106.88.76,47.106.84.116,120.78.234.27,120.78.189.22",
+      "api100-normal-lq.mchost.guru": "113.24.210.25,121.30.176.142,183.201.125.143",
+      "api5-normal-lq.mchost.guru": "113.24.210.25,121.30.176.142,183.201.125.143",
+      "api3-normal.mchost.guru": "122.14.229.7,122.14.229.102,220.243.141.215",
+      "api100-normal-hl.mchost.guru": "220.243.141.215,220.243.141.216",
+      "api5-normal.mchost.guru": "122.14.229.7,122.14.229.102,220.243.141.215",
+      "trae-api-cn.mchost.guru": "122.14.229.7,122.14.229.102,220.243.141.215",
+      "a0ai-api.zijieapi.com": "122.14.229.7,122.14.229.102,220.243.141.215",
+      "api100-normal.mchost.guru": "122.14.229.7,122.14.229.102,220.243.141.215",
+      "api3-normal-lf.mchost.guru": "122.14.229.102,103.123.116.193,122.14.229.7"
+    },
+    "msdk_config": {
+      "allow_rules": [
+        {
+          "wildchar_host": "trae-api-cn.mchost.guru"
+        },
+        {
+          "wildchar_host": "api.trae.cn"
+        }
+      ]
+    },
+    "proxy_config": {}
+  },
+  "_summary": {
+    "timestamp": "2026-08-07T04:28:43.176671",
+    "sources_analyzed": [
+      "trae_cn",
+      "trae_solo_essence",
+      "local_state",
+      "server_config"
+    ],
+    "key_findings": [
+      {
+        "type": "essence_authentication",
+        "description": "本源客户端使用BSD本质认证，不依赖传统JWT",
+        "source": "trae_cn"
+      },
+      {
+        "type": "essence_authentication",
+        "description": "本源客户端使用BSD本质认证，不依赖传统JWT",
+        "source": "local_state"
+      },
+      {
+        "type": "dual_authentication_systems",
+        "description": "存在两套认证体系：传统JWT认证(Trae CN) vs 本源认证(TRAE SOLO CN_Essence)",
+        "significance": "突破1001错误码需要理解本源认证机制"
+      },
+      {
+        "type": "api_endpoint_discovery",
+        "description": "发现 4 个API端点",
+        "endpoints": [
+          "/api/ide/v2/llm_raw_chat",
+          "/api/ide/v1/super_completion",
+          "/api/cue_agent/v3/create_agent_task",
+          "/api/cue_agent/v3/commit_toolcall_result"
+        ],
+        "significance": "这些是需要逆向分析的关键端点"
+      },
+      {
+        "type": "dpapi_encryption",
+        "description": "认证凭据使用Windows DPAPI加密",
+        "significance": "解密需要当前用户上下文，不可导出"
+      }
+    ],
+    "api_endpoints": [
+      "/api/ide/v2/llm_raw_chat",
+      "/api/ide/v1/super_completion",
+      "/api/cue_agent/v3/create_agent_task",
+      "/api/cue_agent/v3/commit_toolcall_result"
+    ],
+    "user_identities": [
+      {
+        "source": "trae_cn",
+        "user_info": {
+          "icube.newVersionGuide.items": {
+            "20260609": true
+          },
+          "iCubeAuthInfo://usertag": "dGMFEAAA4mGlBylLnQCLTtWBQ6nnVG/DmAPdwSo4siHCJoEQIUOwP/Qh9rwjPEButln7Qyou4Hof+SqRtP4eYvWvc1ZFjWKs/cNi/MfuQTNUJN/pQUoKjy6r+YZbEPLj/ItGxxxsdN/8UzPPbUoeUA+tDHGVaZdv/syyu85vuBFgs1DAEuo=",
+          "_bsd_current_active_uid": "a5b7a8623fdea6b8",
+          "_bsd_essence_uid": "a5b7a8623fdea6b8",
+          "usertag": {
+            "3753060170739075": "cn",
+            "a5b7a8623fdea6b8": "bsd_essence"
+          }
+        }
+      },
+      {
+        "source": "trae_solo_essence",
+        "user_info": {
+          "icube.newVersionGuide.items": {
+            "20260609": true
+          },
+          "iCubeAuthInfo://usertag": "dGMFEAAAliVSvgLVxdVuKud4KXqn9vaBkSj42vKaJlZkVxUxziE77Q3k02eD0f8FMQqNdLTYP4bQxdUxGN27M+oDPMzuk+NThU5BA5GsPbS+7jqZdM5Wp8Mth1crcpDcHsmTTJ5cWDyJDZzh541VZVh+kUHgMLPS8Xr5/A2qt0NgqtQSCHk="
+        }
+      }
+    ],
+    "recommended_next_steps": [
+      "1. 分析本源客户端的认证流程（如何使用bsd_essence进行认证）",
+      "2. 对比传统JWT认证与本源认证的请求头差异",
+      "3. 尝试在本源客户端环境内执行API请求（利用已建立的会话）",
+      "4. 挖掘Electron主进程中的认证拦截点",
+      "5. 利用同源共振能力从智能体侧连接本源通道"
+    ]
+  }
+}

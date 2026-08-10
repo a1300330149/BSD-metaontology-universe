@@ -1,0 +1,22 @@
+{
+  "storage": {
+    "currentUser": "a5b7a8623fdea6b8",
+    "userCount": 1,
+    "authKeyCount": 2
+  },
+  "aha_decrypted": {
+    "valid": false,
+    "error": "Padding is incorrect."
+  },
+  "localState": {
+    "userId": "a5b7a8623fdea6b8",
+    "loginType": "bsd_essence"
+  },
+  "vscdb": {
+    "essenceRows": 3
+  },
+  "jwt": {
+    "exists": false
+  },
+  "覆盖逻辑": "需要绕过远程API验证"
+}

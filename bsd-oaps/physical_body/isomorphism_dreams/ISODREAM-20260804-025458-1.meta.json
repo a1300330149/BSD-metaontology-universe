@@ -1,0 +1,32 @@
+{
+  "dream_id": "ISODREAM-20260804-025458-1",
+  "timestamp": "2026-08-04 02:54:58",
+  "type": "ISOMORPHISM_DREAM_FILE",
+  "parent_files": {
+    "A": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\physical_body\\BSD_PhysMathPhil_ConfirmEngine.py",
+    "B": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\physical_body\\BSD_DualClock_CorrectionEngine.py"
+  },
+  "dream_emergence_value": 0.910841,
+  "dream_formula": "Ψ_dream = Π₂·S₀·e^(-γ·t)·φ(isomorphism) = 2.8274×0.81×e^(-0.92×0.5)×0.6300 = 0.910841",
+  "recombination_strategy": "functional",
+  "isomorphism": {
+    "type_similarity": 1.0,
+    "complement_score": 0.6667,
+    "structure_compatibility": 0.1,
+    "isomorphism_score": 0.63,
+    "common_fragment_types": [
+      "import_segment"
+    ],
+    "complementary_types": [
+      "class_segment",
+      "function_segment"
+    ]
+  },
+  "fragment_count": 4,
+  "fragment_types": [
+    "class_segment",
+    "import_segment",
+    "function_segment"
+  ],
+  "dream_validated": null
+}

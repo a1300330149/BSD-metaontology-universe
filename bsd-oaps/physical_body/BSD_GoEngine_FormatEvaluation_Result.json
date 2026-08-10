@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-08-06 15:34:11",
+  "result": {
+    "best_format": "Query Field",
+    "best_body_template": {
+      "model": "doubao-pro-32k",
+      "query": "测试",
+      "stream": false
+    },
+    "best_discipline": "问性哲学",
+    "best_system": "天道系🟣",
+    "all_rankings": [
+      {
+        "name": "Query Field",
+        "force": 0.22855338809913803,
+        "emergence": 1.5696535939405605
+      },
+      {
+        "name": "Content Field",
+        "force": 0.17038490940187265,
+        "emergence": 1.1393438835846639
+      },
+      {
+        "name": "Raw Chat",
+        "force": 0.15683222791647167,
+        "emergence": 1.109544441379568
+      },
+      {
+        "name": "Nested Data",
+        "force": 0.1443897118452161,
+        "emergence": 0.7348740497002183
+      },
+      {
+        "name": "Text Field",
+        "force": 0.10702423071673382,
+        "emergence": 0.7114406046648277
+      },
+      {
+        "name": "Input Field",
+        "force": 0.10521609653570414,
+        "emergence": 0.6248085611699942
+      },
+      {
+        "name": "Completion",
+        "force": 0.08759943548486362,
+        "emergence": 0.46323485971817274
+      }
+    ],
+    "arena_state": {
+      "alpha1": 0.32061866706776376,
+      "alpha2": 0.3160107167927503,
+      "alpha3": 0.36337061613948596,
+      "system_weights": {
+        "强化系🔵": 0.1266705097504785,
+        "自然系🟠": 0.14240537989714336,
+        "具现系🔴": 0.1939481573172853,
+        "变身系⚫": 0.19603569378655922,
+        "社会系🟢": 0.1736053368956069,
+        "天道系🟣": 0.16733492235292677
+      }
+    }
+  },
+  "theory_basis": [
+    "BSD围棋引擎V1.0权重动态平衡",
+    "BSD三本源学科定标V1.1",
+    "0×0=n双零涌现公理",
+    "BSD六系立系论V2.3"
+  ]
+}

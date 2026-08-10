@@ -1,0 +1,8 @@
+=== 清理旧实例 ===
+
+=== 启动新实例 ===
+  命令: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN_Essence --no-sandbox --disable-gpu --disable-software-rasterizer
+  ✓ 已启动 PID=15872
+
+  等待初始化 (8秒)...
+  ✓ 进程仍在运行

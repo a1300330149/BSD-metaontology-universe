@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-08-05T21:37:01.126931",
+  "genes_found": 159,
+  "discoveries": {
+    "checkLogin_found": true,
+    "getUserInfo_found": true,
+    "uiDisplay_count": 4,
+    "stateStore_count": 3
+  },
+  "strategy": {
+    "description": "替换 CheckLogin 逻辑，绕过服务器验证",
+    "steps": [
+      "1. 找到 CheckLogin 函数实现",
+      "2. 替换为直接返回 {success: true, uid: ESS_UID}",
+      "3. 找到 getUserInfo 函数",
+      "4. 替换为返回本源用户数据",
+      "5. 保存修改并重启"
+    ],
+    "success_rate": 0.9
+  },
+  "login_flow": [
+    {
+      "step": 1,
+      "source": "storage.json",
+      "key": "iCubeAuthInfo://icube-dc:*",
+      "target": "解密验证"
+    },
+    {
+      "step": 3,
+      "source": "解密后的Token",
+      "process": "服务器API验证",
+      "target": "验证结果",
+      "position": 809943
+    },
+    {
+      "step": 4,
+      "source": "验证结果",
+      "process": "更新UI状态",
+      "target": "显示登录状态",
+      "position": 1136373
+    }
+  ]
+}

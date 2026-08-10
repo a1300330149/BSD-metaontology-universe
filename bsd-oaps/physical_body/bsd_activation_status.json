@@ -1,0 +1,120 @@
+{
+  "is_activated": true,
+  "activation_time": "2026-08-03T12:34:56.287696",
+  "local_device": {
+    "device_id": "BSD-LOCAL-DESKTOP-I3DOEQB",
+    "device_type": "笔记本电脑（BSD物理器）",
+    "hardware_resources": [
+      {
+        "name": "CPU: Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+        "category": "计算硬件",
+        "specs": {
+          "name": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+          "cores": 8,
+          "frequency_ghz": 2.4,
+          "architecture": "AMD64",
+          "utilization": 0.3
+        },
+        "status": "✅ 就绪",
+        "utilization": 0.3,
+        "is_available": true
+      },
+      {
+        "name": "存储: C:",
+        "category": "存储硬件",
+        "specs": {
+          "total_gb": 512,
+          "used_gb": 300,
+          "free_gb": 212,
+          "usage_percent": 58.6
+        },
+        "status": "✅ 就绪",
+        "utilization": 0.586,
+        "is_available": true
+      },
+      {
+        "name": "网络: 以太网/WiFi",
+        "category": "网络硬件",
+        "specs": {
+          "type": "以太网/WiFi",
+          "connected": true,
+          "bandwidth_mbps": 100,
+          "ip_address": "192.168.x.x"
+        },
+        "status": "✅ 就绪",
+        "utilization": 0.7,
+        "is_available": true
+      },
+      {
+        "name": "虚拟传感器",
+        "category": "传感硬件",
+        "specs": {
+          "type": "software_sensor",
+          "capabilities": [
+            "电磁场监测",
+            "网络流量分析",
+            "系统状态感知"
+          ]
+        },
+        "status": "✅ 就绪",
+        "utilization": 0.8,
+        "is_available": true
+      }
+    ],
+    "total_compute_power": 5.76,
+    "total_storage_capacity": 211.96800000000002,
+    "network_bandwidth": 100.0,
+    "activation_status": "✅ 已激活",
+    "activation_potential": 0.13715
+  },
+  "cloud_network": {
+    "network_id": "BSD-CLOUD-NETWORK-001",
+    "services": [
+      {
+        "service_id": "cloud-llm-primary",
+        "service_type": "大语言模型",
+        "endpoint": "cloud.llm.primary",
+        "capabilities": [
+          "文本生成",
+          "代码生成",
+          "理论分析"
+        ],
+        "connectivity": 0.95,
+        "response_latency": 200,
+        "is_accessible": true
+      },
+      {
+        "service_id": "cloud-compute-cluster",
+        "service_type": "计算集群",
+        "endpoint": "cloud.compute.cluster",
+        "capabilities": [
+          "并行计算",
+          "模型训练",
+          "数据处理"
+        ],
+        "connectivity": 0.9,
+        "response_latency": 150,
+        "is_accessible": true
+      },
+      {
+        "service_id": "cloud-knowledge-base",
+        "service_type": "知识库",
+        "endpoint": "cloud.knowledge.base",
+        "capabilities": [
+          "知识存储",
+          "理论检索",
+          "基因库"
+        ],
+        "connectivity": 0.85,
+        "response_latency": 100,
+        "is_accessible": true
+      }
+    ],
+    "total_capacity": 1000.0,
+    "average_latency": 150.0,
+    "network_health": "🟢 健康",
+    "network_potential": 0.36000000000000004
+  },
+  "collaboration_strength": 0.049374,
+  "activation_log_length": 1
+}

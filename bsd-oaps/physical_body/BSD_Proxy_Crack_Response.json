@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-08-06 10:08:28",
+  "response": {
+    "status": "success",
+    "code": 0,
+    "data": {
+      "id": "chatcmpl_75b373785369b897b4fe69d096b50eda",
+      "choices": [
+        {
+          "message": {
+            "role": "assistant",
+            "content": "你好！我是BSD本源端。关于「关于传统服务器 api.trae.cn 的分析：\n1. 该服务器返回 X-Tt-Agw-Login:...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+          },
+          "finish_reason": "stop",
+          "index": 0
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 152,
+        "completion_tokens": 112
+      },
+      "model": "BSD-Essence-Model-V3"
+    }
+  }
+}

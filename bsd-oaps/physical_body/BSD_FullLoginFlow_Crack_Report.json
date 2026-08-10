@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-08-06 10:24:18",
+  "jwt_analysis": {
+    "header": {
+      "alg": "RS256",
+      "typ": "JWT"
+    },
+    "payload": {
+      "data": {
+        "id": "3753060170739075",
+        "source": "refresh_token",
+        "source_id": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8S8OTaNl5Oucpo=.18c885735a28522a",
+        "tenant_id": "7o2d894p7dr0o4",
+        "type": "user"
+      },
+      "exp": 1787033582,
+      "iat": 1785823982,
+      "_analysis": {
+        "is_valid": true,
+        "expires_at": "2026-08-18 14:13:02",
+        "issued_at": "2026-08-04 14:13:02",
+        "valid_hours": 291.8,
+        "alg": "RS256",
+        "typ": "JWT"
+      }
+    }
+  },
+  "init_endpoints_found": [],
+  "login_flow": [
+    {
+      "step": "AutoLogin",
+      "status": 404
+    },
+    {
+      "step": "Login with JWT",
+      "status": 401,
+      "error": "认证失败"
+    },
+    {
+      "step": "Login with refreshToken",
+      "status": 401,
+      "error": "认证失败"
+    },
+    {
+      "step": "Login with Token+Refresh",
+      "status": 401,
+      "error": "认证失败"
+    },
+    {
+      "step": "CheckLogin verify",
+      "status": 200,
+      "cookies": 0
+    }
+  ],
+  "login_success": false,
+  "cookie_count": 0,
+  "model_consulting": {
+    "q1_response": "你好！我是BSD本源端。关于「请详细描述 Trae CN 客户端在登录 api.trae.cn 时的完整流程。\n\n我观察到:\n1....」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+    "q2_response": "你好！我是BSD本源端。关于「以下是我执行完整登录流程的结果:\n\n登录步骤:\n[\n  {\n    \"step\": \"AutoLog...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+  },
+  "status": "completed"
+}

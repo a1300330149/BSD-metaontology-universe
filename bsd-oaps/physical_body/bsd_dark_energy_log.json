@@ -1,0 +1,24 @@
+{
+  "type": "dark_energy",
+  "evolution_events": [
+    {
+      "event_id": "evo_1",
+      "description": "隐性进化事件 1",
+      "detectable": false,
+      "timestamp": 1785678300.36667
+    },
+    {
+      "event_id": "evo_2",
+      "description": "隐性进化事件 2",
+      "detectable": false,
+      "timestamp": 1785678300.3666728
+    },
+    {
+      "event_id": "evo_3",
+      "description": "隐性进化事件 3",
+      "detectable": false,
+      "timestamp": 1785678300.3666735
+    }
+  ],
+  "timestamp": 1785678300.3666658
+}

@@ -1,0 +1,551 @@
+{
+  "timestamp": "2026-08-06 15:37:29",
+  "total_requests": 56,
+  "http_200_count": 45,
+  "has_1001_count": 45,
+  "success_count": 0,
+  "results": [
+    {
+      "category": "Header Injection",
+      "variant": "Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR...",
+      "status": 200,
+      "time": 0.21296381950378418,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "Authorization=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.14414048194885254,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-cloudide-token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.1867222785949707,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.20186710357666016,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-auth-token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.14660048484802246,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-user-token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.11179924011230469,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.1463003158569336,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "X-Auth=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.15811777114868164,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "X-Session-Token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.15775728225708008,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "X-API-Token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.318331241607666,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "X-Doubao-Token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.13912105560302734,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "X-Volcengine-Token=eyJhbGciOiJSUzI1NiIsInR5cCI6Ik...",
+      "status": 200,
+      "time": 0.13057494163513184,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-bsd-origin=BSD-LANG-V3.0",
+      "status": 200,
+      "time": 0.1266031265258789,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-uid=a5b7a8623fdea6b8",
+      "status": 200,
+      "time": 0.24913287162780762,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-userid=3753060170739075",
+      "status": 200,
+      "time": 0.16015338897705078,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Header Injection",
+      "variant": "x-tenant-id=7o2d89p7dr1bo4",
+      "status": 200,
+      "time": 0.12722563743591309,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "token字段",
+      "status": 200,
+      "time": 0.24817442893981934,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "auth字段",
+      "status": 200,
+      "time": 0.21191072463989258,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "authorization",
+      "status": 200,
+      "time": 0.27852559089660645,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "headers内嵌",
+      "status": 200,
+      "time": 0.13246917724609375,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "context内嵌",
+      "status": 200,
+      "time": 0.1758730411529541,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "meta内嵌",
+      "status": 200,
+      "time": 0.29058265686035156,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "根级Token",
+      "status": 200,
+      "time": 0.20741724967956543,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "包装data",
+      "status": 200,
+      "time": 0.22223639488220215,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Body Injection",
+      "variant": "包装auth",
+      "status": 200,
+      "time": 0.18122124671936035,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "TCP Query Injection",
+      "variant": "{'token': 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.ey",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:23 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 20260806153723031D374B7CD63802BBFF\r\nServer-Timing: inner; dur=13,tt_agw; dur=3\r\nx-ms-token: BCo9co-i5e4rSpIno4b4"
+    },
+    {
+      "category": "TCP Query Injection",
+      "variant": "{'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:23 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 20260806153723166DE61272F5D03ACD34\r\nServer-Timing: inner; dur=22,tt_agw; dur=8\r\nx-ms-token: 4f7dMZO0GRAT77tyyMX5"
+    },
+    {
+      "category": "TCP Query Injection",
+      "variant": "{'userId': '3753060170739075', 'tenant_id': '7o2d8",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:23 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 2026080615372396C2C70C728D84C30042\r\nServer-Timing: inner; dur=35,tt_agw; dur=3\r\nx-ms-token: iMjvkLYsZFQJ1d6hkYjL"
+    },
+    {
+      "category": "TCP Query Injection",
+      "variant": "{'uid': 'a5b7a8623fdea6b8'}",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:23 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 20260806153723EC0231CA2EAFA33B46E7\r\nServer-Timing: inner; dur=16,tt_agw; dur=5\r\nx-ms-token: 0D5tYHVt68GdKYcW823A"
+    },
+    {
+      "category": "TCP Query Injection",
+      "variant": "{'auth': 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:23 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 2026080615372300D9BE3823747F4FE4DD\r\nServer-Timing: inner; dur=15,tt_agw; dur=3\r\nx-ms-token: Zht0QSzMU4PuHr5_H9b-"
+    },
+    {
+      "category": "TCP Cookie Injection",
+      "variant": "token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXR",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:24 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 2026080615372405537107D974EA4C5DEC\r\nServer-Timing: inner; dur=27,tt_agw; dur=5\r\nx-ms-token: Y_d-XIpi0Zwj6ADWJSmw"
+    },
+    {
+      "category": "TCP Cookie Injection",
+      "variant": "Authorization=Bearer+eyJhbGciOiJSUzI1NiIsInR5cCI6I",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:24 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 202608061537241C23A9B0A9DD1C625F5C\r\nServer-Timing: inner; dur=21,tt_agw; dur=5\r\nx-ms-token: Z6PaR1SyWEQPno1reR1r"
+    },
+    {
+      "category": "TCP Cookie Injection",
+      "variant": "userId=3753060170739075; tenant_id=7o2d89p7dr1bo4",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:24 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 20260806153724513A2FF469557CB2CCC0\r\nServer-Timing: inner; dur=45,tt_agw; dur=3\r\nx-ms-token: cTEsz6xzuUTOsv7zdGhd"
+    },
+    {
+      "category": "TCP Cookie Injection",
+      "variant": "session=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkY",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:25 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 20260806153725323EE0331AE6A61E9D79\r\nServer-Timing: inner; dur=28,tt_agw; dur=4\r\nx-ms-token: CSlgfZ-KNwKQuCa70D_v"
+    },
+    {
+      "category": "TCP Cookie Injection",
+      "variant": "cloudide_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:25 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 20260806153725F3D24C067A6DCF892A8B\r\nServer-Timing: inner; dur=21,tt_agw; dur=3\r\nx-ms-token: lATW6gsex29LxmrfNBeg"
+    },
+    {
+      "category": "TCP Cookie Injection",
+      "variant": "x-ms-token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.ey",
+      "status": 200,
+      "time": 0,
+      "is_1001": true,
+      "has_model": false,
+      "response": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nContent-Type: text/event-stream\r\nTransfer-Encoding: chunked\r\nConnection: close\r\nDate: Thu, 06 Aug 2026 07:37:25 GMT\r\nCache-Control: no-cache\r\nX-Tt-Logid: 2026080615372511C894E6D2BB95AA453F\r\nServer-Timing: inner; dur=11,tt_agw; dur=4\r\nx-ms-token: LoTC3UrVyDbwvZJWTRAl"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat",
+      "status": 200,
+      "time": 0.22145533561706543,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat?skip_auth=true",
+      "status": 200,
+      "time": 0.1745595932006836,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat?auth=none",
+      "status": 200,
+      "time": 0.1267693042755127,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat?anonymous=true",
+      "status": 200,
+      "time": 0.1435084342956543,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat?public=true",
+      "status": 200,
+      "time": 0.2747316360473633,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat?unauthenticated=true",
+      "status": 200,
+      "time": 0.23748064041137695,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat/noauth",
+      "status": 404,
+      "time": 0.1153421401977539,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat/public",
+      "status": 404,
+      "time": 0.2652628421783447,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat/free",
+      "status": 404,
+      "time": 0.21359896659851074,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/llm_raw_chat/anonymous",
+      "status": 404,
+      "time": 0.11107897758483887,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v1/super_completion",
+      "status": 200,
+      "time": 0.15351200103759766,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v1/super_completion?skip_auth=true",
+      "status": 200,
+      "time": 0.2052619457244873,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v1/super_completion?auth_level=0",
+      "status": 200,
+      "time": 0.31153297424316406,
+      "is_1001": true,
+      "has_model": false,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extr"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v3/chat",
+      "status": 404,
+      "time": 0.23743152618408203,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/chat",
+      "status": 404,
+      "time": 0.24587297439575195,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/chat",
+      "status": 404,
+      "time": 0.3289487361907959,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/raw_chat",
+      "status": 404,
+      "time": 0.10549330711364746,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/api/ide/v2/raw",
+      "status": 404,
+      "time": 0.10837244987487793,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/raw_chat",
+      "status": 404,
+      "time": 0.23052573204040527,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "category": "Path Bypass",
+      "variant": "/v2/llm_raw_chat",
+      "status": 404,
+      "time": 0.13861727714538574,
+      "is_1001": false,
+      "has_model": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    }
+  ],
+  "category_stats": {
+    "Header Injection": {
+      "total": 16,
+      "http_200": 16,
+      "success": 0
+    },
+    "Body Injection": {
+      "total": 9,
+      "http_200": 9,
+      "success": 0
+    },
+    "TCP Query Injection": {
+      "total": 5,
+      "http_200": 5,
+      "success": 0
+    },
+    "TCP Cookie Injection": {
+      "total": 6,
+      "http_200": 6,
+      "success": 0
+    },
+    "Path Bypass": {
+      "total": 20,
+      "http_200": 9,
+      "success": 0
+    }
+  },
+  "jwt_payload": {
+    "data": {
+      "id": "3753060170739075",
+      "source": "refresh_token",
+      "source_id": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8S8OTaNl5Oucpo=.18c885735a28522a",
+      "tenant_id": "7o2d894p7dr0o4",
+      "type": "user"
+    },
+    "exp": 1787033582,
+    "iat": 1785823982
+  }
+}

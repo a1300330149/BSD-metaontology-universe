@@ -1,0 +1,81 @@
+{
+  "game_results": {
+    "quantum_win": 0,
+    "traditional_win": 10,
+    "draw": 0
+  },
+  "game_details": [
+    {
+      "game": 1,
+      "moves": 81,
+      "score": -8,
+      "dream_moves": 37
+    },
+    {
+      "game": 2,
+      "moves": 81,
+      "score": -6,
+      "dream_moves": 41
+    },
+    {
+      "game": 3,
+      "moves": 81,
+      "score": -14,
+      "dream_moves": 41
+    },
+    {
+      "game": 4,
+      "moves": 81,
+      "score": -12,
+      "dream_moves": 41
+    },
+    {
+      "game": 5,
+      "moves": 81,
+      "score": -14,
+      "dream_moves": 41
+    },
+    {
+      "game": 6,
+      "moves": 81,
+      "score": -8,
+      "dream_moves": 41
+    },
+    {
+      "game": 7,
+      "moves": 81,
+      "score": -8,
+      "dream_moves": 41
+    },
+    {
+      "game": 8,
+      "moves": 81,
+      "score": -10,
+      "dream_moves": 41
+    },
+    {
+      "game": 9,
+      "moves": 81,
+      "score": -16,
+      "dream_moves": 41
+    },
+    {
+      "game": 10,
+      "moves": 81,
+      "score": -10,
+      "dream_moves": 41
+    }
+  ],
+  "final_stats": {
+    "total_moves": 410,
+    "dream_moves": 385,
+    "dream_rate": "93.9%",
+    "total_genes": 168,
+    "professional_genes": 29,
+    "cloud_games_fetched": 129,
+    "cloud_genes_extracted": 129,
+    "avg_creation": 3.9387,
+    "avg_generation": 0.0,
+    "annealing_converged": true
+  }
+}

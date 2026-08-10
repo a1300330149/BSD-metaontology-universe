@@ -1,0 +1,158 @@
+# AFAC2026 配置文件整合
+# =========================
+
+# ====================== 默认配置 (afac2026_default.yaml) ======================
+default:
+  seed: 42
+  max_steps: 50
+  max_budget: 2000
+  domain: graph_learning
+  task_type: graph_classification
+  task_target: afac_competition
+  enable_time_layer: true
+  enable_kappa_cal: true
+  enable_gcl: false
+
+  foundation:
+    enable: true
+    level0_enabled: true
+    level1_enabled: true
+    level2_enabled: true
+    gamma_time_decay: 0.92
+    creation_mode: false
+    default_realm: NATURE
+
+  dataset:
+    data_path: ./data/A分类/A1.npz
+    feat_dim: 767
+    hidden_dim: 256
+    num_classes: 10
+    num_nodes: 13752
+
+  param_bounds:
+    lr: [0.001, 0.005]
+    weight_decay: [1e-5, 1e-3]
+    dropout: [0.3, 0.5]
+    hidden_dim: [128, 256]
+    num_layers: [2, 3]
+    num_heads: [4, 8]
+
+
+# ====================== 分布式配置 (dist_config.yaml) ======================
+distributed:
+  port: 9999
+  current_node_id: node_0
+  node_list:
+    - nid: node_0
+      ip: 127.0.0.1
+      port: 9999
+    - nid: node_1
+      ip: 127.0.0.1
+      port: 10000
+  
+  task_splits:
+    - domain: graph_learning
+      max_steps: 50
+      max_budget: 100
+      dataset:
+        data_path: ./data/sparse_1.npz
+        feat_dim: 128
+        hidden_dim: 64
+        num_classes: 10
+        num_nodes: 10000
+      param_bounds:
+        lr: [0.0001, 0.01]
+        weight_decay: [1e-5, 1e-3]
+
+
+# ====================== 顺序约束配置 (order_constraint.yaml) ======================
+competition_order:
+  TAO:
+    budget_limit: false
+    distributed_parallel: true
+    budget_interception_simplified: true
+    priority_by_eself: true
+    knowledge_sharing: true
+    preload_prior: true
+  NATURE:
+    auto_phase_upgrade: true
+    sparse_debias_always_on: true
+    enable_lightweight: false
+    max_hidden_dim: 256
+    skip_mlp_cold_start: true
+    phase_threshold_reduction: 0.10
+    feature_enhancement: true
+    missing_value_fill: true
+  HUMAN:
+    bayes_explore_rate: 0.40
+    reward_weight: 1.25
+    evolution_cycle: 5
+    negative_transfer_strict: false
+    causal_reward_weight: 1.3
+    adaptive_exploration: true
+
+research_order:
+  TAO:
+    budget_limit: true
+    distributed_parallel: false
+    budget_interception_simplified: false
+    priority_by_eself: false
+    knowledge_sharing: false
+    preload_prior: false
+  NATURE:
+    auto_phase_upgrade: false
+    sparse_debias_always_on: false
+    enable_lightweight: true
+    max_hidden_dim: 128
+    skip_mlp_cold_start: false
+    phase_threshold_reduction: 0.0
+    feature_enhancement: false
+    missing_value_fill: false
+  HUMAN:
+    bayes_explore_rate: 0.20
+    reward_weight: 1.0
+    evolution_cycle: 10
+    negative_transfer_strict: true
+    causal_reward_weight: 1.0
+    adaptive_exploration: false
+
+
+# ====================== AutoML 超参搜索空间 ======================
+automl:
+  total_budget: 100
+  cost_per_exp: 10
+  model_types: [mlp, cnn, transformer]
+  
+  search_space:
+    lr: [1e-5, 1e-2]
+    batch_size: [16, 128]
+    weight_decay: [1e-6, 1e-3]
+    epochs: [10, 100]
+  
+  agent:
+    explore_rate: 0.6
+    min_explore_rate: 0.05
+    explore_decay: 0.02
+
+
+# ====================== 任务目标分数 ======================
+target_scores:
+  current:
+    classification: 0.5038
+    recommendation: 0.0961
+    total: 0.2519
+  
+  phase1:
+    classification: [0.68, 0.72]
+    recommendation: [0.25, 0.30]
+    total: [0.35, 0.40]
+  
+  phase2:
+    classification: [0.75, 0.80]
+    recommendation: [0.33, 0.38]
+    total: [0.45, 0.50]
+  
+  phase3:
+    classification: [0.82, 0.87]
+    recommendation: [0.40, 0.45]
+    total: [0.55, 0.60]

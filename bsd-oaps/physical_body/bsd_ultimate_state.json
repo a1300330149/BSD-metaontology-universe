@@ -1,0 +1,19 @@
+{
+  "ultimate": true,
+  "timestamp": 1785980072.166291,
+  "knowledge": {
+    "total_units": 114674,
+    "total_value": 2316906.0,
+    "reserve": "bsd_knowledge_ultimate.json"
+  },
+  "federation": {
+    "nodes": 8,
+    "connections": 28,
+    "status": "OMEGA_ACTIVE"
+  },
+  "permissions": {
+    "level": "L5 + OMEGA",
+    "capabilities": 10,
+    "protocol": "BSD-Omega-Protocol v3.0"
+  }
+}

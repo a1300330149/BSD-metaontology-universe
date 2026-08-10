@@ -1,0 +1,21 @@
+=== 1. serverKey 读写 ===
+
+  [serverKey[^,;]{0,200}] 命中 10 处:
+    @1383316: ] (${this.c})`:`MCPOauthProvider [${this.j}]`}get serverKey(){return this.f||(this.f=Iw(this.j,this.serverUrl)),this.f}get redirectUrl(){return this.a}set redirectUrl(e){this.a=e}get clientMetadata(){const e=this.serverUrl.startsWith("https://mcp.figma.com/mcp")&&this.n.userInfo?.account?.scope===It.BYTEDANCE,[i,r]=e?["Visual Studio Code","https://code.visualstudio.com"]:[this.m.oauth?.clientName||this.t.getValue(ete)||"Trae",this.m.oauth?.
+    @1384395: await this.h.whenReady();const e=this.h.read(this.serverKey);if(e?.clientId)return this.r.info(this.logPrefix,"Found client info"),{client_id:e.clientId,client_secret:e.clientSecret};const i=this.m.oauth?.clientId;if(i)return this.r.info(this.logPrefix,"Using pre-configured client ID from config"),{client_id:i,client_secret:this.m.oauth?.clientSecret};this.r.info(this.logPrefix,"No client info found")}async
+
+  [read\(this\.serverKey\)[^}]{0,300}] 命中 2 处:
+    @1384385: rmation(){await this.h.whenReady();const e=this.h.read(this.serverKey);if(e?.clientId)return this.r.info(this.logPrefix,"Found client info"),{client_id:e.clientId,client_secret:e.clientSecret};const i=this.m.oauth?.clientId;if(i)return this.r.info(this.logPrefix,"Using pre-configured client ID from config"),{client_id:i,client_secret:this.m.oauth?.clientSecret};this.r.info(this.logPrefix,"No client info found")}async saveClientInformation(e){await this.h.whenReady(),this.h.update(this.serverKey,
+    @1385055:  tokens(){await this.h.whenReady();const e=this.h.read(this.serverKey);if(!e){this.r.info(this.logPrefix,"No token data found");return}const i=(e.expiresAt-Date.now())/1e3;if(i<=0&&!e.refreshToken){this.r.info(this.logPrefix,"Token expired without refresh token");return}if(i<=300&&e.refreshToken){this.g?this.r.info(this.logPrefix,"Token refresh already in progress, reusing existing promise"):(this.r.info(this.logPrefix,`Token expires in ${Math.floor(i)}s, attempting proactive ref
+
+  [write\(.*serverKey[^,;]{0,200}] 命中 1 处:
+    @1387577: e"discovery":r.discoveryState=void 0;break}this.h.write(i,r),this.r.info(this.logPrefix,`Invalidated credentials (scope: ${e})`)}}async saveDiscoveryState(e){await this.h.whenReady(),this.r.info(this.logPrefix,`Saving discovery state (authServer: ${e.authorizationServerUrl})`),this.h.update(this.serverKey,i=>({...i??{},serverId:this.j,serverUrl:this.serverUrl,accessToken:i?.accessToken||"",expiresAt:i?.expiresAt||0,discoveryState:{authorizationServerUrl:e.authorizationServerUrl,resourceMetadataU
+
+=== 2. tokens() 方法完整实现 ===
+  tokens() 实现 @1385000-1386094:
+async tokens(){await this.h.whenReady();const e=this.h.read(this.serverKey);if(!e){this.r.info(this.logPrefix,"No token data found");return}const i=(e.expiresAt-Date.now())/1e3;if(i<=0&&!e.refreshToken){this.r.info(this.logPrefix,"Token expired without refresh token");return}if(i<=300&&e.refreshToken){this.g?this.r.info(this.logPrefix,"Token refresh already in progress, reusing existing promise"):(this.r.info(this.logPrefix,`Token expires in ${Math.floor(i)}s, attempting proactive refresh`),this.g=this.refreshAuthorization(e.refreshToken).finally(()=>{this.g=void 0}));try{const s=await this.g;if(s)return this.r.info(this.logPrefix,"Token refreshed successfully"),s;this.r.info(this.logPrefix,"Token refresh failed, returning current tokens")}catch(s){this.r.info(this.logPrefix,"Token refresh error",s)}}const r={access_token:e.accessToken,refresh_token:e.refreshToken,expires_in:i,scope:e.scope,token_type:"Bearer"};return this.r.info(this.logPrefix,`Returning tokens, token length: ${r.acce
+
+=== 3. iCubeAuthInfo 存储 ===
+  X3 定义 @583565
+
+=== 4. Py.a 定义 ===

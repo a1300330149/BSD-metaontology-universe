@@ -1,0 +1,12 @@
+{
+  "pipeline_switch": {
+    "academic_search": true,
+    "general_web": false,
+    "internal_shared": true
+  },
+  
+  "bandwidth_limit": "unlimited",
+  "auto_power_record": true,
+  "fetch_auto_archive": true,
+  "archive_path": "./theories/external_ref/"
+}

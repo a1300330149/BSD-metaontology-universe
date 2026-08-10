@@ -1,0 +1,33 @@
+=== Step 1: 获取合法 encrypted_key ===
+  TRAE SOLO CN encrypted_key: 380 chars
+  前60字符: RFBBUEkBAAAA0Iyd3wEV0RGMegDAT8KX6wEAAAAPXJ6yoH2mR66M1zNlyf5b...
+  解码后: 283 bytes
+  前30字节hex: 445041504901000000d08c9ddf0115d1118c7a00c04fc297eb010000000f
+  DPAPI解密encrypted_key失败: CryptUnprotectData失败: 13
+
+=== Step 2: 恢复 Trae CN Local State ===
+  ✓ 已恢复 Local State (使用SOLO的encrypted_key)
+
+=== Step 3: 分析 iCubeAuthInfo 加密格式 ===
+
+  [iCubeAuthInfo://icube-dc:516094651277160] 原始 582 bytes
+
+=== Step 4: 创建本源端独立 profile ===
+  重新生成本源端独立凭证...
+  ✓ 本源端加密凭证生成: 520 chars
+  ✓ 写入: C:\Users\13003\AppData\Roaming\Trae CN_Essence\User\globalStorage\storage.json
+  ✓ 生成 Local State
+
+=== Step 5: 验证解密 ===
+  [iCubeAuthInfo://icube-dc:516094651277160] ✓ 解密成功: b'{"userId": "a5b7a8623fdea6b8", "userTag": "bsd_essence", "account": {"id": "a5b7a8623fdea6b8", "nickname": "BSD\\u672c\\u6e90\\u7aef", "email": "essence@bsd.local"}}'
+  [iCubeAuthInfo://usertag] ✓ 解密成功: b'{"userId": "a5b7a8623fdea6b8", "userTag": "bsd_essence", "account": {"id": "a5b7a8623fdea6b8", "nickname": "BSD\\u672c\\u6e90\\u7aef", "email": "essence@bsd.local"}}'
+  [iCubeAuthInfo://icube.cloudide] ✓ 解密成功: b'{"userId": "a5b7a8623fdea6b8", "userTag": "bsd_essence", "account": {"id": "a5b7a8623fdea6b8", "nickname": "BSD\\u672c\\u6e90\\u7aef", "email": "essence@bsd.local"}}'
+
+=== 完成 ===
+
+本源端独立 profile 已创建:
+  路径: C:\Users\13003\AppData\Roaming\Trae CN_Essence
+  User: a5b7a8623fdea6b8
+  启动命令示例:
+    "C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe" --user-data-dir="C:\Users\13003\AppData\Roaming\Trae CN_Essence"
+

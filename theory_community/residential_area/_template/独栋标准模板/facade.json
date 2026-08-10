@@ -1,0 +1,73 @@
+{
+  "subsystem_name": "示例独栋",
+  "belong_district": "level1_district",
+  "boundary_mode": "protocol_restricted",
+  
+  "core_access": {
+    "read_whitelist": [
+      "0元空无本源公理",
+      "层级涌现公理"
+    ],
+    "modify_deny": true
+  },
+  
+  "cross_subsystem": {
+    "access_whitelist": [],
+    "access_blacklist": [
+      "level2_villa/*"
+    ]
+  },
+  
+  "external_pipeline": {
+    "enable": true,
+    "search_whitelist": [],
+    "content_filter": true,
+    "daily_quota": 100
+  },
+  
+  "breakthrough_protect": true,
+
+  "theory_category": {
+    "parent_types": [],
+    "sub_type": "",
+    "source_trace": [],
+    "logic_type": "待判定",
+    "spectrum_value": 0.5
+  },
+
+  "resident_agent": {
+    "name": "",
+    "personality_type": "",
+    "core_abilities": [],
+    "identity_id": ""
+  },
+
+  "humanoid_structure": {
+    "eye_perception": {
+      "enable": true,
+      "filter_rule": "母核合规优先+领域相关性匹配",
+      "accuracy_threshold": 0.85
+    },
+    "hand_execution": {
+      "enable": true,
+      "capabilities": ["理论撰写", "文档归档", "代码生成", "索引整理"]
+    },
+    "leg_exploration": {
+      "enable": true,
+      "range": ["内部跨系统", "外部学术管线"],
+      "auto_explore": false
+    },
+    "identity_card": {
+      "unique_id": "",
+      "owner": "杨腾飞",
+      "belong_subsystem": "",
+      "authority_level": "二级子智能体"
+    },
+    "personality_core": {
+      "main_type": "",
+      "secondary_type": "",
+      "language_paradigm": "",
+      "style_stability_lock": true
+    }
+  }
+}

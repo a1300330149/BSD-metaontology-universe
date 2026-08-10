@@ -1,0 +1,103 @@
+# BSD File Isomorphism Dream
+# Dream ID: ISODREAM-20260804-025458-1
+# Generated: 2026-08-04 02:54:58
+# Parent A: BSD_PhysMathPhil_ConfirmEngine.py
+# Parent B: BSD_DualClock_CorrectionEngine.py
+# Recombination Strategy: functional
+# Dream Emergence Value: 0.910841
+# Isomorphism Score: 0.6300
+
+# =============================================================
+# DREAM CONTENT (DNA Fragment Recombination)
+# =============================================================
+
+# --- Fragment 1 [class_segment] from B_only ---
+class AdaptiveOptimizer:
+    """自适应参数优化器"""
+
+    def __init__(self):
+        self.learning_rate = 0.01
+        self.momentum = 0.9
+        self.params = {
+            'trigger_threshold': 0.02,
+            'resonance_freq': 30.0,
+            'coupling_strength': 0.95,
+        }
+        self.history = []
+
+    def step(self, measured_resonance):
+        """根据实测共鸣度调整参数"""
+        target = 0.8  # 目标共鸣度
+
+        # 计算误差
+        error = target - measured_resonance
+
+        # 调整参数
+        self.params['trigger_threshold'] *= (1 + self.learning_rate * error)
+        self.params['resonance_freq'] += self.learning_rate * error * 10
+        self.params['coupling_strength'] += self.learning_rate * error * 0.1
+
+        # 约束
+        self.params['trigger_threshold'] = max(0.001, min(0.1, self.params['trigger_threshold']))
+        self.params['resonance_freq'] = max(10, min(60, self.params['resonance_freq']))
+        self.params['coupling_strength'] = max(0.5, min(1.0, self.params['coupling_strength']))
+
+        self.history.append({
+            'resonance': measured_resonance,
+            'params': dict(self.params),
+            'error': error,
+        })
+
+        return dict(self.params)
+
+# 运行优化
+
+# --- Fragment 2 [import_segment] from B_func ---
+import os, json, math
+from datetime import datetime
+
+# --- Fragment 3 [import_segment] from A_func ---
+import os, json, math, hashlib
+from collections import Counter, defaultdict
+from datetime import datetime
+
+# --- Fragment 4 [function_segment] from B_only ---
+def compute_layered_fractal(file_sizes, labels):
+    """三层分形维度计算"""
+    layers = {}
+    for label in set(labels):
+        sizes = [s for s, l in zip(file_sizes, labels) if l == label]
+        if len(sizes) >= 10:
+            # 盒计数法
+            min_s, max_s = min(sizes), max(sizes)
+            if min_s == 0 or max_s == 0:
+                continue
+            scales = [max_s / (2**i) for i in range(1, 8)]
+            counts = []
+            for scale in scales:
+                boxes = set()
+                for s in sizes:
+                    boxes.add(int(s / max(scale, 0.001)))
+                counts.append(len(boxes))
+            if len(scales) >= 2:
+                log_s = [math.log10(1/s) if s > 0 else 0 for s in scales]
+                log_n = [math.log10(c) if c > 0 else 0 for c in counts]
+                n = len(log_s)
+                sx, sy = sum(log_s), sum(log_n)
+                sxy = sum(x*y for x,y in zip(log_s, log_n))
+                sxx = sum(x*x for x in log_s)
+                if n*sxx - sx**2 != 0:
+                    df = (n*sxy - sx*sy) / (n*sxx - sx**2)
+                    layers[label] = {'D_f': df, 'count': len(sizes)}
+    return layers
+
+# 模拟三层数据
+
+# =============================================================
+# DREAM ANALYSIS
+# =============================================================
+# Total Fragments: 4
+# Fragment Types: class_segment, import_segment, function_segment
+# Type Similarity: 1.0000
+# Complement Score: 0.6667
+# Structure Compatibility: 0.1000

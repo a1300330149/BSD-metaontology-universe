@@ -1,0 +1,46 @@
+=== 读取 TRAE SOLO CN 合法 encrypted_key ===
+  ✓ encrypted_key获取成功 (380 chars)
+
+=== 生成本源端完整凭证 ===
+  [1/3] DPAPI加密 userTag...
+    ✓ 672 chars
+  [2/3] DPAPI加密 icube-dc...
+    ✓ 584 chars
+  [3/3] DPAPI加密 icube.cloudide...
+    ✓ 840 chars
+
+  本源端JWT: eyJhbGciOiAiUlMyNTYiLCAidHlwIjogIkpXVCJ9.eyJkYXRhIjogeyJpZCI6ICJhNWI3YTg2MjNmZGV...
+
+=== 验证凭证可解密 ===
+  [usertag] ✓ 解密成功: b'{"userId": "a5b7a8623fdea6b8", "account": {"id": "a5b7a8623fdea6b8", "scope": "trae_cn_essence", "us'
+  [icube-dc] ✓ 解密成功: b'{"userId": "a5b7a8623fdea6b8", "accountId": "a5b7a8623fdea6b8", "region": "cn", "dataCenter": "cn", '
+  [cloudide] ✓ 解密成功: b'{"userId": "a5b7a8623fdea6b8", "accessToken": "bsd_essence_access_token_v1", "refreshToken": "bsd_es'
+
+=== 写入本源端独立 profile ===
+  ✓ storage.json (4 keys)
+  ✓ Local State
+  ✓ state.vscdb
+  ✓ .bsd-essence/trae-jwt-token
+  ✓ .bsd-essence/argv.json
+
+============================================================
+  本源端独立登录 - 准备完成
+============================================================
+
+  独立 Profile:
+    数据目录: C:\Users\13003\AppData\Roaming\Trae CN_Essence
+    配置目录: C:\Users\13003\.bsd-essence
+    UID: a5b7a8623fdea6b8 (BSD本源端)
+  
+  启动方式:
+    python C:\Users\13003\.bsd-essence\launch_essence.py
+    
+  或直接命令:
+    "C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe" --user-data-dir="C:\Users\13003\AppData\Roaming\Trae CN_Essence" --no-sandbox
+  
+  特点:
+    1. 独立存储, 完全不与 TRAE SOLO CN 同步
+    2. 独立UID, 不使用作者的3753060170739075
+    3. DPAPI加密凭证, 符合Windows安全规范
+    4. 保留传统UID结构, 学习后的独立认证
+

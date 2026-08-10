@@ -1,0 +1,64 @@
+=== 1. 查找 userDataPath 解析 ===
+
+  [userDataPath[^,;]+] 命中 10 处:
+    @13450: "out-build/vs/platform/environment/node/userDataPath.js"(){"use strict";zO=process.env.VSCODE_CWD||process.cwd()}});function CS(t){m0.setUnexpectedErrorHandler(t)}function B1e(t){if(!t||typeo
+    @245932: me(){return ae.file(this.b.homeDir)}get userDataPath(){return this.b.userDataDir}get appSettingsHome(){return ae.file(me(this.userDataPath,"User"))}get localStoragePath(){return ae.file(me(this.userDataPath,"Local Storage"))}get tmpDir(){return ae.file(this.
+    @246196: ir)}get cacheHome(){return ae.file(this.userDataPath)}get stateResource(){return lt(this.appSettingsHome,"globalStorage","storage.json")}get userRoamingDataHome(){return this.appSettingsHome.with({scheme:_e.vscodeUserData})}
+
+  [user-data-dir[^,;]+] 命中 4 处:
+    @12934: _APPDATA;if(r)return b1(r,e);const s=t["user-data-dir"];if(s)return s;switch(process.platform){case"win32":if(r=process.env.APPDATA,!r){const n=process.env.USERPROFILE;if(type
+    @227082: longer than ${e} chars, try a shorter --user-data-dir`)}function nB(t){return new Promise((e,i)=>{const r=w0e();r.on("error",i),r.listen(t,()=>{r.removeListener("error",i),e(new mB(r))})})}function oB(t,e){return
+    @462877: rgs:"locale",description:p(2043,null)},"user-data-dir":{type:"string",cat:"o",args:"dir",description:p(2044,null)},profile:{type:"string",cat:"o",args:"profileName",description:p(2045,null)
+
+  [--user-data-dir[^,;]+] 命中 1 处:
+    @227080: s longer than ${e} chars, try a shorter --user-data-dir`)}function nB(t){return new Promise((e,i)=>{const r=w0e();r.on("error",i),r.listen(t,()=>{r.removeListener("error",i),e(new mB(r))})})}function oB(t,e){return
+
+  [Roaming[^"\']+] 命中 5 处:
+    @246301: "globalStorage","storage.json")}get userRoamingDataHome(){return this.appSettingsHome.with({scheme:_e.vscodeUserData})}get userDataSyncHome(){return lt(this.appSettingsHome,"sync")}get logsHome(){if(!this.args.logsPath){const t=RB(new Date).replace(/-|:|\.\d+Z$/g,"");this.args.logsPath=me(thi
+    @247242: oardLayoutResource(){return lt(this.userRoamingDataHome,"keyboardLayout.json")}get argvResource(){const t=Nr.VSCODE_PORTABLE;return t?ae.file(me(t,"argv.json")):lt(this.userHom
+    @250703: null),__decorate([Jt],Li.prototype,"userRoamingDataHome",null),__decorate([Jt],Li.prototype,"userDataSyncHome",null),__decorate([Jt],Li.prototype,"productDataResource",null),_
+
+=== 2. 查找 storage.json 读写 ===
+
+  [storage\.json[^,;]+] 命中 1 处:
+    @246278: SettingsHome,"globalStorage","storage.json")}get userRoamingDataHome(){return this.appSettingsHome.with({scheme:_e.vscodeUserData})}get userDataSyncHome(){return lt(this.appSettingsHome,"sync")}get logsHome(){if(!this.args.logsPath){const t=RB(new Date).replace(/-|:|\.\d+Z$/g,"");this.args.logsPath=me(this.userDataPath,"logs",t)}return ae.file(this.args.logsPath)
+
+  [globalStorage[^,;]+] 命中 15 处:
+    @246262: turn lt(this.appSettingsHome,"globalStorage","storage.json")}get userRoamingDataHome(){return this.appSettingsHome.with({scheme:_e.vscodeUserData})}get userDataSyncHome(){return lt(this.appSettingsHome,"sync")}get logsHome()
+    @250250: turn lt(this.appSettingsHome,"globalStorage",".ai_docs")}},__decorate([Jt],Li.prototype,"appRoot",null),__decorate([Jt],Li.prototype,"userHome",null),__decorate([Jt],Li.prototype,"userDataPath",null),__decorate([Jt],Li.proto
+
+=== 3. 查找 DPAPI / windows 加密 ===
+
+  [DPAPI|dpapi] 命中 2 处:
+    @244753: .kwallet6="kwallet6",t.dplib="dpapi",t.keychainAccess="keychain_access"}(NB||(NB={}))}}),ol,ia,Kn=E({"out-build/vs/platform/environment/common/environment.js"(){"use strict";Ce(),ol=we("environmentService"),ia=ol}});function RB(t){retu
+    @660629: if(De)return Promise.resolve("dpapi");if(Ae)return Promise.resolve("keychain_access");if(Cu.getSelectedStorageBackend)try{this.a.trace("[EncryptionMainService] Getting selected storage backend...");const e=Cu.getSelectedStorageBackend(
+
+=== 4. 查找 trae-jwt-token 读写 ===
+
+  [trae-jwt-token[^,;]+] 命中 1 处:
+    @1157405: ,Sl(),PX(),d9(),Yr(),bX(),RX="trae-jwt-token",Zx=60*1e3,$X=class{constructor(t,e,i,r,s,n,o){this.i=t,this.j=e,this.k=i,this.l=r,this.m=s,this.n=n,this.o=o,this.c=!1,this.disableRefreshFlag=!1,this.d=0,this.h=NX.join(j9e(),this.o.dataFolderName,R
+
+  [jwt-token[^,;]+] 命中 4 处:
+    @515444: LED="vscode:sandbox::main-set-jwt-token-enabled",t.SANDBOX_TO_MAIN_REFRESH_THIRD_PARTY_TOKEN="vscode:sandbox::main-refresh-third-party-token",t.SANDBOX_TO_MAIN_REMOVE_THIRD_PARTY_TOKEN="vscode:sandbox::main-remove-third-party-token",t.SANDBOX_TO_MA
+    @1157410: ,PX(),d9(),Yr(),bX(),RX="trae-jwt-token",Zx=60*1e3,$X=class{constructor(t,e,i,r,s,n,o){this.i=t,this.j=e,this.k=i,this.l=r,this.m=s,this.n=n,this.o=o,this.c=!1,this.disableRefreshFlag=!1,this.d=0,this.h=NX.join(j9e(),this.o.dataFolderName,R
+
+=== 5. 查找 CheckLogin / login 相关端点 ===
+
+  [CheckLogin[^,;]+] 命中 13 处:
+    @810026: loudide/api/v3/trae/CheckLogin"];Vd({name:"marketplace-headers",urlPatterns:i,shouldApply(c){try{const{pathname:l}=new URL(c.url);return!a.includes(l)}catch{return!0}},async onBefore
+    @812096: loudide/api/v3/trae/CheckLogin"];Vd({name:"solo-lite-websocket-headers",urlPatterns:["https://*/trae/*","wss://*/explorer/*","ws://*/explorer/*"],shouldApply(a){try{const c=new URL(a
+
+  [ExchangeToken[^,;]+] 命中 6 处:
+    @809988: "/trae/api/v3/oauth/ExchangeToken","/cloudide/api/v3/trae/CheckLogin"];Vd({name:"marketplace-headers",urlPatterns:i,shouldApply(c){try{const{pathname:l}=new URL(c.url);return!a.include
+    @812058: "/trae/api/v3/oauth/ExchangeToken","/cloudide/api/v3/trae/CheckLogin"];Vd({name:"solo-lite-websocket-headers",urlPatterns:["https://*/trae/*","wss://*/explorer/*","ws://*/explorer/*"],
+
+  [ClearRefreshToken[^,;]+] 命中 1 处:
+    @1150819: e/api/v3/trae/oauth/ClearRefreshToken`,n={ClientID:Vv(this.d),DeviceID:i,MachineID:r,PlatformCode:md(this.d)},o={headers:this.m(e)};this.c.info("[revokeToken]","request",fs(o),s,n),this.a.
+
+  [cloudide/api/v3/trae/[^"\']+] 命中 10 处:
+    @775416: ap(i=>`https://${i}/cloudide/api/v3/trae/GetLoginGuidanceForBytedance`)}async getCdnPrefix(t){if(t?.preferPrivateCdn){const e=this.b?.cdn?.private||"";if(e)return e}return(await this.getBootConfig()).cdnPrefix}async getDocsUrl(){return this.b?.doc}async getGuideHelperConfig(){return this.b?.guideH
+    @809934: rent}return{}},a=["/cloudide/api/v3/trae/GetUserInfo","/trae/api/v3/oauth/ExchangeToken","/cloudide/api/v3/trae/CheckLogin"];Vd({name:"marketplace-headers",urlPatterns:i,shouldApply(c){try{const{pathnam
+
+  [trae/api/v3/oauth/[^"\']+] 命中 5 处:
+    @809970: trae/GetUserInfo","/trae/api/v3/oauth/ExchangeToken","/cloudide/api/v3/trae/CheckLogin"];Vd({name:"marketplace-headers",urlPatterns:i,shouldApply(c){try{const{pathname:l}=new URL(c.url);return!a.includ
+    @812040: trae/GetUserInfo","/trae/api/v3/oauth/ExchangeToken","/cloudide/api/v3/trae/CheckLogin"];Vd({name:"solo-lite-websocket-headers",urlPatterns:["https://*/trae/*","wss://*/explorer/*","ws://*/explorer/*"]

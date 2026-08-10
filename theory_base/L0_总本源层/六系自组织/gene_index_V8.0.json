@@ -1,0 +1,434 @@
+{
+  "强化系": [
+    {
+      "gene_id": "BSD-GENE-强-000001",
+      "filename": "BSD-GENE-强-000001_Recovery.md",
+      "original_name": "Recovery",
+      "original_path": "C:\\copied-drive-242968\\Recovery",
+      "size_bytes": 16523938420
+    },
+    {
+      "gene_id": "BSD-GENE-强-000002",
+      "filename": "BSD-GENE-强-000002_RecoveryImage.md",
+      "original_name": "RecoveryImage",
+      "original_path": "C:\\copied-drive-242968\\Recovery\\RecoveryImage",
+      "size_bytes": 16523938420
+    },
+    {
+      "gene_id": "BSD-GENE-强-000003",
+      "filename": "BSD-GENE-强-000003_Platforms.md",
+      "original_name": "Platforms",
+      "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms",
+      "size_bytes": 7107665566
+    },
+    {
+      "gene_id": "BSD-GENE-强-000004",
+      "filename": "BSD-GENE-强-000004_Windows.md",
+      "original_name": "Windows",
+      "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows",
+      "size_bytes": 7107665566
+    },
+    {
+      "gene_id": "BSD-GENE-强-000005",
+      "filename": "BSD-GENE-强-000005_BLPs.md",
+      "original_name": "BLPs",
+      "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows\\BLPs",
+      "size_bytes": 4009600207
+    },
+    {
+      "gene_id": "BSD-GENE-强-000006",
+      "filename": "BSD-GENE-强-000006_Intel.md",
+      "original_name": "Intel",
+      "original_path": "C:\\Users\\All Users\\Intel",
+      "size_bytes": 2538691834
+    },
+    {
+      "gene_id": "BSD-GENE-强-000007",
+      "filename": "BSD-GENE-强-000007_Intel_Extreme_Tuning_Utility.md",
+      "original_name": "Intel Extreme Tuning Utility",
+      "original_path": "C:\\Users\\All Users\\Intel\\Intel Extreme Tuning Utility",
+      "size_bytes": 2538567753
+    },
+    {
+      "gene_id": "BSD-GENE-强-000008",
+      "filename": "BSD-GENE-强-000008_leaders.md",
+      "original_name": "leaders",
+      "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows\\BLPs\\leaders",
+      "size_bytes": 1411316736
+    },
+    {
+      "gene_id": "BSD-GENE-强-000009",
+      "filename": "BSD-GENE-强-000009_AOMEI_Partition_Assistant.md",
+      "original_name": "AOMEI Partition Assistant",
+      "original_path": "D:\\11\\AOMEI Partition Assistant",
+      "size_bytes": 1223917314
+    },
+    {
+      "gene_id": "BSD-GENE-强-000010",
+      "filename": "BSD-GENE-强-000010_Movies.md",
+      "original_name": "Movies",
+      "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows\\Movies",
+      "size_bytes": 582729980
+    }
+  ],
+  "变身系": [
+    {
+      "gene_id": "BSD-GENE-变-000011",
+      "filename": "BSD-GENE-变-000011_kkduizhan.md",
+      "original_name": "kkduizhan",
+      "original_path": "D:\\GAME\\kkduizhan",
+      "size_bytes": 115277587412
+    },
+    {
+      "gene_id": "BSD-GENE-变-000012",
+      "filename": "BSD-GENE-变-000012_Warcraft_III_Frozen_Throne_1.27a_publish.md",
+      "original_name": "Warcraft III Frozen Throne 1.27a publish",
+      "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish",
+      "size_bytes": 93545012398
+    },
+    {
+      "gene_id": "BSD-GENE-变-000013",
+      "filename": "BSD-GENE-变-000013_Maps.md",
+      "original_name": "Maps",
+      "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps",
+      "size_bytes": 91158872125
+    },
+    {
+      "gene_id": "BSD-GENE-变-000014",
+      "filename": "BSD-GENE-变-000014_dz.md",
+      "original_name": "dz",
+      "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps\\dz",
+      "size_bytes": 91158856765
+    },
+    {
+      "gene_id": "BSD-GENE-变-000015",
+      "filename": "BSD-GENE-变-000015_rpg.md",
+      "original_name": "rpg",
+      "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps\\dz\\rpg",
+      "size_bytes": 91158856765
+    },
+    {
+      "gene_id": "BSD-GENE-变-000016",
+      "filename": "BSD-GENE-变-000016_Subverse.md",
+      "original_name": "Subverse",
+      "original_path": "D:\\game2\\Subverse",
+      "size_bytes": 37772975469
+    },
+    {
+      "gene_id": "BSD-GENE-变-000017",
+      "filename": "BSD-GENE-变-000017_Subverse.md",
+      "original_name": "Subverse",
+      "original_path": "D:\\game2\\Subverse\\Subverse",
+      "size_bytes": 37729948511
+    },
+    {
+      "gene_id": "BSD-GENE-变-000018",
+      "filename": "BSD-GENE-变-000018_Content.md",
+      "original_name": "Content",
+      "original_path": "D:\\game2\\Subverse\\Subverse\\Content",
+      "size_bytes": 37667191679
+    },
+    {
+      "gene_id": "BSD-GENE-变-000019",
+      "filename": "BSD-GENE-变-000019_Sid_Meier's_Civilization_VI.md",
+      "original_name": "Sid Meier's Civilization VI",
+      "original_path": "D:\\Games\\Sid Meier's Civilization VI",
+      "size_bytes": 29539269408
+    },
+    {
+      "gene_id": "BSD-GENE-变-000020",
+      "filename": "BSD-GENE-变-000020_Euro_Truck_Simulator_2.md",
+      "original_name": "Euro Truck Simulator 2",
+      "original_path": "D:\\GAME\\Euro Truck Simulator 2",
+      "size_bytes": 26312770112
+    }
+  ],
+  "社会系": [
+    {
+      "gene_id": "BSD-GENE-社-000021",
+      "filename": "BSD-GENE-社-000021_K10156.md",
+      "original_name": "K10156",
+      "original_path": "D:\\BaiduNetdiskDownload\\K10156",
+      "size_bytes": 25443163572
+    },
+    {
+      "gene_id": "BSD-GENE-社-000022",
+      "filename": "BSD-GENE-社-000022_K10156.md",
+      "original_name": "K10156",
+      "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156",
+      "size_bytes": 25443163572
+    },
+    {
+      "gene_id": "BSD-GENE-社-000023",
+      "filename": "BSD-GENE-社-000023_230703.1.md",
+      "original_name": "230703.1",
+      "original_path": "D:\\BaiduNetdiskDownload\\230703.1",
+      "size_bytes": 15715872207
+    },
+    {
+      "gene_id": "BSD-GENE-社-000024",
+      "filename": "BSD-GENE-社-000024_240218.7.md",
+      "original_name": "240218.7",
+      "original_path": "D:\\BaiduNetdiskDownload\\240218.7",
+      "size_bytes": 13503793805
+    },
+    {
+      "gene_id": "BSD-GENE-社-000025",
+      "filename": "BSD-GENE-社-000025_Lilith_Rising_2-2.0.11ns.md",
+      "original_name": "Lilith_Rising_2-2.0.11ns",
+      "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns",
+      "size_bytes": 12786086233
+    },
+    {
+      "gene_id": "BSD-GENE-社-000026",
+      "filename": "BSD-GENE-社-000026_Lilith_Rising_2-2.0.11ns-dists.md",
+      "original_name": "Lilith_Rising_2-2.0.11ns-dists",
+      "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns\\Lilith_Rising_2-2.0.11ns-dists",
+      "size_bytes": 12786086233
+    },
+    {
+      "gene_id": "BSD-GENE-社-000027",
+      "filename": "BSD-GENE-社-000027_game.md",
+      "original_name": "game",
+      "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns\\Lilith_Rising_2-2.0.11ns-dists\\game",
+      "size_bytes": 12618624067
+    },
+    {
+      "gene_id": "BSD-GENE-社-000028",
+      "filename": "BSD-GENE-社-000028_240425.1.md",
+      "original_name": "240425.1",
+      "original_path": "D:\\BaiduNetdiskDownload\\240425.1",
+      "size_bytes": 8574032660
+    },
+    {
+      "gene_id": "BSD-GENE-社-000029",
+      "filename": "BSD-GENE-社-000029_230531.3.md",
+      "original_name": "230531.3",
+      "original_path": "D:\\BaiduNetdiskDownload\\230531.3",
+      "size_bytes": 8097565301
+    },
+    {
+      "gene_id": "BSD-GENE-社-000030",
+      "filename": "BSD-GENE-社-000030_K10186.md",
+      "original_name": "K10186",
+      "original_path": "D:\\BaiduNetdiskDownload\\K10186",
+      "size_bytes": 7750125341
+    }
+  ],
+  "天道系": [
+    {
+      "gene_id": "BSD-GENE-天-000031",
+      "filename": "BSD-GENE-天-000031_TRAE_SOLO_CN.md",
+      "original_name": "TRAE SOLO CN",
+      "original_path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN",
+      "size_bytes": 138656221622
+    },
+    {
+      "gene_id": "BSD-GENE-天-000032",
+      "filename": "BSD-GENE-天-000032_ModularData.md",
+      "original_name": "ModularData",
+      "original_path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN\\ModularData",
+      "size_bytes": 136432050988
+    },
+    {
+      "gene_id": "BSD-GENE-天-000033",
+      "filename": "BSD-GENE-天-000033_ai-agent.md",
+      "original_name": "ai-agent",
+      "original_path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent",
+      "size_bytes": 136421176498
+    },
+    {
+      "gene_id": "BSD-GENE-天-000034",
+      "filename": "BSD-GENE-天-000034_Maine.md",
+      "original_name": "Maine",
+      "original_path": "D:\\game2\\Grounded.Build.16208873\\Maine",
+      "size_bytes": 11874323675
+    },
+    {
+      "gene_id": "BSD-GENE-天-000035",
+      "filename": "BSD-GENE-天-000035_Content.md",
+      "original_name": "Content",
+      "original_path": "D:\\game2\\Grounded.Build.16208873\\Maine\\Content",
+      "size_bytes": 11707752491
+    },
+    {
+      "gene_id": "BSD-GENE-天-000036",
+      "filename": "BSD-GENE-天-000036_Paks.md",
+      "original_name": "Paks",
+      "original_path": "D:\\game2\\Grounded.Build.16208873\\Maine\\Content\\Paks",
+      "size_bytes": 11012019689
+    },
+    {
+      "gene_id": "BSD-GENE-天-000037",
+      "filename": "BSD-GENE-天-000037_UpdateFramework.md",
+      "original_name": "UpdateFramework",
+      "original_path": "C:\\Users\\All Users\\NVIDIA Corporation\\NVIDIA app\\UpdateFramework",
+      "size_bytes": 4714784086
+    },
+    {
+      "gene_id": "BSD-GENE-天-000038",
+      "filename": "BSD-GENE-天-000038_ota-artifacts.md",
+      "original_name": "ota-artifacts",
+      "original_path": "C:\\Users\\All Users\\NVIDIA Corporation\\NVIDIA app\\UpdateFramework\\ota-artifacts",
+      "size_bytes": 4713512819
+    },
+    {
+      "gene_id": "BSD-GENE-天-000039",
+      "filename": "BSD-GENE-天-000039_grd.md",
+      "original_name": "grd",
+      "original_path": "C:\\Users\\All Users\\NVIDIA Corporation\\NVIDIA app\\UpdateFramework\\ota-artifacts\\grd",
+      "size_bytes": 3829927646
+    },
+    {
+      "gene_id": "BSD-GENE-天-000040",
+      "filename": "BSD-GENE-天-000040_Banner_of_the_Maid.md",
+      "original_name": "Banner of the Maid",
+      "original_path": "D:\\Games\\Banner of the Maid",
+      "size_bytes": 2668864271
+    }
+  ],
+  "自然系": [
+    {
+      "gene_id": "BSD-GENE-自-000041",
+      "filename": "BSD-GENE-自-000041_AppData.md",
+      "original_name": "AppData",
+      "original_path": "C:\\Users\\13003\\AppData",
+      "size_bytes": 182862668104
+    },
+    {
+      "gene_id": "BSD-GENE-自-000042",
+      "filename": "BSD-GENE-自-000042_Roaming.md",
+      "original_name": "Roaming",
+      "original_path": "C:\\Users\\13003\\AppData\\Roaming",
+      "size_bytes": 150423342877
+    },
+    {
+      "gene_id": "BSD-GENE-自-000043",
+      "filename": "BSD-GENE-自-000043_steamapps.md",
+      "original_name": "steamapps",
+      "original_path": "D:\\steam\\steamapps",
+      "size_bytes": 71068825662
+    },
+    {
+      "gene_id": "BSD-GENE-自-000044",
+      "filename": "BSD-GENE-自-000044_common.md",
+      "original_name": "common",
+      "original_path": "D:\\steam\\steamapps\\common",
+      "size_bytes": 71068821456
+    },
+    {
+      "gene_id": "BSD-GENE-自-000045",
+      "filename": "BSD-GENE-自-000045_ModExportData.md",
+      "original_name": "ModExportData",
+      "original_path": "D:\\ggbh\\ModExportData",
+      "size_bytes": 37994316977
+    },
+    {
+      "gene_id": "BSD-GENE-自-000046",
+      "filename": "BSD-GENE-自-000046_NARAKA_BLADEPOINT.md",
+      "original_name": "NARAKA BLADEPOINT",
+      "original_path": "D:\\steam\\steamapps\\common\\NARAKA BLADEPOINT",
+      "size_bytes": 32375228876
+    },
+    {
+      "gene_id": "BSD-GENE-自-000047",
+      "filename": "BSD-GENE-自-000047_Palworld.md",
+      "original_name": "Palworld",
+      "original_path": "D:\\steam\\steamapps\\common\\Palworld",
+      "size_bytes": 32275242235
+    },
+    {
+      "gene_id": "BSD-GENE-自-000048",
+      "filename": "BSD-GENE-自-000048_Local.md",
+      "original_name": "Local",
+      "original_path": "C:\\Users\\13003\\AppData\\Local",
+      "size_bytes": 31964275204
+    },
+    {
+      "gene_id": "BSD-GENE-自-000049",
+      "filename": "BSD-GENE-自-000049_Pal.md",
+      "original_name": "Pal",
+      "original_path": "D:\\steam\\steamapps\\common\\Palworld\\Pal",
+      "size_bytes": 31932562702
+    },
+    {
+      "gene_id": "BSD-GENE-自-000050",
+      "filename": "BSD-GENE-自-000050_NarakaBladepoint_Data.md",
+      "original_name": "NarakaBladepoint_Data",
+      "original_path": "D:\\steam\\steamapps\\common\\NARAKA BLADEPOINT\\NarakaBladepoint_Data",
+      "size_bytes": 31913544317
+    }
+  ],
+  "具现系": [
+    {
+      "gene_id": "BSD-GENE-具-000051",
+      "filename": "BSD-GENE-具-000051_Sakuna_Of_Rice_And_Ruin.md",
+      "original_name": "Sakuna Of Rice And Ruin",
+      "original_path": "D:\\33\\Sakuna Of Rice And Ruin",
+      "size_bytes": 6530036023
+    },
+    {
+      "gene_id": "BSD-GENE-具-000052",
+      "filename": "BSD-GENE-具-000052_TUI9R.md",
+      "original_name": "TUI9R",
+      "original_path": "D:\\33\\TUI9R",
+      "size_bytes": 6149876611
+    },
+    {
+      "gene_id": "BSD-GENE-具-000053",
+      "filename": "BSD-GENE-具-000053_Eiyu_Senki_Gold.md",
+      "original_name": "Eiyu Senki Gold",
+      "original_path": "D:\\33\\TUI9R\\Eiyu Senki Gold",
+      "size_bytes": 3677883829
+    },
+    {
+      "gene_id": "BSD-GENE-具-000054",
+      "filename": "BSD-GENE-具-000054_EiyuSenki_–_The_World_Conquest.md",
+      "original_name": "EiyuSenki – The World Conquest",
+      "original_path": "D:\\33\\TUI9R\\EiyuSenki – The World Conquest",
+      "size_bytes": 2471992782
+    },
+    {
+      "gene_id": "BSD-GENE-具-000055",
+      "filename": "BSD-GENE-具-000055_AUGEvent.md",
+      "original_name": "AUGEvent",
+      "original_path": "D:\\33\\TUI9R\\Eiyu Senki Gold\\AUGEvent",
+      "size_bytes": 1910595342
+    },
+    {
+      "gene_id": "BSD-GENE-具-000056",
+      "filename": "BSD-GENE-具-000056_AUEvent.md",
+      "original_name": "AUEvent",
+      "original_path": "D:\\33\\TUI9R\\EiyuSenki – The World Conquest\\AUEvent",
+      "size_bytes": 1666689407
+    },
+    {
+      "gene_id": "BSD-GENE-具-000057",
+      "filename": "BSD-GENE-具-000057_components.md",
+      "original_name": "components",
+      "original_path": "D:\\22\\yy\\9.40.0.1\\components",
+      "size_bytes": 404659542
+    },
+    {
+      "gene_id": "BSD-GENE-具-000058",
+      "filename": "BSD-GENE-具-000058_com.yy.cefdev2.md",
+      "original_name": "com.yy.cefdev2",
+      "original_path": "D:\\22\\yy\\9.40.0.1\\components\\com.yy.cefdev2",
+      "size_bytes": 280207958
+    },
+    {
+      "gene_id": "BSD-GENE-具-000059",
+      "filename": "BSD-GENE-具-000059_131345.md",
+      "original_name": "131345",
+      "original_path": "D:\\22\\yy\\9.40.0.1\\components\\com.yy.cefdev2\\131345",
+      "size_bytes": 280207958
+    },
+    {
+      "gene_id": "BSD-GENE-具-000060",
+      "filename": "BSD-GENE-具-000060_x86_64_windows.md",
+      "original_name": "x86_64_windows",
+      "original_path": "D:\\11\\Qoder\\resources\\app\\resources\\bin\\x86_64_windows",
+      "size_bytes": 124587364
+    }
+  ]
+}

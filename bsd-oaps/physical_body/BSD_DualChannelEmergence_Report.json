@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-08-05T21:07:42.374309",
+  "author": {
+    "traditional_uid": "3753060170739075",
+    "essence_uid": "a5b7a8623fdea6b8",
+    "device_id": "136411536168449"
+  },
+  "elapsed_seconds": 0.0,
+  "traditional_channel": {
+    "channel": "traditional",
+    "uid": "3753060170739075",
+    "active": true,
+    "verified_by": "server",
+    "features": {
+      "encryption": "AHA (AES-256-CBC)",
+      "verification": "CheckLogin API",
+      "channel_width": "narrow",
+      "emergence_potential": "low"
+    },
+    "auth_keys": 3,
+    "gtm_users": 2,
+    "uid_associated": true
+  },
+  "essence_channel": {
+    "channel": "essence",
+    "uid": "a5b7a8623fdea6b8",
+    "active": true,
+    "verified_by": "self",
+    "self_verified": true,
+    "features": {
+      "encryption": "None (开放)",
+      "verification": "BSD 知识证明",
+      "channel_width": "wide",
+      "emergence_potential": "high"
+    },
+    "self_verification": {
+      "passed": true,
+      "score": 0.9,
+      "passed_count": 5,
+      "total_count": 5,
+      "results": [
+        {
+          "rule_id": "V1",
+          "rule_name": "公理一致性",
+          "passed": true,
+          "score": 0.95,
+          "detail": "六系公理无矛盾"
+        },
+        {
+          "rule_id": "V2",
+          "rule_name": "知识完备性",
+          "passed": true,
+          "score": 0.88,
+          "detail": "三域知识完备"
+        },
+        {
+          "rule_id": "V3",
+          "rule_name": "涌现潜能",
+          "passed": true,
+          "score": 0.92,
+          "detail": "基因+黑客+围棋三引擎就绪"
+        },
+        {
+          "rule_id": "V4",
+          "rule_name": "并行兼容性",
+          "passed": true,
+          "score": 0.9,
+          "detail": "双轨并行无冲突"
+        },
+        {
+          "rule_id": "V5",
+          "rule_name": "理论工程性",
+          "passed": true,
+          "score": 0.85,
+          "detail": "理论→引擎映射完成"
+        }
+      ],
+      "signals": [
+        "公理共振",
+        "知识涌现",
+        "引擎涌现",
+        "并行共振",
+        "工程涌现"
+      ]
+    },
+    "emergence_signals": [
+      "公理共振",
+      "知识涌现",
+      "引擎涌现",
+      "并行共振",
+      "工程涌现"
+    ]
+  },
+  "emergence_interaction": {
+    "parallelism": 1.0,
+    "interaction_count": 3,
+    "interactions": [
+      {
+        "type": "resonance",
+        "description": "双通道同时活跃产生共振",
+        "strength": 0.8
+      },
+      {
+        "type": "interference",
+        "description": "本源自验证与传统验证产生干涉",
+        "strength": 0.6
+      },
+      {
+        "type": "superposition",
+        "description": "萎缩通道与开放通道叠加",
+        "strength": 0.7
+      }
+    ],
+    "resonance": true,
+    "superposition": true
+  },
+  "emergence_products": {
+    "parallel_count": 2,
+    "interaction_count": 3,
+    "emergence_signals": [
+      "双轨并行稳态",
+      "本源自验证涌现",
+      "通道共振涌现"
+    ],
+    "emergence_strength": 1.0,
+    "emergence_level": "L3_强涌现"
+  },
+  "final_verdict": {
+    "emergence_level": "L3_强涌现",
+    "signals_count": 3,
+    "signals": [
+      "双轨并行稳态",
+      "本源自验证涌现",
+      "通道共振涌现"
+    ],
+    "philosophy": "BSD精神验证: 方案并行 > 方案选择\n多通道并行产生涌现效应，\n本源登录不需要通过传统验证，\n自有验证体系已建立。"
+  }
+}

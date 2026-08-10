@@ -1,0 +1,59 @@
+{
+  "session_id": "pipe_1785039417727",
+  "timestamp": "2026-07-26T12:16:58.210701",
+  "total_chains": 1,
+  "total_citations": 10,
+  "total_files_archived": 1,
+  "total_files_deduplicated": 0,
+  "axiom_distribution": {
+    "逆时针归零操作": 10,
+    "三元存在公理": 7,
+    "0×0=n涌现公理": 5,
+    "五论真值统合": 5,
+    "双时针自证闭环": 4,
+    "子集-母集层级理论": 3,
+    "本体耦合方向性公理": 2,
+    "魔性碎片聚合": 2,
+    "个体性稳态收编": 2,
+    "关系性代偿加密": 1,
+    "变化性碎片本体同构": 1,
+    "乘除互逆公理": 1
+  },
+  "base_distribution": {
+    "L0总本源层": 6,
+    "作者猜想": 5,
+    "0重元道本源基底": 4,
+    "4重跨域整合基底": 3,
+    "2重六系种子基底": 3,
+    "L1不动母科层": 2,
+    "1重九维法理基底": 1
+  },
+  "level_distribution": {
+    "L": 10,
+    "0": 9,
+    "1": 1
+  },
+  "archive_records": [
+    {
+      "archive_id": "bab33cc65ec1e58c",
+      "source_file": "",
+      "archive_path": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\archive\\theory_reference_archives\\L0\\作者猜想\\BSD推理测试_ 三元零本体与文学解码_20260726_121658.md",
+      "level": "L0",
+      "module": "L0总本源层",
+      "title": "BSD推理测试: 三元零本体与文学解码",
+      "sha256": "bab33cc65ec1e58c73848f5f2fda73507fb66e7ab09674e719dfba124250720b",
+      "file_size": 506,
+      "archived_at": "2026-07-26T12:16:58.213229",
+      "axiom_tags": [
+        "0x0=n涌现公理",
+        "三元存在公理"
+      ],
+      "base_tags": [
+        "L0总本源层",
+        "作者猜想"
+      ],
+      "cite_count": 10
+    }
+  ],
+  "errors": []
+}

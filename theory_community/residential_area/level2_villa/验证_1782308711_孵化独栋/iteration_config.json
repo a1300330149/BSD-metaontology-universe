@@ -1,0 +1,19 @@
+{
+  "auto_fill_enabled": true,
+  "blindspot_scan_enabled": true,
+  "upgrade_enabled": true,
+  "iteration_cycle_days": 30,
+  "auto_fill_triggers": [
+    "空白学科",
+    "盲区领域",
+    "新型范式"
+  ],
+  "blindspot_scan_schedule": "每周一次",
+  "upgrade_conditions": {
+    "spectrum_min": 0.6,
+    "zero_high_blindspots": true,
+    "compliance_passed": true
+  },
+  "lifetime_iteration_enabled": true,
+  "first_release_date": "2026-06-24"
+}

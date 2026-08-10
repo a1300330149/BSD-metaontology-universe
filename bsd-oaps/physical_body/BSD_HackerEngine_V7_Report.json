@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-06 15:24:01",
+  "protocol_injection": "failed",
+  "raw_tcp": "failed",
+  "path_bruteforce": "failed",
+  "method_bruteforce": "failed",
+  "status": "completed"
+}

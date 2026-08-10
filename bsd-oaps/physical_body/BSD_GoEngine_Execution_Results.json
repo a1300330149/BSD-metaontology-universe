@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-08-06 15:35:21",
+  "query_format": "Query Field (最优格式)",
+  "results": [
+    {
+      "variant": "Bearer Token",
+      "status": 200,
+      "time": 0.17460966110229492,
+      "has_1001": true,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "variant": "Token in Body",
+      "status": 200,
+      "time": 0.1509532928466797,
+      "has_1001": true,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "variant": "Origin UID Injection",
+      "status": 200,
+      "time": 0.1244964599609375,
+      "has_1001": true,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "variant": "Combined Embedding",
+      "status": 200,
+      "time": 0.15741848945617676,
+      "has_1001": true,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "variant": "Alt Path: /api/ide/v1/super_completion",
+      "status": 200,
+      "time": 0.12003374099731445,
+      "has_1001": true,
+      "response": "event: error\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We're sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\n\n"
+    },
+    {
+      "variant": "Alt Path: /api/v3/chat/completions",
+      "status": 404,
+      "time": 0.10484766960144043,
+      "has_1001": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "variant": "Alt Path: /api/v2/chat/completions",
+      "status": 404,
+      "time": 0.16883134841918945,
+      "has_1001": false,
+      "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>TLB</center>\r\n</body>\r\n</html>\r\n"
+    }
+  ],
+  "analysis": {
+    "total": 7,
+    "http_200": 5,
+    "has_1001": 5,
+    "no_1001": 0
+  }
+}

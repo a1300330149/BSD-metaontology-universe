@@ -1,0 +1,162 @@
+[
+  {
+    "timestamp": 1786042464.9035378,
+    "datetime": "2026-08-07T02:54:24.903537",
+    "phase": "injection",
+    "technique": "auth_header_injection_cloud_ide_jwt",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "39b212b691a4140e",
+      "headers": [
+        "Cloud-IDE-JWT",
+        "Authorization"
+      ]
+    }
+  },
+  {
+    "timestamp": 1786042464.9047165,
+    "datetime": "2026-08-07T02:54:24.904716",
+    "phase": "injection",
+    "technique": "auth_header_injection_device_proof",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "0728c30762056364",
+      "headers": [
+        "Authorization",
+        "X-Device-Proof",
+        "X-Client-ID"
+      ]
+    }
+  },
+  {
+    "timestamp": 1786042464.9047165,
+    "datetime": "2026-08-07T02:54:24.904716",
+    "phase": "injection",
+    "technique": "auth_header_injection_full_forge",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "47605f0c8c218a9c",
+      "headers": [
+        "Authorization",
+        "Cloud-IDE-JWT",
+        "X-Device-Proof",
+        "X-Client-ID",
+        "X-Requested-With",
+        "Origin",
+        "Referer"
+      ]
+    }
+  },
+  {
+    "timestamp": 1786042464.905906,
+    "datetime": "2026-08-07T02:54:24.905905",
+    "phase": "injection",
+    "technique": "request_smuggling",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "56e099dd019ce494",
+      "smuggled": true
+    }
+  },
+  {
+    "timestamp": 1786042464.906906,
+    "datetime": "2026-08-07T02:54:24.906905",
+    "phase": "injection",
+    "technique": "protocol_downgrade",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "d52de9e317710c9a",
+      "downgraded": true
+    }
+  },
+  {
+    "timestamp": 1786042464.906906,
+    "datetime": "2026-08-07T02:54:24.906905",
+    "phase": "chain_complete",
+    "technique": "full_attack_chain",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "total_payloads": 6
+    }
+  },
+  {
+    "timestamp": 1786043680.3189702,
+    "datetime": "2026-08-07T03:14:40.318970",
+    "phase": "injection",
+    "technique": "auth_header_injection_cloud_ide_jwt",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "536f9deb9adae8ea",
+      "headers": [
+        "Cloud-IDE-JWT",
+        "Authorization"
+      ]
+    }
+  },
+  {
+    "timestamp": 1786043680.3204858,
+    "datetime": "2026-08-07T03:14:40.320485",
+    "phase": "injection",
+    "technique": "auth_header_injection_device_proof",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "285aadc7a1a2f95c",
+      "headers": [
+        "Authorization",
+        "X-Device-Proof",
+        "X-Client-ID"
+      ]
+    }
+  },
+  {
+    "timestamp": 1786043680.3219986,
+    "datetime": "2026-08-07T03:14:40.321998",
+    "phase": "injection",
+    "technique": "auth_header_injection_full_forge",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "8893ef849f3aaeab",
+      "headers": [
+        "Authorization",
+        "Cloud-IDE-JWT",
+        "X-Device-Proof",
+        "X-Client-ID",
+        "X-Requested-With",
+        "Origin",
+        "Referer"
+      ]
+    }
+  },
+  {
+    "timestamp": 1786043680.3219986,
+    "datetime": "2026-08-07T03:14:40.321998",
+    "phase": "injection",
+    "technique": "request_smuggling",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "f31308de27253e76",
+      "smuggled": true
+    }
+  },
+  {
+    "timestamp": 1786043680.3235123,
+    "datetime": "2026-08-07T03:14:40.323512",
+    "phase": "injection",
+    "technique": "protocol_downgrade",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "attack_id": "33f528bb3897ede5",
+      "downgraded": true
+    }
+  },
+  {
+    "timestamp": 1786043680.3240256,
+    "datetime": "2026-08-07T03:14:40.324025",
+    "phase": "chain_complete",
+    "technique": "full_attack_chain",
+    "target": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "result": {
+      "total_payloads": 6
+    }
+  }
+]

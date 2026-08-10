@@ -1,0 +1,119 @@
+{
+  "path": "D:\\TRAE SOLO CN",
+  "total_genes": 1064,
+  "system_stats": {
+    "强化系": {
+      "gene_count": 79,
+      "total_size_mb": 370.4,
+      "extensions": [
+        "",
+        ".bin",
+        ".crt",
+        ".dat",
+        ".der",
+        ".dll",
+        ".exe",
+        ".gyp",
+        ".md",
+        ".patch"
+      ]
+    },
+    "变身系": {
+      "gene_count": 21,
+      "total_size_mb": 2.03,
+      "extensions": [
+        ".png",
+        ".ttf"
+      ]
+    },
+    "社会系": {
+      "gene_count": 227,
+      "total_size_mb": 19.64,
+      "extensions": [
+        "",
+        ".exe",
+        ".html",
+        ".json",
+        ".md",
+        ".ts",
+        ".xml"
+      ]
+    },
+    "天道系": {
+      "gene_count": 366,
+      "total_size_mb": 8.2,
+      "extensions": [
+        "",
+        ".bat",
+        ".cmd",
+        ".exe",
+        ".ini",
+        ".js",
+        ".md",
+        ".ps1",
+        ".sh",
+        ".ts",
+        ".yml"
+      ]
+    },
+    "自然系": {
+      "gene_count": 39,
+      "total_size_mb": 0.38,
+      "extensions": [
+        "",
+        ".json",
+        ".lcov",
+        ".log",
+        ".md",
+        ".txt"
+      ]
+    },
+    "具现系": {
+      "gene_count": 96,
+      "total_size_mb": 3.93,
+      "extensions": [
+        ".css",
+        ".ico",
+        ".md",
+        ".mjs",
+        ".svg",
+        ".xml"
+      ]
+    },
+    "未分类": {
+      "gene_count": 236,
+      "total_size_mb": 269.76,
+      "extensions": [
+        "",
+        ".apache2",
+        ".asar",
+        ".bnf",
+        ".bsd",
+        ".cts",
+        ".exe",
+        ".md",
+        ".md~",
+        ".mit",
+        ".mjs",
+        ".msg",
+        ".pak",
+        ".rtf",
+        ".sh"
+      ]
+    }
+  },
+  "core_genes": {
+    "引擎核心": 14,
+    "模型文件": 2,
+    "API接口": 23,
+    "配置文件": 236,
+    "UI组件": 20
+  },
+  "bsd_improvement": {
+    "traditional_activation_rate": 25.0,
+    "bsd_activation_rate": 72.0,
+    "improvement_pct": 188.0,
+    "description": "TRAE SOLO CN基因BSD化激活率提升"
+  },
+  "deep_scan_time": "2026-08-03 16:56:43"
+}

@@ -1,0 +1,32 @@
+{
+  "dream_id": "ISODREAM-20260804-025458-0",
+  "timestamp": "2026-08-04 02:54:58",
+  "type": "ISOMORPHISM_DREAM_FILE",
+  "parent_files": {
+    "A": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\physical_body\\BSD_Gene_Deconstruction_Engine.py",
+    "B": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\bsd-oaps\\physical_body\\BSD_Gene_Reverse_Jump_Engine.py"
+  },
+  "dream_emergence_value": 1.012045,
+  "dream_formula": "Ψ_dream = Π₂·S₀·e^(-γ·t)·φ(isomorphism) = 2.8274×0.81×e^(-0.92×0.5)×0.7000 = 1.012045",
+  "recombination_strategy": "functional",
+  "isomorphism": {
+    "type_similarity": 1.0,
+    "complement_score": 0.3333,
+    "structure_compatibility": 0.6667,
+    "isomorphism_score": 0.7,
+    "common_fragment_types": [
+      "class_segment",
+      "import_segment"
+    ],
+    "complementary_types": [
+      "function_segment"
+    ]
+  },
+  "fragment_count": 5,
+  "fragment_types": [
+    "class_segment",
+    "import_segment",
+    "function_segment"
+  ],
+  "dream_validated": null
+}

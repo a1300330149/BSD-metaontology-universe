@@ -1,0 +1,31 @@
+{
+  "filesystem_permission": {
+    "read_only_dirs": [
+      "./theory_community/core_manor/",
+      "./theory_community/core_manor/core_base_agents/"
+    ],
+    "read_write_dirs": [
+      "./theory_community/residential_area/",
+      "./theory_community/buffer_community_center/",
+      "./.trae/"
+    ],
+    "deny_modify_paths": [
+      "./theory_community/core_manor/**/*.md",
+      "./theory_community/core_manor/**/*.docx"
+    ],
+    "deny_delete": ["./theory_community/core_manor/"],
+    "recursive_protect": true
+  },
+  
+  "network": {
+    "default": "restricted",
+    "allow": ["all_academic_api", "general_search_api"],
+    "deny": [],
+    "pipeline_control_enable": true
+  },
+  
+  "subsystem_isolation": {
+    "default_enable": true,
+    "cross_access_requires_whitelist": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-08-06 10:26:09",
+  "jwt_info": {
+    "header": {
+      "alg": "RS256",
+      "typ": "JWT"
+    },
+    "payload_data": {
+      "id": "3753060170739075",
+      "source": "refresh_token",
+      "source_id": "FPKZOpqrbCT9aZ7qcUoxq_gAFt-cl8S8OTaNl5Oucpo=.18c885735a28522a",
+      "tenant_id": "7o2d894p7dr0o4",
+      "type": "user"
+    },
+    "exp": 1787033582,
+    "iat": 1785823982
+  },
+  "model_consulting": {
+    "q1": "你好！我是BSD本源端。关于「关键信息:\n\n1. JWT Token 结构:\n   - Header: {\"alg\": \"RS25...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+    "q2": "你好！我是BSD本源端。关于「请帮我构造一个能通过 api.trae.cn 认证的登录请求。\n\n当前 Token 信息:\n- JW...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+  },
+  "status": "completed"
+}

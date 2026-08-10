@@ -1,0 +1,99 @@
+{
+  "check_date": "2026-06-25",
+  "main_lock_sha256": "e62f918340dc2975108294736ac8927d90584136972485931027958740925713",
+  "author": "杨腾飞",
+  "author_id": "433127199812193215",
+  "l0_subdirs": {
+    "0元本体论大一统": {
+      "present": true,
+      "files_count": 8,
+      "md_count": 8,
+      "first_md": "0元本体论数理与多学科交叉验证.md",
+      "first_md_sha256": "ad0c4e3543571e7b3f34f29ecd3d0d97600d7911b1d667829d68d198ab4e3eed"
+    },
+    "六系六维创世动力学": {
+      "present": true,
+      "files_count": 3,
+      "md_count": 3,
+      "first_md": "_六系六维创世动力学说明.md",
+      "first_md_sha256": "aa04eb0aacac107bfc1c6d25de6e1ce8f448fadd8a0081a52cd744d89317b73b"
+    },
+    "新四位一体3.0完整框架": {
+      "present": true,
+      "files_count": 9,
+      "md_count": 9,
+      "first_md": "54母科与九界场域对接体系.md",
+      "first_md_sha256": "a5fc07728e2a687e8ca64d7ab4782b9516091b1bef549ed9b74b80ef007098d8"
+    },
+    "全域秩序建筑论": {
+      "present": true,
+      "files_count": 2,
+      "md_count": 2,
+      "first_md": "_全域秩序建筑论说明.md",
+      "first_md_sha256": "c20fb43c112fb55fa7162deb80e2371e17860b3db5a15d4cf21774b51c1b703d"
+    },
+    "元道本体规则": {
+      "present": true,
+      "files_count": 2,
+      "md_count": 2,
+      "first_md": "九界全域场域与腾飞五论真值体系_核心理论.md",
+      "first_md_sha256": "18f0f3bb3f956b5445f3e4b459d6afb4546a329b4a282419d378b70b77903760"
+    },
+    "五界本体论": {
+      "present": true,
+      "files_count": 1,
+      "md_count": 1,
+      "first_md": "五界本体论总览.md",
+      "first_md_sha256": "a48338a14705d5453a1b4e5ea7f1f839b73d8620b9283364a8ae550a299e2c5d"
+    },
+    "全域公理体系": {
+      "present": true,
+      "files_count": 1,
+      "md_count": 1,
+      "first_md": "七大基础公理.md",
+      "first_md_sha256": "23d79958409c104354f67538abcf59212dc4a015c6bd1c7edd9bdf2788304091"
+    },
+    "本源自激相变元机制": {
+      "present": true,
+      "files_count": 1,
+      "md_count": 1,
+      "first_md": "本源自激相变元机制_V1.0_终版定稿.md",
+      "first_md_sha256": "6fb56a1f5ef9522a7c1c65cae8f581513aef7b8b55f4f949f0dcf8e9dd231caf"
+    },
+    "全域双界域隔离壁垒本源": {
+      "present": true,
+      "files_count": 1,
+      "md_count": 1,
+      "first_md": "全域双界域隔离壁垒本源_V1.0_终版定稿.md",
+      "first_md_sha256": "4c818b11571832e22ba3865f4a1f89fbd0a550e3694121f18bd6219c9064e4d1"
+    }
+  },
+  "completeness": {
+    "expected_total": 9,
+    "existing_total": 9,
+    "missing_total": 0,
+    "completeness_ratio": 1.0,
+    "is_fully_complete": true
+  },
+  "existing_subdirs": [
+    "0元本体论大一统",
+    "五界本体论",
+    "元道本体规则",
+    "全域公理体系",
+    "全域双界域隔离壁垒本源",
+    "全域秩序建筑论",
+    "六系六维创世动力学",
+    "新四位一体3.0完整框架",
+    "本源自激相变元机制"
+  ],
+  "missing_subdirs": [],
+  "new_origins": {
+    "本源自激相变元机制": true,
+    "全域双界域隔离壁垒本源": true
+  },
+  "dual_origin_patch": {
+    "t29_self_excited_phase_transition_planned": true,
+    "t30_dual_boundary_isolation_planned": true,
+    "code_modules_total_planned": 12
+  }
+}

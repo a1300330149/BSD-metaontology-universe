@@ -1,0 +1,35 @@
+{
+  "protocol_version": "1.0",
+  "timestamp": "2026-08-03 22:13:35",
+  "evolution_rules": {
+    "update_detection": {
+      "method": "content_hash_comparison",
+      "description": "通过内容哈希检测基因变化",
+      "trigger": "文件修改时间变化或哈希值变化"
+    },
+    "self_repair": {
+      "method": "backup_restore",
+      "description": "基因损坏时从备份恢复",
+      "trigger": "基因哈希与预期不匹配",
+      "backup_location": "GeneDatabase/backups/"
+    },
+    "adaptation": {
+      "method": "function_tag_update",
+      "description": "根据基因功能变化更新BSD标签",
+      "trigger": "基因扩展名或功能描述变化"
+    },
+    "evolution_cycle": {
+      "frequency": "real_time",
+      "description": "实时监控基因变化",
+      "rotation": "顺时针(理论→工程) + 逆时针(工程→理论)"
+    }
+  },
+  "reverse_feedback": {
+    "description": "工程实践反哺理论完善",
+    "mechanisms": [
+      "基因分布特征→SOC幂律修正",
+      "基因功能分类→六系映射验证",
+      "基因演化模式→层级涌现补充"
+    ]
+  }
+}

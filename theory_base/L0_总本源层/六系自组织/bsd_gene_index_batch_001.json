@@ -1,0 +1,2376 @@
+[
+  {
+    "gene_id": "BSD-GENE-强-000001",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "Recovery",
+    "original_path": "C:\\copied-drive-242968\\Recovery",
+    "original_size_bytes": 16523938420,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.2,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系"
+    ],
+    "subset_relation": "Recovery ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000001 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000001",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394506",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000002",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "RecoveryImage",
+    "original_path": "C:\\copied-drive-242968\\Recovery\\RecoveryImage",
+    "original_size_bytes": 16523938420,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.2,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系"
+    ],
+    "subset_relation": "RecoveryImage ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000002 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000002",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394541",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000003",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "Platforms",
+    "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms",
+    "original_size_bytes": 7107665566,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.4,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系",
+      "变身系"
+    ],
+    "subset_relation": "Platforms ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000003 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000003",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394547",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000004",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "Windows",
+    "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows",
+    "original_size_bytes": 7107665566,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.4,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系",
+      "变身系"
+    ],
+    "subset_relation": "Windows ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000004 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000004",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394551",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000005",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "BLPs",
+    "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows\\BLPs",
+    "original_size_bytes": 4009600207,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 4,
+    "bsd_confidence": 0.4,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系",
+      "变身系"
+    ],
+    "subset_relation": "BLPs ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000005 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000005",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394555",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000006",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "Intel",
+    "original_path": "C:\\Users\\All Users\\Intel",
+    "original_size_bytes": 2538691834,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.2,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系"
+    ],
+    "subset_relation": "Intel ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000006 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000006",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394558",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000007",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "Intel Extreme Tuning Utility",
+    "original_path": "C:\\Users\\All Users\\Intel\\Intel Extreme Tuning Utility",
+    "original_size_bytes": 2538567753,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.2,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系"
+    ],
+    "subset_relation": "Intel Extreme Tuning Utility ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000007 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000007",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394562",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000008",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "leaders",
+    "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows\\BLPs\\leaders",
+    "original_size_bytes": 1411316736,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 5,
+    "bsd_confidence": 0.4,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系",
+      "变身系"
+    ],
+    "subset_relation": "leaders ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000008 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000008",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394565",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000009",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "AOMEI Partition Assistant",
+    "original_path": "D:\\11\\AOMEI Partition Assistant",
+    "original_size_bytes": 1223917314,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.4,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系"
+    ],
+    "subset_relation": "AOMEI Partition Assistant ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000009 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000009",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394569",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-强-000010",
+    "six_system": "强化系",
+    "system_icon": "🔵",
+    "axiom": "纯·个体性公理",
+    "symbol": "+",
+    "equation": "0+0=0",
+    "meaning": "承载·稳态·主体性",
+    "sub_systems": [
+      "系统核心",
+      "安全防护",
+      "存储备份",
+      "硬件驱动",
+      "分区管理",
+      "恢复还原"
+    ],
+    "original_name": "Movies",
+    "original_path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows\\Movies",
+    "original_size_bytes": 582729980,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 4,
+    "bsd_confidence": 0.4,
+    "bsd_category": "安全软件",
+    "bsd_all_systems": [
+      "强化系",
+      "变身系"
+    ],
+    "subset_relation": "Movies ⊂ 强化系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-强-000010 ∈ BSD(强化系)",
+    "upgrade_path": [
+      "识别：已识别为 强化系",
+      "命名：BSD命名为 BSD-GENE-强-000010",
+      "映射：映射到 纯·个体性公理",
+      "激活：通过 + 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394572",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000011",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "kkduizhan",
+    "original_path": "D:\\GAME\\kkduizhan",
+    "original_size_bytes": 115277587412,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系"
+    ],
+    "subset_relation": "kkduizhan ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000011 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000011",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394581",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000012",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "Warcraft III Frozen Throne 1.27a publish",
+    "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish",
+    "original_size_bytes": 93545012398,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系"
+    ],
+    "subset_relation": "Warcraft III Frozen Throne 1.27a publish ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000012 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000012",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394584",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000013",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "Maps",
+    "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps",
+    "original_size_bytes": 91158872125,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系",
+      "自然系"
+    ],
+    "subset_relation": "Maps ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000013 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000013",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394587",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000014",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "dz",
+    "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps\\dz",
+    "original_size_bytes": 91158856765,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系",
+      "自然系"
+    ],
+    "subset_relation": "dz ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000014 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000014",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394590",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000015",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "rpg",
+    "original_path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps\\dz\\rpg",
+    "original_size_bytes": 91158856765,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 4,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系",
+      "自然系"
+    ],
+    "subset_relation": "rpg ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000015 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000015",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394594",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000016",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "Subverse",
+    "original_path": "D:\\game2\\Subverse",
+    "original_size_bytes": 37772975469,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系"
+    ],
+    "subset_relation": "Subverse ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000016 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000016",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394597",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000017",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "Subverse",
+    "original_path": "D:\\game2\\Subverse\\Subverse",
+    "original_size_bytes": 37729948511,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系"
+    ],
+    "subset_relation": "Subverse ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000017 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000017",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394600",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000018",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "Content",
+    "original_path": "D:\\game2\\Subverse\\Subverse\\Content",
+    "original_size_bytes": 37667191679,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系"
+    ],
+    "subset_relation": "Content ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000018 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000018",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394604",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000019",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "Sid Meier's Civilization VI",
+    "original_path": "D:\\Games\\Sid Meier's Civilization VI",
+    "original_size_bytes": 29539269408,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系"
+    ],
+    "subset_relation": "Sid Meier's Civilization VI ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000019 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000019",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394607",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-变-000020",
+    "six_system": "变身系",
+    "system_icon": "⚫",
+    "axiom": "纯·变化性公理",
+    "symbol": "÷",
+    "equation": "0÷0=0",
+    "meaning": "变化·流动·动力性",
+    "sub_systems": [
+      "编译解释",
+      "动画媒体",
+      "游戏引擎",
+      "开发工具",
+      "音乐音效",
+      "3D建模"
+    ],
+    "original_name": "Euro Truck Simulator 2",
+    "original_path": "D:\\GAME\\Euro Truck Simulator 2",
+    "original_size_bytes": 26312770112,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.36,
+    "bsd_category": "编译器",
+    "bsd_all_systems": [
+      "变身系"
+    ],
+    "subset_relation": "Euro Truck Simulator 2 ⊂ 变身系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-变-000020 ∈ BSD(变身系)",
+    "upgrade_path": [
+      "识别：已识别为 变身系",
+      "命名：BSD命名为 BSD-GENE-变-000020",
+      "映射：映射到 纯·变化性公理",
+      "激活：通过 ÷ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394611",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000021",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "K10156",
+    "original_path": "D:\\BaiduNetdiskDownload\\K10156",
+    "original_size_bytes": 25443163572,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "K10156 ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000021 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000021",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394618",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000022",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "K10156",
+    "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156",
+    "original_size_bytes": 25443163572,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "K10156 ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000022 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000022",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394621",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000023",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "230703.1",
+    "original_path": "D:\\BaiduNetdiskDownload\\230703.1",
+    "original_size_bytes": 15715872207,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "230703.1 ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000023 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000023",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394625",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000024",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "240218.7",
+    "original_path": "D:\\BaiduNetdiskDownload\\240218.7",
+    "original_size_bytes": 13503793805,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "240218.7 ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000024 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000024",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394628",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000025",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "Lilith_Rising_2-2.0.11ns",
+    "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns",
+    "original_size_bytes": 12786086233,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "Lilith_Rising_2-2.0.11ns ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000025 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000025",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394631",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000026",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "Lilith_Rising_2-2.0.11ns-dists",
+    "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns\\Lilith_Rising_2-2.0.11ns-dists",
+    "original_size_bytes": 12786086233,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "Lilith_Rising_2-2.0.11ns-dists ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000026 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000026",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394634",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000027",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "game",
+    "original_path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns\\Lilith_Rising_2-2.0.11ns-dists\\game",
+    "original_size_bytes": 12618624067,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 4,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "game ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000027 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000027",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394639",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000028",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "240425.1",
+    "original_path": "D:\\BaiduNetdiskDownload\\240425.1",
+    "original_size_bytes": 8574032660,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "240425.1 ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000028 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000028",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394642",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000029",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "230531.3",
+    "original_path": "D:\\BaiduNetdiskDownload\\230531.3",
+    "original_size_bytes": 8097565301,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "230531.3 ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000029 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000029",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394645",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-社-000030",
+    "six_system": "社会系",
+    "system_icon": "🟢",
+    "axiom": "纯·关系性公理",
+    "symbol": "=",
+    "equation": "0=0",
+    "meaning": "关系·连接·交互性",
+    "sub_systems": [
+      "网络通讯",
+      "协作办公",
+      "下载传输",
+      "云存储",
+      "社交平台",
+      "邮件系统"
+    ],
+    "original_name": "K10186",
+    "original_path": "D:\\BaiduNetdiskDownload\\K10186",
+    "original_size_bytes": 7750125341,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.48,
+    "bsd_category": "网络软件",
+    "bsd_all_systems": [
+      "社会系",
+      "天道系"
+    ],
+    "subset_relation": "K10186 ⊂ 社会系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-社-000030 ∈ BSD(社会系)",
+    "upgrade_path": [
+      "识别：已识别为 社会系",
+      "命名：BSD命名为 BSD-GENE-社-000030",
+      "映射：映射到 纯·关系性公理",
+      "激活：通过 = 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394648",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000031",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "TRAE SOLO CN",
+    "original_path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN",
+    "original_size_bytes": 138656221622,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.72,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "自然系"
+    ],
+    "subset_relation": "TRAE SOLO CN ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000031 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000031",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394654",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000032",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "ModularData",
+    "original_path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN\\ModularData",
+    "original_size_bytes": 136432050988,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 4,
+    "bsd_confidence": 0.72,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "自然系"
+    ],
+    "subset_relation": "ModularData ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000032 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000032",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394657",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000033",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "ai-agent",
+    "original_path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent",
+    "original_size_bytes": 136421176498,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 5,
+    "bsd_confidence": 1.0,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系"
+    ],
+    "subset_relation": "ai-agent ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000033 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000033",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394661",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000034",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "Maine",
+    "original_path": "D:\\game2\\Grounded.Build.16208873\\Maine",
+    "original_size_bytes": 11874323675,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.48,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "Maine ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000034 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000034",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394664",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000035",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "Content",
+    "original_path": "D:\\game2\\Grounded.Build.16208873\\Maine\\Content",
+    "original_size_bytes": 11707752491,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.48,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "Content ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000035 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000035",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394667",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000036",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "Paks",
+    "original_path": "D:\\game2\\Grounded.Build.16208873\\Maine\\Content\\Paks",
+    "original_size_bytes": 11012019689,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.48,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "Paks ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000036 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000036",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394670",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000037",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "UpdateFramework",
+    "original_path": "C:\\Users\\All Users\\NVIDIA Corporation\\NVIDIA app\\UpdateFramework",
+    "original_size_bytes": 4714784086,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.24,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "UpdateFramework ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000037 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000037",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394673",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000038",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "ota-artifacts",
+    "original_path": "C:\\Users\\All Users\\NVIDIA Corporation\\NVIDIA app\\UpdateFramework\\ota-artifacts",
+    "original_size_bytes": 4713512819,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 4,
+    "bsd_confidence": 0.24,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "ota-artifacts ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000038 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000038",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394677",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000039",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "grd",
+    "original_path": "C:\\Users\\All Users\\NVIDIA Corporation\\NVIDIA app\\UpdateFramework\\ota-artifacts\\grd",
+    "original_size_bytes": 3829927646,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 5,
+    "bsd_confidence": 0.24,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "grd ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000039 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000039",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394680",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-天-000040",
+    "six_system": "天道系",
+    "system_icon": "🟣",
+    "axiom": "关系性×变化性",
+    "symbol": "≠",
+    "equation": "0≠n",
+    "meaning": "法则·规律·统治性",
+    "sub_systems": [
+      "AI框架",
+      "规则引擎",
+      "工作流",
+      "自动化",
+      "治理系统",
+      "编程工具"
+    ],
+    "original_name": "Banner of the Maid",
+    "original_path": "D:\\Games\\Banner of the Maid",
+    "original_size_bytes": 2668864271,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.48,
+    "bsd_category": "AI框架",
+    "bsd_all_systems": [
+      "天道系",
+      "变身系"
+    ],
+    "subset_relation": "Banner of the Maid ⊂ 天道系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-天-000040 ∈ BSD(天道系)",
+    "upgrade_path": [
+      "识别：已识别为 天道系",
+      "命名：BSD命名为 BSD-GENE-天-000040",
+      "映射：映射到 关系性×变化性",
+      "激活：通过 ≠ 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394698",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000041",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "AppData",
+    "original_path": "C:\\Users\\13003\\AppData",
+    "original_size_bytes": 182862668104,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.44,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系"
+    ],
+    "subset_relation": "AppData ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000041 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000041",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394704",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000042",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "Roaming",
+    "original_path": "C:\\Users\\13003\\AppData\\Roaming",
+    "original_size_bytes": 150423342877,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.44,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系"
+    ],
+    "subset_relation": "Roaming ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000042 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000042",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394707",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000043",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "steamapps",
+    "original_path": "D:\\steam\\steamapps",
+    "original_size_bytes": 71068825662,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.22,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系",
+      "变身系"
+    ],
+    "subset_relation": "steamapps ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000043 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000043",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394710",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000044",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "common",
+    "original_path": "D:\\steam\\steamapps\\common",
+    "original_size_bytes": 71068821456,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.22,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系",
+      "变身系"
+    ],
+    "subset_relation": "common ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000044 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000044",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394713",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000045",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "ModExportData",
+    "original_path": "D:\\ggbh\\ModExportData",
+    "original_size_bytes": 37994316977,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.44,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系",
+      "变身系"
+    ],
+    "subset_relation": "ModExportData ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000045 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000045",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394716",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000046",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "NARAKA BLADEPOINT",
+    "original_path": "D:\\steam\\steamapps\\common\\NARAKA BLADEPOINT",
+    "original_size_bytes": 32375228876,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.22,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系",
+      "变身系"
+    ],
+    "subset_relation": "NARAKA BLADEPOINT ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000046 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000046",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394720",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000047",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "Palworld",
+    "original_path": "D:\\steam\\steamapps\\common\\Palworld",
+    "original_size_bytes": 32275242235,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.22,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系",
+      "变身系"
+    ],
+    "subset_relation": "Palworld ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000047 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000047",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394723",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000048",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "Local",
+    "original_path": "C:\\Users\\13003\\AppData\\Local",
+    "original_size_bytes": 31964275204,
+    "original_drive": "C:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.44,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系"
+    ],
+    "subset_relation": "Local ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000048 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000048",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394726",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000049",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "Pal",
+    "original_path": "D:\\steam\\steamapps\\common\\Palworld\\Pal",
+    "original_size_bytes": 31932562702,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.22,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系",
+      "变身系"
+    ],
+    "subset_relation": "Pal ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000049 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000049",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394731",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-自-000050",
+    "six_system": "自然系",
+    "system_icon": "🟠",
+    "axiom": "变化性×个体性",
+    "symbol": "-",
+    "equation": "0-0=0",
+    "meaning": "实体·质料·承载性",
+    "sub_systems": [
+      "数据库",
+      "文件系统",
+      "物理模拟",
+      "计算引擎",
+      "驱动程序",
+      "日志系统"
+    ],
+    "original_name": "NarakaBladepoint_Data",
+    "original_path": "D:\\steam\\steamapps\\common\\NARAKA BLADEPOINT\\NarakaBladepoint_Data",
+    "original_size_bytes": 31913544317,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.66,
+    "bsd_category": "数据库",
+    "bsd_all_systems": [
+      "自然系"
+    ],
+    "subset_relation": "NarakaBladepoint_Data ⊂ 自然系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-自-000050 ∈ BSD(自然系)",
+    "upgrade_path": [
+      "识别：已识别为 自然系",
+      "命名：BSD命名为 BSD-GENE-自-000050",
+      "映射：映射到 变化性×个体性",
+      "激活：通过 - 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394734",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000051",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "Sakuna Of Rice And Ruin",
+    "original_path": "D:\\33\\Sakuna Of Rice And Ruin",
+    "original_size_bytes": 6530036023,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "Sakuna Of Rice And Ruin ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000051 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000051",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394739",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000052",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "TUI9R",
+    "original_path": "D:\\33\\TUI9R",
+    "original_size_bytes": 6149876611,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 0,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "TUI9R ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000052 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000052",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394742",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000053",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "Eiyu Senki Gold",
+    "original_path": "D:\\33\\TUI9R\\Eiyu Senki Gold",
+    "original_size_bytes": 3677883829,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "Eiyu Senki Gold ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000053 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000053",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394746",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000054",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "EiyuSenki – The World Conquest",
+    "original_path": "D:\\33\\TUI9R\\EiyuSenki – The World Conquest",
+    "original_size_bytes": 2471992782,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 1,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "EiyuSenki – The World Conquest ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000054 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000054",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394749",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000055",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "AUGEvent",
+    "original_path": "D:\\33\\TUI9R\\Eiyu Senki Gold\\AUGEvent",
+    "original_size_bytes": 1910595342,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "AUGEvent ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000055 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000055",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394752",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000056",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "AUEvent",
+    "original_path": "D:\\33\\TUI9R\\EiyuSenki – The World Conquest\\AUEvent",
+    "original_size_bytes": 1666689407,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "AUEvent ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000056 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000056",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394755",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000057",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "components",
+    "original_path": "D:\\22\\yy\\9.40.0.1\\components",
+    "original_size_bytes": 404659542,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 2,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "components ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000057 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000057",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394759",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000058",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "com.yy.cefdev2",
+    "original_path": "D:\\22\\yy\\9.40.0.1\\components\\com.yy.cefdev2",
+    "original_size_bytes": 280207958,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 3,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "com.yy.cefdev2 ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000058 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000058",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394762",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000059",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "131345",
+    "original_path": "D:\\22\\yy\\9.40.0.1\\components\\com.yy.cefdev2\\131345",
+    "original_size_bytes": 280207958,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 4,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "131345 ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000059 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000059",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394765",
+    "bsd_version": "V9.0"
+  },
+  {
+    "gene_id": "BSD-GENE-具-000060",
+    "six_system": "具现系",
+    "system_icon": "🔴",
+    "axiom": "个体性×关系性",
+    "symbol": "×",
+    "equation": "0×0=n",
+    "meaning": "显现·模态·呈现性",
+    "sub_systems": [
+      "UI框架",
+      "渲染引擎",
+      "显示系统",
+      "主题系统",
+      "组件库",
+      "设计工具"
+    ],
+    "original_name": "x86_64_windows",
+    "original_path": "D:\\11\\Qoder\\resources\\app\\resources\\bin\\x86_64_windows",
+    "original_size_bytes": 124587364,
+    "original_drive": "D:",
+    "original_type": "directory",
+    "original_depth": 5,
+    "bsd_confidence": 0.17,
+    "bsd_category": "UI框架",
+    "bsd_all_systems": [
+      "具现系"
+    ],
+    "subset_relation": "x86_64_windows ⊂ 具现系 ⊂ 六系坐标系",
+    "bsd_membership": "BSD-GENE-具-000060 ∈ BSD(具现系)",
+    "upgrade_path": [
+      "识别：已识别为 具现系",
+      "命名：BSD命名为 BSD-GENE-具-000060",
+      "映射：映射到 个体性×关系性",
+      "激活：通过 × 符号激活",
+      "整合：整合进BSD六系框架"
+    ],
+    "generated_at": "2026-08-03T14:54:51.394768",
+    "bsd_version": "V9.0"
+  }
+]

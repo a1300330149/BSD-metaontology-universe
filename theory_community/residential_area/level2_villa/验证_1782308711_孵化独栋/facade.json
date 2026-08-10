@@ -1,0 +1,96 @@
+{
+  "subsystem_name": "验证_1782308711_孵化独栋",
+  "belong_district": "level2_villa/空白奇迹推演集群",
+  "subsystem_level": "二级孵化",
+  "boundary_mode": "full_isolate",
+  "status": "孵化中",
+  "core_access": {
+    "read_whitelist": [
+      "0元空无本源公理",
+      "基底守恒公理",
+      "层级涌现公理"
+    ],
+    "modify_deny": true,
+    "data_direction": "down_only",
+    "core_full_access_require_audit": true
+  },
+  "cross_subsystem": {
+    "access_whitelist": [],
+    "access_blacklist": [
+      "level1_district/*",
+      "core_manor/*"
+    ],
+    "mutual_visit": false,
+    "cross_access_require_audit": true
+  },
+  "external_pipeline": {
+    "enable": false,
+    "search_scope_whitelist": [],
+    "content_filter": true,
+    "reverse_injection_protect": true,
+    "daily_power_quota": 50,
+    "pipeline_open_require_audit": true
+  },
+  "breakthrough_protect": true,
+  "fault_fuse_enable": true,
+  "upgrade_apply_channel": "buffer_community_center/compliance_check/",
+  "archive_standard": "二级孵化临时归档规范",
+  "theory_category": {
+    "parent_types": [
+      "方法论母类",
+      "世界观母类"
+    ],
+    "sub_type": "科研创新研究",
+    "source_trace": [
+      "0元空无本源公理"
+    ],
+    "logic_type": "正论",
+    "spectrum_value": 0.53
+  },
+  "resident_agent": {
+    "name": "验证_1782308711专项推演子智能体",
+    "personality_type": "科研型",
+    "core_abilities": [
+      "科研选题",
+      "实验设计",
+      "数据分析",
+      "范式创新"
+    ],
+    "identity_id": "AGENT-20260624214511-5775A980"
+  },
+  "humanoid_structure": {
+    "eye_perception": {
+      "enable": true,
+      "filter_rule": "母核合规优先",
+      "accuracy_threshold": 0.9
+    },
+    "hand_execution": {
+      "enable": true,
+      "capabilities": [
+        "理论撰写",
+        "文档归档"
+      ]
+    },
+    "leg_exploration": {
+      "enable": false,
+      "range": [],
+      "auto_explore": false
+    },
+    "identity_card": {
+      "unique_id": "",
+      "owner": "杨腾飞",
+      "belong_subsystem": "",
+      "authority_level": "三级孵化智能体"
+    },
+    "personality_core": {
+      "main_type": "科研型",
+      "secondary_type": "",
+      "language_paradigm": "严谨探索的科研语言",
+      "style_stability_lock": true,
+      "correspond_parent_category": [
+        "方法论母类",
+        "世界观母类"
+      ]
+    }
+  }
+}

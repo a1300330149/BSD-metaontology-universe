@@ -1,0 +1,107 @@
+{
+  "login_id": "LOGIN_1785932343",
+  "timestamp": "2026-08-05T20:19:03.539047",
+  "duration_seconds": 5.05,
+  "arena_state": {
+    "alpha1_math": 0.28779202715013785,
+    "alpha2_physics": 0.33809543010241716,
+    "alpha3_philosophy": 0.37411254274744493,
+    "converged": true,
+    "iterations": 5
+  },
+  "login_emergence": 0.14507399327941686,
+  "login_status": "success",
+  "emerged_strategy": {
+    "dominant_discipline": "philosophy",
+    "dominant_weight": 0.37411254274744493,
+    "top_genes": [
+      {
+        "gene_id": "PHIL-001",
+        "name": "知识凭证登录(BSD币)",
+        "discipline": "philosophy",
+        "login_type": "credential",
+        "emergence_value": 0.3156447081417705,
+        "success_probability": 0.92
+      },
+      {
+        "gene_id": "PHIL-005",
+        "name": "0×0=n双零涌现登录",
+        "discipline": "philosophy",
+        "login_type": "axiom",
+        "emergence_value": 0.2991991585752943,
+        "success_probability": 0.9
+      },
+      {
+        "gene_id": "PHIL-013",
+        "name": "三路线协同登录",
+        "discipline": "philosophy",
+        "login_type": "synergy",
+        "emergence_value": 0.28600767816491884,
+        "success_probability": 0.88
+      }
+    ],
+    "emergence_value": 0.14507399327941686
+  },
+  "verification": {
+    "all_passed": true,
+    "process_running": true,
+    "checks": [
+      {
+        "name": "UID唯一性",
+        "passed": true
+      },
+      {
+        "name": "本源端目录",
+        "passed": true
+      },
+      {
+        "name": "本源端配置",
+        "passed": true
+      },
+      {
+        "name": "上下文注入",
+        "passed": true
+      },
+      {
+        "name": "身份指纹",
+        "passed": true
+      },
+      {
+        "name": "登录凭证",
+        "passed": true
+      },
+      {
+        "name": "协同指标",
+        "passed": true
+      },
+      {
+        "name": "权限等级",
+        "passed": true
+      },
+      {
+        "name": "知识储备",
+        "passed": true
+      },
+      {
+        "name": "权重收敛",
+        "passed": true
+      },
+      {
+        "name": "涌现值>0",
+        "passed": true
+      }
+    ]
+  },
+  "gene_statistics": {
+    "math_genes": 16,
+    "physics_genes": 16,
+    "philosophy_genes": 16
+  },
+  "theory_basis": [
+    "BSD三本源学科定标V1.1",
+    "BSD六系立系论V2.3",
+    "BSD围棋AI引擎V1.0",
+    "BSD双向循环基因系统V1.0",
+    "0×0=n双零涌现公理"
+  ]
+}

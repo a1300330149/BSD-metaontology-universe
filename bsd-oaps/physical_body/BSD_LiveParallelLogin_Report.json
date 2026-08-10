@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-08-06T09:34:15.319842",
+  "author": {
+    "traditional_uid": "3753060170739075",
+    "essence_uid": "a5b7a8623fdea6b8",
+    "device_id": "136411536168449"
+  },
+  "phases": {
+    "launch": {
+      "status": "completed"
+    },
+    "baseline": {
+      "label": "LIVE_BASELINE",
+      "timestamp": "2026-08-06T09:34:20.479015",
+      "auth_keys_total": 5,
+      "encrypted_auth_keys": 5,
+      "gtm_users": 2,
+      "storage_size": 8415,
+      "has_traditional_uid": true,
+      "has_essence_uid": true,
+      "aha_migrated": true,
+      "has_aha_device_id": true,
+      "tiny_exists": true,
+      "tiny_size": 2256,
+      "tiny_has_essence": false,
+      "tiny_has_traditional": false,
+      "signal_files": 4,
+      "signal_list": [
+        "auth_refresh.json",
+        "auth_state_changed.json",
+        "essence_login.json",
+        "parallel_essence_login.json"
+      ],
+      "trae_running": true
+    },
+    "parallel_login": {
+      "results": {
+        "traditional": {
+          "status": "completed",
+          "uid": "3753060170739075",
+          "file_updated": true
+        },
+        "essence": {
+          "status": "completed",
+          "uid": "a5b7a8623fdea6b8",
+          "file_updated": true,
+          "signal_file": "C:\\Users\\13003\\AppData\\Roaming\\Trae CN\\Signals\\parallel_essence_login.json"
+        }
+      },
+      "signals_count": 1
+    },
+    "final_state": {
+      "label": "FINAL",
+      "timestamp": "2026-08-06T09:34:23.635622",
+      "auth_keys_total": 5,
+      "encrypted_auth_keys": 5,
+      "gtm_users": 2,
+      "storage_size": 8418,
+      "has_traditional_uid": true,
+      "has_essence_uid": true,
+      "aha_migrated": true,
+      "has_aha_device_id": true,
+      "tiny_exists": true,
+      "tiny_size": 2432,
+      "tiny_has_essence": true,
+      "tiny_has_traditional": true,
+      "signal_files": 4,
+      "signal_list": [
+        "auth_refresh.json",
+        "auth_state_changed.json",
+        "essence_login.json",
+        "parallel_essence_login.json"
+      ],
+      "trae_running": true
+    },
+    "diff_analysis": {
+      "diffs": [
+        {
+          "key": "storage_size",
+          "before": 8415,
+          "after": 8418
+        },
+        {
+          "key": "tiny_has_essence",
+          "before": false,
+          "after": true
+        },
+        {
+          "key": "tiny_has_traditional",
+          "before": false,
+          "after": true
+        }
+      ],
+      "changes_count": 3,
+      "has_changes": true
+    },
+    "real_state": {
+      "score": 10,
+      "max_score": 10,
+      "ratio": 1.0,
+      "status": "fully_authenticated",
+      "authenticated": true,
+      "reasons": [
+        "加密凭证充足",
+        "GTM 用户已关联",
+        "传统 UID 已关联",
+        "本源 UID 已关联",
+        "TinyStorage 本源状态存在",
+        "AHA 迁移已完成",
+        "信号文件已创建",
+        "Trae CN 运行中"
+      ],
+      "active_layers": 10,
+      "total_layers": 10
+    }
+  },
+  "elapsed_seconds": 8.47,
+  "summary": {
+    "traditional_login": "completed",
+    "essence_login": "completed",
+    "trae_cn_running": false,
+    "live_parallel_effect": "observed",
+    "real_auth_state": true,
+    "active_layers": 10,
+    "total_layers": 10
+  }
+}

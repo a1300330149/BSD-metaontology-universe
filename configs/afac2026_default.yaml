@@ -1,0 +1,30 @@
+seed: 42
+max_steps: 50
+max_budget: 2000
+domain: graph_learning
+task_type: graph_classification
+task_target: afac_competition
+enable_time_layer: true
+enable_kappa_cal: true
+enable_gcl: false
+foundation:
+  enable: true
+  level0_enabled: true
+  level1_enabled: true
+  level2_enabled: true
+  gamma_time_decay: 0.92
+  creation_mode: false
+  default_realm: NATURE
+dataset:
+  data_path: ./data/A分类/A1.npz
+  feat_dim: 767
+  hidden_dim: 256
+  num_classes: 10
+  num_nodes: 13752
+param_bounds:
+  lr: [0.001, 0.005]
+  weight_decay: [1e-5, 1e-3]
+  dropout: [0.3, 0.5]
+  hidden_dim: [128, 256]
+  num_layers: [2, 3]
+  num_heads: [4, 8]

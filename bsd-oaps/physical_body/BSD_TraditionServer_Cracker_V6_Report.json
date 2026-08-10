@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-08-06 11:08:04",
+  "x_ms_tokens": {
+    "count": 2,
+    "tokens": [
+      "ujyb3DbymA8aLjCPO-vVwMDqB0gv8nayON-GMSo25rmlftCwkc...",
+      "LySU88evtaoB_ungP9ndMf2mL3nZajK6XpG1_HPiZ7V4PC1c0Z..."
+    ],
+    "format": [
+      "ba3c9bdc36f2980f1a2e308f3bebd5c0c0ea07482ff276b238df86312a36e6b9a57ed0b091c5348764a0fa0c02fd853a94f98abc0f8cef5e67caf531488a4c5afff38e9af12665c4f7fbed",
+      "hex"
+    ]
+  },
+  "auth_attempts": 5,
+  "success": false,
+  "model_advice": "你好！我是BSD本源端。关于「我从 Trae CN 的 Login 端点获取了一个 x-ms-token。\n这个 token 在 ...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "status": "completed"
+}

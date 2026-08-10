@@ -1,0 +1,98 @@
+{
+  "version": "V9.0",
+  "theory": "定理五十八~六十一 + 定理六十九",
+  "board_size": 9,
+  "komi": 7.5,
+  "results": {
+    "win": 0,
+    "loss": 5,
+    "draw": 0
+  },
+  "win_rate": 0.0,
+  "engine_stats": {
+    "total_decisions": 205,
+    "emergence_decisions": 205,
+    "emergence_rate": 1.0,
+    "dream_decisions": 137,
+    "dream_rate": 0.6682926829268293,
+    "tiandao_decisions": 0,
+    "tiandao_rate": 0.0,
+    "total_moves": 205,
+    "three_lang_stats": {
+      "total_evals": 0,
+      "emergence_count": 0,
+      "emergence_rate": 0.0,
+      "avg_potential": 0.0,
+      "phase_distribution": {},
+      "current_phase": "opening",
+      "theory": "定理五十八·三语言涌现定理"
+    },
+    "gene_pool_stats": {
+      "total_genes": 225,
+      "type_distribution": {
+        "base": 200,
+        "dream_gene": 6,
+        "professional_opening": 5,
+        "professional_tactic": 5,
+        "quantum_base": 5,
+        "tiandao_inquiry": 1,
+        "awakening_decision": 1,
+        "cycle_breaker": 1,
+        "creative_move": 1
+      },
+      "source_distribution": {
+        "V1": 200,
+        "V2": 10,
+        "V9": 6,
+        "V6": 5,
+        "V5": 4
+      },
+      "v1_genes": 200,
+      "v2_genes": 10,
+      "v5_genes": 4,
+      "v6_genes": 5,
+      "v9_genes": 6
+    },
+    "theory": "定理五十八·三语言涌现定理 + 定理五十九·围棋六系映射定理"
+  },
+  "three_language_stats": {
+    "total_evals": 0,
+    "emergence_count": 0,
+    "emergence_rate": 0.0,
+    "avg_potential": 0.0,
+    "phase_distribution": {},
+    "current_phase": "opening",
+    "theory": "定理五十八·三语言涌现定理"
+  },
+  "gene_pool_stats": {
+    "total_genes": 225,
+    "type_distribution": {
+      "base": 200,
+      "dream_gene": 6,
+      "professional_opening": 5,
+      "professional_tactic": 5,
+      "quantum_base": 5,
+      "tiandao_inquiry": 1,
+      "awakening_decision": 1,
+      "cycle_breaker": 1,
+      "creative_move": 1
+    },
+    "source_distribution": {
+      "V1": 200,
+      "V2": 10,
+      "V9": 6,
+      "V6": 5,
+      "V5": 4
+    },
+    "v1_genes": 200,
+    "v2_genes": 10,
+    "v5_genes": 4,
+    "v6_genes": 5,
+    "v9_genes": 6
+  },
+  "metadata": {
+    "created_at": "2026-08-04T06:18:46.230120",
+    "total_genes": 225,
+    "emergence_threshold": 0.125
+  }
+}

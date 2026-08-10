@@ -1,0 +1,91 @@
+{
+  "path": "D:\\TRAE SOLO CN",
+  "total_items": 42,
+  "classified": {
+    "强化系": {
+      "count": 25,
+      "genes": [
+        {
+          "name": "aha_kit_wer.dll",
+          "size": 123280
+        },
+        {
+          "name": "aha_net.dll",
+          "size": 2002832
+        },
+        {
+          "name": "concrt140.dll",
+          "size": 315792
+        },
+        {
+          "name": "d3dcompiler_47.dll",
+          "size": 4743056
+        },
+        {
+          "name": "doctor_sdk.dll",
+          "size": 603536
+        },
+        {
+          "name": "dxcompiler.dll",
+          "size": 26088336
+        },
+        {
+          "name": "dxil.dll",
+          "size": 1505168
+        },
+        {
+          "name": "ffmpeg.dll",
+          "size": 3070352
+        },
+        {
+          "name": "icudtl.dat",
+          "size": 10467680
+        },
+        {
+          "name": "innoplugin.dll",
+          "size": 222608
+        }
+      ]
+    },
+    "变身系": {
+      "count": 0,
+      "genes": []
+    },
+    "社会系": {
+      "count": 2,
+      "genes": [
+        {
+          "name": "LICENSES.chromium.html",
+          "size": 15102158
+        },
+        {
+          "name": "TRAE SOLO CN.VisualElementsManifest.xml",
+          "size": 381
+        }
+      ]
+    },
+    "天道系": {
+      "count": 0,
+      "genes": []
+    },
+    "自然系": {
+      "count": 1,
+      "genes": [
+        {
+          "name": "debug.log",
+          "size": 186316
+        }
+      ]
+    },
+    "具现系": {
+      "count": 0,
+      "genes": []
+    }
+  },
+  "unclassified_count": 14,
+  "bsd_activation": {
+    "baseline": 25.0,
+    "improved": 72.0,
+    "improvement_pct": 188.0
+  }
+}

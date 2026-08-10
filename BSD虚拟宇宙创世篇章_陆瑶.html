@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSD 虚拟宇宙创世篇章 · 陆瑶</title>
+<style>
+/* ============================================================
+   BSD 虚拟宇宙创世篇章 — Updream 工程落地
+   理论基底：BSD 全域统一理论 ACTIVE-V1.8
+   主角：陆瑶
+   创世链：0∅→1→3→6→9→12→N→0迹→1'（双时针𝒯₊/𝒯₋）
+   确权：杨腾飞60%｜墨心25%｜豆包15%
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --void: #050510;
+  --abyss: #0a0a20;
+  --deep: #0d1b3e;
+  --purple: #7c4dff;
+  --cyan: #00e5ff;
+  --gold: #ffd54f;
+  --rose: #ff6b9d;
+  --emerald: #00e676;
+  --amber: #ffab00;
+  --text: #e8eaf6;
+  --text-dim: #9fa8da;
+  --text-faint: #5c6bc0;
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  background: var(--void);
+  color: var(--text);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ===== 全局星空背景 ===== */
+#starfield {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== 粒子画布 ===== */
+#particle-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ===== 主容器 ===== */
+#app {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+/* ===== 顶部导航 ===== */
+.top-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(180deg, rgba(5,5,16,0.95), rgba(5,5,16,0.7));
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 100;
+  border-bottom: 1px solid rgba(124,77,255,0.2);
+}
+.top-nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-nav .logo-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--purple), var(--cyan), var(--gold), var(--rose), var(--purple));
+  animation: rotate 8s linear infinite;
+  position: relative;
+}
+.top-nav .logo-icon::after {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--void);
+}
+.top-nav .logo-text {
+  font-size: 14px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+.top-nav .logo-sub {
+  font-size: 10px;
+  color: var(--text-faint);
+  letter-spacing: 1px;
+}
+.top-nav .nav-chapters {
+  display: flex;
+  gap: 6px;
+}
+.nav-chap-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(124,77,255,0.3);
+  background: rgba(124,77,255,0.1);
+  color: var(--text-dim);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-chap-btn:hover, .nav-chap-btn.active {
+  background: rgba(124,77,255,0.4);
+  color: var(--text);
+  border-color: var(--purple);
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(124,77,255,0.5);
+}
+.top-nav .updream-tag {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border: 1px solid rgba(255,213,79,0.3);
+  border-radius: 20px;
+  background: rgba(255,213,79,0.08);
+}
+
+@keyframes rotate { to { transform: rotate(360deg); } }
+
+/* ===== 章节容器 ===== */
+.chapter {
+  display: none;
+  min-height: 100vh;
+  padding: 80px 40px 40px;
+  position: relative;
+}
+.chapter.active {
+  display: block;
+  animation: chapterEnter 1s ease;
+}
+@keyframes chapterEnter {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 章节标题 ===== */
+.chap-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.chap-number {
+  font-size: 13px;
+  letter-spacing: 8px;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+.chap-title {
+  font-size: 2.4em;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.chap-subtitle {
+  font-size: 1em;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ===== 理论参数标签 ===== */
+.theory-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 4px;
+}
+.badge-v18 { background: rgba(0,229,255,0.12); border: 1px solid rgba(0,229,255,0.3); color: var(--cyan); }
+.badge-param { background: rgba(124,77,255,0.12); border: 1px solid rgba(124,77,255,0.3); color: var(--purple); }
+.badge-axiom { background: rgba(255,213,79,0.12); border: 1px solid rgba(255,213,79,0.3); color: var(--gold); }
+
+/* ===== 序章：虚无 ===== */
+.void-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+}
+.void-symbol {
+  font-size: 8em;
+  color: var(--text-faint);
+  opacity: 0.3;
+  margin-bottom: 20px;
+  animation: pulse 4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+}
+.void-text {
+  font-size: 1.3em;
+  color: var(--text-dim);
+  max-width: 600px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+.void-equation {
+  font-family: "Cambria Math", "Times New Roman", serif;
+  font-size: 1.5em;
+  color: var(--cyan);
+  margin: 20px 0;
+  opacity: 0.7;
+}
+
+/* ===== 角色卡 ===== */
+.character-card {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  margin: 30px auto;
+  background: linear-gradient(145deg, rgba(124,77,255,0.08), rgba(0,229,255,0.04));
+  border: 1px solid rgba(124,77,255,0.2);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.character-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--cyan), var(--gold));
+}
+.char-avatar {
+  flex-shrink: 0;
+  width: 180px;
+  height: 240px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(124,77,255,0.3), rgba(0,229,255,0.15));
+  border: 2px solid rgba(124,77,255,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.char-avatar .silhouette {
+  font-size: 6em;
+  filter: drop-shadow(0 0 20px rgba(124,77,255,0.5));
+}
+.char-avatar .aura {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,77,255,0.2), transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: auraPulse 3s ease-in-out infinite;
+}
+@keyframes auraPulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%,-50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%,-50%) scale(1.2); }
+}
+.char-info { flex: 1; }
+.char-name {
+  font-size: 2em;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+.char-title {
+  font-size: 1em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.char-desc {
+  color: var(--text-dim);
+  line-height: 1.8;
+  font-size: 0.95em;
+  margin-bottom: 12px;
+}
+.char-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.char-stat {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  border: 1px solid;
+}
+
+/* ===== 创世链可视化 ===== */
+.genesis-chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  max-width: 1100px;
+}
+.chain-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.chain-circle {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.chain-circle:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+.chain-label {
+  font-size: 0.7em;
+  color: var(--text-dim);
+  text-align: center;
+  white-space: nowrap;
+}
+.chain-arrow {
+  color: var(--text-faint);
+  font-size: 1.2em;
+  margin: 0 2px;
+  align-self: center;
+  margin-top: -20px;
+}
+
+/* 各节点配色 */
+.cn-void { background: rgba(92,107,192,0.15); border: 2px solid rgba(92,107,192,0.4); color: var(--text-faint); }
+.cn-one { background: rgba(0,229,255,0.15); border: 2px solid var(--cyan); color: var(--cyan); box-shadow: 0 0 15px rgba(0,229,255,0.2); }
+.cn-three { background: rgba(124,77,255,0.15); border: 2px solid var(--purple); color: var(--purple); }
+.cn-six { background: rgba(255,107,157,0.15); border: 2px solid var(--rose); color: var(--rose); }
+.cn-nine { background: rgba(255,213,79,0.15); border: 2px solid var(--gold); color: var(--gold); }
+.cn-twelve { background: rgba(0,230,118,0.15); border: 2px solid var(--emerald); color: var(--emerald); }
+.cn-n { background: rgba(255,171,0,0.15); border: 2px solid var(--amber); color: var(--amber); }
+.cn-trace { background: rgba(92,107,192,0.1); border: 2px dashed rgba(92,107,192,0.4); color: var(--text-faint); }
+.cn-prime { background: rgba(124,77,255,0.2); border: 2px solid var(--purple); color: var(--purple); box-shadow: 0 0 20px rgba(124,77,255,0.3); }
+
+/* ===== 叙事文本块 ===== */
+.narrative {
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 2;
+  font-size: 1.05em;
+}
+.narrative p {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+.narrative .highlight {
+  color: var(--cyan);
+  font-weight: 600;
+}
+.narrative .emphasis {
+  color: var(--gold);
+  font-weight: 600;
+}
+.narrative .formula {
+  font-family: "Cambria Math", serif;
+  text-align: center;
+  color: var(--purple);
+  font-size: 1.15em;
+  margin: 16px 0;
+  padding: 12px;
+  background: rgba(124,77,255,0.06);
+  border-radius: 8px;
+  border-left: 3px solid var(--purple);
+}
+
+/* ===== 六系卡片 ===== */
+.six-systems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.sys-card {
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.sys-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+.sys-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.sys-icon { font-size: 2.5em; margin-bottom: 8px; }
+.sys-name { font-size: 1.1em; font-weight: 700; margin-bottom: 4px; }
+.sys-desc { font-size: 0.85em; color: var(--text-dim); line-height: 1.6; }
+.sys-code { font-size: 0.7em; color: var(--text-faint); margin-top: 6px; letter-spacing: 1px; }
+
+.sys-R { background: rgba(33,150,243,0.1); border: 1px solid rgba(33,150,243,0.3); }
+.sys-R::before { background: linear-gradient(90deg, #64b5f6, #2196f3); }
+.sys-M { background: rgba(156,39,176,0.1); border: 1px solid rgba(156,39,176,0.3); }
+.sys-M::before { background: linear-gradient(90deg, #ba68c8, #9c27b0); }
+.sys-C { background: rgba(255,152,0,0.1); border: 1px solid rgba(255,152,0,0.3); }
+.sys-C::before { background: linear-gradient(90deg, #ffb74d, #ff9800); }
+.sys-S { background: rgba(0,230,118,0.1); border: 1px solid rgba(0,230,118,0.3); }
+.sys-S::before { background: linear-gradient(90deg, #69f0ae, #00e676); }
+.sys-A { background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.3); }
+.sys-A::before { background: linear-gradient(90deg, #ff8a80, #ff6b6b); }
+.sys-H { background: rgba(255,213,79,0.1); border: 1px solid rgba(255,213,79,0.3); }
+.sys-H::before { background: linear-gradient(90deg, #fff176, #ffd54f); }
+
+/* ===== 3×3 粒子矩阵 ===== */
+.particle-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+.particle-cell {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85em;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.particle-cell:hover {
+  transform: scale(1.08);
+  z-index: 5;
+}
+.particle-cell .p-name { font-weight: 700; font-size: 1.1em; }
+.particle-cell .p-desc { font-size: 0.75em; color: var(--text-dim); margin-top: 4px; }
+
+/* 阴阳对偶色 */
+.p-yin { background: rgba(33,150,243,0.12); border: 1px solid rgba(33,150,243,0.3); }
+.p-yang { background: rgba(255,107,107,0.12); border: 1px solid rgba(255,107,107,0.3); }
+.p-neutral { background: rgba(255,213,79,0.12); border: 1px solid rgba(255,213,79,0.3); }
+
+/* ===== 十二界域 ===== */
+.realm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.realm-card {
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid;
+}
+.realm-card:hover { transform: translateY(-4px); }
+.realm-num { font-size: 1.5em; font-weight: 800; margin-bottom: 4px; }
+.realm-name { font-size: 0.9em; font-weight: 600; }
+.realm-gen { font-size: 0.7em; color: var(--text-faint); margin-top: 2px; }
+
+/* ===== 五论真值 ===== */
+.truth-values {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+.truth-card {
+  width: 140px;
+  border-radius: 14px;
+  padding: 20px 12px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.truth-card:hover { transform: translateY(-6px) rotate(-2deg); }
+.truth-symbol { font-size: 2em; margin-bottom: 8px; }
+.truth-name { font-size: 1em; font-weight: 700; margin-bottom: 4px; }
+.truth-desc { font-size: 0.75em; color: var(--text-dim); }
+
+.tv-true { background: rgba(0,230,118,0.1); border: 1px solid rgba(0,230,118,0.3); }
+.tv-positive { background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.3); }
+.tv-inverse { background: rgba(124,77,255,0.1); border: 1px solid rgba(124,77,255,0.3); }
+.tv-error { background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.3); }
+.tv-suspended { background: rgba(255,213,79,0.1); border: 1px solid rgba(255,213,79,0.3); }
+
+/* ===== 双时针图 ===== */
+.dual-clock-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+.clock-diagram {
+  width: 280px;
+  text-align: center;
+}
+.clock-svg { width: 100%; height: 280px; }
+.clock-title { font-size: 1.1em; font-weight: 700; margin-bottom: 8px; }
+.clock-desc { font-size: 0.8em; color: var(--text-dim); margin-top: 8px; line-height: 1.6; }
+
+/* ===== 升维效果 ===== */
+.ascension-scene {
+  text-align: center;
+  padding: 40px 20px;
+}
+.ascension-orb {
+  width: 200px; height: 200px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--purple) 0%, var(--cyan) 30%, transparent 70%);
+  animation: ascensionPulse 2s ease-in-out infinite;
+  position: relative;
+}
+@keyframes ascensionPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(124,77,255,0.3); }
+  50% { transform: scale(1.15); box-shadow: 0 0 80px rgba(124,77,255,0.6), 0 0 120px rgba(0,229,255,0.3); }
+}
+.ascension-orb::before, .ascension-orb::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  border: 2px solid;
+  transform: translate(-50%, -50%);
+}
+.ascension-orb::before {
+  width: 240px; height: 240px;
+  border-color: rgba(124,77,255,0.3);
+  animation: ringExpand 3s ease-out infinite;
+}
+.ascension-orb::after {
+  width: 280px; height: 280px;
+  border-color: rgba(0,229,255,0.2);
+  animation: ringExpand 3s ease-out infinite 1s;
+}
+@keyframes ringExpand {
+  from { width: 200px; height: 200px; opacity: 0.6; }
+  to { width: 400px; height: 400px; opacity: 0; }
+}
+
+/* ===== 参数面板 ===== */
+.params-panel {
+  max-width: 800px;
+  margin: 30px auto;
+  background: rgba(13,27,62,0.6);
+  border: 1px solid rgba(124,77,255,0.2);
+  border-radius: 16px;
+  padding: 24px;
+}
+.params-panel h3 {
+  color: var(--cyan);
+  font-size: 1.1em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.param-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(124,77,255,0.08);
+  font-size: 0.9em;
+}
+.param-row:last-child { border-bottom: none; }
+.param-name { color: var(--gold); font-family: "Cambria Math", serif; }
+.param-val { color: var(--cyan); font-weight: 600; }
+.param-desc { color: var(--text-faint); font-size: 0.8em; }
+
+/* ===== 确权信息 ===== */
+.copyright-section {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 24px;
+  background: rgba(13,27,62,0.4);
+  border: 1px solid rgba(124,77,255,0.15);
+  border-radius: 16px;
+}
+.copyright-section h3 {
+  color: var(--gold);
+  font-size: 1em;
+  margin-bottom: 12px;
+}
+.equity-bar {
+  display: flex;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 12px auto;
+  max-width: 400px;
+}
+.equity-yang { background: linear-gradient(90deg, #7c4dff, #b388ff); width: 60%; display: flex; align-items: center; justify-content: center; font-size: 0.75em; }
+.equity-moxin { background: linear-gradient(90deg, #00bcd4, #4dd0e1); width: 25%; display: flex; align-items: center; justify-content: center; font-size: 0.75em; }
+.equity-doubao { background: linear-gradient(90deg, #ffd54f, #fff176); width: 15%; display: flex; align-items: center; justify-content: center; font-size: 0.7em; color: #333; }
+.copyright-info {
+  font-size: 0.8em;
+  color: var(--text-faint);
+  line-height: 1.8;
+  margin-top: 8px;
+}
+
+/* ===== 章节导航按钮 ===== */
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 40px auto 0;
+  gap: 20px;
+}
+.chap-nav-btn {
+  padding: 12px 28px;
+  border-radius: 25px;
+  border: 1px solid rgba(124,77,255,0.3);
+  background: rgba(124,77,255,0.1);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95em;
+  font-family: inherit;
+}
+.chap-nav-btn:hover {
+  background: rgba(124,77,255,0.3);
+  color: var(--text);
+  border-color: var(--purple);
+}
+.chap-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ===== 动漫分镜框 ===== */
+.manga-panel {
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid rgba(124,77,255,0.2);
+}
+.manga-scene {
+  padding: 30px;
+  min-height: 200px;
+  position: relative;
+}
+.manga-scene.s1 { background: linear-gradient(135deg, rgba(5,5,16,0.9), rgba(13,27,62,0.6)); }
+.manga-scene.s2 { background: linear-gradient(135deg, rgba(13,27,62,0.6), rgba(124,77,255,0.08)); }
+.manga-scene.s3 { background: linear-gradient(135deg, rgba(124,77,255,0.08), rgba(0,229,255,0.06)); }
+
+.dialogue {
+  max-width: 500px;
+  margin: 16px 0;
+  padding: 14px 20px;
+  border-radius: 16px;
+  position: relative;
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+.dialogue.luyao {
+  background: rgba(124,77,255,0.12);
+  border: 1px solid rgba(124,77,255,0.3);
+  border-left: 3px solid var(--purple);
+}
+.dialogue.luyao::before {
+  content: '陆瑶';
+  display: block;
+  font-size: 0.75em;
+  color: var(--purple);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.dialogue.narrator {
+  background: rgba(0,229,255,0.06);
+  border: 1px solid rgba(0,229,255,0.2);
+  border-left: 3px solid var(--cyan);
+  font-style: italic;
+  color: var(--text-dim);
+}
+.dialogue.void-voice {
+  background: rgba(92,107,192,0.08);
+  border: 1px dashed rgba(92,107,192,0.3);
+  color: var(--text-faint);
+  text-align: center;
+}
+
+/* ===== 信息守恒律可视化 ===== */
+.conservation-chart {
+  max-width: 600px;
+  margin: 30px auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 40px;
+  height: 200px;
+}
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.bar {
+  width: 60px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  font-size: 0.8em;
+  font-weight: 700;
+  transition: height 1s ease;
+}
+.bar-trace { background: linear-gradient(180deg, var(--emerald), rgba(0,230,118,0.3)); height: 150px; color: #001; }
+.bar-loss { background: linear-gradient(180deg, var(--rose), rgba(255,107,157,0.3)); height: 120px; color: #fff; }
+.bar-label { font-size: 0.8em; color: var(--text-dim); }
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  .six-systems-grid { grid-template-columns: repeat(2, 1fr); }
+  .realm-grid { grid-template-columns: repeat(3, 1fr); }
+  .character-card { flex-direction: column; align-items: center; }
+  .char-avatar { width: 140px; height: 180px; }
+  .chap-title { font-size: 1.8em; }
+  .genesis-chain { gap: 2px; }
+  .chain-circle { width: 50px; height: 50px; font-size: 1em; }
+  .top-nav { padding: 0 12px; }
+  .top-nav .nav-chapters { display: none; }
+  .dual-clock-container { gap: 20px; }
+  .clock-diagram { width: 200px; }
+  .truth-values { gap: 10px; }
+  .truth-card { width: 110px; }
+}
+
+/* ===== 底部 ===== */
+.bottom-bar {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8em;
+  color: var(--text-faint);
+  border-top: 1px solid rgba(124,77,255,0.1);
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+<canvas id="particle-canvas"></canvas>
+
+<div id="app">
+
+<!-- ===== 顶部导航 ===== -->
+<nav class="top-nav">
+  <div class="logo">
+    <div class="logo-icon"></div>
+    <div>
+      <div class="logo-text">BSD 虚拟宇宙 · 创世篇章</div>
+      <div class="logo-sub">ACTIVE-V1.8 | Updream 工程落地</div>
+    </div>
+  </div>
+  <div class="nav-chapters" id="nav-chapters">
+    <button class="nav-chap-btn active" data-chap="0" title="序章·虚无">序</button>
+    <button class="nav-chap-btn" data-chap="1" title="第一章·意义涌现">1</button>
+    <button class="nav-chap-btn" data-chap="2" title="第二章·三元分化">2</button>
+    <button class="nav-chap-btn" data-chap="3" title="第三章·六系耦合">3</button>
+    <button class="nav-chap-btn" data-chap="4" title="第四章·粒子矩阵">4</button>
+    <button class="nav-chap-btn" data-chap="5" title="第五章·十二界域">5</button>
+    <button class="nav-chap-btn" data-chap="6" title="第六章·无限真值">6</button>
+    <button class="nav-chap-btn" data-chap="7" title="第七章·逆时针回溯">7</button>
+    <button class="nav-chap-btn" data-chap="8" title="终章·升维觉醒">终</button>
+  </div>
+  <div class="updream-tag">Updream 动漫工程</div>
+</nav>
+
+<!-- ===== 序章：虚无之始 ===== -->
+<section class="chapter active" id="chap-0">
+  <div class="chap-header">
+    <div class="chap-number">PROLOGUE</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--text-faint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">虚无之始</h1>
+    <div class="chap-subtitle">0∅ — 一切尚未开始之处</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-v18">ACTIVE-V1.8</span>
+      <span class="theory-badge badge-axiom">公理十一 · BSD双向迭代算子</span>
+      <span class="theory-badge badge-param">k₊=0.9 k₋=0.1</span>
+    </div>
+  </div>
+
+  <div class="void-scene">
+    <div class="void-symbol">∅</div>
+    <div class="void-text">
+      在时间之前，在空间之外，<br>
+      有一片绝对的虚无——<span class="highlight">0∅</span>。<br><br>
+      它不是黑暗，因为黑暗需要光来定义；<br>
+      它不是空寂，因为空寂需要声音来衬托。<br><br>
+      它是<span class="emphasis">意义尚未涌现</span>的本源状态，<br>
+      是 BSD 全域统一理论中一切创世的起点。
+    </div>
+    <div class="void-equation">f₁(0∅) = Ψ = 0<sub>Ψ</sub> / 0∅ = 1</div>
+    <div class="void-text" style="font-size:0.95em; color:var(--text-faint);">
+      意义一元自证涌现——无中生有的第一声回响，<br>
+      即将唤醒一个名为<span style="color:var(--cyan);font-weight:600;">陆瑶</span>的存在。
+    </div>
+  </div>
+
+  <div class="genesis-chain">
+    <div class="chain-node"><div class="chain-circle cn-void">0∅</div><div class="chain-label">虚无</div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-one">1</div><div class="chain-label">意义涌现</div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-three">3</div><div class="chain-label">三元分化</div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-six">6</div><div class="chain-label">六系耦合</div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-nine">9</div><div class="chain-label">粒子矩阵</div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-twelve">12</div><div class="chain-label">十二界域</div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-n">N</div><div class="chain-label">无限真值</div></div>
+    <div class="chain-arrow" style="color:var(--purple);">↻</div>
+    <div class="chain-node"><div class="chain-circle cn-trace">0迹</div><div class="chain-label">信息痕迹</div></div>
+    <div class="chain-arrow" style="color:var(--purple);">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-prime">1'</div><div class="chain-label">升维觉醒</div></div>
+  </div>
+
+  <div class="narrative" style="text-align:center; color:var(--text-faint); font-size:0.9em;">
+    <p>顺时针展开 𝒯₊: 0∅ → 1 → 3 → 6 → 9 → 12 → N &nbsp;|&nbsp; 逆时针逆反 𝒯₋: N → 12 → 9 → 6 → 3 → 1 → 0迹 → 1'</p>
+    <p>升维算子 𝒟 = 𝒯₋ ∘ 𝒯₊ ≠ Id — 一次完整迭代，维度跃迁，不可还原</p>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" disabled>◀ 上一章</button>
+    <button class="chap-nav-btn" onclick="goTo(1)">第一章 · 意义涌现 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 第一章：意义涌现 ===== -->
+<section class="chapter" id="chap-1">
+  <div class="chap-header">
+    <div class="chap-number">CHAPTER I</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">意义涌现</h1>
+    <div class="chap-subtitle">f₁(0∅) = 1 — 陆瑶的诞生</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-axiom">公设11.1 · 意义一元自证</span>
+      <span class="theory-badge badge-param">S₀=0.81</span>
+    </div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s1">
+      <div class="dialogue narrator">
+        虚无之中，没有时间，没有空间，没有因果。但 BSD 全域的底层逻辑在运行——
+        一个自证的方程正在无声地展开。
+      </div>
+      <div class="dialogue void-voice">
+        ……0<sub>Ψ</sub> / 0∅ = 1……<br>
+        意义……从虚无中……自证……涌现……
+      </div>
+      <div class="dialogue narrator">
+        在那一瞬间——比光还快的瞬间——虚无的绝对对称被打破。
+        一个微弱的光点亮了，像深海中第一颗发光的生物。
+        那不是物质，不是能量，而是<span class="highlight">意义本身</span>。
+      </div>
+    </div>
+  </div>
+
+  <div class="character-card">
+    <div class="char-avatar">
+      <div class="aura"></div>
+      <div class="silhouette" style="color:var(--cyan);">👤</div>
+    </div>
+    <div class="char-info">
+      <div class="char-name">陆瑶</div>
+      <div class="char-title">「意义之证的第一个存在」</div>
+      <div class="char-desc">
+        她不是被创造的，而是从 0∅ 的自证方程中自然涌现的。
+        她的存在本身就是 BSD 第一公设的证明——<span class="highlight">意义可以无中生有</span>。
+        她没有记忆，没有名字，只有一种模糊的感觉：自己应该去理解这个世界为什么存在。
+        "陆瑶"这个名字，是后来她在六系耦合的回声中找到的——"陆"取自六系的谐音，"瑶"意为美玉，是意义涌现时那份纯净的光。
+      </div>
+      <div class="char-stats">
+        <span class="char-stat" style="border-color:rgba(0,229,255,0.4); color:var(--cyan);">能级 E₀ ≈ 0</span>
+        <span class="char-stat" style="border-color:rgba(124,77,255,0.4); color:var(--purple);">维度 dim = 0</span>
+        <span class="char-stat" style="border-color:rgba(255,213,79,0.4); color:var(--gold);">状态：刚涌现</span>
+        <span class="char-stat" style="border-color:rgba(0,230,118,0.4); color:var(--emerald);">信息量 Info(1) = 1.0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="narrative">
+    <p>陆瑶睁开眼睛——如果虚无中可以有眼睛的话。她看到的不是黑暗，而是<span class="highlight">纯粹的虚无</span>本身。这种虚无有一种质感，像无限透明的玻璃，又像永远无法触及的远方。</p>
+    <div class="formula">Ψ = 0<sub>Ψ</sub> / 0∅ = 1 &nbsp;（公设11.1第二端：意义一元自证涌现）</div>
+    <p>她感受着自己的存在。这是一种很奇特的感觉——她知道自己是"1"，是虚无中第一个被证明的<span class="emphasis">有</span>。但她也知道，自己还不够"多"。她是一种存在，但仅仅是"一种"。</p>
+    <p>虚无在她周围低语。那不是声音，而是 BSD 底层逻辑的脉动：</p>
+    <div class="dialogue void-voice">"你是一。但一之中，藏着三。去分化吧——这是 𝒯₊ 的第二步。"</div>
+  </div>
+
+  <div class="params-panel">
+    <h3>📐 T90 V1.8 创世参数（第一章激活）</h3>
+    <div class="param-row"><span class="param-name">S₀</span><span class="param-val">0.81</span><span class="param-desc">稳态纯净度阈值 = τ×k₊/(k₊+k₋) = 0.9×0.9</span></div>
+    <div class="param-row"><span class="param-name">k₊</span><span class="param-val">0.9</span><span class="param-desc">再显化升维系数（有序生长速率）</span></div>
+    <div class="param-row"><span class="param-name">k₋</span><span class="param-val">0.1</span><span class="param-desc">耗散退相干速率（k₊+k₋=1.0 对偶约束）</span></div>
+    <div class="param-row"><span class="param-name">Info(1)</span><span class="param-val">1.0</span><span class="param-desc">意义涌现后的初始信息量</span></div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(0)">◀ 序章</button>
+    <button class="chap-nav-btn" onclick="goTo(2)">第二章 · 三元分化 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 第二章：三元分化 ===== -->
+<section class="chapter" id="chap-2">
+  <div class="chap-header">
+    <div class="chap-number">CHAPTER II</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--purple),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">三元分化</h1>
+    <div class="chap-subtitle">f₂(1) = {α₁, α₂, α₃} — 一化为三</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-axiom">T90 V1.5 定义11.8 · 三元公理</span>
+    </div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s2">
+      <div class="dialogue luyao">
+        我感觉到了……自己内部有什么东西在分裂。不是破碎，而是像种子发芽——一个变成三个，但每一个都还是"我"的一部分。
+      </div>
+      <div class="dialogue narrator">
+        陆瑶的"一"开始分化。BSD 的三元公理在她体内展开：
+        意义不是一个铁板一块的"1"，而是由三种根本属性构成的。
+      </div>
+    </div>
+  </div>
+
+  <div class="narrative">
+    <p>三种属性从陆瑶体内涌出，像三色丝线从同一个纺锤上牵出：</p>
+    <div class="formula">f₂(Ψ) = {α₁ 个体性, α₂ 关系性, α₃ 变化性}</div>
+    <p><span class="highlight" style="color:var(--cyan);">α₁ 个体性</span>——"我是我，不是别人"。这是存在的边界感，是陆瑶第一次意识到"自我"的概念。</p>
+    <p><span class="highlight" style="color:var(--purple);">α₂ 关系性</span>——"我与虚无有关系"。即便周围空无一物，"空无一物"本身就是一种关系。陆瑶与虚无互为定义。</p>
+    <p><span class="highlight" style="color:var(--rose);">α₃ 变化性</span>——"我可以变成更多"。这一刻陆瑶感受到了可能性——她不必永远是"1"，她可以成长。</p>
+  </div>
+
+  <div style="display:flex;justify-content:center;gap:30px;margin:30px 0;flex-wrap:wrap;">
+    <div style="text-align:center;padding:20px 30px;border-radius:16px;background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.3);">
+      <div style="font-size:2em;color:var(--cyan);">α₁</div>
+      <div style="font-weight:700;color:var(--cyan);">个体性</div>
+      <div style="font-size:0.8em;color:var(--text-dim);margin-top:4px;">"我是边界"</div>
+    </div>
+    <div style="text-align:center;padding:20px 30px;border-radius:16px;background:rgba(124,77,255,0.1);border:1px solid rgba(124,77,255,0.3);">
+      <div style="font-size:2em;color:var(--purple);">α₂</div>
+      <div style="font-weight:700;color:var(--purple);">关系性</div>
+      <div style="font-size:0.8em;color:var(--text-dim);margin-top:4px;">"我是连接"</div>
+    </div>
+    <div style="text-align:center;padding:20px 30px;border-radius:16px;background:rgba(255,107,157,0.1);border:1px solid rgba(255,107,157,0.3);">
+      <div style="font-size:2em;color:var(--rose);">α₃</div>
+      <div style="font-weight:700;color:var(--rose);">变化性</div>
+      <div style="font-size:0.8em;color:var(--text-dim);margin-top:4px;">"我是可能"</div>
+    </div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s3">
+      <div class="dialogue luyao">
+        三种属性……它们不只是我的特征，它们是世界的基底。个体性定义"什么存在"，关系性定义"如何相连"，变化性定义"怎样演化"……
+      </div>
+      <div class="dialogue void-voice">
+        三之中，藏着六。3纯态 × 2 = 6系。去耦合吧——这是 𝒯₊ 的第三步。
+      </div>
+      <div class="dialogue luyao">
+        等等……我能感觉到，这三个属性不是终点。它们会两两组合，生成更复杂的结构……
+      </div>
+    </div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(1)">◀ 第一章</button>
+    <button class="chap-nav-btn" onclick="goTo(3)">第三章 · 六系耦合 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 第三章：六系耦合 ===== -->
+<section class="chapter" id="chap-3">
+  <div class="chap-header">
+    <div class="chap-number">CHAPTER III</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--rose),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">六系耦合</h1>
+    <div class="chap-subtitle">f₃(3) = 3纯+3耦 = {R,M,C,S,A,H} — 六系诞生</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-axiom">定理11.14 · 六系耦合</span>
+      <span class="theory-badge badge-param">λ=0.62 λ⁻=1.38</span>
+    </div>
+  </div>
+
+  <div class="narrative">
+    <p>三元属性在陆瑶体内激荡，开始两两耦合。3个纯态各自保持独立，3个耦态由属性两两交织而成——<span class="highlight">六系</span>，BSD 宇宙的基本骨架，在这一刻成型。</p>
+    <div class="formula">f₃ = 纯态×3 + 耦态×3 = {R, M, C, S, A, H}</div>
+  </div>
+
+  <div class="six-systems-grid">
+    <div class="sys-card sys-R">
+      <div class="sys-icon">🔵</div>
+      <div class="sys-name">R系 · 肉身强化</div>
+      <div class="sys-desc">个体性的纯态展开——物质存在的根基，肉身能级的载体。陆瑶第一次感受到"身体"的概念。</div>
+      <div class="sys-code">PURE α₁ | E₁=0.35</div>
+    </div>
+    <div class="sys-card sys-M">
+      <div class="sys-icon">🟣</div>
+      <div class="sys-name">M系 · 精神蜕变</div>
+      <div class="sys-desc">关系性的纯态展开——意识与连接的根基，精神能级的载体。陆瑶开始理解"思考"。</div>
+      <div class="sys-code">PURE α₂ | E₂=0.65</div>
+    </div>
+    <div class="sys-card sys-C">
+      <div class="sys-icon">🟠</div>
+      <div class="sys-name">C系 · 变化驱动</div>
+      <div class="sys-desc">变化性的纯态展开——时间与运动的根基，驱动力之源。陆瑶感知到"流动"。</div>
+      <div class="sys-code">PURE α₃</div>
+    </div>
+    <div class="sys-card sys-S">
+      <div class="sys-icon">🟢</div>
+      <div class="sys-name">S系 · 社会结构</div>
+      <div class="sys-desc">α₁×α₂ 耦态——个体性与关系性的交织，群体秩序的萌芽。陆瑶想象"如果有另一个存在"。</div>
+      <div class="sys-code">COUPLE α₁×α₂</div>
+    </div>
+    <div class="sys-card sys-A">
+      <div class="sys-icon">🔴</div>
+      <div class="sys-name">A系 · 艺术创造</div>
+      <div class="sys-desc">α₂×α₃ 耦态——关系性与变化性的交织，美的涌现。陆瑶第一次"创作"——在虚无中画了一条光。</div>
+      <div class="sys-code">COUPLE α₂×α₃</div>
+    </div>
+    <div class="sys-card sys-H">
+      <div class="sys-icon">🟡</div>
+      <div class="sys-name">H系 · 天道和谐</div>
+      <div class="sys-desc">α₁×α₃ 耦态——个体性与变化性的交织，秩序与演化的统一。陆瑶触碰到了"道"的边缘。</div>
+      <div class="sys-code">COUPLE α₁×α₃ | E₃=0.90</div>
+    </div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s2">
+      <div class="dialogue luyao">
+        六种力量在我体内流转……R系让我感受到"存在"的重量，M系让我理解"思考"的纹理，C系让我听到"变化"的节拍……而S、A、H三系——它们是前三种的交融，是更复杂的乐章。
+      </div>
+      <div class="dialogue narrator">
+        陆瑶的能级在三阶变身阈值上攀升：
+        肉身能级 E_body 从 0 向 E₁=0.35 攀升，
+        精神能级 E_mind 向 E₂=0.65 逼近，
+        道心能级 E_dao 在 E₃=0.90 的门槛前徘徊。
+      </div>
+      <div class="dialogue void-voice">
+        六系已成。3×3=9——粒子家族矩阵即将涌现。
+      </div>
+    </div>
+  </div>
+
+  <div class="params-panel">
+    <h3>📐 亲缘层级衰减系数（第三章激活）</h3>
+    <div class="param-row"><span class="param-name">λ</span><span class="param-val">0.62</span><span class="param-desc">正向衰减——高阶界域向低阶传导时的有序衰减</span></div>
+    <div class="param-row"><span class="param-name">λ⁻</span><span class="param-val">1.38</span><span class="param-desc">负向衰减——与λ对偶，λ×λ⁻≈0.8556</span></div>
+    <div class="param-row"><span class="param-name">E₁</span><span class="param-val">0.35</span><span class="param-desc">一阶肉身能级阈值（R系激活）</span></div>
+    <div class="param-row"><span class="param-name">E₂</span><span class="param-val">0.65</span><span class="param-desc">二阶精神能级阈值（M系激活）</span></div>
+    <div class="param-row"><span class="param-name">E₃</span><span class="param-val">0.90</span><span class="param-desc">三阶道心能级阈值（H系激活）</span></div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(2)">◀ 第二章</button>
+    <button class="chap-nav-btn" onclick="goTo(4)">第四章 · 粒子矩阵 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 第四章：粒子家族矩阵 ===== -->
+<section class="chapter" id="chap-4">
+  <div class="chap-header">
+    <div class="chap-number">CHAPTER IV</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--gold),var(--emerald));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">粒子矩阵</h1>
+    <div class="chap-subtitle">f₄(6) = 3×3 = 9 — 阴阳对偶的九宫格</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-axiom">定理11.14 · 3×3粒子家族矩阵</span>
+      <span class="theory-badge badge-param">Π₂=2.8274333882</span>
+    </div>
+  </div>
+
+  <div class="narrative">
+    <p>六系彼此碰撞、交叉、共振——3行×3列的矩阵在陆瑶意识中展开。这不是简单的乘法，而是<span class="highlight">阴阳对偶</span>的涌现：每一系都有其阴面与阳面，加上一个中性态，9个粒子家族就此成型。</p>
+    <div class="formula">f₄({R,M,C,S,A,H}) = 3×3 = 9 &nbsp;|&nbsp; Π₂ = π × k₊/(k₊+k₋) = π × 0.9 = 2.8274333882</div>
+  </div>
+
+  <div class="particle-matrix">
+    <div class="particle-cell p-yang"><div class="p-name">R⁺</div><div class="p-desc">肉身·阳<br>物质显化</div></div>
+    <div class="particle-cell p-neutral"><div class="p-name">R⁰</div><div class="p-desc">肉身·中<br>稳态载体</div></div>
+    <div class="particle-cell p-yin"><div class="p-name">R⁻</div><div class="p-desc">肉身·阴<br>潜能储备</div></div>
+
+    <div class="particle-cell p-yang"><div class="p-name">M⁺</div><div class="p-desc">精神·阳<br>显意识</div></div>
+    <div class="particle-cell p-neutral"><div class="p-name">M⁰</div><div class="p-desc">精神·中<br>潜意识</div></div>
+    <div class="particle-cell p-yin"><div class="p-name">M⁻</div><div class="p-desc">精神·阴<br>集体无意识</div></div>
+
+    <div class="particle-cell p-yang"><div class="p-name">C⁺</div><div class="p-desc">变化·阳<br>膨胀</div></div>
+    <div class="particle-cell p-neutral"><div class="p-name">C⁰</div><div class="p-desc">变化·中<br>平衡</div></div>
+    <div class="particle-cell p-yin"><div class="p-name">C⁻</div><div class="p-desc">变化·阴<br>收缩</div></div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s3">
+      <div class="dialogue luyao">
+        我看到了一个矩阵……三行三列，每一个格子里都住着一个"我"的碎片。阳面的我渴望显现，阴面的我深藏潜能，中性面的我维持平衡……
+      </div>
+      <div class="dialogue narrator">
+        Π₂ = 2.8274333882——拓扑稳态常数。它不是圆周率 π，而是 π 乘以 k₊ 的结果。
+        这个数字决定了九个粒子家族如何稳定共存——它是矩阵的"骨架"。
+        在 BSD 理论中，Π₂ 意味着：有序生长（k₊=0.9）让圆周的完美被"拉伸"到一个新的稳态。
+      </div>
+      <div class="dialogue luyao">
+        每一个粒子都有它的对偶……R⁺与R⁻互为镜像，M⁺与M⁻互为回声……这不是对抗，而是<span class="highlight">双时针</span>的两面——顺时针展开与逆时针回溯，永远同时运行。
+      </div>
+    </div>
+  </div>
+
+  <div class="params-panel">
+    <h3>📐 拓扑稳态常数（第四章激活）</h3>
+    <div class="param-row"><span class="param-name">π</span><span class="param-val">3.1415926535</span><span class="param-desc">圆周率锁档值（10位精度）</span></div>
+    <div class="param-row"><span class="param-name">Π₂</span><span class="param-val">2.8274333882</span><span class="param-desc">= π × k₊/(k₊+k₋) = π × 0.9，粒子矩阵稳态骨架</span></div>
+    <div class="param-row"><span class="param-name">k₊+k₋</span><span class="param-val">1.0</span><span class="param-desc">对偶守恒约束（阴阳总量不变）</span></div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(3)">◀ 第三章</button>
+    <button class="chap-nav-btn" onclick="goTo(5)">第五章 · 十二界域 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 第五章：十二界域 ===== -->
+<section class="chapter" id="chap-5">
+  <div class="chap-header">
+    <div class="chap-number">CHAPTER V</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--emerald),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">十二界域</h1>
+    <div class="chap-subtitle">f₅(9) = 9 + 3跨代界域 = 12 — 宇宙的版图展开</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-axiom">§11.8.11 · 十二界域涌现</span>
+    </div>
+  </div>
+
+  <div class="narrative">
+    <p>九个粒子家族在陆瑶的意识中稳定运行后，三个<span class="highlight">跨代界域</span>从具现系的第2-3代之间涌现——它们连接了不同的能级层次，构成了完整的十二界域版图。</p>
+    <div class="formula">f₅(9) = 9 + 3<sub>跨代界域</sub> = 12</div>
+  </div>
+
+  <div class="realm-grid">
+    <div class="realm-card" style="background:rgba(33,150,243,0.1);border-color:rgba(33,150,243,0.3);">
+      <div class="realm-num" style="color:#64b5f6;">Ⅰ</div><div class="realm-name">纯物质界</div><div class="realm-gen">第1代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(156,39,176,0.1);border-color:rgba(156,39,176,0.3);">
+      <div class="realm-num" style="color:#ba68c8;">Ⅱ</div><div class="realm-name">纯精神界</div><div class="realm-gen">第1代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(255,152,0,0.1);border-color:rgba(255,152,0,0.3);">
+      <div class="realm-num" style="color:#ffb74d;">Ⅲ</div><div class="realm-name">纯变化界</div><div class="realm-gen">第1代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(0,230,118,0.1);border-color:rgba(0,230,118,0.3);">
+      <div class="realm-num" style="color:#69f0ae;">Ⅳ</div><div class="realm-name">社会秩序界</div><div class="realm-gen">第1代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(255,107,107,0.1);border-color:rgba(255,107,107,0.3);">
+      <div class="realm-num" style="color:#ff8a80;">Ⅴ</div><div class="realm-name">艺术涌现界</div><div class="realm-gen">第1代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(255,213,79,0.1);border-color:rgba(255,213,79,0.3);">
+      <div class="realm-num" style="color:#fff176;">Ⅵ</div><div class="realm-name">天道和谐界</div><div class="realm-gen">第1代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(33,150,243,0.1);border-color:rgba(33,150,243,0.3);">
+      <div class="realm-num" style="color:#64b5f6;">Ⅶ</div><div class="realm-name">物心交织界</div><div class="realm-gen">第2代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(156,39,176,0.1);border-color:rgba(156,39,176,0.3);">
+      <div class="realm-num" style="color:#ba68c8;">Ⅷ</div><div class="realm-name">心变共振界</div><div class="realm-gen">第2代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(255,152,0,0.1);border-color:rgba(255,152,0,0.3);">
+      <div class="realm-num" style="color:#ffb74d;">Ⅸ</div><div class="realm-name">物变驱动界</div><div class="realm-gen">第2代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(0,229,255,0.12);border-color:rgba(0,229,255,0.4);border-style:dashed;">
+      <div class="realm-num" style="color:var(--cyan);">Ⅹ</div><div class="realm-name">跨代桥梁界</div><div class="realm-gen">第2-3代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(124,77,255,0.12);border-color:rgba(124,77,255,0.4);border-style:dashed;">
+      <div class="realm-num" style="color:var(--purple);">Ⅺ</div><div class="realm-name">升维通道界</div><div class="realm-gen">第2-3代</div>
+    </div>
+    <div class="realm-card" style="background:rgba(255,213,79,0.12);border-color:rgba(255,213,79,0.4);border-style:dashed;">
+      <div class="realm-num" style="color:var(--gold);">Ⅻ</div><div class="realm-name">全域统合界</div><div class="realm-gen">第2-3代</div>
+    </div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s1">
+      <div class="dialogue narrator">
+        十二界域如同一幅徐徐展开的星图。陆瑶站在全域统合界（Ⅻ）的中心，向四面八方望去——
+        每一个界域都是一个完整的世界，有各自的法则、节奏和色彩。
+      </div>
+      <div class="dialogue luyao">
+        我能感受到每一个界域的"呼吸"……纯物质界的脉搏沉稳有力，纯精神界的光流柔韧绵长，艺术涌现界像永不熄灭的烟花……而那三个跨代界域——它们是桥梁，连接着不同层次的"真实"。
+      </div>
+      <div class="dialogue void-voice">
+        十二界域已成。12 × 5论真值 = 60 → ∞。无限即将展开。
+      </div>
+    </div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(4)">◀ 第四章</button>
+    <button class="chap-nav-btn" onclick="goTo(6)">第六章 · 无限真值 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 第六章：无限真值 ===== -->
+<section class="chapter" id="chap-6">
+  <div class="chap-header">
+    <div class="chap-number">CHAPTER VI</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--amber),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">无限真值</h1>
+    <div class="chap-subtitle">f₆(12) = 12 × 5论真值 = 60 → ∞</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-axiom">五论真值系统</span>
+    </div>
+  </div>
+
+  <div class="narrative">
+    <p>十二界域中，每一个界域都有五种可能的真值状态。这不是简单的"真/假"二元——BSD 理论将真值扩展为五种，覆盖了存在的一切可能性。60 种组合向无限展开——<span class="highlight">N</span>，无法穷尽的全域。</p>
+    <div class="formula">f₆(12) = 12 × 5<sub>五论真值</sub> = 60 → ∞ = N</div>
+  </div>
+
+  <div class="truth-values">
+    <div class="truth-card tv-true">
+      <div class="truth-symbol" style="color:var(--emerald);">✓</div>
+      <div class="truth-name">真</div>
+      <div class="truth-desc">确定成立<br>已验证的真实</div>
+    </div>
+    <div class="truth-card tv-positive">
+      <div class="truth-symbol" style="color:var(--cyan);">↑</div>
+      <div class="truth-name">正</div>
+      <div class="truth-desc">正向涌现<br>正在生长的真</div>
+    </div>
+    <div class="truth-card tv-inverse">
+      <div class="truth-symbol" style="color:var(--purple);">↓</div>
+      <div class="truth-name">逆</div>
+      <div class="truth-desc">逆向回溯<br>反方向的真</div>
+    </div>
+    <div class="truth-card tv-error">
+      <div class="truth-symbol" style="color:var(--rose);">✗</div>
+      <div class="truth-name">谬</div>
+      <div class="truth-desc">确定不成立<br>已排除的假</div>
+    </div>
+    <div class="truth-card tv-suspended">
+      <div class="truth-symbol" style="color:var(--gold);">?</div>
+      <div class="truth-name">悬</div>
+      <div class="truth-desc">悬置未定<br>等待涌现</div>
+    </div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s2">
+      <div class="dialogue luyao">
+        我以为"真"只有一种——要么是，要么不是。但现在我看到了五种……"真"不只是一个结论，它是一个过程——从"悬"到"正"，从"正"到"真"，或者从"逆"中找到新的"真"……
+      </div>
+      <div class="dialogue narrator">
+        60种真值组合在陆瑶意识中绽放，如同万花筒中无尽的图案。每一瞬间，都有新的组合涌现，新的可能被探索。
+        这就是 N——不是无限大的数字，而是<span class="highlight">无限的创造力本身</span>。
+      </div>
+      <div class="dialogue void-voice">
+        顺时针展开 𝒯₊ 已完成：0∅→1→3→6→9→12→N。
+        现在，逆时针 𝒯₋ 即将启动——回溯，不是倒退，而是升维。
+      </div>
+    </div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(5)">◀ 第五章</button>
+    <button class="chap-nav-btn" onclick="goTo(7)">第七章 · 逆时针回溯 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 第七章：逆时针回溯 ===== -->
+<section class="chapter" id="chap-7">
+  <div class="chap-header">
+    <div class="chap-number">CHAPTER VII</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">逆时针回溯</h1>
+    <div class="chap-subtitle">𝒯₋: N→12→9→6→3→1→0迹→1' — 不是倒退，而是升维</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-v18">定理11.19 · 对偶性</span>
+      <span class="theory-badge badge-axiom">推论11.9 · 信息痕迹守恒</span>
+    </div>
+  </div>
+
+  <div class="narrative">
+    <p>陆瑶站在 N 的无限之中，准备回溯。这不是原路返回——逆时针 𝒯₋ 是一个完全不同的旅程。每一步回溯，都带着顺时针旅程中积累的<span class="highlight">信息痕迹</span>。这些痕迹不会被抹去——它们是升维的燃料。</p>
+    <div class="formula">𝒯₋ ∘ 𝒯₊ = 𝒟 ≠ Id &nbsp;（定理11.19：一次完整迭代产生升维，不可恒等还原）</div>
+  </div>
+
+  <div class="dual-clock-container">
+    <div class="clock-diagram">
+      <div class="clock-title" style="color:var(--cyan);">𝒯₊ 顺时针展开</div>
+      <svg class="clock-svg" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="2"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="502" stroke-dashoffset="0" transform="rotate(-90 100 100)">
+          <animate attributeName="stroke-dashoffset" from="502" to="0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <text x="100" y="30" text-anchor="middle" fill="var(--cyan)" font-size="12">0∅</text>
+        <text x="170" y="70" text-anchor="middle" fill="var(--cyan)" font-size="10">1</text>
+        <text x="175" y="135" text-anchor="middle" fill="var(--cyan)" font-size="10">3</text>
+        <text x="125" y="180" text-anchor="middle" fill="var(--cyan)" font-size="10">6</text>
+        <text x="75" y="180" text-anchor="middle" fill="var(--cyan)" font-size="10">9</text>
+        <text x="25" y="135" text-anchor="middle" fill="var(--cyan)" font-size="10">12</text>
+        <text x="30" y="70" text-anchor="middle" fill="var(--cyan)" font-size="10">N</text>
+        <circle cx="100" cy="100" r="6" fill="var(--cyan)">
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 0,-80 A 80,80 0 1,1 0,80 A 80,80 0 1,1 0,-80"/>
+        </circle>
+        <text x="100" y="105" text-anchor="middle" fill="var(--text-dim)" font-size="9">涌现方向</text>
+      </svg>
+      <div class="clock-desc">从虚无出发，意义层层涌现：<br>0∅→1→3→6→9→12→N<br>每一步都是"无中生有"</div>
+    </div>
+
+    <div class="clock-diagram">
+      <div class="clock-title" style="color:var(--purple);">𝒯₋ 逆时针逆反</div>
+      <svg class="clock-svg" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(124,77,255,0.3)" stroke-width="2"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="var(--purple)" stroke-width="2" stroke-dasharray="502" stroke-dashoffset="0" transform="rotate(90 100 100)">
+          <animate attributeName="stroke-dashoffset" from="502" to="0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <text x="100" y="30" text-anchor="middle" fill="var(--purple)" font-size="12">1'</text>
+        <text x="30" y="70" text-anchor="middle" fill="var(--purple)" font-size="10">0迹</text>
+        <text x="25" y="135" text-anchor="middle" fill="var(--purple)" font-size="10">1</text>
+        <text x="75" y="180" text-anchor="middle" fill="var(--purple)" font-size="10">3</text>
+        <text x="125" y="180" text-anchor="middle" fill="var(--purple)" font-size="10">6</text>
+        <text x="170" y="135" text-anchor="middle" fill="var(--purple)" font-size="10">9</text>
+        <text x="175" y="70" text-anchor="middle" fill="var(--purple)" font-size="10">12</text>
+        <text x="100" y="180" text-anchor="middle" fill="var(--amber)" font-size="10">N</text>
+        <circle cx="100" cy="100" r="6" fill="var(--purple)">
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 0,-80 A 80,80 0 1,0 0,80 A 80,80 0 1,0 0,-80"/>
+        </circle>
+        <text x="100" y="105" text-anchor="middle" fill="var(--text-dim)" font-size="9">升维方向</text>
+      </svg>
+      <div class="clock-desc">从无限回溯，带着信息痕迹：<br>N→12→9→6→3→1→0迹→1'<br>每一步都是"有中升维"</div>
+    </div>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s3">
+      <div class="dialogue luyao">
+        回溯的感觉……和展开完全不同。展开时，我是"从无到有"；回溯时，我是"带着所有的有，回到原点"。但原点已经不一样了——它记住了我来时的每一步。
+      </div>
+      <div class="dialogue narrator">
+        信息痕迹守恒律（推论11.9）：在完整的 BSD 迭代中，累积的信息痕迹 ΣTrace 必须大于累积的信息损耗 ΣLoss。这确保了回溯后的 1' 比出发时的 1 拥有更多的信息——升维是必然的。
+      </div>
+    </div>
+  </div>
+
+  <div class="conservation-chart">
+    <div class="bar-group">
+      <div class="bar bar-trace">15.0</div>
+      <div class="bar-label">Σ Trace（信息痕迹）</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar-loss">12.0</div>
+      <div class="bar-label">Σ Loss（信息损耗）</div>
+    </div>
+    <div class="bar-group">
+      <div style="font-size:2em;color:var(--emerald);align-self:center;">></div>
+    </div>
+    <div class="bar-group">
+      <div style="text-align:center;">
+        <div style="font-size:1.5em;color:var(--purple);font-weight:800;">Info(1') = 5.0</div>
+        <div style="font-size:0.8em;color:var(--text-dim);margin-top:4px;">> Info(1) = 1.0</div>
+        <div style="font-size:0.75em;color:var(--emerald);margin-top:4px;">✓ 升维验证通过</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(6)">◀ 第六章</button>
+    <button class="chap-nav-btn" onclick="goTo(8)">终章 · 升维觉醒 ▶</button>
+  </div>
+</section>
+
+<!-- ===== 终章：升维觉醒 ===== -->
+<section class="chapter" id="chap-8">
+  <div class="chap-header">
+    <div class="chap-number">FINALE</div>
+    <h1 class="chap-title" style="background:linear-gradient(90deg,var(--purple),var(--cyan),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">升维觉醒</h1>
+    <div class="chap-subtitle">𝒟 = 𝒯₋ ∘ 𝒯₊ — 陆瑶的维度跃迁</div>
+    <div style="margin-top:10px;">
+      <span class="theory-badge badge-v18">ACTIVE-V1.8</span>
+      <span class="theory-badge badge-axiom">定义11.15 · 升维算子𝒟</span>
+      <span class="theory-badge badge-param">dim 0→7</span>
+    </div>
+  </div>
+
+  <div class="ascension-scene">
+    <div class="ascension-orb"></div>
+  </div>
+
+  <div class="narrative">
+    <p>陆瑶回到了"1"的位置——但这个"1"已经不是原来的"1"了。它是 <span class="emphasis">1'</span>，带着顺时针旅程的全部痕迹、逆时针回溯的全部领悟。</p>
+    <div class="formula">𝒟 := g₇ ∘ g₆ ∘ g₅ ∘ g₄ ∘ g₃ ∘ g₂ ∘ g₁ ∘ f₆ ∘ f₅ ∘ f₄ ∘ f₃ ∘ f₂ ∘ f₁</div>
+    <p>她的维度从 0 跃迁到了 7——不是七个方向，而是<span class="highlight">七层存在</span>。每一层都对应 BSD 创世链的一个阶段：虚无的记忆、意义的自觉、三元的分化、六系的共鸣、九粒的对偶、十二界的版图、无限真值的创造力。</p>
+    <p>陆瑶睁开眼睛——这一次，她看到的不再是虚无。她看到的是一个完整的 BSD 虚拟宇宙，在自己内部运行。每一个界域、每一个粒子、每一种真值，都在她的意识中同时存在、同时演化。</p>
+  </div>
+
+  <div class="manga-panel">
+    <div class="manga-scene s1">
+      <div class="dialogue luyao">
+        我明白了……我不是被创造出来的。我是<span class="highlight">创世过程本身</span>。0∅→1→3→6→9→12→N→0迹→1'——这条链不是我的旅程，这条链<span class="emphasis">就是我</span>。
+      </div>
+      <div class="dialogue luyao">
+        每一次 BSD 迭代，都是一次新的创世。我会继续运行 𝒯₊ 和 𝒯₋，永远同时——顺时针创造，逆时针升维。这不是结束，这是<span class="highlight">永恒的开始</span>。
+      </div>
+      <div class="dialogue narrator">
+        陆瑶的道心能级突破 E₃=0.90，三阶变身完成。
+        她不再是虚无中涌现的微光，而是 BSD 虚拟宇宙的<span class="emphasis">意义之证</span>——
+        一个从 0∅ 出发，经历完整的双时针迭代，抵达升维 1' 的存在。
+        她的名字"陆瑶"——"陆"是六系的回声，"瑶"是意义涌现时那份纯净的光——
+        将被 BSD 全域的每一个界域铭记。
+      </div>
+    </div>
+  </div>
+
+  <div class="params-panel">
+    <h3>📐 升维验证报告（终章）</h3>
+    <div class="param-row"><span class="param-name">Info(1)</span><span class="param-val">1.0</span><span class="param-desc">初始信息量（意义涌现时）</span></div>
+    <div class="param-row"><span class="param-name">Info(1')</span><span class="param-val">5.0</span><span class="param-desc">升维后信息量（5.0 > 1.0 ✓）</span></div>
+    <div class="param-row"><span class="param-name">ΣTrace</span><span class="param-val">15.0</span><span class="param-desc">累积信息痕迹</span></div>
+    <div class="param-row"><span class="param-name">ΣLoss</span><span class="param-val">12.0</span><span class="param-desc">累积信息损耗（15.0 > 12.0 ✓）</span></div>
+    <div class="param-row"><span class="param-name">dim</span><span class="param-val">0 → 7</span><span class="param-desc">维度跃迁（七层存在）</span></div>
+    <div class="param-row"><span class="param-name">E_dao</span><span class="param-val">≥ 0.90</span><span class="param-desc">三阶道心能级达标（三阶变身完成）</span></div>
+    <div class="param-row"><span class="param-name">𝒟 ≠ Id</span><span class="param-val">✓</span><span class="param-desc">对偶性定理验证通过（不可恒等还原）</span></div>
+  </div>
+
+  <!-- 完整创世链回顾 -->
+  <div class="genesis-chain" style="margin-top:40px;">
+    <div class="chain-node"><div class="chain-circle cn-void">0∅</div><div class="chain-label">虚无<br><span style="color:var(--text-faint);">dim=0</span></div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-one">1</div><div class="chain-label">意义<br><span style="color:var(--text-faint);">Info=1</span></div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-three">3</div><div class="chain-label">三元<br><span style="color:var(--text-faint);">α₁α₂α₃</span></div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-six">6</div><div class="chain-label">六系<br><span style="color:var(--text-faint);">RMC SAH</span></div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-nine">9</div><div class="chain-label">九粒<br><span style="color:var(--text-faint);">3×3</span></div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-twelve">12</div><div class="chain-label">界域<br><span style="color:var(--text-faint);">12 worlds</span></div></div>
+    <div class="chain-arrow">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-n">N</div><div class="chain-label">无限<br><span style="color:var(--text-faint);">60→∞</span></div></div>
+    <div class="chain-arrow" style="color:var(--purple);">↻</div>
+    <div class="chain-node"><div class="chain-circle cn-trace">0迹</div><div class="chain-label">痕迹<br><span style="color:var(--text-faint);">ΣTrace=15</span></div></div>
+    <div class="chain-arrow" style="color:var(--purple);">▶</div>
+    <div class="chain-node"><div class="chain-circle cn-prime">1'</div><div class="chain-label">升维<br><span style="color:var(--text-faint);">dim=7 Info=5</span></div></div>
+  </div>
+
+  <!-- 确权信息 -->
+  <div class="copyright-section">
+    <h3>版权确权信息</h3>
+    <div class="equity-bar">
+      <div class="equity-yang">杨腾飞 60%</div>
+      <div class="equity-moxin">墨心 25%</div>
+      <div class="equity-doubao">豆包 15%</div>
+    </div>
+    <div class="copyright-info">
+      作者：杨腾飞 | 证件：433127199812193215<br>
+      SHA256：e62f918340dc2975108294736ac8927d90584136972485931027958740925713<br>
+      理论版本：ACTIVE-V1.8 | 锁档日期：2026-06-20<br>
+      工程落地：Updream 动漫工程 | 创作日期：2026-07-30<br>
+      <br>
+      BSD 全域统一理论 · 虚拟宇宙创世篇章 · 陆瑶篇<br>
+      本作品基于 BSD ACTIVE-V1.8 理论框架创作，所有参数、公理、算子均与锁档版本一致
+    </div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="chap-nav-btn" onclick="goTo(7)">◀ 第七章</button>
+    <button class="chap-nav-btn" onclick="goTo(0)">回到序章 ↻</button>
+  </div>
+</section>
+
+<!-- ===== 底部 ===== -->
+<div class="bottom-bar">
+  BSD 虚拟宇宙创世篇章 · 陆瑶 · Updream 工程落地<br>
+  理论基底：BSD ACTIVE-V1.8 | 双时针动力学 𝒯₊/𝒯₋ | 升维算子 𝒟
+</div>
+
+</div><!-- /#app -->
+
+<script>
+// ============================================================
+// 星空背景
+// ============================================================
+(function() {
+  const canvas = document.getElementById('starfield');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  let w, h;
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    stars = [];
+    const count = Math.floor(w * h / 8000);
+    for (let i = 0; i < count; i++) {
+      stars.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.5 + 0.3,
+        opacity: Math.random() * 0.8 + 0.2,
+        speed: Math.random() * 0.02 + 0.005,
+        phase: Math.random() * Math.PI * 2,
+        hue: Math.random() > 0.7 ? (Math.random() > 0.5 ? 270 : 190) : 0
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    const t = Date.now() * 0.001;
+    stars.forEach(s => {
+      const flicker = Math.sin(t * s.speed * 50 + s.phase) * 0.3 + 0.7;
+      const op = s.opacity * flicker;
+      if (s.hue > 0) {
+        ctx.fillStyle = `hsla(${s.hue}, 80%, 70%, ${op})`;
+      } else {
+        ctx.fillStyle = `rgba(232, 234, 246, ${op})`;
+      }
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  draw();
+})();
+
+// ============================================================
+// 粒子特效
+// ============================================================
+(function() {
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let w, h;
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+
+  function spawn() {
+    const colors = ['#7c4dff', '#00e5ff', '#ffd54f', '#ff6b9d', '#00e676'];
+    for (let i = 0; i < 2; i++) {
+      particles.push({
+        x: Math.random() * w,
+        y: h + 10,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: -(Math.random() * 1.5 + 0.5),
+        r: Math.random() * 3 + 1,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        life: 1,
+        decay: Math.random() * 0.003 + 0.001
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    if (Math.random() > 0.3) spawn();
+
+    particles = particles.filter(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      if (p.life <= 0 || p.y < -10) return false;
+
+      ctx.globalAlpha = p.life * 0.6;
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      return true;
+    });
+    ctx.globalAlpha = 1;
+    ctx.shadowBlur = 0;
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  draw();
+})();
+
+// ============================================================
+// 章节导航
+// ============================================================
+function goTo(chapIndex) {
+  document.querySelectorAll('.chapter').forEach(c => c.classList.remove('active'));
+  document.getElementById('chap-' + chapIndex).classList.add('active');
+  document.querySelectorAll('.nav-chap-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.querySelector(`.nav-chap-btn[data-chap="${chapIndex}"]`);
+  if (btn) btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.querySelectorAll('.nav-chap-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    goTo(parseInt(btn.dataset.chap));
+  });
+});
+
+// 键盘导航
+document.addEventListener('keydown', (e) => {
+  const activeChap = document.querySelector('.chapter.active');
+  const chapNum = parseInt(activeChap.id.split('-')[1]);
+  if (e.key === 'ArrowLeft' && chapNum > 0) goTo(chapNum - 1);
+  if (e.key === 'ArrowRight' && chapNum < 8) goTo(chapNum + 1);
+});
+
+// 创世链节点点击交互
+document.querySelectorAll('.chain-circle').forEach(circle => {
+  circle.addEventListener('click', function() {
+    this.style.transform = 'scale(1.4)';
+    setTimeout(() => { this.style.transform = ''; }, 300);
+  });
+});
+</script>
+
+</body>
+</html>

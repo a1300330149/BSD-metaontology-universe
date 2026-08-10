@@ -1,0 +1,16 @@
+{
+  "pipeline_switch": {
+    "academic_search": true,
+    "general_web": false,
+    "internal_shared": true
+  },
+  
+  "bandwidth_limit": "unlimited",
+  "auto_power_record": true,
+  "power_unit": "算力点",
+  "fetch_auto_archive": true,
+  "archive_path": "./theories/external_ref/",
+  "citation_auto_format": true,
+  "access_log_enable": true,
+  "illegal_content_block": true
+}

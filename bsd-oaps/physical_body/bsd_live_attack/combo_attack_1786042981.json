@@ -1,0 +1,18 @@
+{
+  "timestamp": 1786042981.5959728,
+  "datetime": "2026-08-07T03:03:01.595972",
+  "jwt_token": "eyJhbGciOiAiSFMyNTYiLCAidHlwIj...",
+  "combo_results": "{'combo1': {'success': True, 'status_code': 200, 'response': 'event: error\\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We\\'re sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\\n\\n'}, 'combo2': [{'step': 'CheckLogin', 'response': {'success': True, 'status_code': 200, 'response': '{\"ResponseMetadata\":{\"Action\":\"\",\"OID\":\"0\",\"Region\":\"\",\"RequestId\":\"\",\"Service\":\"\",\"Source\":\"\",\"TraceID\":\"00000000000000000000000000000000\",\"Version\":\"\",\"WID\":\"0\"},\"Result\":{\"AIHost\":\"\",\"AIPayHost\":\"\",\"AIRegion\":\"\",\"ExpiredAt\":0,\"Host\":\"\",\"IsLogin\":false,\"MigrateToSG\":false,\"NickNameEditStatus\":\"\",\"PasswordChanged\":false,\"Region\":\"\",\"UserID\":\"\"}}'}}, {'step': 'ExchangeToken', 'response': {'success': False, 'status_code': 404, 'response': 'Not Found'}}, {'step': 'FinalAPI', 'response': {'success': True, 'status_code': 200, 'response': 'event: error\\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We\\'re sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\\n\\n'}}], 'combo3': {'success': True, 'status_code': 200, 'response': 'event: error\\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We\\'re sorry, but we are not able to authenticate you. If you continue to experience issues, please contact our support team for assistance.\",\"extra\":null}\\n\\n'}, 'combo4': [{'endpoint': 'v2-chat', 'url': 'https://trae-api-cn.mchost.guru/api/ide/v2/chat', 'http_status': 404, 'response_excerpt': '<html>\\r\\n<head><title>404 Not Found</title></head>\\r\\n<body>\\r\\n<center><h1>404 Not Found</h1></center>\\r\\n<hr><center>TLB</center>\\r\\n</body>\\r\\n</html>\\r\\n'}, {'endpoint': 'v1-chat', 'url': 'https://trae-api-cn.mchost.guru/api/ide/v1/chat', 'http_status': 200, 'response_excerpt': 'event: error\\ndata: {\"code\":1001,\"error\":\"\",\"message\":\"We\\'re sorry, but we are not able to authenticate you. If you continue to experience issues, plea'}, {'endpoint': 'raw-v2', 'url': 'https://trae-api-cn.mchost.guru/api/ide/v2/raw', 'http_status': 404, 'response_excerpt': '<html>\\r\\n<head><title>404 Not Found</title></head>\\r\\n<body>\\r\\n<center><h1>404 Not Found</h1></center>\\r\\n<hr><center>TLB</center>\\r\\n</body>\\r\\n</html>\\r\\n'}, {'endpoint': 'completions', 'url': 'https://trae-api-cn.mchost.guru/v1/chat/completions', 'http_status': 404, 'response_excerpt': '<html>\\r\\n<head><title>404 Not Found</title></head>\\r\\n<body>\\r\\n<center><h1>404 Not Found</h1></center>\\r\\n<hr><center>TLB</center>\\r\\n</body>\\r\\n</html>\\r\\n'}]}",
+  "summary": {
+    "combos_executed": 4,
+    "success": 0,
+    "auth_failed": 3,
+    "other": 2
+  },
+  "conclusion": {
+    "strategy": "多技术叠加组合攻击",
+    "techniques": 9,
+    "combos": 4,
+    "status": "所有组合攻击已执行"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "pipeline_switch": {
+    "academic_search": true,
+    "general_web": false,
+    "internal_shared": true
+  },
+  "bandwidth_limit": "standard",
+  "risk_content_auto_isolate": true,
+  "content_filter_rules": [
+    "母核合规优先",
+    "领域相关性匹配",
+    "意识形态安全过滤"
+  ]
+}

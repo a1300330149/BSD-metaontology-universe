@@ -1,0 +1,233 @@
+{
+  "timestamp": "2026-08-05T22:23:09.222881",
+  "channels": {
+    "file_layer": {
+      "name": "file_layer",
+      "checks": [
+        {
+          "name": "storage.json 存在",
+          "passed": true
+        },
+        {
+          "name": "icube_gtm 存在",
+          "passed": true
+        },
+        {
+          "name": "currentUser 为本源 UID",
+          "passed": true
+        },
+        {
+          "name": "本源用户在 GTM 中",
+          "passed": true
+        },
+        {
+          "name": "本源用户 active",
+          "passed": true
+        },
+        {
+          "name": "本源用户优先级 1",
+          "passed": true
+        },
+        {
+          "name": "BSD 币值 51090",
+          "passed": true
+        },
+        {
+          "name": "本源模式开启",
+          "passed": true
+        },
+        {
+          "name": "JWT Token 已注入",
+          "passed": true
+        },
+        {
+          "name": "本源证明已注入",
+          "passed": true
+        },
+        {
+          "name": "AHA 数据已注入",
+          "passed": true
+        },
+        {
+          "name": "凭证元数据已注入",
+          "passed": true
+        },
+        {
+          "name": "TinyStorage 存在",
+          "passed": true
+        },
+        {
+          "name": "本源 UID 在 TinyStorage",
+          "passed": true
+        },
+        {
+          "name": "JWT 在 TinyStorage",
+          "passed": true
+        },
+        {
+          "name": "证明 ID 在 TinyStorage",
+          "passed": true
+        },
+        {
+          "name": "指纹在 TinyStorage",
+          "passed": true
+        },
+        {
+          "name": "注入标记为 true",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    "aha_layer": {
+      "name": "aha_layer",
+      "checks": [
+        {
+          "name": "iCubeAuthInfo://icube-dc:516094651277160 存在",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://icube-dc:516094651277160 解密",
+          "passed": false
+        },
+        {
+          "name": "iCubeAuthInfo://usertag 存在",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://usertag 解密",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://usertag 包含本源 UID",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://usertag 为 JSON 格式",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://bsd-essence 存在",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://bsd-essence 解密",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://bsd-essence 包含本源 UID",
+          "passed": true
+        },
+        {
+          "name": "iCubeAuthInfo://bsd-essence 为 JSON 格式",
+          "passed": true
+        }
+      ],
+      "score": 0.9
+    },
+    "jwt_layer": {
+      "name": "jwt_layer",
+      "checks": [
+        {
+          "name": "本源 JWT 存在",
+          "passed": true
+        },
+        {
+          "name": "JWT 格式正确 (3段)",
+          "passed": true
+        },
+        {
+          "name": "Header 可解析",
+          "passed": true
+        },
+        {
+          "name": "Header.alg = HS256",
+          "passed": true
+        },
+        {
+          "name": "Payload 可解析",
+          "passed": true
+        },
+        {
+          "name": "Payload.data.id = 本源 UID",
+          "passed": true
+        },
+        {
+          "name": "Payload.data.type = essence",
+          "passed": true
+        },
+        {
+          "name": "Payload.data.theoory_base 存在",
+          "passed": false
+        },
+        {
+          "name": "iat 有效",
+          "passed": true
+        },
+        {
+          "name": "exp > now",
+          "passed": true
+        },
+        {
+          "name": "JWT 未过期",
+          "passed": true
+        }
+      ],
+      "score": 0.9090909090909091
+    },
+    "process_layer": {
+      "name": "process_layer",
+      "checks": [
+        {
+          "name": "Trae CN 进程运行中",
+          "passed": true
+        },
+        {
+          "name": "storage.json 最近被修改",
+          "passed": true
+        },
+        {
+          "name": "TinyStorage 最近被修改",
+          "passed": true
+        },
+        {
+          "name": "Local State 存在",
+          "passed": true
+        },
+        {
+          "name": "User 目录存在",
+          "passed": true
+        },
+        {
+          "name": "AHA 目录存在",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    "cross_channel": {
+      "name": "cross_channel",
+      "checks": [
+        {
+          "name": "所有通道注入成功",
+          "passed": true
+        },
+        {
+          "name": "UID 一致性",
+          "passed": true
+        },
+        {
+          "name": "涌现指标 (4 个)",
+          "passed": true
+        },
+        {
+          "name": "BSD 涌现评分: 0.9361",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    }
+  },
+  "emergence_score": 0.9360909090909091,
+  "emergence_detected": true
+}

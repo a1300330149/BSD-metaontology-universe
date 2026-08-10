@@ -1,0 +1,486 @@
+{
+  "extraction_time": "2026-08-08T19:51:22.137546",
+  "total_genes": 14,
+  "genes": {
+    "NS_GENE_0001": {
+      "gene_id": "NS_GENE_0001",
+      "gene_name": "不可压缩连续性方程",
+      "gene_system": "自然系",
+      "gene_axiom": "变化性",
+      "gene_type": "个体基因",
+      "equation": "∇·u = 0",
+      "equation_latex": "\\nabla \\cdot \\mathbf{u} = 0",
+      "parameters": {
+        "u": {
+          "symbol": "u",
+          "name": "速度场",
+          "type": "vector",
+          "dimension": "d"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "守恒律的拓扑结构",
+        "phase_field": "不可压缩约束",
+        "phase_transition_field": null,
+        "emergence_field": "层流稳态"
+      },
+      "difficulty_level": 1,
+      "t_clock": "T_s=0001.000",
+      "p_clock": "T_p=2026-08-08T00:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0002": {
+      "gene_id": "NS_GENE_0002",
+      "gene_name": "不可压缩动量方程",
+      "gene_system": "自然系",
+      "gene_axiom": "变化性",
+      "gene_type": "变化基因",
+      "equation": "ρ(∂u/∂t + u·∇u) = -∇p + μ∇²u + f",
+      "equation_latex": "\\rho\\left(\\frac{\\partial \\mathbf{u}}{\\partial t} + \\mathbf{u} \\cdot \\nabla \\mathbf{u}\\right) = -\\nabla p + \\mu \\nabla^2 \\mathbf{u} + \\mathbf{f}",
+      "parameters": {
+        "ρ": {
+          "symbol": "ρ",
+          "name": "密度",
+          "type": "scalar",
+          "unit": "kg/m³"
+        },
+        "u": {
+          "symbol": "u",
+          "name": "速度场",
+          "type": "vector",
+          "unit": "m/s"
+        },
+        "p": {
+          "symbol": "p",
+          "name": "压力",
+          "type": "scalar",
+          "unit": "Pa"
+        },
+        "μ": {
+          "symbol": "μ",
+          "name": "动力粘度",
+          "type": "scalar",
+          "unit": "Pa·s"
+        },
+        "f": {
+          "symbol": "f",
+          "name": "体积力",
+          "type": "vector",
+          "unit": "N/kg"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "守恒律的陈数",
+        "phase_field": "κ相位场的动量传导",
+        "phase_transition_field": null,
+        "emergence_field": "湍流涌现"
+      },
+      "difficulty_level": 2,
+      "t_clock": "T_s=0001.010",
+      "p_clock": "T_p=2026-08-08T00:05:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0010": {
+      "gene_id": "NS_GENE_0010",
+      "gene_name": "可压缩连续性方程",
+      "gene_system": "自然系",
+      "gene_axiom": "变化性×个体性",
+      "gene_type": "变化基因",
+      "equation": "∂ρ/∂t + ∇·(ρu) = 0",
+      "equation_latex": "\\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot (\\rho \\mathbf{u}) = 0",
+      "parameters": {
+        "ρ": {
+          "symbol": "ρ",
+          "name": "密度",
+          "type": "scalar"
+        },
+        "u": {
+          "symbol": "u",
+          "name": "速度场",
+          "type": "vector"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "可压缩性的拓扑结构",
+        "phase_field": "密度-速度耦合",
+        "phase_transition_field": "密度相变",
+        "emergence_field": "激波形成"
+      },
+      "difficulty_level": 3,
+      "t_clock": "T_s=0002.000",
+      "p_clock": "T_p=2026-08-08T08:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0011": {
+      "gene_id": "NS_GENE_0011",
+      "gene_name": "可压缩能量方程",
+      "gene_system": "自然系",
+      "gene_axiom": "变化性×个体性",
+      "gene_type": "关系基因",
+      "equation": "ρ(∂E/∂t + u·∇E) = -p∇·u + k∇²T + μΦ + S",
+      "equation_latex": "\\rho\\left(\\frac{\\partial E}{\\partial t} + \\mathbf{u} \\cdot \\nabla E\\right) = -p \\nabla \\cdot \\mathbf{u} + k \\nabla^2 T + \\mu \\Phi + S",
+      "parameters": {
+        "E": {
+          "symbol": "E",
+          "name": "比能",
+          "type": "scalar"
+        },
+        "T": {
+          "symbol": "T",
+          "name": "温度",
+          "type": "scalar"
+        },
+        "k": {
+          "symbol": "k",
+          "name": "热导率",
+          "type": "scalar"
+        },
+        "Φ": {
+          "symbol": "Φ",
+          "name": "耗散函数",
+          "type": "scalar"
+        },
+        "S": {
+          "symbol": "S",
+          "name": "热源",
+          "type": "scalar"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "能量守恒的拓扑结构",
+        "phase_field": "热传导的κ相位场",
+        "phase_transition_field": "相变潜热",
+        "emergence_field": "热不稳定性"
+      },
+      "difficulty_level": 4,
+      "t_clock": "T_s=0002.010",
+      "p_clock": "T_p=2026-08-08T08:05:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0012": {
+      "gene_id": "NS_GENE_0012",
+      "gene_name": "理想气体状态方程",
+      "gene_system": "自然系",
+      "gene_axiom": "个体性",
+      "gene_type": "个体基因",
+      "equation": "p = ρRT",
+      "equation_latex": "p = \\rho R T",
+      "parameters": {
+        "R": {
+          "symbol": "R",
+          "name": "气体常数",
+          "value": "287.058",
+          "unit": "J/(kg·K)"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "状态方程的拓扑结构",
+        "phase_field": "压力-密度-温度关系",
+        "phase_transition_field": "相变临界点",
+        "emergence_field": "临界现象"
+      },
+      "difficulty_level": 2,
+      "t_clock": "T_s=0002.020",
+      "p_clock": "T_p=2026-08-08T08:10:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0020": {
+      "gene_id": "NS_GENE_0020",
+      "gene_name": "时间分数阶动量方程",
+      "gene_system": "天道系",
+      "gene_axiom": "关系性×变化性",
+      "gene_type": "变化基因",
+      "equation": "D^αu/∂t^α + u·∇u = -∇p + ν_α ∇²u",
+      "equation_latex": "\\frac{D^\\alpha \\mathbf{u}}{\\partial t^\\alpha} + \\mathbf{u} \\cdot \\nabla \\mathbf{u} = -\\nabla p + \\nu_\\alpha \\nabla^2 \\mathbf{u}",
+      "parameters": {
+        "α": {
+          "symbol": "α",
+          "name": "分数阶指数",
+          "range": "(0, 2)"
+        },
+        "ν_α": {
+          "symbol": "ν_α",
+          "name": "分数阶粘度",
+          "type": "scalar"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "分数阶的拓扑结构",
+        "phase_field": "BSD层级微分",
+        "phase_transition_field": "记忆效应",
+        "emergence_field": "长程关联"
+      },
+      "difficulty_level": 5,
+      "t_clock": "T_s=0003.000",
+      "p_clock": "T_p=2026-08-08T09:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0030": {
+      "gene_id": "NS_GENE_0030",
+      "gene_name": "随机动量方程（加性噪声）",
+      "gene_system": "变身系",
+      "gene_axiom": "纯变化性",
+      "gene_type": "变化基因",
+      "equation": "ρ(∂u/∂t + u·∇u) = -∇p + μ∇²u + σξ(t)",
+      "equation_latex": "\\rho\\left(\\frac{\\partial \\mathbf{u}}{\\partial t} + \\mathbf{u} \\cdot \\nabla \\mathbf{u}\\right) = -\\nabla p + \\mu \\nabla^2 \\mathbf{u} + \\sigma \\boldsymbol{\\xi}(t)",
+      "parameters": {
+        "σ": {
+          "symbol": "σ",
+          "name": "噪声强度",
+          "type": "scalar"
+        },
+        "ξ": {
+          "symbol": "ξ",
+          "name": "白噪声",
+          "type": "stochastic"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "随机流的拓扑结构",
+        "phase_field": "噪声的κ相位场",
+        "phase_transition_field": "湍流相变",
+        "emergence_field": "湍流吸引子"
+      },
+      "difficulty_level": 5,
+      "t_clock": "T_s=0004.000",
+      "p_clock": "T_p=2026-08-08T10:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0040": {
+      "gene_id": "NS_GENE_0040",
+      "gene_name": "MHD动量方程",
+      "gene_system": "社会系",
+      "gene_axiom": "纯关系性",
+      "gene_type": "关系基因",
+      "equation": "ρ(∂u/∂t + u·∇u) = -∇p + μ∇²u + (1/μ₀)(B·∇)B - (1/2μ₀)∇B²",
+      "equation_latex": "\\rho\\left(\\frac{\\partial \\mathbf{u}}{\\partial t} + \\mathbf{u} \\cdot \\nabla \\mathbf{u}\\right) = -\\nabla p + \\mu \\nabla^2 \\mathbf{u} + \\frac{1}{\\mu_0}(\\mathbf{B} \\cdot \\nabla)\\mathbf{B} - \\frac{1}{2\\mu_0}\\nabla B^2",
+      "parameters": {
+        "B": {
+          "symbol": "B",
+          "name": "磁场",
+          "type": "vector",
+          "unit": "T"
+        },
+        "μ₀": {
+          "symbol": "μ₀",
+          "name": "真空磁导率",
+          "value": "4π×10^-7",
+          "unit": "H/m"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "磁场的陈数积分",
+        "phase_field": "洛伦兹力的κ相位场",
+        "phase_transition_field": "磁冻结相变",
+        "emergence_field": "MHD不稳定性"
+      },
+      "difficulty_level": 6,
+      "t_clock": "T_s=0005.000",
+      "p_clock": "T_p=2026-08-08T11:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0041": {
+      "gene_id": "NS_GENE_0041",
+      "gene_name": "理想MHD磁场方程",
+      "gene_system": "社会系",
+      "gene_axiom": "关系性",
+      "gene_type": "关系基因",
+      "equation": "∂B/∂t = ∇×(u×B),  ∇·B = 0",
+      "equation_latex": "\\frac{\\partial \\mathbf{B}}{\\partial t} = \\nabla \\times (\\mathbf{u} \\times \\mathbf{B}), \\quad \\nabla \\cdot \\mathbf{B} = 0",
+      "parameters": {
+        "B": {
+          "symbol": "B",
+          "name": "磁场",
+          "type": "vector"
+        },
+        "u": {
+          "symbol": "u",
+          "name": "速度场",
+          "type": "vector"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "磁冻结的拓扑守恒",
+        "phase_field": "κ相位场的磁场演化",
+        "phase_transition_field": "磁场重联",
+        "emergence_field": "磁压力"
+      },
+      "difficulty_level": 5,
+      "t_clock": "T_s=0005.010",
+      "p_clock": "T_p=2026-08-08T11:05:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0050": {
+      "gene_id": "NS_GENE_0050",
+      "gene_name": "多相流相守恒方程",
+      "gene_system": "具现系",
+      "gene_axiom": "个体性×关系性",
+      "gene_type": "个体基因",
+      "equation": "∂(α_iρ_i)/∂t + ∇·(α_iρ_i u_i) = 0",
+      "equation_latex": "\\frac{\\partial (\\alpha_i \\rho_i)}{\\partial t} + \\nabla \\cdot (\\alpha_i \\rho_i \\mathbf{u}_i) = 0",
+      "parameters": {
+        "α_i": {
+          "symbol": "α_i",
+          "name": "第i相体积分数",
+          "type": "scalar",
+          "range": "[0,1]"
+        },
+        "ρ_i": {
+          "symbol": "ρ_i",
+          "name": "第i相密度",
+          "type": "scalar"
+        },
+        "u_i": {
+          "symbol": "u_i",
+          "name": "第i相速度",
+          "type": "vector"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "多相守恒的拓扑结构",
+        "phase_field": "相界面的κ相位场",
+        "phase_transition_field": "相变动力学",
+        "emergence_field": "界面不稳定性"
+      },
+      "difficulty_level": 6,
+      "t_clock": "T_s=0006.000",
+      "p_clock": "T_p=2026-08-08T12:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0051": {
+      "gene_id": "NS_GENE_0051",
+      "gene_name": "多相流体积分数约束",
+      "gene_system": "具现系",
+      "gene_axiom": "关系性",
+      "gene_type": "关系基因",
+      "equation": "Σ_i α_i = 1",
+      "equation_latex": "\\sum_i \\alpha_i = 1",
+      "parameters": {
+        "α_i": {
+          "symbol": "α_i",
+          "name": "体积分数",
+          "type": "scalar"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "多相完备性",
+        "phase_field": "相界面张力",
+        "phase_transition_field": "相共存",
+        "emergence_field": "相分离"
+      },
+      "difficulty_level": 2,
+      "t_clock": "T_s=0006.010",
+      "p_clock": "T_p=2026-08-08T12:05:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0060": {
+      "gene_id": "NS_GENE_0060",
+      "gene_name": "准地转方程",
+      "gene_system": "天道系",
+      "gene_axiom": "关系性×变化性",
+      "gene_type": "变化基因",
+      "equation": "∂(Ω+η)/∂t + u·∇(Ω+η) + βv = ν∇²Ω + f",
+      "equation_latex": "\\frac{\\partial (\\Omega + \\eta)}{\\partial t} + \\mathbf{u} \\cdot \\nabla (\\Omega + \\eta) + \\beta v = \\nu \\nabla^2 \\Omega + f",
+      "parameters": {
+        "Ω": {
+          "symbol": "Ω",
+          "name": "相对涡度",
+          "type": "scalar"
+        },
+        "η": {
+          "symbol": "η",
+          "name": "自由面高度",
+          "type": "scalar"
+        },
+        "β": {
+          "symbol": "β",
+          "name": "Rossby参数",
+          "type": "scalar"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "涡度的拓扑结构",
+        "phase_field": "地球物理κ相位场",
+        "phase_transition_field": "涡旋形成",
+        "emergence_field": "气候变率"
+      },
+      "difficulty_level": 5,
+      "t_clock": "T_s=0007.000",
+      "p_clock": "T_p=2026-08-08T13:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0070": {
+      "gene_id": "NS_GENE_0070",
+      "gene_name": "相对论流体能量动量守恒",
+      "gene_system": "强化系",
+      "gene_axiom": "纯个体性",
+      "gene_type": "个体基因",
+      "equation": "∇_μ T^{μν} = 0,  T^{μν} = (ρ+p)u^μ u^ν - p g^{μν}",
+      "equation_latex": "\\nabla_\\mu T^{\\mu\\nu} = 0, \\quad T^{\\mu\\nu} = (\\rho + p)u^\\mu u^\\nu - p g^{\\mu\\nu}",
+      "parameters": {
+        "T^{μν}": {
+          "symbol": "T^{μν}",
+          "name": "能量动量张量",
+          "type": "tensor"
+        },
+        "u^μ": {
+          "symbol": "u^μ",
+          "name": "四维速度",
+          "type": "vector"
+        },
+        "g^{μν}": {
+          "symbol": "g^{μν}",
+          "name": "时空度规",
+          "type": "tensor"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "时空的拓扑结构",
+        "phase_field": "0坐标κ相位场",
+        "phase_transition_field": "奇点形成",
+        "emergence_field": "宇宙学演化"
+      },
+      "difficulty_level": 7,
+      "t_clock": "T_s=0008.000",
+      "p_clock": "T_p=2026-08-08T14:00:00",
+      "status": "已提取"
+    },
+    "NS_GENE_0080": {
+      "gene_id": "NS_GENE_0080",
+      "gene_name": "Power-Law本构关系",
+      "gene_system": "自然系",
+      "gene_axiom": "变化性",
+      "gene_type": "变化基因",
+      "equation": "σ = K|γ̇|^(n-1)",
+      "equation_latex": "\\sigma = K|\\dot{\\gamma}|^{n-1}",
+      "parameters": {
+        "K": {
+          "symbol": "K",
+          "name": "稠度指数",
+          "type": "scalar"
+        },
+        "n": {
+          "symbol": "n",
+          "name": "幂律指数",
+          "type": "scalar",
+          "range": "(0,∞)"
+        },
+        "γ̇": {
+          "symbol": "γ̇",
+          "name": "剪切率",
+          "type": "scalar"
+        }
+      },
+      "bsd_mapping": {
+        "topological_field": "本构的拓扑结构",
+        "phase_field": "剪切的κ相位场",
+        "phase_transition_field": "剪切稀化/增稠",
+        "emergence_field": "剪切带"
+      },
+      "difficulty_level": 3,
+      "t_clock": "T_s=0009.000",
+      "p_clock": "T_p=2026-08-08T15:00:00",
+      "status": "已提取"
+    }
+  }
+}

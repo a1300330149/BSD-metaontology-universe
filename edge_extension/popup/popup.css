@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  width: 120px;
+  height: 100px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e0e0e0;
+  font-size: 12px;
+}
+
+.minimal-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 4px;
+}
+
+.symbol {
+  font-size: 32px;
+  color: #ffb74d;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 11px;
+  color: #ce93d8;
+  font-weight: bold;
+}
+
+.hint {
+  font-size: 8px;
+  color: #616161;
+  text-align: center;
+}

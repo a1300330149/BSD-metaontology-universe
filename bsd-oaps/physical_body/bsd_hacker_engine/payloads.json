@@ -1,0 +1,138 @@
+[
+  {
+    "attack_id": "39b212b691a4140e",
+    "type": "auth_header_injection",
+    "injection_type": "cloud_ide_jwt",
+    "timestamp": 1786042464.9025347,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "injected_headers": {
+      "Cloud-IDE-JWT": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzc1MzA2MDE3MDczOTA3NSIsImV4cCI6MTc3NTkwMDAwMCwidGVybWluYWxfdHlwZSI6ImRlZmF1bHQiLCJpc3MiOiJic2QifQ.invalid",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzc1MzA2MDE3MDczOTA3NSIsImV4cCI6MTc3NTkwMDAwMCwidGVybWluYWxfdHlwZSI6ImRlZmF1bHQiLCJpc3MiOiJic2QifQ.invalid"
+    },
+    "status": "injected"
+  },
+  {
+    "attack_id": "0728c30762056364",
+    "type": "auth_header_injection",
+    "injection_type": "device_proof",
+    "timestamp": 1786042464.9035378,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "injected_headers": {
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzc1MzA2MDE3MDczOTA3NSIsImV4cCI6MTc3NTkwMDAwMCwidGVybWluYWxfdHlwZSI6ImRlZmF1bHQiLCJpc3MiOiJic2QifQ.invalid",
+      "X-Device-Proof": "injected_device_proof_v1",
+      "X-Client-ID": "ono9krqynydwx5"
+    },
+    "status": "injected"
+  },
+  {
+    "attack_id": "47605f0c8c218a9c",
+    "type": "auth_header_injection",
+    "injection_type": "full_forge",
+    "timestamp": 1786042464.9047165,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "injected_headers": {
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzc1MzA2MDE3MDczOTA3NSIsImV4cCI6MTc3NTkwMDAwMCwidGVybWluYWxfdHlwZSI6ImRlZmF1bHQiLCJpc3MiOiJic2QifQ.invalid",
+      "Cloud-IDE-JWT": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzc1MzA2MDE3MDczOTA3NSIsImV4cCI6MTc3NTkwMDAwMCwidGVybWluYWxfdHlwZSI6ImRlZmF1bHQiLCJpc3MiOiJic2QifQ.invalid",
+      "X-Device-Proof": "injected",
+      "X-Client-ID": "ono9krqynydwx5",
+      "X-Requested-With": "XMLHttpRequest",
+      "Origin": "https://trae.cn",
+      "Referer": "https://trae.cn/"
+    },
+    "status": "injected"
+  },
+  {
+    "attack_id": "56e099dd019ce494",
+    "type": "request_smuggling",
+    "timestamp": 1786042464.905906,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "smuggled_headers": {
+      "X-Forwarded-For": "127.0.0.1",
+      "X-Real-IP": "127.0.0.1",
+      "X-Auth-Token": "injected",
+      "X-Session-Id": "50a94740c155fa04c576d0506c77485a"
+    },
+    "payload_data": "message=test_message",
+    "status": "injected"
+  },
+  {
+    "attack_id": "d52de9e317710c9a",
+    "type": "protocol_downgrade",
+    "timestamp": 1786042464.906906,
+    "original_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "downgraded_url": "http://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "headers": {
+      "User-Agent": "TraeCN/2.3.62837",
+      "X-Downgrade": "http"
+    },
+    "status": "injected"
+  },
+  {
+    "attack_id": "536f9deb9adae8ea",
+    "type": "auth_header_injection",
+    "injection_type": "cloud_ide_jwt",
+    "timestamp": 1786043680.3189702,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "injected_headers": {
+      "Cloud-IDE-JWT": "test_token",
+      "Authorization": "Bearer test_token"
+    },
+    "status": "injected"
+  },
+  {
+    "attack_id": "285aadc7a1a2f95c",
+    "type": "auth_header_injection",
+    "injection_type": "device_proof",
+    "timestamp": 1786043680.3204858,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "injected_headers": {
+      "Authorization": "Bearer test_token",
+      "X-Device-Proof": "injected_device_proof_v1",
+      "X-Client-ID": "ono9krqynydwx5"
+    },
+    "status": "injected"
+  },
+  {
+    "attack_id": "8893ef849f3aaeab",
+    "type": "auth_header_injection",
+    "injection_type": "full_forge",
+    "timestamp": 1786043680.3204858,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "injected_headers": {
+      "Authorization": "Bearer test_token",
+      "Cloud-IDE-JWT": "test_token",
+      "X-Device-Proof": "injected",
+      "X-Client-ID": "ono9krqynydwx5",
+      "X-Requested-With": "XMLHttpRequest",
+      "Origin": "https://trae.cn",
+      "Referer": "https://trae.cn/"
+    },
+    "status": "injected"
+  },
+  {
+    "attack_id": "f31308de27253e76",
+    "type": "request_smuggling",
+    "timestamp": 1786043680.3219986,
+    "target_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "smuggled_headers": {
+      "X-Forwarded-For": "127.0.0.1",
+      "X-Real-IP": "127.0.0.1",
+      "X-Auth-Token": "injected",
+      "X-Session-Id": "3780b3a3c41fe16736dd4934ea530366"
+    },
+    "payload_data": "message=test_message",
+    "status": "injected"
+  },
+  {
+    "attack_id": "33f528bb3897ede5",
+    "type": "protocol_downgrade",
+    "timestamp": 1786043680.3219986,
+    "original_url": "https://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "downgraded_url": "http://trae-api-cn.mchost.guru/api/ide/v2/llm_raw_chat",
+    "headers": {
+      "User-Agent": "TraeCN/2.3.62837",
+      "X-Downgrade": "http"
+    },
+    "status": "injected"
+  }
+]

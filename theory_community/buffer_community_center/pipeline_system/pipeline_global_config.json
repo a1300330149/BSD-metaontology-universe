@@ -1,0 +1,40 @@
+{
+  "pipeline_system_name": "全域本体社区公共管线系统",
+  
+  "main_pipeline": {
+    "bandwidth_unlimited": true,
+    "content_audit_enable": true,
+    "traffic_metering_enable": true,
+    "access_log_enable": true
+  },
+  
+  "subsystem_default_quota": {
+    "daily_search_times": 100,
+    "daily_full_text_fetch": 50,
+    "daily_power_quota": 100
+  },
+  
+  "pipeline_types": {
+    "academic_search": {
+      "name": "学术文献管线",
+      "resource": "全球学术期刊、预印本、学位论文库",
+      "power_cost_per_call": 1.0
+    },
+    
+    "general_web": {
+      "name": "通用网络管线",
+      "resource": "公开网页信息",
+      "power_cost_per_call": 0.5
+    },
+    
+    "internal_shared": {
+      "name": "社区内部共享管线",
+      "resource": "子系统间理论成果互通",
+      "power_cost_per_call": 0.2
+    }
+  },
+  
+  "pipeline_switch_independent": true,
+  "illegal_content_block": true,
+  "reverse_injection_protect": true
+}

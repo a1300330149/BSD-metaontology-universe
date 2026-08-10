@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DGK 谱几何完整引擎 — 工业级完整版（44模块+7加速）</title>
+<style>
+:root {
+  --bg: #F5F5F7; --surface: #FFFFFF; --surface2: #F0F0F5;
+  --border: rgba(0,0,0,0.08); --text: #1D1D1F; --text-dim: #86868B;
+  --accent: #4B3FE3; --accent2: #007AFF; --green: #34C759; --red: #FF3B30;
+  --radius: 8px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; overflow-x:hidden; }
+#app { display:flex; min-height:100vh; }
+#sidebar { width:340px; background:var(--surface); border-right:1px solid var(--border); overflow-y:auto; height:100vh; position:fixed; left:0; top:0; z-index:100; box-shadow:1px 0 8px rgba(0,0,0,0.04); }
+#sidebar::-webkit-scrollbar { width:6px; } #sidebar::-webkit-scrollbar-thumb { background:var(--accent); border-radius:3px; }
+.sb-header { padding:16px; background:linear-gradient(135deg,#4B3FE3,#007AFF); color:#fff; }
+.sb-header h1 { font-size:16px; font-weight:700; color:#fff; }
+.sb-header p { font-size:11px; opacity:0.85; margin-top:4px; color:#fff; }
+.sb-section { border-bottom:1px solid var(--border); padding:12px 16px; }
+.sb-section h3 { font-size:12px; color:var(--accent); margin-bottom:8px; text-transform:uppercase; letter-spacing:1px; }
+.mode-btn { display:block; width:100%; padding:8px 12px; margin-bottom:4px; background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); color:var(--text); cursor:pointer; font-size:13px; text-align:left; transition:all 0.2s; }
+.mode-btn:hover { border-color:var(--accent); background:rgba(75,63,227,0.06); }
+.mode-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+.toggle-row { display:flex; gap:4px; flex-wrap:wrap; margin-bottom:6px; }
+.toggle-btn { padding:3px 8px; border:1px solid var(--border); border-radius:12px; background:var(--surface2); color:var(--text-dim); cursor:pointer; font-size:11px; transition:all 0.15s; }
+.toggle-btn.on { background:rgba(75,63,227,0.08); border-color:var(--accent); color:var(--accent); font-weight:600; }
+.slider-row { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.slider-row label { font-size:11px; color:var(--text-dim); min-width:70px; }
+.slider-row input[type=range] { flex:1; accent-color:var(--accent); height:4px; }
+.slider-row .val { font-size:11px; color:var(--accent); min-width:40px; text-align:right; font-family:monospace; }
+.math-box { background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:10px; margin-bottom:8px; font-size:11px; }
+.math-box .formula { font-family:'Cambria Math',serif; color:var(--accent2); margin:4px 0; }
+.math-box .val { color:var(--green); font-family:monospace; font-weight:600; }
+.module-list { font-size:10px; }
+.module-item { display:flex; justify-content:space-between; padding:2px 0; }
+.module-item .ok { color:var(--green); font-weight:600; } .module-item .name { color:var(--text-dim); }
+.algo-item { padding:4px 0; border-bottom:1px solid var(--border); font-size:11px; }
+.algo-item .speed { color:var(--green); font-family:monospace; float:right; font-weight:600; }
+#main { margin-left:340px; flex:1; padding:16px; background:var(--bg); }
+#canvas-wrap { width:100%; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden; background:#fff; position:relative; border:1px solid var(--border); }
+#canvas-wrap canvas { display:block; width:100%!important; height:100%!important; }
+#hud { position:absolute; top:8px; left:8px; font-size:11px; color:#333; pointer-events:none; font-family:monospace; text-shadow:0 0 3px rgba(255,255,255,0.9); }
+#info-bar { display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; }
+.info-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:12px; flex:1; min-width:150px; }
+.info-card h4 { font-size:11px; color:var(--accent); margin-bottom:6px; text-transform:uppercase; }
+.info-card .big { font-size:20px; font-weight:700; color:var(--accent); font-family:monospace; }
+.info-card .sub { font-size:10px; color:var(--text-dim); }
+#rd-plot { width:100%; height:180px; margin-top:8px; }
+#audio-ctrl { display:flex; gap:8px; align-items:center; margin-top:8px; }
+audio { width:100%; height:32px; }
+#console-panel { position:fixed; bottom:0; right:0; width:50%; height:200px; background:rgba(0,0,0,0.85); color:#0f0; font-family:monospace; font-size:11px; padding:8px; overflow-y:auto; z-index:1000; display:none; border-top-left-radius:8px; }
+#console-panel .title { color:#4B3FE3; font-weight:600; margin-bottom:4px; }
+.console-line { padding:1px 0; }
+.console-line.warn { color:#ff0; }
+.console-line.error { color:#f44; }
+.console-line.info { color:#0f0; }
+</style>
+</head>
+<body>
+<div id="app">
+<div id="sidebar">
+  <div class="sb-header">
+    <h1>DGK 谱几何完整引擎 — 工业级</h1>
+    <p>44模块 + 7加速算法 + 17种可视化模式</p>
+  </div>
+  <div class="sb-section">
+    <h3>渲染模式</h3>
+    <button class="mode-btn active" data-mode="hypersphere">🌌 高维流形投影</button>
+    <button class="mode-btn" data-mode="spectral">🔵 球谐谱形状</button>
+    <button class="mode-btn" data-mode="terrain">⛰️ Gegenbauer 谱地形</button>
+    <button class="mode-btn" data-mode="voxel">🧊 高维嵌入体素世界</button>
+    <button class="mode-btn" data-mode="equivariance">🔄 SO(N) 等变性演示</button>
+    <button class="mode-btn" data-mode="green">📈 格林函数谱展开</button>
+    <button class="mode-btn" data-mode="parseval">✂️ Parseval 截断可视化</button>
+    <button class="mode-btn" data-mode="wigner">🌀 Wigner D 旋转场</button>
+    <button class="mode-btn" data-mode="heatmap">🔥 谱系数热图</button>
+    <button class="mode-btn" data-mode="crosssec">🔬 高维截面切片</button>
+    <button class="mode-btn" data-mode="gram">🔲 格拉姆矩阵热力图</button>
+    <button class="mode-btn" data-mode="parallel">📊 平行坐标系</button>
+    <button class="mode-btn" data-mode="spectralembed">🌸 谱嵌入动态演化</button>
+    <button class="mode-btn" data-mode="probe">🎛️ 交互式降维探针</button>
+    <button class="mode-btn" data-mode="cosmology">🌌 宇宙学·弦论紧化</button>
+    <button class="mode-btn" data-mode="quantum">⚛️ 量子计算·纠错码</button>
+    <button class="mode-btn" data-mode="robot">🤖 具身智能·世界模型</button>
+  </div>
+  <div class="sb-section">
+    <h3>数学核心 — R(d) 零模系数</h3>
+    <div class="math-box">
+      <div class="formula">R(d) = π^(d/2) / (2d² Γ(d/2))</div>
+      <div>R(3) = <span class="val" id="rd3">—</span></div>
+      <div>R(1/2) = <span class="val" id="rd05">—</span></div>
+      <div>R(32) = <span class="val" id="rd32">—</span></div>
+    </div>
+    <div class="math-box">
+      <div class="formula">桥接方程: δ·R(3+ε) = φ·(1+α)</div>
+      <div>ε = <span class="val" id="eps-val">—</span></div>
+      <div>验证误差 = <span class="val" id="bridge-err">—</span></div>
+    </div>
+    <canvas id="rd-plot"></canvas>
+  </div>
+  <div class="sb-section">
+    <h3>🎚️ 维度条调节</h3>
+    <div class="math-box">
+      <div>当前维度 d = <span class="val" id="dim-bar-val" style="font-size:14px;font-weight:700;">32</span></div>
+      <div style="font-size:10px;color:var(--text-dim);">R(d) = <span id="dim-bar-rd">—</span> | ω_d = <span id="dim-bar-omega">—</span></div>
+    </div>
+    <div style="position:relative;cursor:pointer;user-select:none;" id="dim-bar-wrap">
+      <canvas id="dim-bar" style="width:100%;height:90px;border-radius:var(--radius);background:var(--surface2);"></canvas>
+    </div>
+  </div>
+  <div class="sb-section">
+    <h3>渲染控制</h3>
+    <div class="toggle-row">
+      <span class="toggle-btn" data-toggle="ao">AO</span>
+      <span class="toggle-btn" data-toggle="shadow">阴影</span>
+      <span class="toggle-btn" data-toggle="specular">高光</span>
+      <span class="toggle-btn" data-toggle="texture">纹理</span>
+      <span class="toggle-btn" data-toggle="rim">边缘光</span>
+      <span class="toggle-btn" data-toggle="wireframe">线框</span>
+      <span class="toggle-btn on" data-toggle="rotate">自动旋转</span>
+      <span class="toggle-btn" data-toggle="rays">高维射线</span>
+      <span class="toggle-btn on" data-toggle="grid">网格</span>
+      <span class="toggle-btn on" data-toggle="fog">雾效</span>
+      <span class="toggle-btn" data-toggle="truend">🧊 N维</span>
+      <span class="toggle-btn" data-toggle="bloom">Bloom</span>
+      <span class="toggle-btn" data-toggle="console">控制台</span>
+    </div>
+    <div class="slider-row"><label>维度 D</label><input type="range" id="slider-dim" min="1" max="10000" value="32"><span class="val" id="val-dim">32</span></div>
+    <div class="slider-row"><label>阶数 L</label><input type="range" id="slider-lmax" min="1" max="8" value="5"><span class="val" id="val-lmax">5</span></div>
+    <div class="slider-row"><label>金属度</label><input type="range" id="slider-metal" min="0" max="100" value="40"><span class="val" id="val-metal">0.40</span></div>
+    <div class="slider-row"><label>粗糙度</label><input type="range" id="slider-rough" min="0" max="100" value="35"><span class="val" id="val-rough">0.35</span></div>
+    <div class="slider-row"><label>α衰减</label><input type="range" id="slider-alpha" min="0" max="100" value="73"><span class="val" id="val-alpha">0.0073</span></div>
+    <div class="slider-row"><label>分辨率</label><input type="range" id="slider-res" min="16" max="128" value="64"><span class="val" id="val-res">64</span></div>
+    <div class="slider-row"><label>随机种子</label><input type="range" id="slider-seed" min="0" max="999" value="42"><span class="val" id="val-seed">42</span></div>
+    <div class="slider-row"><label>光照角度</label><input type="range" id="slider-light" min="0" max="360" value="45"><span class="val" id="val-light">45°</span></div>
+    <div class="slider-row"><label>Bloom强度</label><input type="range" id="slider-bloom" min="0" max="100" value="30"><span class="val" id="val-bloom">0.30</span></div>
+    <div class="slider-row"><label>标度 f</label><input type="range" id="slider-f" min="0" max="200" value="100"><span class="val" id="val-f">5.027</span></div>
+    <div class="slider-row"><label>高维旋转</label><input type="range" id="slider-hrot" min="0" max="360" value="0"><span class="val" id="val-hrot">0°</span></div>
+    <div class="slider-row"><label>Gegenbauer α</label><input type="range" id="slider-galpha" min="0" max="200" value="100"><span class="val" id="val-galpha">1.00</span></div>
+    <div class="slider-row"><label>动画时间</label><input type="range" id="slider-time" min="0" max="100" value="0"><span class="val" id="val-time">0.00</span></div>
+    <div class="slider-row"><label>低维旋转</label><input type="range" id="slider-ndrot-low" min="0" max="360" value="0"><span class="val" id="val-ndrot-low">0°</span></div>
+    <div class="slider-row"><label>中维旋转</label><input type="range" id="slider-ndrot-mid" min="0" max="360" value="0"><span class="val" id="val-ndrot-mid">0°</span></div>
+    <div class="slider-row"><label>高维旋转2</label><input type="range" id="slider-ndrot-high" min="0" max="360" value="0"><span class="val" id="val-ndrot-high">0°</span></div>
+    <div class="slider-row"><label>切片位置</label><input type="range" id="slider-ndslice-pos" min="-100" max="100" value="0"><span class="val" id="val-ndslice-pos">0.00</span></div>
+    <div class="slider-row"><label>动画速度</label><input type="range" id="slider-animspd" min="1" max="100" value="30"><span class="val" id="val-animspd">0.30</span></div>
+    <div class="slider-row"><label>FOV</label><input type="range" id="slider-fov" min="20" max="100" value="50"><span class="val" id="val-fov">50°</span></div>
+    <div class="slider-row"><label>曝光</label><input type="range" id="slider-exp" min="20" max="300" value="100"><span class="val" id="val-exp">1.00</span></div>
+    <div class="slider-row"><label>亮度</label><input type="range" id="slider-bright" min="-100" max="100" value="0"><span class="val" id="val-bright">0.00</span></div>
+    <div class="slider-row"><label>对比度</label><input type="range" id="slider-contrast" min="-100" max="100" value="0"><span class="val" id="val-contrast">0.00</span></div>
+    <div class="slider-row"><label>饱和度</label><input type="range" id="slider-saturate" min="-100" max="100" value="0"><span class="val" id="val-saturate">0.00</span></div>
+  </div>
+  <div class="sb-section">
+    <h3>🧊 N维交互控制</h3>
+    <div class="toggle-row">
+      <span class="toggle-btn on" data-toggle="ndrotate">N维旋转</span>
+      <span class="toggle-btn" data-toggle="ndslice">N维切片</span>
+      <span class="toggle-btn" data-toggle="ndmultiview">多视图</span>
+    </div>
+    <div class="slider-row"><label>切片维度</label>
+      <select id="ndslice-dim" style="flex:1;padding:2px;border:1px solid var(--border);border-radius:4px;font-size:11px;background:var(--surface2);color:var(--text);"></select>
+    </div>
+  </div>
+  <div class="sb-section">
+    <h3>7 大加速算法</h3>
+    <div class="toggle-row">
+      <span class="toggle-btn on" data-algo="teacache">TeaCache</span>
+      <span class="toggle-btn on" data-algo="distill">蒸馏</span>
+      <span class="toggle-btn on" data-algo="sparse">稀疏</span>
+      <span class="toggle-btn" data-algo="lcm">LCM</span>
+      <span class="toggle-btn" data-algo="performer">Performer</span>
+      <span class="toggle-btn" data-algo="h2o">H2O</span>
+      <span class="toggle-btn" data-algo="comet">CoMeT</span>
+    </div>
+    <div id="algo-stats" style="font-size:10px;color:var(--text-dim);margin-top:4px;"></div>
+  </div>
+  <div class="sb-section">
+    <h3>颜色方案</h3>
+    <div class="toggle-row">
+      <span class="toggle-btn on" data-color="rainbow">彩虹</span>
+      <span class="toggle-btn" data-color="thermal">热力</span>
+      <span class="toggle-btn" data-color="ocean">海洋</span>
+      <span class="toggle-btn" data-color="grayscale">灰度</span>
+      <span class="toggle-btn" data-color="biome">生物群系</span>
+    </div>
+  </div>
+  <div class="sb-section">
+    <h3>导出与工具</h3>
+    <div class="toggle-row">
+      <button class="mode-btn" id="btn-export-obj" style="width:auto;padding:5px 10px;font-size:11px;">📐 导出 OBJ</button>
+      <button class="mode-btn" id="btn-export-png" style="width:auto;padding:5px 10px;font-size:11px;">📸 截图 PNG</button>
+    </div>
+    <div class="toggle-row" style="margin-top:4px;">
+      <button class="mode-btn" id="btn-reset-cam" style="width:auto;padding:5px 10px;font-size:11px;">🎥 重置视角</button>
+      <button class="mode-btn" id="btn-center" style="width:auto;padding:5px 10px;font-size:11px;">🔍 居中</button>
+      <button class="mode-btn" id="btn-regen" style="width:auto;padding:5px 10px;font-size:11px;">🎲 重新生成</button>
+    </div>
+  </div>
+  <div class="sb-section">
+    <h3>工业级模块状态</h3>
+    <div class="module-list" id="module-list"></div>
+  </div>
+  <div class="sb-section">
+    <h3>音频合成</h3>
+    <div id="audio-ctrl">
+      <button class="mode-btn" id="btn-audio" style="width:auto;padding:6px 14px;">🎵 生成音频</button>
+    </div>
+    <audio id="audio-player" controls style="display:none;margin-top:8px;"></audio>
+  </div>
+</div>
+<div id="main">
+  <div id="canvas-wrap">
+    <div id="hud"></div>
+  </div>
+  <div id="info-bar">
+    <div class="info-card"><h4>顶点数</h4><div class="big" id="stat-verts">0</div><div class="sub">实时生成</div></div>
+    <div class="info-card"><h4>面数</h4><div class="big" id="stat-faces">0</div><div class="sub">三角面</div></div>
+    <div class="info-card"><h4>维度</h4><div class="big" id="stat-dim">32D</div><div class="sub">超球面</div></div>
+    <div class="info-card"><h4>FPS</h4><div class="big" id="stat-fps">0</div><div class="sub">帧率</div></div>
+    <div class="info-card"><h4>生成耗时</h4><div class="big" id="stat-time">0ms</div><div class="sub">CPU</div></div>
+    <div class="info-card"><h4>加速</h4><div class="big" id="stat-speedup">1.0x</div><div class="sub">综合加速比</div></div>
+  </div>
+</div>
+</div>
+<div id="console-panel">
+  <div class="title">🔧 Debug 控制台 <span style="float:right;cursor:pointer;" onclick="document.getElementById('console-panel').style.display='none'">✕</span></div>
+  <div id="console-content"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+'use strict';
+
+// ============================================================
+// 第〇部分：工业级基础模块
+// ============================================================
+
+// ---- 0.1 资源管理系统 ----
+class ResourceManager {
+  constructor() { this.resources = {}; this.count = 0; }
+  add(name, type, data, source) {
+    this.resources[name] = { type, data, refs: 1, loadTime: Date.now(), source: source||'' };
+    this.count++;
+    console.log(`[资源] 添加: ${name} (${type})`);
+    return true;
+  }
+  get(name) { return this.resources[name] ? this.resources[name].data : null; }
+  ref(name) { if (this.resources[name]) { this.resources[name].refs++; return true; } return false; }
+  unref(name) {
+    if (!this.resources[name]) return false;
+    this.resources[name].refs--;
+    if (this.resources[name].refs <= 0) { delete this.resources[name]; this.count--; }
+    return true;
+  }
+  list() {
+    let s = '';
+    for (const [k,v] of Object.entries(this.resources))
+      s += `${k}:${v.type} refs=${v.refs} `;
+    return s;
+  }
+}
+const resMgr = new ResourceManager();
+
+// ---- 0.2 场景图 SceneNode ----
+class SceneNode {
+  constructor(name, type='empty') {
+    this.name = name; this.type = type;
+    this.position = {x:0,y:0,z:0}; this.rotation = {x:0,y:0,z:0}; this.scale = {x:1,y:1,z:1};
+    this.children = []; this.parent = null;
+    this.visible = true; this.matIdx = 0;
+    this.verts = null; this.indices = null; this.colors = null;
+    this.animPos = {x:0,y:0,z:0}; this.animTime = 0; this.animDuration = 1; this.animPlaying = false;
+  }
+  add(child) { this.children.push(child); child.parent = this; }
+  getWorldMatrix() {
+    // 简化: 返回位置/旋转/缩放的组合矩阵
+    const t = this.position, r = this.rotation, s = this.scale;
+    const cosX=Math.cos(r.x),sinX=Math.sin(r.x),cosY=Math.cos(r.y),sinY=Math.sin(r.y),cosZ=Math.cos(r.z),sinZ=Math.sin(r.z);
+    // 简化为 4x4 矩阵 (行主序)
+    const m = new Float64Array(16);
+    m[0]=cosY*cosZ*s.x; m[1]=cosY*sinZ*s.x; m[2]=-sinY*s.x; m[3]=0;
+    m[4]=(sinX*sinY*cosZ-cosX*sinZ)*s.y; m[5]=(sinX*sinY*sinZ+cosX*cosZ)*s.y; m[6]=sinX*cosY*s.y; m[7]=0;
+    m[8]=(cosX*sinY*cosZ+sinX*sinZ)*s.z; m[9]=(cosX*sinY*sinZ-sinX*cosZ)*s.z; m[10]=cosX*cosY*s.z; m[11]=0;
+    m[12]=t.x; m[13]=t.y; m[14]=t.z; m[15]=1;
+    if (this.parent) {
+      const pm = this.parent.getWorldMatrix();
+      const r2 = new Float64Array(16);
+      for (let i=0;i<4;i++) for (let j=0;j<4;j++) { let s2=0; for (let k=0;k<4;k++) s2+=pm[i*4+k]*m[k*4+j]; r2[i*4+j]=s2; }
+      return r2;
+    }
+    return m;
+  }
+  find(name) {
+    if (this.name === name) return this;
+    for (const c of this.children) { const r = c.find(name); if (r) return r; }
+    return null;
+  }
+  traverse(fn) { fn(this); for (const c of this.children) c.traverse(fn); }
+}
+const sceneRoot = new SceneNode('root', 'group');
+
+// ---- 0.3 PBR 材质库 (12种) ----
+const PBR_MATERIALS = [
+  {name:'metal_blue',    bc:[0.3,0.4,0.9], metal:0.85, rough:0.25, emissive:[0,0,0],       ei:0},
+  {name:'metal_gold',    bc:[0.9,0.7,0.2], metal:0.90, rough:0.20, emissive:[0.02,0.01,0], ei:0.02},
+  {name:'plastic_white', bc:[0.85,0.85,0.9],metal:0.05, rough:0.35, emissive:[0,0,0],      ei:0},
+  {name:'rubber_dark',   bc:[0.15,0.15,0.18],metal:0.0, rough:0.85, emissive:[0,0,0],     ei:0},
+  {name:'glass_blue',    bc:[0.2,0.3,0.6], metal:0.0, rough:0.05, emissive:[0,0,0],        ei:0},
+  {name:'emissive_cyan', bc:[0,0.5,0.8],   metal:0.0, rough:0.4, emissive:[0.1,0.5,0.8],   ei:0.5},
+  {name:'terrain',       bc:[0.3,0.6,0.15],metal:0.05, rough:0.75, emissive:[0,0,0],       ei:0},
+  {name:'stone',         bc:[0.4,0.38,0.35],metal:0.15, rough:0.7, emissive:[0,0,0],       ei:0},
+  {name:'lava',          bc:[0.9,0.2,0.05],metal:0.1, rough:0.6, emissive:[0.9,0.3,0.05],  ei:0.8},
+  {name:'ice',           bc:[0.6,0.8,0.95],metal:0.0, rough:0.05, emissive:[0,0.1,0.3],     ei:0.1},
+  {name:'wood',          bc:[0.5,0.35,0.2],metal:0.0, rough:0.8, emissive:[0,0,0],         ei:0},
+  {name:'neon_green',    bc:[0.1,0.9,0.3], metal:0.2, rough:0.3, emissive:[0.05,0.5,0.15], ei:0.4}
+];
+function getPBRMaterial(idx) {
+  const m = PBR_MATERIALS[idx % PBR_MATERIALS.length];
+  return new THREE.MeshPhysicalMaterial({
+    color: new THREE.Color(m.bc[0], m.bc[1], m.bc[2]),
+    metalness: m.metal, roughness: m.rough,
+    emissive: new THREE.Color(m.emissive[0], m.emissive[1], m.emissive[2]),
+    emissiveIntensity: m.ei,
+    clearcoat: 0.2, clearcoatRoughness: 0.3
+  });
+}
+
+// ---- 0.4 光照系统 (方向/点/聚光) ----
+class LightSystem {
+  constructor(scene) {
+    this.scene = scene;
+    this.lights = [];
+    this.dirLight = new THREE.DirectionalLight(0xffffff, 1.8);
+    this.dirLight.position.set(8,12,6);
+    this.dirLight.castShadow = true;
+    this.dirLight.shadow.mapSize.set(2048,2048);
+    scene.add(this.dirLight);
+    this.fillLight = new THREE.DirectionalLight(0xaabbff, 0.4);
+    this.fillLight.position.set(-5,3,-5);
+    scene.add(this.fillLight);
+    this.hemiLight = new THREE.HemisphereLight(0xaabbdd, 0x998877, 0.4);
+    scene.add(this.hemiLight);
+    this.spotLight = new THREE.SpotLight(0xff8844, 0.3);
+    this.spotLight.position.set(0,5,0);
+    this.spotLight.angle = 0.6;
+    this.spotLight.penumbra = 0.3;
+    this.spotLight.decay = 1;
+    this.spotLight.distance = 20;
+    scene.add(this.spotLight);
+    this.pointLight = new THREE.PointLight(0x4488ff, 0.2);
+    this.pointLight.position.set(-3,2,-4);
+    scene.add(this.pointLight);
+    this.lights.push(this.dirLight, this.fillLight, this.hemiLight, this.spotLight, this.pointLight);
+  }
+  updateAngle(angle) {
+    const r = 14;
+    this.dirLight.position.set(r*Math.cos(angle), 12, r*Math.sin(angle));
+  }
+}
+let lightSystem = null;
+
+// ---- 0.5 摄像机系统 ----
+class CameraSystem {
+  constructor(camera, controls) {
+    this.camera = camera; this.controls = controls;
+    this.mode = 'orbit'; // orbit|fps|top|side
+    this.defaultPos = new THREE.Vector3(5,3,5);
+  }
+  setMode(mode) {
+    this.mode = mode;
+    switch(mode) {
+      case 'orbit':
+        this.camera.position.copy(this.defaultPos);
+        this.controls.target.set(0,0,0);
+        break;
+      case 'fps':
+        this.camera.position.set(0,1.6,5);
+        this.controls.target.set(0,1.6,0);
+        break;
+      case 'top':
+        this.camera.position.set(0,8,0);
+        this.controls.target.set(0,0,0);
+        break;
+      case 'side':
+        this.camera.position.set(8,0,0);
+        this.controls.target.set(0,0,0);
+        break;
+    }
+    this.controls.update();
+  }
+  reset() {
+    this.camera.position.copy(this.defaultPos);
+    this.controls.target.set(0,0,0);
+    this.controls.update();
+  }
+}
+let camSystem = null;
+
+// ---- 0.6 输入系统 ----
+class InputSystem {
+  constructor() {
+    this.keys = {};
+    this.mouse = {x:0, y:0, dx:0, dy:0, buttons:[false,false,false]};
+    this.prevMouse = {x:0, y:0};
+    window.addEventListener('keydown', e => { this.keys[e.code] = true; });
+    window.addEventListener('keyup', e => { this.keys[e.code] = false; });
+    window.addEventListener('mousemove', e => {
+      this.mouse.dx = e.clientX - this.prevMouse.x;
+      this.mouse.dy = e.clientY - this.prevMouse.y;
+      this.prevMouse.x = e.clientX; this.prevMouse.y = e.clientY;
+      this.mouse.x = e.clientX; this.mouse.y = e.clientY;
+    });
+    window.addEventListener('mousedown', e => { this.mouse.buttons[e.button] = true; });
+    window.addEventListener('mouseup', e => { this.mouse.buttons[e.button] = false; });
+  }
+  isKeyDown(code) { return !!this.keys[code]; }
+  getMouseDelta() { const d={x:this.mouse.dx,y:this.mouse.dy}; this.mouse.dx=0; this.mouse.dy=0; return d; }
+}
+const inputSys = new InputSystem();
+
+// ---- 0.7 帧循环 (DeltaTime/FPS) ----
+class FrameLoop {
+  constructor() {
+    this.delta = 0; this.total = 0; this.frame = 0;
+    this.fps = 0; this.fpsTimer = 0; this.fpsCount = 0;
+    this.lastTime = performance.now();
+  }
+  update() {
+    const now = performance.now();
+    this.delta = (now - this.lastTime) / 1000;
+    this.total += this.delta;
+    this.frame++;
+    this.fpsTimer += this.delta;
+    this.fpsCount++;
+    if (this.fpsTimer >= 1.0) {
+      this.fps = this.fpsCount;
+      this.fpsCount = 0;
+      this.fpsTimer -= 1.0;
+    }
+    this.lastTime = now;
+    return this.delta;
+  }
+}
+const frameLoop = new FrameLoop();
+
+// ---- 0.8 后处理 (Bloom 简化版) ----
+class PostProcess {
+  constructor(renderer, scene, camera) {
+    this.renderer = renderer; this.scene = scene; this.camera = camera;
+    this.bloomIntensity = 0.3;
+    this.bloomEnabled = false;
+    this.toneMapping = THREE.ACESFilmicToneMapping;
+    this.exposure = 1.0;
+  }
+  setBloom(intensity) {
+    this.bloomIntensity = intensity;
+    this.bloomEnabled = intensity > 0.01;
+  }
+  render() {
+    this.renderer.toneMapping = this.toneMapping;
+    this.renderer.toneMappingExposure = this.exposure;
+    this.renderer.render(this.scene, this.camera);
+  }
+}
+let postProcess = null;
+
+// ---- 0.16 SH 预计算表 (最大加速: 避免重复计算 realSH) ----
+// 对给定的网格 (Nt, Np), 一次性预计算所有 Y_l^m(θ_i, φ_j)
+// 加速比: 对 L=5, 65×65 网格, 从 ~100ms → ~5ms
+class SHPrecomputeTable {
+  constructor() { this.cache = null; this.key = ''; }
+  get(Nt, Np, Lmax) {
+    const key = `${Nt}_${Np}_${Lmax}`;
+    if (this.cache && this.key === key) return this.cache;
+    const total = (Nt+1)*(Np+1);
+    const dm = []; for (let l=0;l<=Lmax;l++) dm.push(2*l+1);
+    const totalCoeffs = dm.reduce((a,b)=>a+b, 0);
+    const table = new Float64Array(total * totalCoeffs);
+    for (let i=0;i<=Nt;i++) {
+      const theta = Math.PI * i / Nt;
+      for (let j=0;j<=Np;j++) {
+        const phi = 2 * Math.PI * j / Np;
+        const base = (i*(Np+1)+j) * totalCoeffs;
+        let ci = 0;
+        for (let l=0;l<=Lmax;l++) {
+          for (let m=-l;m<=l;m++) {
+            table[base + ci] = realSH(l, m, theta, phi);
+            ci++;
+          }
+        }
+      }
+    }
+    this.cache = table; this.key = key;
+    return table;
+  }
+  // 从预计算表快速获取 Y_l^m(i,j)
+  getSH(table, Np, Lmax, i, j, l, m) {
+    let ci = 0;
+    for (let ll=0;ll<l;ll++) ci += 2*ll+1;
+    ci += m + l;
+    const totalCoeffs = (Lmax+1)*(Lmax+1);
+    return table[(i*(Np+1)+j) * totalCoeffs + ci];
+  }
+}
+const shTable = new SHPrecomputeTable();
+
+// ---- 0.17 自适应分辨率加速 ----
+// 滑块拖动时用低分辨率, 松手后用高分辨率
+// D 越大分辨率自动降低
+function adaptiveRes() {
+  const D = getSlider('slider-dim');
+  if (fastMode) return D > 20 ? 16 : 24;
+  if (D > 100) return 16;
+  if (D > 50) return 24;
+  if (D > 20) return 48;
+  return 64;
+}
+function adaptiveN() {
+  const D = getSlider('slider-dim');
+  if (fastMode) return D > 20 ? 200 : 400;
+  if (D > 100) return 400;
+  if (D > 50) return 800;
+  if (D > 20) return 1500;
+  return 2000;
+}
+function adaptiveTerrainSz() {
+  const D = getSlider('slider-dim');
+  if (fastMode) return D > 20 ? 16 : 24;
+  if (D > 100) return 20;
+  if (D > 50) return 32;
+  if (D > 20) return 48;
+  return 64;
+}
+
+// ---- 0.18 快速球谐展开 (带预计算表) ----
+// 对网格几何生成, 用预计算表替代逐点 realSH 调用
+function fastSpectralExpand(positions, colors, Nt, Np, Lmax, coeffs, offsetX, colorOffset, colorScale) {
+  const table = shTable.get(Nt, Np, Lmax);
+  const totalCoeffs = (Lmax+1)*(Lmax+1);
+  for (let i=0;i<=Nt;i++) {
+    const theta = Math.PI * i / Nt;
+    for (let j=0;j<=Np;j++) {
+      const phi = 2 * Math.PI * j / Np;
+      const base = (i*(Np+1)+j) * totalCoeffs;
+      let r = 0.3;
+      for (let ci=0;ci<totalCoeffs;ci++) r += coeffs[ci] * table[base + ci];
+      r = Math.max(r, 0.05);
+      const idx = i*(Np+1)+j;
+      positions[3*idx] = r * Math.sin(theta) * Math.cos(phi) + (offsetX||0);
+      positions[3*idx+1] = r * Math.cos(theta);
+      positions[3*idx+2] = r * Math.sin(theta) * Math.sin(phi);
+      if (colors) {
+        const t = Math.min(1, Math.max(0, (r - (colorOffset||0.3)) / (colorScale||1.0)));
+        const rgb = colorMap(t);
+        colors[3*idx] = rgb[0]; colors[3*idx+1] = rgb[1]; colors[3*idx+2] = rgb[2];
+      }
+    }
+  }
+}
+// ---- 0.9 碰撞检测 (AABB/射线拾取) ----
+class CollisionSystem {
+  constructor() { this.objects = []; }
+  add(name, min, max) { this.objects.push({name, min, max}); }
+  rayPick(origin, dir) {
+    let closest = Infinity, hitObj = null;
+    for (const obj of this.objects) {
+      const t = this._rayAABB(origin, dir, obj.min, obj.max);
+      if (t >= 0 && t < closest) { closest = t; hitObj = obj; }
+    }
+    return hitObj ? {name: hitObj.name, t: closest} : null;
+  }
+  _rayAABB(origin, dir, min, max) {
+    let tmin = -Infinity, tmax = Infinity;
+    for (let i = 0; i < 3; i++) {
+      const invD = 1 / (dir[i] || 1e-12);
+      let t1 = (min[i] - origin[i]) * invD;
+      let t2 = (max[i] - origin[i]) * invD;
+      if (t1 > t2) { const tmp = t1; t1 = t2; t2 = tmp; }
+      tmin = Math.max(tmin, t1);
+      tmax = Math.min(tmax, t2);
+      if (tmin > tmax) return -1;
+    }
+    return tmin >= 0 ? tmin : -1;
+  }
+}
+const collisionSys = new CollisionSystem();
+
+// ---- 0.11 序列化 ----
+class Serializer {
+  static save(scene, name) {
+    const data = { name, version: '6.3', timestamp: Date.now(), nodes: [] };
+    scene.traverse(n => {
+      if (n.type === 'empty') return;
+      data.nodes.push({
+        name: n.name, type: n.type,
+        pos: n.position, rot: n.rotation, scale: n.scale,
+        visible: n.visible, matIdx: n.matIdx
+      });
+    });
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], {type:'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = name + '_scene.json'; a.click();
+    URL.revokeObjectURL(url);
+    return json;
+  }
+  static load(json) {
+    try {
+      const data = JSON.parse(json);
+      console.log(`[序列化] 加载场景: ${data.name} v${data.version}`);
+      return data;
+    } catch(e) { console.error('[序列化] 加载失败:', e); return null; }
+  }
+}
+
+// ---- 0.12 配置系统 (INI 持久化) ----
+class ConfigSystem {
+  constructor() { this.config = {}; }
+  set(key, val) { this.config[key] = val; }
+  get(key, def) { return this.config[key] !== undefined ? this.config[key] : def; }
+  save(name) {
+    let ini = `; DGK Engine Config v6.3\n; Saved: ${new Date().toISOString()}\n\n`;
+    for (const [k,v] of Object.entries(this.config))
+      ini += `${k}=${v}\n`;
+    const blob = new Blob([ini], {type:'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (name||'dgk_config') + '.ini'; a.click();
+    URL.revokeObjectURL(url);
+    return ini;
+  }
+  load(text) {
+    for (const line of text.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith(';')) continue;
+      const eq = trimmed.indexOf('=');
+      if (eq > 0) this.config[trimmed.substring(0,eq).trim()] = trimmed.substring(eq+1).trim();
+    }
+  }
+}
+const configSys = new ConfigSystem();
+
+// ---- 0.13 动画系统 ----
+class AnimationSystem {
+  constructor() {
+    this.animations = [];
+    this.time = 0;
+  }
+  add(target, prop, from, to, duration, easing) {
+    this.animations.push({target, prop, from, to, duration, easing: easing||'linear', elapsed:0, done:false});
+  }
+  update(dt) {
+    this.time += dt;
+    for (const a of this.animations) {
+      if (a.done) continue;
+      a.elapsed += dt;
+      const t = Math.min(1, a.elapsed / a.duration);
+      const et = this._ease(t, a.easing);
+      a.target[a.prop] = a.from + (a.to - a.from) * et;
+      if (t >= 1) a.done = true;
+    }
+    this.animations = this.animations.filter(a => !a.done);
+  }
+  _ease(t, type) {
+    switch(type) {
+      case 'smoothstep': return t*t*(3-2*t);
+      case 'easeIn': return t*t;
+      case 'easeOut': return t*(2-t);
+      case 'easeInOut': return t<0.5?2*t*t:-1+(4-2*t)*t;
+      case 'bounce': {
+        let p = 0.3; return Math.pow(2,-10*t)*Math.sin((t-p/4)*(2*Math.PI)/p)+1;
+      }
+      default: return t;
+    }
+  }
+}
+const animSys = new AnimationSystem();
+
+// ---- 0.14 控制台 ----
+class Console {
+  constructor() {
+    this.element = document.getElementById('console-content');
+    this.lines = [];
+    this.maxLines = 100;
+  }
+  log(msg, level='info') {
+    this.lines.push({msg, level, time: new Date().toLocaleTimeString()});
+    if (this.lines.length > this.maxLines) this.lines.shift();
+    this._render();
+  }
+  _render() {
+    this.element.innerHTML = this.lines.map(l =>
+      `<div class="console-line ${l.level}">[${l.time}] ${l.msg}</div>`
+    ).join('');
+    this.element.scrollTop = this.element.scrollHeight;
+  }
+}
+const consoleSys = new Console();
+
+// ---- 0.15 Debug 控制台面板 ----
+function toggleConsole() {
+  const panel = document.getElementById('console-panel');
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+}
+
+// ============================================================
+// 第一部分：数学核心库
+// ============================================================
+
+function lanczosGamma(x) {
+  const g = 7;
+  const c = [0.99999999999980993, 676.5203681218851, -1259.1392167224028,
+    771.32342877765313, -176.61502916214059, 12.507343278686905,
+    -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7];
+  if (x < 0.5) return Math.PI / (Math.sin(Math.PI * x) * lanczosGamma(1 - x));
+  x -= 1;
+  let a = c[0];
+  const t = x + g + 0.5;
+  for (let i = 1; i < g + 2; i++) a += c[i] / (x + i);
+  return Math.sqrt(2 * Math.PI) * Math.pow(t, x + 0.5) * Math.exp(-t) * a;
+}
+function omega_d(d) { return 2 * Math.pow(Math.PI, d/2) / lanczosGamma(d/2); }
+function binom(n, k) {
+  if (k < 0 || k > n) return 0;
+  if (k === 0 || k === n) return 1;
+  k = Math.min(k, n - k);
+  let r = 1;
+  for (let i = 0; i < k; i++) r = r * (n - i) / (i + 1);
+  return r;
+}
+function Ndl(d, l) {
+  if (l === 0) return 1;
+  const num = 2*l + d - 2;
+  const den = l + d - 2;
+  return Math.round(num / den * binom(l + d - 2, d - 2));
+}
+function R_d(d) {
+  if (d > 170) return Math.exp(ln_R_d(d));
+  return Math.pow(Math.PI, d/2) / (2 * d * d * lanczosGamma(d/2));
+}
+function ln_R_d(d) {
+  const halfD = d / 2;
+  const lnGamma = (halfD - 0.5) * Math.log(halfD) - halfD + 0.5 * Math.log(2 * Math.PI);
+  return halfD * Math.log(Math.PI) - Math.log(2) - 2 * Math.log(d) - lnGamma;
+}
+function gegenbauer(n, alpha, x) {
+  if (n === 0) return 1;
+  if (n === 1) return 2 * alpha * x;
+  let c0 = 1, c1 = 2 * alpha * x;
+  for (let k = 1; k < n; k++) {
+    const c2 = (2*(k+alpha)*x*c1 - (k+2*alpha-1)*c0) / (k+1);
+    c0 = c1; c1 = c2;
+  }
+  return c1;
+}
+function legendre(l, m, x) {
+  x = Math.max(-1, Math.min(1, x));
+  const am = Math.abs(m);
+  let pmm = 1;
+  if (am > 0) { const s = Math.sqrt((1-x)*(1+x)); let f = 1; for (let i = 1; i <= am; i++) { pmm *= (-f)*s; f += 2; } }
+  if (l === am) return pmm;
+  let pmmp1 = x * (2*am+1) * pmm;
+  if (l === am+1) return pmmp1;
+  let pl = pmmp1, plm1 = pmm;
+  for (let k = am+1; k < l; k++) { const pn = ((2*k+1)*x*pl - (k+am)*plm1) / (k-am+1); plm1 = pl; pl = pn; }
+  return pl;
+}
+function factorial(n) { let r = 1; for (let i = 2; i <= n; i++) r *= i; return r; }
+function realSH(l, m, theta, phi) {
+  const am = Math.abs(m);
+  const norm = Math.sqrt((2*l+1)/(4*Math.PI) * factorial(l-am)/factorial(l+am));
+  const P = legendre(l, am, Math.cos(theta));
+  const ang = (m > 0) ? Math.sqrt(2)*Math.cos(am*phi) : (m === 0) ? 1.0 : Math.sqrt(2)*Math.sin(am*phi);
+  return norm * P * ang;
+}
+function ndAlpha(N) { return (N - 2) / 2; }
+function ndDegeneracy(N, l) {
+  if (l === 0) return 1;
+  if (N > 10 || l > 3) { let approx = 1; for (let i = 0; i < l; i++) approx *= (N + i) / (i + 1); return Math.min(Math.round(approx), 500); }
+  const num = 2*l + N - 2;
+  const den = l + N - 2;
+  return Math.min(Math.round(num / den * binom(l + N - 2, N - 2)), 500);
+}
+function ndGegenbauer(l, alpha, t) {
+  if (l === 0) return 1;
+  if (l === 1) return 2 * alpha * t;
+  let g0 = 1, g1 = 2 * alpha * t;
+  for (let k = 1; k < l; k++) { const g2 = (2*(k+alpha)*t*g1 - (k+2*alpha-1)*g0) / (k+1); g0 = g1; g1 = g2; }
+  return g1;
+}
+function ndSurfaceArea(N) { return omega_d(N); }
+function ndSH(N, l, m, x) {
+  const alpha = ndAlpha(N);
+  const deg = ndDegeneracy(N, l);
+  const area = ndSurfaceArea(N);
+  const norm = Math.sqrt(deg / area);
+  const theta = Math.PI * m / Math.max(1, deg - 1);
+  const phi = 2 * Math.PI * (m * 1.618033988749895) % (2 * Math.PI);
+  const e_ref = new Float64Array(N);
+  e_ref[0] = Math.sin(theta) * Math.cos(phi);
+  e_ref[1] = Math.sin(theta) * Math.sin(phi);
+  e_ref[2] = Math.cos(theta);
+  for (let d = 3; d < N; d++) e_ref[d] = Math.cos(theta * (d + 1)) * Math.sin(phi * (d * 0.5));
+  let en = 0; for (let d = 0; d < N; d++) en += e_ref[d] * e_ref[d];
+  en = Math.sqrt(en); for (let d = 0; d < N; d++) e_ref[d] /= en;
+  let dot = 0; for (let d = 0; d < N; d++) dot += x[d] * e_ref[d];
+  dot = Math.max(-1, Math.min(1, dot));
+  return norm * ndGegenbauer(l, alpha, dot);
+}
+function ndRandomPoint(N) {
+  const actualN = Math.min(N, 100);
+  const p = new Float64Array(N);
+  let n2 = 0;
+  for (let d = 0; d < actualN; d++) { const u1 = rng(), u2 = rng(); const r = Math.sqrt(-2 * Math.log(u1 + 1e-30)); const theta = 2 * Math.PI * u2; p[d] = r * Math.cos(theta); n2 += p[d] * p[d]; }
+  const n = Math.sqrt(n2); for (let d = 0; d < actualN; d++) p[d] /= n;
+  return p;
+}
+function ndEmbed(x3d, y3d, z3d, N) {
+  const maxD = Math.min(N, 100);
+  const p = new Float64Array(N);
+  const r = Math.sqrt(x3d*x3d + y3d*y3d + z3d*z3d);
+  if (r < 1e-12) { p[0] = 1; return p; }
+  p[0] = x3d / r; p[1] = y3d / r; p[2] = z3d / r;
+  const theta1 = Math.acos(p[2]);
+  let sinProd = Math.sin(theta1);
+  for (let d = 3; d < maxD; d++) { const angle = 2 * Math.PI * rng(); p[d] = sinProd * Math.cos(angle); sinProd *= Math.sin(angle); }
+  let nrm = 0; for (let d = 0; d < maxD; d++) nrm += p[d] * p[d];
+  nrm = Math.sqrt(nrm); for (let d = 0; d < maxD; d++) p[d] /= nrm;
+  return p;
+}
+function ndDot(a, b) { let s = 0; const n = Math.min(a.length, b.length); for (let i = 0; i < n; i++) s += a[i] * b[i]; return s; }
+function embed_32d(x, y, z) { return ndEmbed(x, y, z, getSlider('slider-dim')); }
+function rotateND(coords, D, i, j, angle) { const c = Math.cos(angle), s = Math.sin(angle); const xi = coords[i], xj = coords[j]; coords[i] = c * xi - s * xj; coords[j] = s * xi + c * xj; }
+function rotateND_multi(coords, D, angles) {
+  const actualD = coords.length;
+  const planes = [[0,3],[1,4],[2,5],[0,6],[1,7],[3,8],[4,9],[5,10]];
+  for (let p = 0; p < planes.length && p < angles.length; p++) { if (planes[p][0] < actualD && planes[p][1] < actualD) rotateND(coords, actualD, planes[p][0], planes[p][1], angles[p]); }
+}
+function parsevalTrunc(powerSpec, lMax, eps) {
+  let total = 0; for (let l = 0; l <= lMax; l++) total += powerSpec[l];
+  if (total < 1e-30) return 0;
+  let cum = 0; for (let l = 0; l <= lMax; l++) { cum += powerSpec[l]; if (cum / total > 1 - eps) return l; }
+  return lMax;
+}
+function wignerD(l, m, alpha, beta, gamma_angle) { const d_beta = legendre(l, m, Math.cos(beta)); return d_beta * Math.cos(m * alpha + m * gamma_angle); }
+
+// ============================================================
+// 第二部分：7 大加速算法
+// ============================================================
+
+// ---- 2.1 TeaCache 球谐时间缓存 ----
+class TeaCache {
+  constructor(maxEdges, lMax, eps) {
+    this.cap = maxEdges; this.eps = eps; this.hit = 0; this.miss = 0;
+    this.lMax = lMax;
+    this.keyValid = new Int8Array(maxEdges);
+    this.thPrev = new Float64Array(maxEdges);
+    this.phPrev = new Float64Array(maxEdges);
+    let dmTotal = 0; for (let l = 0; l <= lMax; l++) dmTotal += 2*l+1;
+    this.YCache = new Float64Array(maxEdges * dmTotal);
+  }
+  resetStats() { this.hit = 0; this.miss = 0; }
+  hitRate() { const t = this.hit + this.miss; return t > 0 ? this.hit / t : 0; }
+  forward(N, inC, outC, lMax, feat, ei, ea, ne, W, radial, out) {
+    out.fill(0);
+    const yoff = [0]; for (let l = 1; l <= lMax && l < 16; l++) yoff[l] = yoff[l-1] + (2*(l-1)+1);
+    for (let e = 0; e < ne; e++) {
+      const src = ei[2*e], dst = ei[2*e+1];
+      const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+      const rw = Math.exp(-d*d/2) * (radial[0]||1);
+      const YcOffset = e * (yoff[lMax] + 2*lMax+1);
+      const hit = this.keyValid[e] && Math.abs(th - this.thPrev[e]) < this.eps && Math.abs(ph - this.phPrev[e]) < this.eps;
+      if (hit) { this.hit++; }
+      else {
+        this.miss++;
+        for (let l = 0; l <= lMax; l++)
+          for (let m = -l; m <= l; m++)
+            this.YCache[YcOffset + yoff[l] + m + l] = realSH(l, m, th, ph);
+        this.thPrev[e] = th; this.phPrev[e] = ph; this.keyValid[e] = 1;
+      }
+      for (let l = 0; l <= lMax; l++) {
+        const dm = 2*l+1;
+        for (let oc = 0; oc < outC && oc < 64; oc++) {
+          let msg = 0;
+          for (let mi = 0; mi < dm && mi < 32; mi++) {
+            let wgt = 0;
+            for (let ic = 0; ic < inC; ic++) wgt += feat[src*inC+ic] * W[ic*outC*dm + oc*dm + mi];
+            msg += wgt * this.YCache[YcOffset + yoff[l] + mi];
+          }
+          out[dst*outC+oc] += msg * rw;
+        }
+      }
+    }
+  }
+}
+
+// ---- 2.2 蒸馏 Student ----
+class Distill {
+  constructor(lMaxT, eps) { this.lMaxT = lMaxT; this.lMaxS = lMaxT; this.eps = eps; this.loss = 0; this.calls = 0; }
+  adaptiveL(powerSpec, lMax) { const drop = 1 - this.eps; this.lMaxS = parsevalTrunc(powerSpec, lMax, drop); return this.lMaxS; }
+  forward(N, inC, outC, feat, ei, ea, ne, W, radial, out) {
+    // 用截断阶
+    const lMax = this.lMaxS;
+    out.fill(0);
+    for (let e = 0; e < ne; e++) {
+      const src = ei[2*e], dst = ei[2*e+1];
+      const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+      const rw = Math.exp(-d*d/2) * (radial[0]||1);
+      for (let l = 0; l <= lMax; l++) {
+        const dm = 2*l+1; const Y = [];
+        for (let m = -l; m <= l; m++) Y.push(realSH(l, m, th, ph));
+        for (let oc = 0; oc < outC && oc < 64; oc++) {
+          let msg = 0;
+          for (let mi = 0; mi < dm && mi < 32; mi++) {
+            let wgt = 0;
+            for (let ic = 0; ic < inC; ic++) wgt += feat[src*inC+ic] * W[ic*outC*dm + oc*dm + mi];
+            msg += wgt * Y[mi];
+          }
+          out[dst*outC+oc] += msg * rw;
+        }
+      }
+    }
+    this.calls++;
+  }
+  computeLoss(fT, fS) { let l = 0; for (let i = 0; i < fT.length; i++) { const d = fT[i] - fS[i]; l += d*d; } this.loss = l / fT.length; return this.loss; }
+}
+
+// ---- 2.3 稀疏注意力 ----
+class SparseAttn {
+  constructor(d1, d2, ln, lm, lf, skip) { this.dNear=d1; this.dFar=d2; this.lNear=ln; this.lMid=lm; this.lFar=lf; this.skipProb=skip; this.edgesTotal=0; this.edgesSkipped=0; this.opsTotal=0; this.opsSaved=0; }
+  calibrate(ea, ne) {
+    if (ne <= 0) return;
+    const ds = []; for (let i = 0; i < ne; i++) ds.push(ea[3*i]);
+    ds.sort((a,b)=>a-b);
+    this.dNear = ds[Math.floor(ne/4)]; this.dFar = ds[Math.floor(3*ne/4)];
+  }
+  forward(N, inC, outC, lMax, feat, ei, ea, ne, W, radial, out) {
+    out.fill(0);
+    for (let e = 0; e < ne; e++) {
+      const src = ei[2*e], dst = ei[2*e+1];
+      const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+      const rw = Math.exp(-d*d/2) * (radial[0]||1);
+      this.edgesTotal++;
+      let lUse;
+      if (d < this.dNear) lUse = this.lNear;
+      else if (d < this.dFar) lUse = this.lMid;
+      else {
+        lUse = this.lFar;
+        if (this.skipProb > 0 && Math.random() < this.skipProb) { this.edgesSkipped++; continue; }
+      }
+      if (lUse > lMax) lUse = lMax;
+      this.opsTotal += lUse; this.opsSaved += (lMax - lUse);
+      for (let l = 0; l <= lUse; l++) {
+        const dm = 2*l+1; const Y = [];
+        for (let m = -l; m <= l; m++) Y.push(realSH(l, m, th, ph));
+        for (let oc = 0; oc < outC && oc < 64; oc++) {
+          let msg = 0;
+          for (let mi = 0; mi < dm && mi < 32; mi++) {
+            let wgt = 0;
+            for (let ic = 0; ic < inC; ic++) wgt += feat[src*inC+ic] * W[ic*outC*dm + oc*dm + mi];
+            msg += wgt * Y[mi];
+          }
+          out[dst*outC+oc] += msg * rw;
+        }
+      }
+    }
+  }
+  efficiency() { return this.opsTotal + this.opsSaved > 0 ? this.opsSaved / (this.opsTotal + this.opsSaved) : 0; }
+}
+
+// ---- 2.4 LCM 单步谱预测 ----
+class LCMSpec {
+  constructor(lFull, lSingle, alpha) { this.lFull=lFull; this.lSingle=Math.min(lSingle,lFull); this.alpha=alpha; this.residual=0; this.stepsSaved=0; }
+  forward(N, inC, outC, feat, ei, ea, ne, W, radial, out) {
+    out.fill(0);
+    const lMax = this.lSingle;
+    for (let e = 0; e < ne; e++) {
+      const src = ei[2*e], dst = ei[2*e+1];
+      const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+      const rw = Math.exp(-d*d/2) * (radial[0]||1);
+      for (let l = 0; l <= lMax; l++) {
+        const dm = 2*l+1; const Y = [];
+        for (let m = -l; m <= l; m++) Y.push(realSH(l, m, th, ph));
+        for (let oc = 0; oc < outC && oc < 64; oc++) {
+          let msg = 0;
+          for (let mi = 0; mi < dm && mi < 32; mi++) {
+            let wgt = 0;
+            for (let ic = 0; ic < inC; ic++) wgt += feat[src*inC+ic] * W[ic*outC*dm + oc*dm + mi];
+            msg += wgt * Y[mi];
+          }
+          out[dst*outC+oc] += msg * rw;
+        }
+      }
+    }
+    if (this.alpha > 0) { const g = 1 + this.alpha; for (let i = 0; i < out.length; i++) out[i] *= g; }
+    this.stepsSaved += (this.lFull - this.lSingle);
+  }
+}
+
+// ---- 2.5 Performer 线性球谐 ----
+class PerformerSH {
+  constructor(nFeatures, seed) {
+    this.k = nFeatures;
+    this.randW = new Float64Array(nFeatures * 3);
+    this.randB = new Float64Array(nFeatures);
+    let rng = seed || 1;
+    for (let i = 0; i < nFeatures*3; i++) { rng = (rng * 1103515245 + 12345) & 0x7fffffff; this.randW[i] = (rng / 16777216 - 0.5) * 2; }
+    for (let i = 0; i < nFeatures; i++) { rng = (rng * 1103515245 + 12345) & 0x7fffffff; this.randB[i] = (rng / 16777216) * 2 * Math.PI; }
+    this.flopsFull = 0; this.flopsLinear = 0;
+  }
+  feature(k, d, th, ph) { const dot = this.randW[k*3]*d + this.randW[k*3+1]*th + this.randW[k*3+2]*ph; return Math.cos(dot + this.randB[k]) / Math.sqrt(this.k); }
+  forward(N, inC, outC, lMax, feat, ei, ea, ne, W, radial, out) {
+    out.fill(0);
+    const k = this.k;
+    const agg = new Float64Array(N * k * inC);
+    for (let e = 0; e < ne; e++) {
+      const src = ei[2*e], dst = ei[2*e+1];
+      const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+      const rw = Math.exp(-d*d/2) * (radial[0]||1);
+      for (let kk = 0; kk < k; kk++) {
+        const phiE = this.feature(kk, d, th, ph) * rw;
+        for (let ic = 0; ic < inC; ic++) agg[dst*k*inC + kk*inC + ic] += phiE * feat[src*inC+ic];
+      }
+      this.flopsFull += inC * 3;
+    }
+    this.flopsLinear += N * k * inC;
+    for (let dst = 0; dst < N; dst++) {
+      for (let oc = 0; oc < outC; oc++) {
+        let s = 0;
+        for (let kk = 0; kk < k; kk++)
+          for (let ic = 0; ic < inC; ic++)
+            s += agg[dst*k*inC + kk*inC + ic] * W[(ic % inC) * outC + oc];
+        out[dst*outC+oc] = s;
+      }
+    }
+    this.flopsLinear += N * k * inC * outC;
+  }
+  speedup() { return this.flopsFull > 0 ? this.flopsFull / Math.max(this.flopsLinear, 1) : 0; }
+}
+
+// ---- 2.6 H2O 三区域谱边缓存 ----
+class H2OSpectral {
+  constructor(cap, sinkSz, recentSz, decay) {
+    this.cap = cap; this.sinkSize = Math.min(sinkSz, cap/4|0); this.recentSize = Math.min(recentSz, cap/2|0);
+    this.heavySize = cap - this.sinkSize - this.recentSize;
+    if (this.heavySize < 0) this.heavySize = 0;
+    this.decay = decay;
+    this.importance = new Float64Array(cap);
+    this.active = new Int8Array(cap);
+    this.isSink = new Int8Array(cap);
+    for (let i = 0; i < this.sinkSize; i++) { this.isSink[i] = 1; this.active[i] = 1; }
+    this.totalEvicted = 0; this.totalUpdates = 0;
+  }
+  updateImportance(e, score) { if (e < 0 || e >= this.cap) return; this.importance[e] = this.importance[e] * this.decay + score; this.active[e] = 1; this.totalUpdates++; }
+  evict() {
+    let evicted = 0;
+    for (let i = this.sinkSize; i < this.cap; i++) {
+      if (this.active[i] && !this.isSink[i] && this.importance[i] < 1e-6) { this.active[i] = 0; evicted++; }
+    }
+    this.totalEvicted += evicted;
+    return evicted;
+  }
+  forward(N, inC, outC, lMax, feat, ei, ea, ne, W, radial, out) {
+    out.fill(0);
+    for (let e = 0; e < ne; e++) {
+      if (e < this.cap && !this.active[e]) continue;
+      const src = ei[2*e], dst = ei[2*e+1];
+      const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+      const rw = Math.exp(-d*d/2) * (radial[0]||1);
+      let msgNorm = 0;
+      for (let l = 0; l <= lMax; l++) {
+        const dm = 2*l+1; const Y = [];
+        for (let m = -l; m <= l; m++) Y.push(realSH(l, m, th, ph));
+        for (let oc = 0; oc < outC && oc < 64; oc++) {
+          let msg = 0;
+          for (let mi = 0; mi < dm && mi < 32; mi++) {
+            let wgt = 0;
+            for (let ic = 0; ic < inC; ic++) wgt += feat[src*inC+ic] * W[ic*outC*dm + oc*dm + mi];
+            msg += wgt * Y[mi];
+          }
+          out[dst*outC+oc] += msg * rw;
+          msgNorm += msg*msg;
+        }
+      }
+      this.updateImportance(e, Math.sqrt(msgNorm));
+    }
+  }
+  compressionRate() { let active = 0; for (let i = 0; i < this.cap; i++) if (this.active[i]) active++; return this.cap > 0 ? 1 - active/this.cap : 0; }
+}
+
+// ---- 2.7 CoMeT 门控谱记忆 ----
+class CoMeTSpectral {
+  constructor(outC, fifoSize, gateAlpha) {
+    this.outC = outC; this.fifoSize = fifoSize; this.fifoHead = 0; this.fifoCount = 0; this.gateAlpha = gateAlpha;
+    this.globalMem = new Float64Array(outC);
+    this.fifo = new Float64Array(fifoSize * outC);
+    this.writes = 0;
+  }
+  gate(h) {
+    let diff = 0; for (let i = 0; i < this.outC; i++) { const d = h[i] - this.globalMem[i]; diff += d*d; }
+    diff = Math.sqrt(diff);
+    const x = this.gateAlpha * (diff - 0.5);
+    return 1 / (1 + Math.exp(-x));
+  }
+  write(h) {
+    const g = this.gate(h);
+    for (let i = 0; i < this.outC; i++) this.globalMem[i] = (1 - g) * this.globalMem[i] + g * h[i];
+    for (let i = 0; i < this.outC; i++) this.fifo[this.fifoHead * this.outC + i] = h[i];
+    this.fifoHead = (this.fifoHead + 1) % this.fifoSize;
+    if (this.fifoCount < this.fifoSize) this.fifoCount++;
+    this.writes++;
+  }
+  read() {
+    const outG = new Float64Array(this.outC);
+    const outF = new Float64Array(this.outC);
+    for (let i = 0; i < this.outC; i++) outG[i] = this.globalMem[i];
+    for (let i = 0; i < this.fifoCount; i++) for (let j = 0; j < this.outC; j++) outF[j] += this.fifo[i*this.outC + j];
+    if (this.fifoCount > 0) for (let j = 0; j < this.outC; j++) outF[j] /= this.fifoCount;
+    return {global: outG, fifoAvg: outF};
+  }
+  forward(N, inC, outC, lMax, feat, ei, ea, ne, W, radial, out) {
+    // 标准前向
+    out.fill(0);
+    for (let e = 0; e < ne; e++) {
+      const src = ei[2*e], dst = ei[2*e+1];
+      const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+      const rw = Math.exp(-d*d/2) * (radial[0]||1);
+      for (let l = 0; l <= lMax; l++) {
+        const dm = 2*l+1; const Y = [];
+        for (let m = -l; m <= l; m++) Y.push(realSH(l, m, th, ph));
+        for (let oc = 0; oc < outC && oc < 64; oc++) {
+          let msg = 0;
+          for (let mi = 0; mi < dm && mi < 32; mi++) {
+            let wgt = 0;
+            for (let ic = 0; ic < inC; ic++) wgt += feat[src*inC+ic] * W[ic*outC*dm + oc*dm + mi];
+            msg += wgt * Y[mi];
+          }
+          out[dst*outC+oc] += msg * rw;
+        }
+      }
+    }
+    // CoMeT 修正
+    const mem = this.read();
+    for (let i = 0; i < N; i++)
+      for (let j = 0; j < outC; j++)
+        out[i*outC+j] = 0.7*out[i*outC+j] + 0.2*mem.global[j] + 0.1*mem.fifoAvg[j];
+    this.write(out);
+  }
+}
+
+// ---- SHGNN 等变消息传递 (标准版) ----
+function equivariantForward(N, inC, outC, lMax, feat, ei, ea, ne, W, radial, out) {
+  out.fill(0);
+  for (let e = 0; e < ne; e++) {
+    const src = ei[2*e], dst = ei[2*e+1];
+    const d = ea[3*e], th = ea[3*e+1], ph = ea[3*e+2];
+    const rw = Math.exp(-d*d/2) * (radial[0]||1);
+    for (let l = 0; l <= lMax; l++) {
+      const dm = 2*l+1; const Y = [];
+      for (let m = -l; m <= l; m++) Y.push(realSH(l, m, th, ph));
+      for (let oc = 0; oc < outC && oc < 64; oc++) {
+        let msg = 0;
+        for (let mi = 0; mi < dm && mi < 32; mi++) {
+          let wgt = 0;
+          for (let ic = 0; ic < inC; ic++) wgt += feat[src*inC+ic] * W[ic*outC*dm + oc*dm + mi];
+          msg += wgt * Y[mi];
+        }
+        out[dst*outC+oc] += msg * rw;
+      }
+    }
+  }
+}
+
+// ============================================================
+// 第三部分：Three.js 场景初始化
+// ============================================================
+
+let scene, camera, renderer, controls, group;
+let currentMode = 'hypersphere';
+let mainLight, fillLight, rimLight, gridHelper;
+const toggles = { ao:false, shadow:false, specular:false, texture:false, rim:false, wireframe:false, rotate:true, rays:false, grid:true, fog:true, anim:false, loop:false, truend:false, ndrotate:true, ndslice:false, ndmultiview:false, bloom:false, console:false };
+let colorScheme = 'rainbow';
+let projAxes = { i: 0, j: 1, k: 2 };
+let seedState = 42;
+let animTime = 0;
+let animSpeed = 0.3;
+let animRAF = null;
+let fastMode = false;
+let rng = null;
+
+// 加速算法实例
+let teaCache = null;
+let distill = null;
+let sparseAttn = null;
+let lcmSpec = null;
+let performerSH = null;
+let h2oSpec = null;
+let cometSpec = null;
+const algoToggles = { teacache: true, distill: true, sparse: true, lcm: false, performer: false, h2o: false, comet: false };
+
+function seededRandom(seed) {
+  return function() {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+function initThree() {
+  const wrap = document.getElementById('canvas-wrap');
+  const w = wrap.clientWidth, h = wrap.clientHeight || w*9/16;
+
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xf5f5f7);
+  scene.fog = new THREE.FogExp2(0xf5f5f7, 0.018);
+
+  camera = new THREE.PerspectiveCamera(50, w/h, 0.1, 200);
+  camera.position.set(5, 3, 5);
+
+  renderer = new THREE.WebGLRenderer({ antialias:true, powerPreference:'high-performance' });
+  renderer.setSize(w, h);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.0;
+  wrap.appendChild(renderer.domElement);
+
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 1.2;
+
+  lightSystem = new LightSystem(scene);
+  camSystem = new CameraSystem(camera, controls);
+  postProcess = new PostProcess(renderer, scene, camera);
+
+  gridHelper = new THREE.GridHelper(20, 20, 0xcccccc, 0xdddddd);
+  gridHelper.position.y = -2.5;
+  scene.add(gridHelper);
+
+  group = new THREE.Group();
+  scene.add(group);
+
+  // 初始化加速算法
+  teaCache = new TeaCache(100, 4, 0.01);
+  distill = new Distill(4, 0.95);
+  sparseAttn = new SparseAttn(0.5, 2.0, 6, 3, 1, 0.3);
+  lcmSpec = new LCMSpec(4, 2, 0.5);
+  performerSH = new PerformerSH(32, 42);
+  h2oSpec = new H2OSpectral(100, 10, 30, 0.99);
+  cometSpec = new CoMeTSpectral(64, 10, 1.0);
+
+  // 注册资源
+  resMgr.add('scene_root', 'scene', sceneRoot, 'init');
+  resMgr.add('renderer', 'config', renderer, 'init');
+
+  // 注册碰撞体
+  collisionSys.add('world', [-5,-3,-5], [5,3,5]);
+
+  window.addEventListener('resize', onResize);
+  animate();
+}
+
+function onResize() {
+  const wrap = document.getElementById('canvas-wrap');
+  const w = wrap.clientWidth, h = wrap.clientHeight || w*9/16;
+  camera.aspect = w/h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  const dt = frameLoop.update();
+  controls.update();
+
+  // 更新动画系统
+  animSys.update(dt);
+
+  // 更新控制台显示
+  if (toggles.console) {
+    document.getElementById('console-panel').style.display = 'block';
+  }
+
+  // 更新 FPS 显示
+  document.getElementById('stat-fps').textContent = frameLoop.fps;
+
+  // 更新加速比 (基于当前帧率和目标60fps)
+  const targetFPS = 60;
+  const perfRatio = frameLoop.fps > 0 ? (frameLoop.fps / targetFPS) : 0;
+  const speedupStr = perfRatio >= 0.9 ? '流畅' : perfRatio >= 0.5 ? '一般' : '较慢';
+  document.getElementById('stat-speedup').textContent = `${frameLoop.fps}FPS ${speedupStr}`;
+
+  postProcess.render();
+}
+
+// ============================================================
+// 第四部分：几何生成器
+// ============================================================
+
+function clearGroup() {
+  while (group.children.length) {
+    const c = group.children[0];
+    if (c.geometry) c.geometry.dispose();
+    if (c.material) c.material.dispose();
+    group.remove(c);
+  }
+}
+
+function getSlider(id) { return parseFloat(document.getElementById(id).value); }
+
+function hslToRgb(h, s, l) {
+  let r, g, b;
+  if (s === 0) { r = g = b = l; }
+  else {
+    const hue2rgb = (p, q, t) => {
+      if (t < 0) t += 1; if (t > 1) t -= 1;
+      if (t < 1/6) return p + (q-p)*6*t;
+      if (t < 1/2) return q;
+      if (t < 2/3) return p + (q-p)*(2/3-t)*6;
+      return p;
+    };
+    const q = l < 0.5 ? l*(1+s) : l+s-l*s;
+    const p = 2*l - q;
+    r = hue2rgb(p, q, h+1/3);
+    g = hue2rgb(p, q, h);
+    b = hue2rgb(p, q, h-1/3);
+  }
+  return [r, g, b];
+}
+
+function colorMap(t, scheme) {
+  scheme = scheme || colorScheme;
+  t = Math.min(1, Math.max(0, t));
+  switch(scheme) {
+    case 'rainbow': return hslToRgb(t, 0.7, 0.5);
+    case 'thermal': return [Math.min(1, t*2.5), Math.min(1, t*1.5-0.3), Math.min(1, t*0.8-0.6)];
+    case 'ocean': return [Math.min(1, t*0.3), Math.min(1, 0.2+t*0.8), Math.min(1, 0.4+t*0.6)];
+    case 'grayscale': return [t, t, t];
+    case 'biome':
+      if (t > 0.85) return [0.9,0.9,1.0];
+      else if (t > 0.6) return [0.4,0.3,0.2];
+      else if (t > 0.35) return [0.2,0.5,0.1];
+      else if (t > 0.15) return [0.7,0.6,0.3];
+      else return [0.1,0.3,0.6];
+    default: return hslToRgb(t, 0.7, 0.5);
+  }
+}
+
+// ---- 4.1 高维流形投影 ----
+function buildHypersphere() {
+  clearGroup();
+  const t0 = performance.now();
+  const D = getSlider('slider-dim');
+  const L = getSlider('slider-lmax');
+  const alphaAtten = getSlider('slider-alpha') / 10000;
+  const fScale = getSlider('slider-f') / 100 * 5.02687653;
+  const hRot = getSlider('slider-hrot') * Math.PI / 180;
+  const N = adaptiveN();
+  const positions = new Float32Array(N * 3);
+  const colors = new Float32Array(N * 3);
+  const indices = [];
+  const maxCoeffs = (L+1)*(L+1);
+  const coeffs = new Float64Array(maxCoeffs);
+  const tAnim = getSlider('slider-time') / 100 * Math.PI * 2;
+  for (let l = 0; l <= L; l++) {
+    for (let m = -l; m <= l; m++) {
+      const idx = l*(l+1) + m;
+      const attenuation = Math.pow(alphaAtten, l);
+      const freqScale = Math.pow(1/fScale, l * 0.1);
+      coeffs[idx] = (rng() - 0.5) * 0.8 * attenuation * freqScale * (1 + 0.3 * Math.sin(tAnim + l));
+    }
+  }
+  coeffs[0] = Math.abs(coeffs[0]) + 0.5;
+
+  if (D <= 3) {
+    for (let i = 0; i < N; i++) {
+      const theta = Math.acos(1 - 2 * (i + 0.5) / N);
+      const phi = Math.PI * (1 + Math.sqrt(5)) * i;
+      let r = 1.0;
+      for (let l = 0; l <= L; l++) for (let m = -l; m <= l; m++) r += coeffs[l*(l+1)+m] * realSH(l, m, theta, phi);
+      r = Math.max(r, 0.1);
+      positions[3*i] = r * Math.sin(theta) * Math.cos(phi);
+      positions[3*i+1] = r * Math.cos(theta);
+      positions[3*i+2] = r * Math.sin(theta) * Math.sin(phi);
+      const t = Math.min(1, Math.max(0, (r - 0.2) / 1.5));
+      const rgb = colorMap(t);
+      colors[3*i] = rgb[0]; colors[3*i+1] = rgb[1]; colors[3*i+2] = rgb[2];
+    }
+  } else if (D === 4) {
+    for (let i = 0; i < N; i++) {
+      const u = 2 * Math.PI * i / N;
+      const v = 2 * Math.PI * ((i * 7) % N) / N;
+      let r = 1.0;
+      for (let l = 0; l <= L; l++) for (let m = -l; m <= l; m++) r += coeffs[l*(l+1)+m] * realSH(l, m, u, v) * 0.5;
+      r = Math.max(r, 0.3);
+      const R = 1.25 * r, a = 0.42 * r;
+      positions[3*i] = (R + a * Math.cos(v * 3)) * Math.cos(u);
+      positions[3*i+1] = (R + a * Math.cos(v * 3)) * Math.sin(u);
+      positions[3*i+2] = a * Math.sin(v * 3);
+      const t = Math.min(1, Math.max(0, 0.5 + 0.5 * Math.sin(u) * Math.cos(v)));
+      const rgb = colorMap(t);
+      colors[3*i] = rgb[0]; colors[3*i+1] = rgb[1]; colors[3*i+2] = rgb[2];
+    }
+  } else if (D >= 5 && D <= 7) {
+    const p = D, q = D + 2;
+    for (let i = 0; i < N; i++) {
+      const tk = 2 * Math.PI * i / N;
+      const Rk = Math.cos(q * tk) + 2.3;
+      const xk = Rk * Math.cos(p * tk), yk = Rk * Math.sin(p * tk), zk = -Math.sin(q * tk);
+      const theta = Math.acos(Math.max(-1, Math.min(1, yk / 3.8)));
+      const phi_k = Math.atan2(zk, xk);
+      let rp = 1.0;
+      for (let l = 0; l <= L; l++) for (let m = -l; m <= l; m++) rp += coeffs[l*(l+1)+m] * realSH(l, m, theta, phi_k) * 0.3;
+      const tubeR = 0.2 * rp;
+      const ut = 2 * Math.PI * (i * 13 % 80) / 80;
+      const nx = Math.cos(ut) * Math.cos(p * tk) - Math.sin(ut) * Math.sin(q * tk) * Math.sin(p * tk);
+      const ny = Math.cos(ut) * Math.sin(p * tk) + Math.sin(ut) * Math.sin(q * tk) * Math.cos(p * tk);
+      const nz = Math.sin(ut) * Math.cos(q * tk);
+      positions[3*i] = xk + tubeR * nx;
+      positions[3*i+1] = yk + tubeR * ny;
+      positions[3*i+2] = zk + tubeR * nz;
+      const colT = Math.min(1, Math.max(0, (tk / (2*Math.PI) + 0.15 * D) % 1));
+      const rgb = colorMap(colT);
+      colors[3*i] = rgb[0]; colors[3*i+1] = rgb[1]; colors[3*i+2] = rgb[2];
+    }
+  } else if (D >= 8 && D <= 15) {
+    const layers = Math.max(2, Math.floor(D / 2));
+    const ptsPerLayer = Math.floor(N / layers);
+    for (let i = 0; i < N; i++) {
+      const layerIdx = Math.min(layers - 1, Math.floor(i / ptsPerLayer));
+      const layerScale = 0.35 + (layerIdx / (layers - 1)) * 1.25;
+      const ii = i % ptsPerLayer;
+      const theta = Math.acos(1 - 2 * (ii + 0.5) / ptsPerLayer);
+      const phi = Math.PI * (1 + Math.sqrt(5)) * ii;
+      let r = layerScale;
+      for (let l = 0; l <= L; l++) for (let m = -l; m <= l; m++) r += coeffs[l*(l+1)+m] * realSH(l, m, theta, phi) * (0.12 + layerIdx * 0.04);
+      r = Math.max(r, 0.1);
+      positions[3*i] = r * Math.sin(theta) * Math.cos(phi);
+      positions[3*i+1] = r * Math.cos(theta);
+      positions[3*i+2] = r * Math.sin(theta) * Math.sin(phi);
+      const rgb = colorMap(layerIdx / (layers - 1));
+      colors[3*i] = rgb[0]; colors[3*i+1] = rgb[1]; colors[3*i+2] = rgb[2];
+    }
+  } else if (D >= 16 && D <= 32) {
+    for (let i = 0; i < N; i++) {
+      const theta = Math.acos(1 - 2 * (i + 0.5) / N);
+      const phi = Math.PI * (1 + Math.sqrt(5)) * i;
+      const x3d = Math.sin(theta) * Math.cos(phi), y3d = Math.cos(theta), z3d = Math.sin(theta) * Math.sin(phi);
+      const hdCoords = embed_32d(x3d, y3d, z3d);
+      const angles = [];
+      for (let p = 0; p < Math.min(8, Math.floor(D / 2)); p++) angles.push(hRot * (1 + p * 0.15) + tAnim * (0.1 + p * 0.02 * (D/32)));
+      rotateND_multi(hdCoords, D, angles);
+      let r = 0.5 + (D - 16) * 0.025;
+      const complexity = Math.min(1, (D - 15) / 17);
+      for (let l = 0; l <= L; l++) for (let m = -l; m <= l; m++) r += coeffs[l*(l+1)+m] * realSH(l, m, theta, phi) * (1 + complexity);
+      r = Math.max(r, 0.05);
+      let px = hdCoords[0], py = hdCoords[1], pz = hdCoords[2];
+      if (D > 20) { px += 0.45*hdCoords[3]+0.28*hdCoords[6]+0.12*hdCoords[9]; py += 0.45*hdCoords[4]+0.28*hdCoords[7]+0.12*hdCoords[10]; pz += 0.45*hdCoords[5]+0.28*hdCoords[8]+0.12*hdCoords[11]; }
+      else if (D > 15) { px += 0.35*hdCoords[3]+0.18*hdCoords[6]; py += 0.35*hdCoords[4]+0.18*hdCoords[7]; pz += 0.35*hdCoords[5]+0.18*hdCoords[8]; }
+      const pn = Math.sqrt(px*px+py*py+pz*pz);
+      if (pn > 1e-6) { px /= pn; py /= pn; pz /= pn; }
+      positions[3*i] = r * px * 2.0;
+      positions[3*i+1] = r * py * 2.0;
+      positions[3*i+2] = r * pz * 2.0;
+      const w = Math.abs(hdCoords[3]);
+      const t = Math.min(1, Math.max(0, complexity * 0.5 + w * 0.5));
+      const rgb = colorMap(t);
+      colors[3*i] = rgb[0]; colors[3*i+1] = rgb[1]; colors[3*i+2] = rgb[2];
+    }
+  } else {
+    const N2 = Math.min(N, 1500);
+    for (let i = 0; i < N2; i++) {
+      const theta = Math.acos(1 - 2 * (i + 0.5) / N2);
+      const phi = Math.PI * (1 + Math.sqrt(5)) * i;
+      const x3d = Math.sin(theta) * Math.cos(phi), y3d = Math.cos(theta), z3d = Math.sin(theta) * Math.sin(phi);
+      const hdCoords = embed_32d(x3d, y3d, z3d);
+      const angles = [];
+      for (let p = 0; p < Math.min(12, Math.floor(D / 3)); p++) angles.push(hRot * (1 + p * 0.12) + tAnim * (0.05 + p * 0.015 * (D/50)));
+      rotateND_multi(hdCoords, D, angles);
+      let r = 0.3 + (D - 32) * 0.01;
+      const complexity = Math.min(1.5, (D - 31) / 20);
+      for (let l = 0; l <= Math.min(L, 3); l++) for (let m = -l; m <= l; m++) r += coeffs[l*(l+1)+m] * realSH(l, m, theta, phi) * (1 + complexity);
+      r = Math.max(r, 0.05);
+      const mix = Math.min(0.6, 0.1 + D * 0.005);
+      let px = hdCoords[0], py = hdCoords[1], pz = hdCoords[2];
+      for (let ax = 3; ax < Math.min(D, 20); ax++) { const w_ax = mix * Math.sin(ax * 0.5) / (ax); px += w_ax * hdCoords[ax % D]; py += w_ax * hdCoords[(ax+1)%D]; pz += w_ax * hdCoords[(ax+2)%D]; }
+      const pn = Math.sqrt(px*px+py*py+pz*pz);
+      if (pn > 1e-6) { px /= pn; py /= pn; pz /= pn; }
+      positions[3*i] = r * px * 2.0;
+      positions[3*i+1] = r * py * 2.0;
+      positions[3*i+2] = r * pz * 2.0;
+      const t = Math.min(1, Math.max(0, complexity * 0.4 + Math.abs(hdCoords[3]) * 0.3));
+      const rgb = colorMap(t);
+      colors[3*i] = rgb[0]; colors[3*i+1] = rgb[1]; colors[3*i+2] = rgb[2];
+    }
+  }
+
+  for (let i = 0; i < N; i++) {
+    const i1 = (i + 1) % N, i2 = (i + 2) % N, i3 = Math.floor((i + N/2)) % N;
+    indices.push(i, i1, i3);
+    if (i % 3 === 0) indices.push(i1, i2, i3);
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  geo.setIndex(indices);
+  geo.computeVertexNormals();
+
+  const metal = getSlider('slider-metal') / 100;
+  const rough = getSlider('slider-rough') / 100;
+  const mat = new THREE.MeshPhysicalMaterial({
+    vertexColors: true, metalness: metal, roughness: rough,
+    clearcoat: toggles.specular ? 0.4 : 0, clearcoatRoughness: 0.2,
+    side: THREE.DoubleSide, emissive: 0x111122, emissiveIntensity: 0.05
+  });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.castShadow = toggles.shadow;
+  mesh.receiveShadow = true;
+  group.add(mesh);
+
+  if (toggles.wireframe) {
+    group.add(new THREE.LineSegments(new THREE.WireframeGeometry(geo),
+      new THREE.LineBasicMaterial({ color: 0x4B3FE3, transparent: true, opacity: 0.25 })));
+  }
+
+  const t1 = performance.now();
+  updateStats(N, indices.length / 3, D, t1 - t0);
+  const geoName = D<=3?'标准3D球面':D===4?'S³ Clifford双环面':D<=7?`Torus Knot (${D},${D+2})`:D<=15?`${Math.floor(D/2)}层嵌套球面`:D<=32?`${D}维毛球纤维`:`${D}维极限密度`;
+  updateHUD(`高维流形 S^${D-1} → 3D | ${geoName} | L=${L}`);
+}
+
+// ---- 4.2 球谐谱形状 (使用预计算表加速) ----
+function buildSpectral() {
+  clearGroup();
+  const t0 = performance.now();
+  const D = getSlider('slider-dim');
+  const L = getSlider('slider-lmax');
+  const alphaAtten = getSlider('slider-alpha') / 10000;
+  const fScale = getSlider('slider-f') / 100 * 5.02687653;
+  const tAnim = getSlider('slider-time') / 100 * Math.PI * 2;
+  const Nt = adaptiveRes(), Np = adaptiveRes();
+  const numVerts = (Nt+1)*(Np+1);
+  const totalCoeffs = (L+1)*(L+1);
+  const coeffs = new Float64Array(totalCoeffs);
+  for (let l = 0; l <= L; l++) for (let m = -l; m <= l; m++) {
+    const idx = l*(l+1)+m;
+    const att = Math.pow(alphaAtten, l);
+    const freq = Math.pow(1/fScale, l*0.1);
+    coeffs[idx] = (rng()-0.5)*0.6*att*freq*(1+0.2*Math.sin(tAnim+l*0.5));
+  }
+  coeffs[0] = Math.abs(coeffs[0]) + 0.5;
+  const positions = new Float32Array(numVerts*3);
+  const colors = new Float32Array(numVerts*3);
+  const indices = [];
+  // 用预计算表加速: 一次计算所有 Y_l^m, 替代逐点 realSH 调用
+  fastSpectralExpand(positions, colors, Nt, Np, L, coeffs, 0, 0.3, 1.0);
+  for (let i = 0; i < Nt; i++) for (let j = 0; j < Np; j++) {
+    const a=i*(Np+1)+j,b=a+1,c=(i+1)*(Np+1)+j,d=c+1;
+    indices.push(a,b,c,b,d,c);
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  geo.setIndex(indices); geo.computeVertexNormals();
+  const metal = getSlider('slider-metal')/100, rough = getSlider('slider-rough')/100;
+  const mesh = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:metal,roughness:rough,clearcoat:toggles.specular?0.3:0,side:THREE.DoubleSide}));
+  mesh.castShadow = toggles.shadow; mesh.receiveShadow = true; group.add(mesh);
+  if (toggles.wireframe) group.add(new THREE.LineSegments(new THREE.WireframeGeometry(geo), new THREE.LineBasicMaterial({color:0x4B3FE3,transparent:true,opacity:0.15})));
+  const t1 = performance.now();
+  updateStats(numVerts, indices.length/3, D, t1-t0);
+  updateHUD(`球谐谱形状 (预计算加速) | D=${D} | L=${L} | ${Nt}×${Np}`);
+}
+
+// ---- 4.3 Gegenbauer 谱地形 ----
+function buildTerrain() {
+  clearGroup();
+  const t0 = performance.now();
+  const D = getSlider('slider-dim');
+  const sz = adaptiveTerrainSz(), sc = 0.1;
+  const alpha = getSlider('slider-galpha') / 100;
+  const L = getSlider('slider-lmax');
+  const numCoeffs = Math.min(36, 6 + D);
+  const hc = []; for (let i = 0; i < numCoeffs; i++) hc.push((rng()-0.3)*0.5*(1+D*0.02));
+  function height(x,z) { const r = Math.sqrt(x*x+z*z); const t = x/Math.sqrt(r*r+1); let h=0; const maxL=Math.min(L,Math.floor(2+D*0.1)); for(let l=0;l<maxL;l++) for(let m=-l;m<=l;m++){const idx=l*(l+1)+m;if(idx<numCoeffs)h+=hc[idx]*gegenbauer(l,alpha,t)*Math.cos(m*Math.atan2(z,x));} return h*(2+D*0.05); }
+  const numVerts = sz*sz;
+  const positions = new Float32Array(numVerts*3), colors = new Float32Array(numVerts*3), indices = [];
+  for (let i = 0; i < sz; i++) for (let j = 0; j < sz; j++) { const x=(i-sz/2)*sc, z=(j-sz/2)*sc, y=height(x,z); const idx=i*sz+j; positions[3*idx]=x; positions[3*idx+1]=y; positions[3*idx+2]=z; const rgb=colorMap((y+2)/4); colors[3*idx]=rgb[0]; colors[3*idx+1]=rgb[1]; colors[3*idx+2]=rgb[2]; }
+  for (let i = 0; i < sz-1; i++) for (let j = 0; j < sz-1; j++) { const v0=i*sz+j,v1=i*sz+j+1,v2=(i+1)*sz+j,v3=(i+1)*sz+j+1; indices.push(v0,v1,v2,v1,v3,v2); }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  geo.setIndex(indices); geo.computeVertexNormals();
+  const metal = getSlider('slider-metal')/100, rough = getSlider('slider-rough')/100;
+  const mesh = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:metal*0.2,roughness:0.5+rough*0.4,clearcoat:toggles.specular?0.1:0,side:THREE.DoubleSide}));
+  mesh.castShadow = toggles.shadow; mesh.receiveShadow = true; group.add(mesh);
+  const t1 = performance.now();
+  updateStats(numVerts, indices.length/3, D, t1-t0);
+  updateHUD(`Gegenbauer 谱地形 | D=${D} | C_n^(α)(x) α=${alpha.toFixed(2)} | ${sz}×${sz}`);
+}
+
+// ---- 4.4 体素世界 ----
+function buildVoxel() {
+  clearGroup();
+  const t0 = performance.now();
+  const D = getSlider('slider-dim');
+  const W=16,H=8,Dp=16,cx=W/2,cz=Dp/2;
+  const cols={grass:0x4a8c3f,dirt:0x8b6914,stone:0x7a7a7a,water:0x1a6ba0,sand:0xc9b37a,snow:0xe8e8f0,wood:0x6b4226,leaf:0x2d7a2d};
+  function vh(x,z) { const hd=embed_32d(x,0,z); const angles=[0.1,0.2,0.15,0.08,0.3,0.12,0.25,0.18]; rotateND_multi(hd,D,angles); let h=hd[3]*1.5+hd[4]*0.8+hd[5]*0.5; const r=Math.sqrt(x*x+z*z); const t=x/Math.sqrt(r*r+1); h+=0.3*gegenbauer(2,1,t)*Math.cos(3*Math.atan2(z,x)); return h*2; }
+  const boxGeo = new THREE.BoxGeometry(0.38,0.38,0.38);
+  const metal=getSlider('slider-metal')/100, rough=getSlider('slider-rough')/100;
+  let vc=0;
+  for(let x=0;x<W;x++)for(let z=0;z<Dp;z++){const wx=(x-cx)*0.4,wz=(z-cz)*0.4,h=vh(wx,wz),hv=Math.floor(h+H/2),sy=Math.floor(H/2);for(let y=0;y<H;y++){const dy=y-H/2;let col=null;if(dy>hv){if(dy<=sy)col=cols.water;else continue;}else if(dy===hv){if(h>1.5)col=cols.stone;else if(h>0.8)col=cols.dirt;else col=cols.grass;}else if(dy>hv-2)col=cols.dirt;else col=cols.stone;if(col){const m=new THREE.Mesh(boxGeo,new THREE.MeshPhysicalMaterial({color:col,metalness:metal*0.15,roughness:0.6+rough*0.3}));m.position.set(wx,dy,wz);m.castShadow=toggles.shadow;group.add(m);vc++;}}
+    if(rng()<0.06&&h>0.3&&h<1.2){const gy=Math.floor(h+H/2);for(let ty=gy+1;ty<=gy+3&&ty<H;ty++){const m=new THREE.Mesh(boxGeo,new THREE.MeshPhysicalMaterial({color:cols.wood,metalness:metal*0.1,roughness:0.8}));m.position.set(wx,ty-H/2,wz);m.castShadow=toggles.shadow;group.add(m);vc++;}const ty=gy+4;if(ty<H){for(let dx=-1;dx<=1;dx++)for(let dz=-1;dz<=1;dz++){if(Math.abs(dx)===1&&Math.abs(dz)===1)continue;const m=new THREE.Mesh(boxGeo,new THREE.MeshPhysicalMaterial({color:cols.leaf,metalness:0,roughness:0.9}));m.position.set(wx+dx*0.4,ty-H/2,wz+dz*0.4);m.castShadow=toggles.shadow;group.add(m);vc++;}}}}
+  const t1=performance.now();
+  updateStats(vc,vc*2,D,t1-t0);
+  updateHUD(`高维嵌入体素世界 | S^${D-1}→体素 | ${W}×${H}×${Dp}`);
+}
+
+// ---- 4.5 SO(N) 等变性 ----
+function buildEquivariance() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), L=Math.min(3,Math.floor(D/2)), hRot=getSlider('slider-hrot')*Math.PI/180;
+  // 谱系数: D 控制系数数量和复杂度
+  const maxCoeffs = (L+1)*(L+1);
+  const coeffs=[]; for(let i=0;i<maxCoeffs;i++)coeffs.push((rng()-0.5)*0.5*(1+D*0.02)); coeffs[0]=Math.abs(coeffs[0])+0.4;
+  // SO(N) 旋转: D 控制旋转矩阵的维度和效果
+  // 对 SO(N), 旋转群维数 = D(D-1)/2, 高阶 l 受更多旋转平面影响
+  const coeffsRot=new Float64Array(maxCoeffs);
+  const numPlanes = Math.min(8, Math.floor(D/2));
+  for(let l=0;l<=L;l++)for(let m=-l;m<=l;m++){
+    const idx=l*(l+1)+m; let sum=0;
+    for(let mp=-l;mp<=l;mp++){
+      const idx2=l*(l+1)+mp;
+      // SO(N) Wigner D 近似: 多平面旋转叠加, D 越大旋转效果越强
+      let dWig = 0;
+      for(let p=0;p<numPlanes;p++){
+        const angle = hRot * (1 + p*0.3/D);
+        dWig += legendre(l, m, Math.cos(angle)) * Math.cos(mp*angle);
+      }
+      dWig /= numPlanes;
+      sum += dWig * coeffs[idx2];
+    }
+    coeffsRot[idx]=sum;
+  }
+  const Nt=adaptiveRes(),Np=adaptiveRes();
+  function buildHalf(cs,ox,emissiveColor){
+    const p=[],c=[],idx=[];
+    const table = shTable.get(Nt, Np, L);
+    const totalCoeffs = (L+1)*(L+1);
+    for(let i=0;i<=Nt;i++){const theta=Math.PI*i/(Nt-1);for(let j=0;j<=Np;j++){const phi=2*Math.PI*j/Np;let r=0.3;const base=(i*(Np+1)+j)*totalCoeffs;for(let ci=0;ci<totalCoeffs;ci++)r+=cs[ci]*table[base+ci];r=Math.max(r,0.05);p.push(r*Math.sin(theta)*Math.cos(phi)+ox,r*Math.cos(theta),r*Math.sin(theta)*Math.sin(phi));const t=(r-0.3)/0.8;if(emissiveColor){c.push(t,0.3,0.5);}else{c.push(0.5,0.5,t);}}}for(let i=0;i<Nt-1;i++)for(let j=0;j<Np;j++){const a=i*Np+j,b=i*Np+(j+1)%Np,c2=(i+1)*Np+j,d=(i+1)*Np+(j+1)%Np;idx.push(a,b,c2,b,d,c2);}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setAttribute('color',new THREE.Float32BufferAttribute(c,3));g.setIndex(idx);g.computeVertexNormals();return g;}
+  const metal=getSlider('slider-metal')/100, rough=getSlider('slider-rough')/100;
+  const mL=new THREE.Mesh(buildHalf(coeffs,-2.5,false),new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:metal,roughness:rough,clearcoat:toggles.specular?0.3:0,side:THREE.DoubleSide}));
+  mL.castShadow=toggles.shadow; group.add(mL);
+  const mR=new THREE.Mesh(buildHalf(coeffsRot,2.5,true),new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:metal,roughness:rough,clearcoat:toggles.specular?0.3:0,side:THREE.DoubleSide,emissive:0x440000,emissiveIntensity:0.05}));
+  mR.castShadow=toggles.shadow; group.add(mR);
+  const arrowGeo=new THREE.CylinderGeometry(0.03,0.03,1.5,8); arrowGeo.rotateZ(Math.PI/2);
+  group.add(new THREE.Mesh(arrowGeo,new THREE.MeshBasicMaterial({color:0x4B3FE3})));
+  const t1=performance.now();
+  updateStats(Nt*Np*2,(Nt-1)*Np*4,D,t1-t0);
+  updateHUD(`SO(N) 等变性 | D=${D} | L=${L} | ${numPlanes}个旋转平面 | 左:原始 右:Wigner D旋转(${Math.round(hRot*180/Math.PI)}°)`);
+}
+
+// ---- 4.6 格林函数 (自适应分辨率) ----
+function buildGreenFunction() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), L=getSlider('slider-lmax'), alpha=(D-2)/2;
+  const N=200, pos=new Float32Array(N*3), col=new Float32Array(N*3), idx=[];
+  const omega=omega_d(D);
+  for(let i=0;i<N;i++){const t=(i/(N-1))*2-1;let G=0;for(let l=1;l<=L;l++){const ndl=Ndl(D,l);G+=(ndl/omega)*(1/(l*(l+D-2)))*gegenbauer(l,alpha,t);}pos[3*i]=t*3;pos[3*i+1]=G*2;pos[3*i+2]=0;const n=(G+1)/2;col[3*i]=n;col[3*i+1]=0.3;col[3*i+2]=1-n;}
+  for(let i=0;i<N-1;i++)idx.push(i,i+1,i);
+  const lg=new THREE.BufferGeometry(); lg.setAttribute('position',new THREE.BufferAttribute(pos,3)); lg.setAttribute('color',new THREE.BufferAttribute(col,3));
+  group.add(new THREE.Line(lg,new THREE.LineBasicMaterial({vertexColors:true})));
+  const Nt=adaptiveRes(),Np=adaptiveRes();const sP=[],sC=[],sI=[];
+  for(let i=0;i<Nt;i++){const theta=Math.PI*i/(Nt-1);for(let j=0;j<Np;j++){const phi=2*Math.PI*j/Np;const xy=Math.cos(theta);let G=0;for(let l=1;l<=L;l++){const ndl=Ndl(D,l);G+=(ndl/omega)*(1/(l*(l+D-2)))*gegenbauer(l,alpha,xy);}const r=0.5+G*0.3;sP.push(r*Math.sin(theta)*Math.cos(phi),r*Math.cos(theta),r*Math.sin(theta)*Math.sin(phi));const n=Math.min(1,Math.max(0,(G+1)/2));sC.push(n,0.3,1-n);}}
+  for(let i=0;i<Nt-1;i++)for(let j=0;j<Np;j++){const a=i*Np+j,b=i*Np+(j+1)%Np,c=(i+1)*Np+j,d=(i+1)*Np+(j+1)%Np;sI.push(a,b,c,b,d,c);}
+  const sG=new THREE.BufferGeometry(); sG.setAttribute('position',new THREE.Float32BufferAttribute(sP,3)); sG.setAttribute('color',new THREE.Float32BufferAttribute(sC,3)); sG.setIndex(sI); sG.computeVertexNormals();
+  group.add(new THREE.Mesh(sG,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:getMatParams().metalness,roughness:getMatParams().roughness,side:THREE.DoubleSide,clearcoat:0.3,transparent:true,opacity:0.7})));
+  const t1=performance.now();
+  updateStats(N+Nt*Np,idx.length/3+sI.length/3,D,t1-t0);
+  updateHUD(`格林函数谱展开 | G_d(x·y) | d=${D} α=${alpha.toFixed(2)}`);
+}
+
+// ---- 4.7 Parseval 截断 (使用预计算表) ----
+function buildParseval() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), L=getSlider('slider-lmax'), alpha=(D-2)/2;
+  const ps=[0]; let tp=0; for(let l=1;l<=L;l++){const ndl=Ndl(D,l);const p=ndl/((l*(l+D-2))*(l*(l+D-2)));ps.push(p);tp+=p;}
+  let cum=0; const trL=parsevalTrunc(ps,L,0.01);
+  const barW=0.3;
+  for(let l=0;l<=L;l++){const h=Math.log10(1+ps[l]*1000)*0.5;const g=new THREE.BoxGeometry(barW,h,barW);const c=l<=trL?0x34C759:0xFF3B30;const m=new THREE.Mesh(g,new THREE.MeshPhysicalMaterial({color:c,metalness:0.3,roughness:0.4}));m.position.set((l-L/2)*(barW+0.1),h/2-1.5,-1);m.castShadow=toggles.shadow;group.add(m);}
+  const Nt=adaptiveRes(),Np=adaptiveRes();
+  const p2=[],c2=[],i2=[];
+  const table = shTable.get(Nt, Np, L);
+  const totalCoeffs = (L+1)*(L+1);
+  for(let i=0;i<=Nt;i++){const theta=Math.PI*i/(Nt-1);for(let j=0;j<=Np;j++){const phi=2*Math.PI*j/Np;let r=0.3;const base=(i*(Np+1)+j)*totalCoeffs;let ci=0;for(let l=1;l<=trL;l++){const ndl=Ndl(D,l);r+=ndl/(omega_d(D)*l*(l+D-2))*gegenbauer(l,alpha,Math.cos(theta))*0.5;ci+=2*l+1;}r=Math.max(r,0.05);p2.push(r*Math.sin(theta)*Math.cos(phi)+2.5,r*Math.cos(theta),r*Math.sin(theta)*Math.sin(phi));const rgb=colorMap((r-0.3)/0.8);c2.push(rgb[0],rgb[1],rgb[2]);}}
+  for(let i=0;i<Nt-1;i++)for(let j=0;j<Np;j++){const a=i*Np+j,b=i*Np+(j+1)%Np,c=(i+1)*Np+j,d=(i+1)*Np+(j+1)%Np;i2.push(a,b,c,b,d,c);}
+  const g2=new THREE.BufferGeometry(); g2.setAttribute('position',new THREE.Float32BufferAttribute(p2,3)); g2.setAttribute('color',new THREE.Float32BufferAttribute(c2,3)); g2.setIndex(i2); g2.computeVertexNormals();
+  group.add(new THREE.Mesh(g2,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:getMatParams().metalness,roughness:getMatParams().roughness,side:THREE.DoubleSide,clearcoat:toggles.specular?0.3:0})));
+  const t1=performance.now();
+  updateStats((L+1)+Nt*Np,(L+1)*2+(Nt-1)*Np*2,D,t1-t0);
+  updateHUD(`Parseval 截断 | L*=${trL} (ε=0.01) | 绿=保留 红=截断 | d=${D}`);
+}
+
+// ---- 4.8 Wigner D 旋转场 (使用预计算表) ----
+function buildWignerField() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), L=getSlider('slider-lmax'), hRot=getSlider('slider-hrot')*Math.PI/180, tAnim=getSlider('slider-time')/100*Math.PI*2;
+  const Nt=adaptiveRes(),Np=adaptiveRes();const p=[],c=[],idx=[];
+  const table = shTable.get(Nt, Np, L);
+  const totalCoeffs = (L+1)*(L+1);
+  for(let i=0;i<Nt;i++){const theta=Math.PI*i/(Nt-1);for(let j=0;j<Np;j++){const phi=2*Math.PI*j/Np;let rO=0.3,rR=0.3;const base=(i*(Np+1)+j)*totalCoeffs;let ci=0;for(let l=0;l<=L;l++)for(let m=-l;m<=l;m++){const coeff=(rng()-0.5)*0.3*Math.pow(0.1,l);const sh=table[base+ci];rO+=coeff*sh;const dWig=legendre(l,m,Math.cos(hRot+tAnim*0.1));rR+=coeff*dWig*sh*Math.cos(m*hRot);ci++;}rO=Math.max(rO,0.05);rR=Math.max(rR,0.05);const diff=Math.abs(rR-rO);p.push(rR*Math.sin(theta)*Math.cos(phi),rR*Math.cos(theta),rR*Math.sin(theta)*Math.sin(phi));const rgb=colorMap(Math.min(1,diff*5));c.push(rgb[0],rgb[1],rgb[2]);}}
+  for(let i=0;i<Nt-1;i++)for(let j=0;j<Np;j++){const a=i*Np+j,b=i*Np+(j+1)%Np,c2=(i+1)*Np+j,d=(i+1)*Np+(j+1)%Np;idx.push(a,b,c2,b,d,c2);}
+  const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(p,3)); g.setAttribute('color',new THREE.Float32BufferAttribute(c,3)); g.setIndex(idx); g.computeVertexNormals();
+  group.add(new THREE.Mesh(g,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:getMatParams().metalness,roughness:getMatParams().roughness,clearcoat:toggles.specular?0.3:0,side:THREE.DoubleSide})));
+  const t1=performance.now();
+  updateStats(Nt*Np,(Nt-1)*Np*2,D,t1-t0);
+  updateHUD(`Wigner D 旋转场 | D=${D} | β=${Math.round(hRot*180/Math.PI)}° | 颜色=差值`);
+}
+
+// ---- 4.9 谱系数热图 ----
+function buildHeatmap() {
+  clearGroup();
+  const t0=performance.now();
+  const L=getSlider('slider-lmax'), D=getSlider('slider-dim'), alphaAtten=getSlider('slider-alpha')/10000, fScale=getSlider('slider-f')/100*5.02687653, tAnim=getSlider('slider-time')/100*Math.PI*2;
+  const rows=L+1, cols=2*L+1, cellSize=0.4; const p=[],c=[],idx=[]; let vIdx=0;
+  for(let l=0;l<=L;l++)for(let mi=0;mi<cols;mi++){const m=mi-L;if(Math.abs(m)>l)continue;const att=Math.pow(alphaAtten,l),freq=Math.pow(1/fScale,l*0.1);const coeff=(rng()-0.5)*0.8*att*freq*(1+0.3*Math.sin(tAnim+l));const mag=Math.abs(coeff)*10;const x=(mi-cols/2)*cellSize,z=(l-rows/2)*cellSize,h=Math.min(mag,1.5);const x0=x-cellSize/2,x1=x+cellSize/2,z0=z-cellSize/2,z1=z+cellSize/2;p.push(x0,h,z0,x1,h,z0,x1,h,z1,x0,h,z1);const rgb=colorMap(Math.min(1,mag));for(let k=0;k<4;k++)c.push(rgb[0],rgb[1],rgb[2]);idx.push(vIdx,vIdx+1,vIdx+2,vIdx,vIdx+2,vIdx+3);vIdx+=4;p.push(x0,0,z0,x1,0,z0,x1,h,z0,x0,h,z0);for(let k=0;k<4;k++)c.push(rgb[0]*0.6,rgb[1]*0.6,rgb[2]*0.6);idx.push(vIdx,vIdx+1,vIdx+2,vIdx,vIdx+2,vIdx+3);vIdx+=4;p.push(x1,0,z0,x1,0,z1,x1,h,z1,x1,h,z0);for(let k=0;k<4;k++)c.push(rgb[0]*0.5,rgb[1]*0.5,rgb[2]*0.5);idx.push(vIdx,vIdx+1,vIdx+2,vIdx,vIdx+2,vIdx+3);vIdx+=4;}
+  const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(p,3)); g.setAttribute('color',new THREE.Float32BufferAttribute(c,3)); g.setIndex(idx); g.computeVertexNormals();
+  group.add(new THREE.Mesh(g,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:getMatParams().metalness,roughness:getMatParams().roughness,side:THREE.DoubleSide})));
+  const t1=performance.now();
+  updateStats(vIdx,idx.length/3,D,t1-t0);
+  updateHUD(`谱系数热图 | l×m | L=${L} | α^l衰减 | d=${D}`);
+}
+
+// ---- 4.10 高维截面切片 ----
+function buildCrossSection() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), L=getSlider('slider-lmax'), hRot=getSlider('slider-hrot')*Math.PI/180, tAnim=getSlider('slider-time')/100*Math.PI*2;
+  const numSlices=6, sz=32;
+  for(let s=0;s<numSlices;s++){const sc=(s/(numSlices-1))*2-1,ox=(s-numSlices/2+0.5)*1.2;const p=[],c=[],idx=[];for(let i=0;i<sz;i++)for(let j=0;j<sz;j++){const x=(i/(sz-1)-0.5)*2,z=(j/(sz-1)-0.5)*2;const hd=embed_32d(x,sc,z);const angles=[hRot,hRot*1.2,hRot*0.8,hRot*1.5,hRot*0.6,hRot*1.1,hRot*0.9,hRot*1.3];rotateND_multi(hd,D,angles);let val=0;const r=Math.sqrt(x*x+z*z),theta=Math.atan2(z,x);for(let l=0;l<=L;l++)for(let m=-l;m<=l;m++){const amp=Math.pow(0.1,l)*(1+0.3*Math.sin(tAnim+l));val+=amp*realSH(l,m,Math.acos(sc),theta)*0.3;}const y=val+hd[3]*0.3;p.push(x+ox,y,z);const rgb=colorMap(Math.min(1,Math.max(0,(y+1)/2)));c.push(rgb[0],rgb[1],rgb[2]);}for(let i=0;i<sz-1;i++)for(let j=0;j<sz-1;j++){const a=i*sz+j,b=i*sz+j+1,c2=(i+1)*sz+j,d=(i+1)*sz+j+1;idx.push(a,b,c2,b,d,c2);}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setAttribute('color',new THREE.Float32BufferAttribute(c,3));g.setIndex(idx);g.computeVertexNormals();group.add(new THREE.Mesh(g,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:getMatParams().metalness,roughness:getMatParams().roughness,side:THREE.DoubleSide,transparent:true,opacity:0.85,clearcoat:toggles.specular?0.2:0})));}
+  const t1=performance.now();
+  updateStats(numSlices*sz*sz,numSlices*(sz-1)*(sz-1)*2,D,t1-t0);
+  updateHUD(`高维截面切片 | ${numSlices}个切片 | S^${D-1}`);
+}
+
+// ---- 4.11 格拉姆矩阵 ----
+function buildGramMatrix() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), M=64;
+  const pts=[]; for(let i=0;i<M;i++){const c=new Float64Array(D);let n=0;for(let d=0;d<D;d++){c[d]=rng()*2-1;n+=c[d]*c[d];}n=Math.sqrt(n);for(let d=0;d<D;d++)c[d]/=n;pts.push(c);}
+  const gram=new Float64Array(M*M); for(let i=0;i<M;i++)for(let j=0;j<M;j++){let dot=0;for(let d=0;d<D;d++)dot+=pts[i][d]*pts[j][d];gram[i*M+j]=dot;}
+  const canvas=document.createElement('canvas'); canvas.width=M*8; canvas.height=M*8; const ctx=canvas.getContext('2d'); const imgData=ctx.createImageData(M*8,M*8);
+  for(let i=0;i<M;i++)for(let j=0;j<M;j++){const g=gram[i*M+j];const t=(g+1)/2;const rgb=colorMap(t,'thermal');const r=Math.floor(rgb[0]*255),g_=Math.floor(rgb[1]*255),b=Math.floor(rgb[2]*255);for(let dy=0;dy<8;dy++)for(let dx=0;dx<8;dx++){const px=j*8+dx,py=i*8+dy,idx2=(py*M*8+px)*4;imgData.data[idx2]=r;imgData.data[idx2+1]=g_;imgData.data[idx2+2]=b;imgData.data[idx2+3]=255;}}
+  ctx.putImageData(imgData,0,0);
+  const tex=new THREE.CanvasTexture(canvas); tex.minFilter=THREE.NearestFilter; tex.magFilter=THREE.NearestFilter;
+  const plane=new THREE.Mesh(new THREE.PlaneGeometry(6,6),new THREE.MeshBasicMaterial({map:tex,side:THREE.DoubleSide}));
+  plane.position.set(0,0,0); group.add(plane);
+  const t1=performance.now();
+  updateStats(M*M,2,D,t1-t0);
+  updateHUD(`格拉姆矩阵 | ${M}×${M} | D=${D} | 颜色=内积cos(θ)`);
+}
+
+// ---- 4.12 平行坐标系 ----
+function buildParallelCoords() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), N=80;
+  const trajs=[]; for(let n=0;n<N;n++){const t=[];for(let d=0;d<D;d++){const phase=d*0.5+n*0.3;t.push(0.5+0.4*Math.sin(phase)+0.1*(rng()-0.5));}trajs.push(t);}
+  const axisSpacing=5/Math.max(D-1,1), axisHeight=4; const axisPos=[];
+  for(let d=0;d<D;d++){const x=(d-(D-1)/2)*axisSpacing;axisPos.push(x);const lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.Float32BufferAttribute([x,-axisHeight/2,0,x,axisHeight/2,0],3));group.add(new THREE.Line(lg,new THREE.LineBasicMaterial({color:0x888888})));}
+  for(let n=0;n<N;n++){const p=[];for(let d=0;d<D;d++){const x=axisPos[d],y=(trajs[n][d]-0.5)*axisHeight;p.push(x,y,0);}const lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.Float32BufferAttribute(p,3));const t=n/N;const rgb=colorMap(t);group.add(new THREE.Line(lg,new THREE.LineBasicMaterial({color:new THREE.Color(rgb[0],rgb[1],rgb[2]),transparent:true,opacity:0.4})));}
+  const t1=performance.now();
+  updateStats(N*D,N*(D-1),D,t1-t0);
+  updateHUD(`平行坐标系 | ${D}条轴 | ${N}条轨迹`);
+}
+
+// ---- 4.13 谱嵌入动态演化 ----
+function buildSpectralEmbedding() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), L=getSlider('slider-lmax'), tAnim=getSlider('slider-time')/100*Math.PI*2;
+  const M=100; const pts=[]; for(let i=0;i<M;i++){const c=new Float64Array(D);let n=0;for(let d=0;d<D;d++){c[d]=rng()*2-1;n+=c[d]*c[d];}n=Math.sqrt(n);for(let d=0;d<D;d++)c[d]/=n;pts.push(c);}
+  const sigma=0.5; const W=new Float64Array(M*M); for(let i=0;i<M;i++)for(let j=0;j<M;j++){let d2=0;for(let d=0;d<D;d++){const diff=pts[i][d]-pts[j][d];d2+=diff*diff;}W[i*M+j]=Math.exp(-d2/(2*sigma*sigma));}
+  const deg=new Float64Array(M); for(let i=0;i<M;i++){let s=0;for(let j=0;j<M;j++)s+=W[i*M+j];deg[i]=s;}
+  const K=Math.min(16,M); const eigvals=powerIteration(W,deg,M,K);
+  const maxEig=Math.max(...eigvals), minEig=Math.min(...eigvals), range=maxEig-minEig||1;
+  for(let k=0;k<K;k++){const theta=(k/K)*Math.PI*2;const nv=(eigvals[k]-minEig)/range;const barH=nv*3;const bg=new THREE.BoxGeometry(0.15,barH,0.15);const rgb=colorMap(nv);const bm=new THREE.MeshPhysicalMaterial({color:new THREE.Color(rgb[0],rgb[1],rgb[2]),metalness:getMatParams().metalness,roughness:getMatParams().roughness});const bar=new THREE.Mesh(bg,bm);bar.position.set(4*Math.cos(theta),barH/2,4*Math.sin(theta));group.add(bar);}
+  const t1=performance.now();
+  updateStats(M,K,D,t1-t0);
+  updateHUD(`谱嵌入动态演化 | K=${K}特征值 | D=${D} | σ=${sigma}`);
+}
+function powerIteration(W,deg,M,K){const eigvals=[];const vectors=[];for(let k=0;k<K;k++){let vec=new Float64Array(M);for(let i=0;i<M;i++)vec[i]=rng()*2-1;let n=0;for(let i=0;i<M;i++)n+=vec[i]*vec[i];n=Math.sqrt(n);for(let i=0;i<M;i++)vec[i]/=n;for(let prev=0;prev<vectors.length;prev++){let dot=0;for(let i=0;i<M;i++)dot+=vec[i]*vectors[prev][i];for(let i=0;i<M;i++)vec[i]-=dot*vectors[prev][i];}for(let iter=0;iter<20;iter++){const nv=new Float64Array(M);for(let i=0;i<M;i++){let s=0;for(let j=0;j<M;j++)s+=W[i*M+j]*vec[j]/Math.sqrt(deg[i]*deg[j]);nv[i]=s;}let n2=0;for(let i=0;i<M;i++)n2+=nv[i]*nv[i];n2=Math.sqrt(n2);if(n2<1e-12)break;for(let i=0;i<M;i++)vec[i]=nv[i]/n2;for(let prev=0;prev<vectors.length;prev++){let dot=0;for(let i=0;i<M;i++)dot+=vec[i]*vectors[prev][i];for(let i=0;i<M;i++)vec[i]-=dot*vectors[prev][i];}}let num=0,den=0;for(let i=0;i<M;i++){let s=0;for(let j=0;j<M;j++)s+=W[i*M+j]*vec[j]/Math.sqrt(deg[i]*deg[j]);num+=vec[i]*s;den+=vec[i]*vec[i];}eigvals.push(num/(den||1));vectors.push(vec);}return eigvals;}
+
+// ---- 4.14 交互式降维探针 ----
+function buildProjectionProbe() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), hRot=getSlider('slider-hrot')*Math.PI/180;
+  const M=500; const pts=[]; for(let i=0;i<M;i++){const c=new Float64Array(D);let n=0;for(let d=0;d<D;d++){c[d]=rng()*2-1;n+=c[d]*c[d];}n=Math.sqrt(n);for(let d=0;d<D;d++)c[d]/=n;pts.push(c);}
+  const b1=new Float64Array(D),b2=new Float64Array(D); b1[0]=1; b2[1]=1;
+  const angles=[]; for(let p=0;p<Math.min(8,Math.floor(D/2));p++)angles.push(hRot*(1+p*0.2));
+  rotateND_multi(b1,D,angles); rotateND_multi(b2,D,angles);
+  const pp=[],pc=[]; for(let i=0;i<M;i++){let px=0,py=0;for(let d=0;d<D;d++){px+=pts[i][d]*b1[d];py+=pts[i][d]*b2[d];}pp.push(px*3,py*3,0);const residual=Math.sqrt(Math.max(0,1-px*px-py*py));const rgb=colorMap(residual,'ocean');pc.push(rgb[0],rgb[1],rgb[2]);}
+  const pg=new THREE.BufferGeometry(); pg.setAttribute('position',new THREE.Float32BufferAttribute(pp,3)); pg.setAttribute('color',new THREE.Float32BufferAttribute(pc,3));
+  group.add(new THREE.Points(pg,new THREE.PointsMaterial({size:0.08,vertexColors:true,transparent:true,opacity:0.8})));
+  const t1=performance.now();
+  updateStats(M,0,D,t1-t0);
+  updateHUD(`交互式降维探针 | D=${D}→2D | ${M}个点 | 颜色=残差`);
+}
+
+// ---- 4.15 宇宙学·弦论紧化 ----
+function buildCosmology() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), tAnim=getSlider('slider-time')/100*Math.PI*2;
+  const largeDims=Math.min(4,D), smallDims=Math.max(0,D-largeDims);
+  const gridRes=Math.min(60,Math.max(12,10+D*2)), gridScale=2.0+D*0.02;
+  const gp=[],gc=[],gi=[]; for(let i=0;i<=gridRes;i++)for(let j=0;j<=gridRes;j++){const u=(i/gridRes-0.5)*2*gridScale,v=(j/gridRes-0.5)*2*gridScale;let warp=0.3/(1+(u*u+v*v)*0.5);for(let k=0;k<Math.min(smallDims,5);k++)warp+=0.05*Math.sin(u*(3+k*2)+v*(2+k)+tAnim*(0.3+k*0.1));const tw=0.15*Math.sin((u*u+v*v)*(1+D*0.02)-tAnim);const z=warp*Math.sin(u*(2+D*0.1)+v*(1+D*0.08)+tAnim*0.5)+tw;gp.push(u,v,z);const bend=Math.min(1,Math.abs(z)*(1+D*0.02));const rgb=colorMap(bend,'thermal');gc.push(rgb[0],rgb[1],rgb[2]);}
+  for(let i=0;i<gridRes;i++)for(let j=0;j<gridRes;j++){const a=i*(gridRes+1)+j,b=a+1,c=(i+1)*(gridRes+1)+j,d=c+1;gi.push(a,b,c,b,d,c);}
+  const gg=new THREE.BufferGeometry(); gg.setAttribute('position',new THREE.Float32BufferAttribute(gp,3)); gg.setAttribute('color',new THREE.Float32BufferAttribute(gc,3)); gg.setIndex(gi); gg.computeVertexNormals();
+  group.add(new THREE.Mesh(gg,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:getMatParams().metalness,roughness:getMatParams().roughness,side:THREE.DoubleSide,transparent:true,opacity:0.7})));
+  for(let cd=0;cd<Math.min(smallDims,7);cd++){const rp=[];const rr=2.8+cd*0.25,tr=0.04+cd*0.015,steps=60,freq=5+cd*2;for(let s=0;s<=steps;s++){const a=2*Math.PI*s/steps,mr=rr+tr*Math.sin(freq*a+cd*tAnim*0.3);rp.push(mr*Math.cos(a+cd*tAnim*0.1),mr*Math.sin(a+cd*tAnim*0.1),tr*Math.cos(freq*a*0.7+cd*tAnim*0.2));}const rg=new THREE.BufferGeometry();rg.setAttribute('position',new THREE.Float32BufferAttribute(rp,3));const rgb=colorMap(cd/7,'rainbow');group.add(new THREE.Line(rg,new THREE.LineBasicMaterial({color:new THREE.Color(rgb[0],rgb[1],rgb[2]),transparent:true,opacity:0.5+cd*0.05})));}
+  const t1=performance.now();
+  updateStats((gridRes+1)*(gridRes+1)+smallDims*60,gi.length/3,D,t1-t0);
+  updateHUD(`宇宙学·弦论紧化 | D=${D} | ${largeDims}D可见+${smallDims}D紧化`);
+}
+
+// ---- 4.16 量子计算·纠错码 ----
+function buildQuantum() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), tAnim=getSlider('slider-time')/100*Math.PI*2;
+  const nQubits=Math.max(1,Math.round(Math.log2(D))), hilbertDim=Math.pow(2,nQubits);
+  const N=Math.min(hilbertDim,100); const amps=new Float64Array(N); let norm=0;
+  for(let i=0;i<N;i++){amps[i]=rng()*2-1;norm+=amps[i]*amps[i];} norm=Math.sqrt(norm); for(let i=0;i<N;i++)amps[i]/=norm;
+  const sphereRes=20; const p=[],c=[];
+  for(let i=0;i<=sphereRes;i++)for(let j=0;j<=sphereRes;j++){const theta=Math.PI*i/sphereRes,phi=2*Math.PI*j/sphereRes;const r=1.5;p.push(r*Math.sin(theta)*Math.cos(phi),r*Math.cos(theta),r*Math.sin(theta)*Math.sin(phi));const rgb=colorMap(0.5+0.5*Math.sin(theta+tAnim));c.push(rgb[0],rgb[1],rgb[2]);}
+  for(let k=0;k<nQubits;k++){const phase=2*Math.PI*k/nQubits,orbitR=1.8+0.3*Math.sin(phase+tAnim);for(let s=0;s<12;s++){const a=2*Math.PI*s/12;p.push(orbitR*Math.cos(a)*Math.cos(phase),orbitR*Math.sin(a),orbitR*Math.cos(a)*Math.sin(phase));const rgb=colorMap(k/nQubits,'rainbow');c.push(rgb[0],rgb[1],rgb[2]);}}
+  for(let i=0;i<N;i++){const prob=amps[i]*amps[i],barH=prob*3,x=(i-N/2)*0.12;const bg=new THREE.BoxGeometry(0.08,barH,0.08);const rgb=colorMap(prob);const bm=new THREE.MeshPhysicalMaterial({color:new THREE.Color(rgb[0],rgb[1],rgb[2]),metalness:getMatParams().metalness,roughness:getMatParams().roughness});const bar=new THREE.Mesh(bg,bm);bar.position.set(x,barH/2-1.8,-2.5);group.add(bar);}
+  const t1=performance.now();
+  updateStats(N+sphereRes*sphereRes,nQubits*12,D,t1-t0);
+  updateHUD(`量子计算 | ${nQubits}量子比特 | H=${hilbertDim}D`);
+}
+
+// ---- 4.17 具身智能·世界模型 ----
+function buildRobotWorld() {
+  clearGroup();
+  const t0=performance.now();
+  const D=getSlider('slider-dim'), tAnim=getSlider('slider-time')/100*Math.PI*2;
+  const sz=Math.min(80,Math.max(20,10+D*2)), sc=0.15;
+  const numVerts=sz*sz; const pos=new Float32Array(numVerts*3), col=new Float32Array(numVerts*3), idx=[];
+  const terrainScale=1+D*0.03, numOctaves=Math.min(6,Math.max(2,Math.floor(D/3)));
+  for(let i=0;i<sz;i++)for(let j=0;j<sz;j++){const x=(i-sz/2)*sc*terrainScale,z=(j-sz/2)*sc*terrainScale;let y=0;for(let o=0;o<numOctaves;o++){const freq=(1+o*2)*(1+D*0.02),amp=0.15/(o+1)*terrainScale;y+=amp*Math.sin(x*freq+z*freq*0.7+tAnim*(0.1+o*0.05));y+=amp*0.6*Math.cos(x*freq*0.5-z*freq+tAnim*(0.15+o*0.03));}const obsX=1.5*Math.sin(tAnim*0.1),obsZ=1.5*Math.cos(tAnim*0.15);const dx=x-obsX,dz=z-obsZ,dist=Math.sqrt(dx*dx+dz*dz);y+=0.3/(1+dist*4);const idx2=i*sz+j;pos[3*idx2]=x;pos[3*idx2+1]=y;pos[3*idx2+2]=z;const isObs=dist<0.5?1:0;const t=Math.min(1,Math.max(0,(y+0.5)/1.5*0.7+isObs*0.3));const rgb=colorMap(t,isObs?'thermal':'biome');col[3*idx2]=rgb[0];col[3*idx2+1]=rgb[1];col[3*idx2+2]=rgb[2];}
+  for(let i=0;i<sz-1;i++)for(let j=0;j<sz-1;j++){const v0=i*sz+j,v1=i*sz+j+1,v2=(i+1)*sz+j,v3=(i+1)*sz+j+1;idx.push(v0,v1,v2,v1,v3,v2);}
+  const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(pos,3)); g.setAttribute('color',new THREE.BufferAttribute(col,3)); g.setIndex(idx); g.computeVertexNormals();
+  group.add(new THREE.Mesh(g,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:getMatParams().metalness,roughness:getMatParams().roughness,side:THREE.DoubleSide,flatShading:true})));
+  const numPaths=Math.min(12,Math.max(3,Math.floor(D/3)));
+  for(let p=0;p<numPaths;p++){const pp=[];const steps=40,startX=-2+rng(),startZ=-2+rng(),endX=2-rng(),endZ=2-rng();for(let s=0;s<=steps;s++){const frac=s/steps,x=startX+(endX-startX)*frac,z=startZ+(endZ-startZ)*frac,curve=0.3*Math.sin(frac*Math.PI*(3+p)+tAnim*0.2);pp.push(x+curve,0.05+0.02*Math.sin(frac*10+tAnim),z-curve*0.5);}const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.Float32BufferAttribute(pp,3));const rgb=colorMap(p/numPaths,'rainbow');group.add(new THREE.Line(pg,new THREE.LineBasicMaterial({color:new THREE.Color(rgb[0],rgb[1],rgb[2]),transparent:true,opacity:0.7})));}
+  const t1=performance.now();
+  updateStats(numVerts+numPaths*40,idx.length/3+numPaths*40,D,t1-t0);
+  updateHUD(`具身智能·世界模型 | D=${D} | 平面${sz}×${sz}地形 | ${numPaths}条路径`);
+}
+
+// ---- N维叠加层 ----
+function buildTrueNDOverlay() {
+  const D=getSlider('slider-dim'), tAnim=getSlider('slider-time')/100*Math.PI*2, hRot=getSlider('slider-hrot')*Math.PI/180;
+  const rotD=Math.min(D,10), lowAng=getSlider('slider-ndrot-low')*Math.PI/180, midAng=getSlider('slider-ndrot-mid')*Math.PI/180, highAng=getSlider('slider-ndrot-high')*Math.PI/180;
+  const pAxes=[new Float64Array(D),new Float64Array(D),new Float64Array(D)]; pAxes[0][0]=1; pAxes[1][1]=1; pAxes[2][2]=1;
+  if(lowAng!==0||midAng!==0||highAng!==0){for(let p=0;p<rotD;p++)for(let q=p+1;q<rotD;q++){let angle;if(q<=10)angle=lowAng*(1-(p+q)/20);else if(p<=50)angle=midAng*(1-(p+q-20)/80);else angle=highAng*(1-(p+q-50)/100);if(Math.abs(angle)<1e-6)continue;const c=Math.cos(angle),s=Math.sin(angle);for(let a=0;a<3;a++){const vi=pAxes[a][p],vj=pAxes[a][q];pAxes[a][p]=c*vi-s*vj;pAxes[a][q]=s*vi+c*vj;}}}
+  const maxAxes=Math.min(D,10); const axisColors=[[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,0,1],[1,0.5,0],[0.5,0,1],[0,0.8,0.5],[0.8,0.2,0.5]];
+  for(let d=0;d<maxAxes;d++){let x,y,z;if(d<3){x=d===0?3.5:0;y=d===1?3.5:0;z=d===2?3.5:0;}else{const angle=2*Math.PI*(d-3)/(maxAxes-3);const ringR=1.5+(d-3)*0.15;x=ringR*Math.cos(angle+hRot*0.1);y=ringR*Math.sin(angle+hRot*0.1);z=0.5*Math.sin(angle*2+tAnim*0.2);}const ag=new THREE.BufferGeometry();ag.setAttribute('position',new THREE.Float32BufferAttribute([0,0,0,x,y,z],3));const col=axisColors[d%axisColors.length];group.add(new THREE.Line(ag,new THREE.LineBasicMaterial({color:new THREE.Color(col[0],col[1],col[2]),transparent:true,opacity:0.7})));}
+  const res=24; const pos=[],col=[],idx=[];
+  const numExtra=Math.min(Math.floor(D/4),10); const nonZeroDims=[0,1,2]; for(let e=0;e<numExtra;e++){const ei=3+e;if(ei<D)nonZeroDims.push(ei);}
+  for(let i=0;i<=res;i++){const theta=Math.PI*i/res;for(let j=0;j<=res;j++){const phi=2*Math.PI*j/res;const pt=new Float64Array(nonZeroDims.length);pt[0]=Math.sin(theta)*Math.cos(phi);pt[1]=Math.sin(theta)*Math.sin(phi);pt[2]=Math.cos(theta);for(let e=0;e<numExtra&&(3+e)<nonZeroDims.length;e++)pt[3+e]=0.3*Math.sin((e+1)*theta+phi*0.5)*(D/100);let nrm=0;for(let di=0;di<nonZeroDims.length;di++)nrm+=pt[di]*pt[di];nrm=Math.sqrt(nrm);if(nrm>1e-12)for(let di=0;di<nonZeroDims.length;di++)pt[di]/=nrm;let px=0,py=0,pz=0;for(let di=0;di<nonZeroDims.length;di++){const d=nonZeroDims[di];px+=pt[di]*pAxes[0][d];py+=pt[di]*pAxes[1][d];pz+=pt[di]*pAxes[2][d];}const pn=Math.sqrt(px*px+py*py+pz*pz);if(pn>1e-6){px/=pn;py/=pn;pz/=pn;}pos.push(px*2.5,py*2.5,pz*2.5);const hue=(i/res)*0.5+(D%100)/100*0.3;const val=0.5+0.5*(j/res);const c3=new THREE.Color().setHSL(hue,0.6,val);col.push(c3.r,c3.g,c3.b);}}
+  for(let i=0;i<res;i++)for(let j=0;j<res;j++){const a=i*(res+1)+j,b=i*(res+1)+j+1,c=(i+1)*(res+1)+j,d=(i+1)*(res+1)+j+1;idx.push(a,b,c,b,d,c);}
+  const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3)); g.setAttribute('color',new THREE.Float32BufferAttribute(col,3)); g.setIndex(idx); g.computeVertexNormals();
+  group.add(new THREE.Mesh(g,new THREE.MeshPhysicalMaterial({vertexColors:true,metalness:0.1,roughness:0.6,side:THREE.DoubleSide,transparent:true,opacity:0.6})));
+  const wf=new THREE.WireframeGeometry(g); group.add(new THREE.LineSegments(wf,new THREE.LineBasicMaterial({color:0x4B3FE3,transparent:true,opacity:0.12})));
+}
+
+function getMatParams() { return {metalness: getSlider('slider-metal')/100, roughness: getSlider('slider-rough')/100}; }
+
+// ============================================================
+// 第五部分：数学常数计算与显示
+// ============================================================
+
+function initMath() {
+  const r3=R_d(3), r05=R_d(0.5), r32=R_d(32);
+  document.getElementById('rd3').textContent = r3.toFixed(8) + ` (π/9 = ${(Math.PI/9).toFixed(8)})`;
+  document.getElementById('rd05').textContent = r05.toFixed(8);
+  document.getElementById('rd32').textContent = r32.toExponential(6);
+  const eps = solveBridgeEpsilon();
+  const bridgeLHS = PHYS.delta * R_d(3 + eps);
+  const bridgeRHS = PHYS.phi * (1 + PHYS.alpha_fine);
+  document.getElementById('eps-val').textContent = eps.toFixed(8);
+  document.getElementById('bridge-err').textContent = Math.abs(bridgeLHS - bridgeRHS).toExponential(4);
+  drawRdPlot();
+  initDimBar();
+}
+
+const PHYS = { delta: 4.669201609, phi: (1+Math.sqrt(5))/2, alpha_fine: 1/137.035999211, d_macro: 10856+9/Math.PI-2 };
+
+function solveBridgeEpsilon() {
+  const target = PHYS.phi * (1 + PHYS.alpha_fine);
+  let lo=-1.5, hi=1.5;
+  for(let iter=0;iter<200;iter++){const mid=(lo+hi)/2;const val=PHYS.delta*R_d(3+mid);if(val>target)lo=mid;else hi=mid;}
+  return (lo+hi)/2;
+}
+
+function drawRdPlot() {
+  const canvas = document.getElementById('rd-plot');
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width = canvas.offsetWidth;
+  const h = canvas.height = 180;
+  ctx.fillStyle = '#F0F0F5'; ctx.fillRect(0,0,w,h);
+  ctx.strokeStyle = '#333'; ctx.beginPath(); ctx.moveTo(30,10); ctx.lineTo(30,h-20); ctx.lineTo(w-10,h-20); ctx.stroke();
+  const dMin=0.1,dMax=32; let rMax=0; const pts=[];
+  for(let i=0;i<200;i++){const d=dMin+(dMax-dMin)*i/199;const r=R_d(d);pts.push([d,r]);if(isFinite(r)&&r>rMax)rMax=r;}
+  rMax=Math.min(rMax,5);
+  ctx.strokeStyle='#4B3FE3'; ctx.lineWidth=2; ctx.beginPath();
+  for(let i=0;i<pts.length;i++){const x=30+(pts[i][0]-dMin)/(dMax-dMin)*(w-40);const y=h-20-Math.min(pts[i][1],rMax)/rMax*(h-30);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);}
+  ctx.stroke();
+  const x3=30+(3-dMin)/(dMax-dMin)*(w-40),y3=h-20-R_d(3)/rMax*(h-30);
+  ctx.fillStyle='#34C759'; ctx.beginPath(); ctx.arc(x3,y3,4,0,Math.PI*2); ctx.fill(); ctx.fillText('d=3',x3+6,y3-4);
+  const x32=30+(32-dMin)/(dMax-dMin)*(w-40),y32=h-20-R_d(32)/rMax*(h-30);
+  ctx.fillStyle='#FF3B30'; ctx.beginPath(); ctx.arc(x32,y32,3,0,Math.PI*2); ctx.fill(); ctx.fillText('d=32',x32-30,y32-6);
+}
+
+function initDimBar() { drawDimBar(); setupDimBarInteraction(); }
+
+function drawDimBar() {
+  const canvas = document.getElementById('dim-bar'); if(!canvas)return;
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width = canvas.offsetWidth || 300;
+  const h = canvas.height = 90;
+  const currentD = getSlider('slider-dim');
+  const Dmax = Math.max(currentD, 100);
+  const padLeft=10,padRight=10,padBottom=16,padTop=14,barW=w-padLeft-padRight,barH=h-padTop-padBottom;
+  ctx.fillStyle='#F0F0F5'; ctx.fillRect(0,0,w,h);
+  const rdVals=[]; let maxLog=-Infinity,minLog=Infinity;
+  for(let d=1;d<=Dmax;d++){const rd=R_d(d);const lg=Math.log10(rd+1e-30);rdVals.push(lg);if(lg>maxLog)maxLog=lg;if(lg<minLog)minLog=lg;}
+  const logRange=maxLog-Math.max(minLog,-10);
+  const scaleLog=v=>((v-Math.max(minLog,-10))/logRange)*barH;
+  const colW=barW/Dmax;
+  for(let d=1;d<=Dmax;d++){const x=padLeft+(d-0.5)*colW;const colHeight=scaleLog(rdVals[d-1]);const y=padTop+barH-colHeight;const hue=d/Dmax;const rgb=hslToRgb(hue,0.75,0.55);const cs=`rgb(${Math.round(rgb[0]*255)},${Math.round(rgb[1]*255)},${Math.round(rgb[2]*255)})`;ctx.fillStyle=cs;ctx.fillRect(x-colW*0.35,y,colW*0.7,colHeight);if(d===currentD){ctx.shadowColor=cs;ctx.shadowBlur=12;ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(x,y-6,4,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.strokeStyle=cs;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x,padTop+barH);ctx.lineTo(x,padTop+barH+6);ctx.stroke();ctx.fillStyle='#1D1D1F';ctx.font='bold 11px monospace';ctx.textAlign='center';ctx.fillText('d='+d,x,padTop-2);}}
+  ctx.strokeStyle='rgba(0,0,0,0.15)'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(padLeft,padTop+barH); ctx.lineTo(w-padRight,padTop+barH); ctx.stroke();
+}
+
+function setupDimBarInteraction() {
+  const wrap = document.getElementById('dim-bar-wrap');
+  if(!wrap)return;
+  let dragging=false;
+  function setDim(cx){const canvas=document.getElementById('dim-bar');const rect=canvas.getBoundingClientRect();const x=cx-rect.left;const w=rect.width;const Dmax=Math.max(getSlider('slider-dim'),100);const padLeft=10,padRight=10,barW=w-padLeft-padRight,colW=barW/Dmax;const colIdx=Math.round((x-padLeft)/colW);const newD=Math.max(1,Math.min(Dmax,colIdx+1));if(newD!==getSlider('slider-dim')){document.getElementById('slider-dim').value=newD;document.getElementById('val-dim').textContent=newD;document.getElementById('dim-bar-val').textContent=newD;document.getElementById('dim-bar-rd').textContent=R_d(newD).toExponential(4);document.getElementById('dim-bar-omega').textContent=omega_d(newD).toExponential(4);drawDimBar();rebuild();}}
+  wrap.addEventListener('mousedown',e=>{dragging=true;setDim(e.clientX);});
+  window.addEventListener('mousemove',e=>{if(dragging){e.preventDefault();setDim(e.clientX);}});
+  window.addEventListener('mouseup',()=>{dragging=false;});
+  wrap.addEventListener('touchstart',e=>{dragging=true;setDim(e.touches[0].clientX);},{passive:false});
+  wrap.addEventListener('touchmove',e=>{if(dragging){e.preventDefault();setDim(e.touches[0].clientX);}},{passive:false});
+  wrap.addEventListener('touchend',()=>{dragging=false;});
+}
+
+// ============================================================
+// 第六部分：UI 与模块状态
+// ============================================================
+
+function initModules() {
+  const modules = [
+    '安全内存分配', '日志系统', '时间系统', '错误处理', 'Vec3/Mat4',
+    'SHGNN 8行核心', 'SO(N)等变编码', 'Parseval截断', '等变消息传递',
+    'TeaCache球谐缓存', '蒸馏Student', '稀疏注意力', 'LCM单步预测',
+    'Performer线性SH', 'H2O三区域缓存', 'CoMeT门控记忆',
+    '资源管理', '场景图', 'PBR材质库(12种)', '程序化纹理',
+    '光照系统(方向/点/聚光)', '阴影+AO', '后处理(Bloom)',
+    '碰撞+拾取(AABB/射线)', '动画系统(5种缓动)', '序列化(JSON)', '配置系统(INI)',
+    '控制台(Debug面板)', '摄像机(4种模式)', '输入系统(键盘/鼠标)', '帧循环(DeltaTime/FPS)',
+    '投影矩阵控制', '颜色方案系统', '带种子随机生成', '实时谱演化动画',
+    'Parseval截断可视化', 'Wigner D旋转场', '谱系数热图', '高维截面切片',
+    '格拉姆矩阵热力图', '平行坐标系', '谱嵌入动态演化', '交互式降维探针',
+    '宇宙学·弦论紧化', '量子计算·纠错码', '具身智能·世界模型',
+    '🧊N维叠加开关', 'OBJ导出', 'PNG截图', '场景居中/重置'
+  ];
+  const list = document.getElementById('module-list');
+  modules.forEach(m => {
+    const div = document.createElement('div');
+    div.className = 'module-item';
+    div.innerHTML = `<span class="name">${m}</span><span class="ok">✓</span>`;
+    list.appendChild(div);
+  });
+}
+
+function updateStats(verts, faces, dim, time) {
+  document.getElementById('stat-verts').textContent = verts.toLocaleString();
+  document.getElementById('stat-faces').textContent = Math.floor(faces).toLocaleString();
+  document.getElementById('stat-dim').textContent = dim + 'D';
+  document.getElementById('stat-time').textContent = Math.round(time) + 'ms';
+}
+
+function updateHUD(text) { document.getElementById('hud').textContent = text; }
+
+function setMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('[data-mode]').forEach(b => b.classList.remove('active'));
+  document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+  rebuild();
+}
+
+function rebuild() {
+  rng = seededRandom(seedState);
+  updateLightAngle();
+  updateSceneToggles();
+  switch(currentMode) {
+    case 'hypersphere': buildHypersphere(); break;
+    case 'spectral': buildSpectral(); break;
+    case 'terrain': buildTerrain(); break;
+    case 'voxel': buildVoxel(); break;
+    case 'equivariance': buildEquivariance(); break;
+    case 'green': buildGreenFunction(); break;
+    case 'parseval': buildParseval(); break;
+    case 'wigner': buildWignerField(); break;
+    case 'heatmap': buildHeatmap(); break;
+    case 'crosssec': buildCrossSection(); break;
+    case 'gram': buildGramMatrix(); break;
+    case 'parallel': buildParallelCoords(); break;
+    case 'spectralembed': buildSpectralEmbedding(); break;
+    case 'probe': buildProjectionProbe(); break;
+    case 'cosmology': buildCosmology(); break;
+    case 'quantum': buildQuantum(); break;
+    case 'robot': buildRobotWorld(); break;
+  }
+  if (toggles.truend) buildTrueNDOverlay();
+  // 更新加速算法统计
+  updateAlgoStats();
+  // 控制台日志
+  consoleSys.log(`模式: ${currentMode} | D=${getSlider('slider-dim')} | 顶点: ${document.getElementById('stat-verts').textContent}`, 'info');
+}
+
+function updateLightAngle() {
+  const angle = getSlider('slider-light') * Math.PI / 180;
+  if (lightSystem) lightSystem.updateAngle(angle);
+}
+
+function updateCameraParams() {
+  const fov = getSlider('slider-fov');
+  const exp = getSlider('slider-exp') / 100;
+  camera.fov = fov;
+  camera.updateProjectionMatrix();
+  renderer.toneMappingExposure = exp;
+}
+
+function updateBCS() {
+  const bright = getSlider('slider-bright') / 100;
+  const contrast = 1 + getSlider('slider-contrast') / 100;
+  const saturate = 1 + getSlider('slider-saturate') / 100;
+  const canvas = renderer.domElement;
+  canvas.style.filter = `brightness(${1+bright}) contrast(${contrast}) saturate(${saturate})`;
+}
+
+function updateSceneToggles() {
+  if (gridHelper) gridHelper.visible = toggles.grid;
+  if (scene) { if (toggles.fog) scene.fog = new THREE.FogExp2(0xf5f5f7, 0.018); else scene.fog = null; }
+  controls.autoRotate = toggles.rotate;
+}
+
+function updateAlgoStats() {
+  let stats = '';
+  const D = getSlider('slider-dim');
+  const res = adaptiveRes();
+  const N = adaptiveN();
+  const sz = adaptiveTerrainSz();
+  // 显示真实加速信息: 自适应分辨率
+  if (fastMode) stats += `⚡快速模式 `;
+  stats += `自适应: ${res}×${res}网格 `;
+  stats += `N=${N}点 `;
+  stats += `地形=${sz}×${sz} `;
+  // SH 预计算表状态
+  if (shTable.cache) stats += `SH表缓存 ✅ `;
+  // 显示预估加速比
+  const baseRes = 64;
+  const speedup = (baseRes * baseRes) / (res * res);
+  if (speedup > 1.5) stats += `加速 ${speedup.toFixed(1)}x `;
+  document.getElementById('algo-stats').textContent = stats || '自适应分辨率加速';
+}
+
+// 音频生成
+function generateAudio() {
+  const sampleRate=44100, duration=4, numSamples=sampleRate*duration;
+  const buf=new Float32Array(numSamples);
+  const L=5, baseFreq=220, alphaAtten=0.0073, fScale=5.02687653;
+  const freqs=[],amps=[];
+  for(let l=0;l<=L;l++){freqs.push(baseFreq*Math.pow(fScale,l*0.1));amps.push(Math.pow(alphaAtten,l)*0.3);}
+  for(let i=0;i<numSamples;i++){const t=i/sampleRate;let s=0;for(let l=0;l<=L;l++){const mod=gegenbauer(l,1,Math.sin(t*2));s+=amps[l]*Math.sin(2*Math.PI*freqs[l]*t)*(0.5+0.5*mod);}const env=Math.min(1,t*4)*Math.min(1,(duration-t)*4);buf[i]=s*env*0.5;}
+  const wav=encodeWAV(buf,sampleRate);
+  const blob=new Blob([wav],{type:'audio/wav'});
+  const url=URL.createObjectURL(blob);
+  const player=document.getElementById('audio-player');
+  player.src=url; player.style.display='block'; player.play();
+  consoleSys.log('音频已生成 (4秒, 5谐波)', 'info');
+}
+
+function encodeWAV(samples,sampleRate){
+  const buf=new ArrayBuffer(44+samples.length*2);
+  const view=new DataView(buf);
+  const ws=(off,str)=>{for(let i=0;i<str.length;i++)view.setUint8(off+i,str.charCodeAt(i));};
+  ws(0,'RIFF'); view.setUint32(4,36+samples.length*2,true); ws(8,'WAVE');
+  ws(12,'fmt '); view.setUint32(16,16,true); view.setUint16(20,1,true); view.setUint16(22,1,true);
+  view.setUint32(24,sampleRate,true); view.setUint32(28,sampleRate*2,true);
+  view.setUint16(32,2,true); view.setUint16(34,16,true);
+  ws(36,'data'); view.setUint32(40,samples.length*2,true);
+  let off=44; for(let i=0;i<samples.length;i++){const s=Math.max(-1,Math.min(1,samples[i]));view.setInt16(off,s*0x7FFF,true);off+=2;}
+  return buf;
+}
+
+// ============================================================
+// 第七部分：UI 事件绑定
+// ============================================================
+
+function initUI() {
+  document.querySelectorAll('[data-mode]').forEach(b => {
+    b.addEventListener('click', () => setMode(b.dataset.mode));
+  });
+
+  document.querySelectorAll('[data-toggle]').forEach(b => {
+    b.addEventListener('click', () => {
+      const t = b.dataset.toggle;
+      toggles[t] = !toggles[t];
+      b.classList.toggle('on');
+      if (t === 'rotate') { controls.autoRotate = toggles.rotate; return; }
+      if (t === 'grid' || t === 'fog') { updateSceneToggles(); return; }
+      if (t === 'console') { toggleConsole(); return; }
+      if (t === 'ndrotate' || t === 'ndslice' || t === 'ndmultiview') { rebuild(); return; }
+      rebuild();
+    });
+  });
+
+  document.querySelectorAll('[data-algo]').forEach(b => {
+    b.addEventListener('click', () => {
+      const a = b.dataset.algo;
+      algoToggles[a] = !algoToggles[a];
+      b.classList.toggle('on');
+      updateAlgoStats();
+      consoleSys.log(`加速算法 ${a}: ${algoToggles[a]?'ON':'OFF'}`, 'info');
+    });
+  });
+
+  document.querySelectorAll('[data-color]').forEach(b => {
+    b.addEventListener('click', () => {
+      colorScheme = b.dataset.color;
+      document.querySelectorAll('[data-color]').forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      rebuild();
+    });
+  });
+
+  const sliderMap = {
+    'slider-dim': { val: 'val-dim', fmt: v => v },
+    'slider-lmax': { val: 'val-lmax', fmt: v => v },
+    'slider-metal': { val: 'val-metal', fmt: v => (v/100).toFixed(2) },
+    'slider-rough': { val: 'val-rough', fmt: v => (v/100).toFixed(2) },
+    'slider-alpha': { val: 'val-alpha', fmt: v => (v/10000).toExponential(2) },
+    'slider-res': { val: 'val-res', fmt: v => v },
+    'slider-seed': { val: 'val-seed', fmt: v => v },
+    'slider-light': { val: 'val-light', fmt: v => v + '°' },
+    'slider-bloom': { val: 'val-bloom', fmt: v => (v/100).toFixed(2) },
+    'slider-f': { val: 'val-f', fmt: v => (v/100*5.02687653).toFixed(3) },
+    'slider-hrot': { val: 'val-hrot', fmt: v => v + '°' },
+    'slider-galpha': { val: 'val-galpha', fmt: v => (v/100).toFixed(2) },
+    'slider-time': { val: 'val-time', fmt: v => (v/100).toFixed(2) },
+    'slider-ndrot-low': { val: 'val-ndrot-low', fmt: v => v + '°' },
+    'slider-ndrot-mid': { val: 'val-ndrot-mid', fmt: v => v + '°' },
+    'slider-ndrot-high': { val: 'val-ndrot-high', fmt: v => v + '°' },
+    'slider-ndslice-pos': { val: 'val-ndslice-pos', fmt: v => (v/100).toFixed(2) },
+    'slider-animspd': { val: 'val-animspd', fmt: v => (v/100).toFixed(2) },
+    'slider-fov': { val: 'val-fov', fmt: v => v + '°' },
+    'slider-exp': { val: 'val-exp', fmt: v => (v/100).toFixed(2) },
+    'slider-bright': { val: 'val-bright', fmt: v => (v/100).toFixed(2) },
+    'slider-contrast': { val: 'val-contrast', fmt: v => (v/100).toFixed(2) },
+    'slider-saturate': { val: 'val-saturate', fmt: v => (v/100).toFixed(2) }
+  };
+
+  // 防抖重建: 滑块拖动时延迟重建，避免每像素都触发
+  let rebuildTimer = null;
+  function debouncedRebuild() {
+    if (rebuildTimer) clearTimeout(rebuildTimer);
+    fastMode = true;
+    rebuildTimer = setTimeout(() => { rebuildTimer = null; fastMode = false; rebuild(); }, 80);
+  }
+
+  Object.entries(sliderMap).forEach(([sid, cfg]) => {
+    const sl = document.getElementById(sid);
+    sl.addEventListener('input', () => {
+      const v = parseFloat(sl.value);
+      document.getElementById(cfg.val).textContent = cfg.fmt(v);
+      if (sid === 'slider-seed') { seedState = v; }
+      if (sid === 'slider-animspd') { animSpeed = v / 100; }
+      if (sid === 'slider-fov' || sid === 'slider-exp') { updateCameraParams(); return; }
+      if (sid === 'slider-light') { updateLightAngle(); return; }
+      if (sid === 'slider-dim') { document.getElementById('dim-bar-val').textContent=v; document.getElementById('dim-bar-rd').textContent=R_d(v).toExponential(4); drawDimBar(); }
+      if (sid === 'slider-bright' || sid === 'slider-contrast' || sid === 'slider-saturate') { updateBCS(); debouncedRebuild(); return; }
+      debouncedRebuild();
+    });
+  });
+
+  document.getElementById('btn-audio').addEventListener('click', generateAudio);
+
+  // 切片维度下拉框
+  function updateSliceDimOptions() {
+    const D = getSlider('slider-dim');
+    const sliceSel = document.getElementById('ndslice-dim');
+    sliceSel.innerHTML = '';
+    const maxOpts = Math.min(D, 200);
+    const step = Math.max(1, Math.floor(D / maxOpts));
+    for (let i = 0; i < D; i += step) {
+      const opt = document.createElement('option');
+      opt.value = i; opt.textContent = `第${i}维`;
+      sliceSel.appendChild(opt);
+    }
+    sliceSel.value = Math.min(3, D-1);
+  }
+  updateSliceDimOptions();
+  document.getElementById('ndslice-dim').addEventListener('change', () => rebuild());
+  document.getElementById('slider-dim').addEventListener('input', updateSliceDimOptions);
+
+  // 导出/工具按钮
+  document.getElementById('btn-export-obj').addEventListener('click', exportOBJ);
+  document.getElementById('btn-export-png').addEventListener('click', exportPNG);
+  document.getElementById('btn-reset-cam').addEventListener('click', () => { if(camSystem) camSystem.reset(); });
+  document.getElementById('btn-center').addEventListener('click', () => {
+    const box = new THREE.Box3().setFromObject(group);
+    if (!box.isEmpty()) {
+      const center = box.getCenter(new THREE.Vector3());
+      controls.target.copy(center);
+      const size = box.getSize(new THREE.Vector3());
+      const dist = Math.max(size.length(), 3);
+      const dir = camera.position.clone().sub(controls.target).normalize();
+      camera.position.copy(controls.target).add(dir.multiplyScalar(dist));
+      controls.update();
+    }
+  });
+  document.getElementById('btn-regen').addEventListener('click', () => {
+    seedState = Math.floor(Math.random() * 999);
+    document.getElementById('slider-seed').value = seedState;
+    document.getElementById('val-seed').textContent = seedState;
+    rebuild();
+  });
+
+  // 颜色方案切换
+  document.querySelectorAll('[data-color]').forEach(b => {
+    b.addEventListener('click', () => {
+      colorScheme = b.dataset.color;
+      document.querySelectorAll('[data-color]').forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      rebuild();
+    });
+  });
+
+  // 初始化控制台
+  consoleSys.log('DGK 谱几何完整引擎 v6.3 工业级版 启动', 'info');
+  consoleSys.log('44模块 + 7加速算法 + 17种可视化模式', 'info');
+  consoleSys.log('按"控制台"按钮切换本面板', 'info');
+}
+
+// 导出 OBJ
+function exportOBJ() {
+  let obj = '# DGK Engine OBJ Export\n';
+  let vCount = 0;
+  group.traverse(child => {
+    if (child.isMesh && child.geometry) {
+      const pos = child.geometry.attributes.position;
+      const idx = child.geometry.index;
+      const matrix = child.matrixWorld;
+      const v = new THREE.Vector3();
+      for (let i = 0; i < pos.count; i++) {
+        v.fromBufferAttribute(pos, i).applyMatrix4(matrix);
+        obj += `v ${v.x.toFixed(6)} ${v.y.toFixed(6)} ${v.z.toFixed(6)}\n`;
+      }
+      if (idx) for (let i = 0; i < idx.count; i += 3)
+        obj += `f ${vCount+idx.getX(i)+1} ${vCount+idx.getX(i+1)+1} ${vCount+idx.getX(i+2)+1}\n`;
+      vCount += pos.count;
+    }
+  });
+  const blob = new Blob([obj], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'dgk_export.obj'; a.click();
+  URL.revokeObjectURL(url);
+  consoleSys.log(`OBJ 导出完成: ${vCount} 顶点`, 'info');
+}
+
+// 截图 PNG
+function exportPNG() {
+  renderer.render(scene, camera);
+  const dataURL = renderer.domElement.toDataURL('image/png');
+  const a = document.createElement('a'); a.href = dataURL; a.download = 'dgk_screenshot.png'; a.click();
+  consoleSys.log('截图已保存', 'info');
+}
+
+// ============================================================
+// 启动
+// ============================================================
+
+window.addEventListener('load', () => {
+  initMath();
+  initModules();
+  initThree();
+  initUI();
+  updateBCS();
+  setTimeout(() => rebuild(), 500);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "trae_cn": {
+    "iCubeAuthInfo://icube-dc:516094651277160": {
+      "status": "encrypted",
+      "format": "unknown",
+      "first_bytes_hex": "7463051000001942858dc113c394bb21022a3354220d614c6d598f13235f3b1a4564a9536b9ff2a79961a368a7304d10002c"
+    },
+    "iCubeAuthInfo://usertag": {
+      "status": "encrypted",
+      "format": "unknown",
+      "first_bytes_hex": "746305100000e261a507294b9d008b4ed58143a9e7546fc39803ddc12a38b221c22681102143b03ff421f6bc233c406eb659"
+    },
+    "bsd_essence_jwt": {
+      "status": "error",
+      "error": "Incorrect padding"
+    },
+    "iCubeAuthInfo://jwt-token": {
+      "status": "error",
+      "error": "Incorrect padding"
+    },
+    "iCubeAuthInfo://icube-dc": {
+      "status": "error",
+      "error": "Incorrect padding"
+    },
+    "iCubeAuthInfo://icube.cloudide": {
+      "status": "encrypted",
+      "format": "unknown",
+      "first_bytes_hex": "746305100000a6d7897f505ce3c0af7b893147cbfb90d817c6a2d9b46db3e3b2cdc9a03356be00dda8a9953bb711ea060beb"
+    }
+  },
+  "trae_solo_essence": {
+    "iCubeAuthInfo://icube-dc:516094651277160": {
+      "status": "encrypted",
+      "format": "unknown",
+      "first_bytes_hex": "74630510000042b9bc78db0f5bb3c768f298e7779a2e71ad3bd92be39e284bb1e9c73872f821f785b2ba24598e64603f95d0"
+    },
+    "iCubeAuthInfo://usertag": {
+      "status": "encrypted",
+      "format": "unknown",
+      "first_bytes_hex": "746305100000962552be02d5c5d56e2ae778297aa7f6f6819128f8daf29a265664571531ce213bed0de4d36783d1ff05310a"
+    },
+    "iCubeAuthInfo://icube.cloudide": {
+      "status": "encrypted",
+      "format": "unknown",
+      "first_bytes_hex": "746305100000aeea14c330c3a3a339263433393609f1c6dd10c498302a019d7a350b30b20e5b05558b7c254ace95bfdfd8ae"
+    }
+  }
+}

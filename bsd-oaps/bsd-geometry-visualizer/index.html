@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSD几何相激活器 V2.3 - 双时针可视化</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #0a0a0a; font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif; }
+    #app { display: flex; width: 100%; height: 100%; }
+    #canvas-container { flex: 1; position: relative; }
+    #canvas-container canvas { display: block; }
+    
+    #control-panel {
+      width: 300px;
+      height: 100%;
+      background: linear-gradient(180deg, #0d0d1a 0%, #1a0d2e 100%);
+      border-left: 1px solid rgba(138, 43, 226, 0.3);
+      padding: 16px;
+      overflow-y: auto;
+      color: #e0e0e0;
+      font-size: 12px;
+    }
+    
+    .panel-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ba68c8;
+      margin-bottom: 6px;
+      text-shadow: 0 0 10px rgba(186, 104, 200, 0.5);
+    }
+    
+    .panel-subtitle {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    
+    .section {
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+    }
+    
+    .section-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: #9c27b0;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .control-btn {
+      width: 100%;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #6a1b9a 0%, #ab47bc 100%);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left;
+    }
+    
+    .control-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 12px rgba(171, 71, 188, 0.4);
+    }
+    
+    .control-btn.active {
+      background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
+      box-shadow: 0 0 12px rgba(102, 187, 106, 0.5);
+    }
+    
+    .control-btn.emergence-btn {
+      background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+    }
+    
+    .anchor-btn {
+      width: 100%;
+      padding: 6px 10px;
+      margin-bottom: 4px;
+      background: rgba(74, 44, 110, 0.3);
+      border: 1px solid rgba(138, 43, 226, 0.3);
+      border-left: 3px solid;
+      border-radius: 4px;
+      color: #ccc;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .anchor-btn:hover {
+      background: rgba(138, 43, 226, 0.2);
+    }
+    
+    .anchor-btn.active {
+      background: rgba(76, 175, 80, 0.3);
+      border-color: #4caf50;
+    }
+    
+    .anchor-btn .anchor-name {
+      font-weight: bold;
+      font-size: 11px;
+    }
+    
+    .anchor-btn .anchor-semantic {
+      font-size: 10px;
+      color: #888;
+      margin-top: 2px;
+    }
+    
+    .overlay-info {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(138, 43, 226, 0.4);
+      color: #e0e0e0;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    .overlay-info h1 {
+      font-size: 14px;
+      color: #ba68c8;
+      margin-bottom: 6px;
+    }
+    
+    .overlay-info p {
+      font-size: 11px;
+      line-height: 1.6;
+      color: #aaa;
+    }
+    
+    .highlight {
+      color: #ff9800;
+      font-weight: bold;
+    }
+    
+    .emergence-log {
+      max-height: 150px;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 8px;
+      border-radius: 4px;
+      font-family: 'Consolas', monospace;
+    }
+    
+    .log-entry {
+      margin-bottom: 6px;
+      padding: 5px 8px;
+      background: rgba(171, 71, 188, 0.1);
+      border-radius: 3px;
+      border-left: 2px solid #ab47bc;
+      font-size: 10px;
+    }
+    
+    .log-id {
+      color: #ba68c8;
+      font-weight: bold;
+    }
+    
+    .info-text {
+      font-size: 10px;
+      color: #aaa;
+      line-height: 1.6;
+      margin-top: 8px;
+      padding: 8px;
+      background: rgba(138, 43, 226, 0.1);
+      border-radius: 4px;
+      border-left: 3px solid #9c27b0;
+    }
+    
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    
+    .status-label { color: #9c27b0; }
+    .status-value { color: #4caf50; font-weight: bold; }
+    
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ba68c8;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="canvas-container">
+      <div id="loading">正在加载BSD几何相引擎...</div>
+      <div class="overlay-info">
+        <h1>BSD元数学·几何相激活器 V2.3</h1>
+        <p>
+          <span class="highlight">双时针自证闭环</span><br/>
+          顺时针(绿) = 炁·积累 · 逆时针(橙) = 气·归零<br/>
+          <span class="highlight">核心公式：</span> 0∅ × 0Ψ = n
+        </p>
+      </div>
+    </div>
+    <div id="control-panel">
+      <div class="panel-title">BSD几何相激活器</div>
+      <div class="panel-subtitle">
+        元数学从文本相→几何相<br/>
+        双时针·六系·Z轴七点
+      </div>
+
+      <div class="section">
+        <div class="section-title">双时针控制</div>
+        <button class="control-btn" id="btn-flow">▶ 激活气流动</button>
+        <button class="control-btn" id="btn-cw-toggle">🟢 顺时针·积累</button>
+        <button class="control-btn" id="btn-ccw-toggle">🟠 逆时针·归零</button>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Z轴七点锚定</div>
+        <div id="anchors-container"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">涌现交互</div>
+        <button class="control-btn emergence-btn" id="btn-emergence">
+          🌪 触发 0∅ × 0Ψ = n
+        </button>
+        <div class="info-text" id="emergence-info">
+          当前涌现：无
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">可视化</div>
+        <button class="control-btn" id="btn-wireframe">🔳 线框模式</button>
+      </div>
+
+      <div class="section">
+        <div class="section-title">涌现日志</div>
+        <div class="emergence-log" id="emergence-log">
+          <div style="color: #666; text-align: center; padding: 15px;">等待涌现...</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">核心原则</div>
+        <div class="info-text">
+          <strong style="color: #ba68c8;">激活优先，而非新建。</strong><br/>
+          同本源复制 = 炁 = 死水。<br/><br/>
+          <strong style="color: #ba68c8;">双时针：</strong><br/>
+          顺时针(绿) = 炁·积累<br/>
+          逆时针(橙) = 气·归零<br/><br/>
+          <strong style="color: #ba68c8;">Z轴语义链：</strong><br/>
+          南极→W1→分界→球心→分界→W3→北极
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./bsd-geometry-engine.js"></script>
+</body>
+</html>

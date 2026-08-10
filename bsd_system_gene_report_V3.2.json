@@ -1,0 +1,338 @@
+{
+  "scan_time": "2026-08-03T13:43:39.870356",
+  "total_directories": 363,
+  "total_files": 110,
+  "total_genes": 473,
+  "by_system": {
+    "强化系": {
+      "icon": "🔵",
+      "axiom": "纯·个体性公理",
+      "count": 45,
+      "total_size_bytes": 4643396559,
+      "categories": [
+        "安全软件"
+      ],
+      "top_genes": [
+        {
+          "name": "EdgeCore",
+          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeCore",
+          "size_mb": 2038.25,
+          "confidence": 0.33,
+          "keywords": [
+            "Core"
+          ]
+        },
+        {
+          "name": "151.0.4129.59",
+          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\151.0.4129.59",
+          "size_mb": 686.87,
+          "confidence": 0.33,
+          "keywords": [
+            "Core"
+          ]
+        },
+        {
+          "name": "150.0.4078.105",
+          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\150.0.4078.105",
+          "size_mb": 675.69,
+          "confidence": 0.33,
+          "keywords": [
+            "Core"
+          ]
+        },
+        {
+          "name": "Optimized",
+          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\Optimized",
+          "size_mb": 675.69,
+          "confidence": 0.33,
+          "keywords": [
+            "Core"
+          ]
+        },
+        {
+          "name": "Microsoft.NETCore.App",
+          "path": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App",
+          "size_mb": 137.76,
+          "confidence": 0.33,
+          "keywords": [
+            "Core"
+          ]
+        }
+      ]
+    },
+    "变身系": {
+      "icon": "⚫",
+      "axiom": "纯·变化性公理",
+      "count": 58,
+      "total_size_bytes": 1015507141,
+      "categories": [
+        "编译器"
+      ],
+      "top_genes": [
+        {
+          "name": "sdk",
+          "path": "C:\\Program Files\\dotnet\\sdk",
+          "size_mb": 374.64,
+          "confidence": 0.33,
+          "keywords": [
+            "SDK"
+          ]
+        },
+        {
+          "name": "8.0.401",
+          "path": "C:\\Program Files\\dotnet\\sdk\\8.0.401",
+          "size_mb": 374.64,
+          "confidence": 0.33,
+          "keywords": [
+            "SDK"
+          ]
+        },
+        {
+          "name": "ARMOURY CRATE Audio SDK",
+          "path": "C:\\Program Files\\ASUS\\ARMOURY CRATE Audio SDK",
+          "size_mb": 88.12,
+          "confidence": 0.67,
+          "keywords": [
+            "SDK",
+            "Audio"
+          ]
+        },
+        {
+          "name": "FrameViewSDK",
+          "path": "C:\\Program Files\\NVIDIA Corporation\\FrameViewSDK",
+          "size_mb": 51.84,
+          "confidence": 0.33,
+          "keywords": [
+            "SDK"
+          ]
+        },
+        {
+          "name": "SDK",
+          "path": "C:\\Program Files\\NVIDIA Corporation\\FrameViewSDK\\SDK",
+          "size_mb": 38.41,
+          "confidence": 0.33,
+          "keywords": [
+            "SDK"
+          ]
+        }
+      ]
+    },
+    "社会系": {
+      "icon": "🟢",
+      "axiom": "纯·关系性公理",
+      "count": 17,
+      "total_size_bytes": 2241679003,
+      "categories": [
+        "网络软件"
+      ],
+      "top_genes": [
+        {
+          "name": "EdgeWebView",
+          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView",
+          "size_mb": 849.28,
+          "confidence": 0.33,
+          "keywords": [
+            "Web"
+          ]
+        },
+        {
+          "name": "Application",
+          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application",
+          "size_mb": 849.28,
+          "confidence": 0.33,
+          "keywords": [
+            "Web"
+          ]
+        },
+        {
+          "name": "shared",
+          "path": "C:\\Program Files\\dotnet\\shared",
+          "size_mb": 254.37,
+          "confidence": 0.33,
+          "keywords": [
+            "Share"
+          ]
+        },
+        {
+          "name": "Microsoft.WindowsDesktop.App",
+          "path": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App",
+          "size_mb": 89.53,
+          "confidence": 0.33,
+          "keywords": [
+            "Share"
+          ]
+        },
+        {
+          "name": "microsoft shared",
+          "path": "C:\\Program Files\\Common Files\\microsoft shared",
+          "size_mb": 23.98,
+          "confidence": 0.33,
+          "keywords": [
+            "Share"
+          ]
+        }
+      ]
+    },
+    "天道系": {
+      "icon": "🟣",
+      "axiom": "关系性×变化性",
+      "count": 40,
+      "total_size_bytes": 795090824,
+      "categories": [
+        "AI框架"
+      ],
+      "top_genes": [
+        {
+          "name": "Enterbrain",
+          "path": "C:\\Program Files (x86)\\Common Files\\Enterbrain",
+          "size_mb": 256.01,
+          "confidence": 0.33,
+          "keywords": [
+            "AI"
+          ]
+        },
+        {
+          "name": "RGSS3",
+          "path": "C:\\Program Files (x86)\\Common Files\\Enterbrain\\RGSS3",
+          "size_mb": 193.32,
+          "confidence": 0.33,
+          "keywords": [
+            "AI"
+          ]
+        },
+        {
+          "name": "RGSS2",
+          "path": "C:\\Program Files (x86)\\Common Files\\Enterbrain\\RGSS2",
+          "size_mb": 42.35,
+          "confidence": 0.33,
+          "keywords": [
+            "AI"
+          ]
+        },
+        {
+          "name": "NvContainer",
+          "path": "C:\\Program Files\\NVIDIA Corporation\\NvContainer",
+          "size_mb": 42.29,
+          "confidence": 0.33,
+          "keywords": [
+            "AI"
+          ]
+        },
+        {
+          "name": "plugins",
+          "path": "C:\\Program Files\\NVIDIA Corporation\\NvContainer\\plugins",
+          "size_mb": 40.19,
+          "confidence": 0.33,
+          "keywords": [
+            "AI"
+          ]
+        }
+      ]
+    },
+    "自然系": {
+      "icon": "🟠",
+      "axiom": "变化性×个体性",
+      "count": 310,
+      "total_size_bytes": 17707070876,
+      "categories": [
+        "数据库"
+      ],
+      "top_genes": [
+        {
+          "name": "Microsoft",
+          "path": "C:\\Program Files (x86)\\Microsoft",
+          "size_mb": 4877.69,
+          "confidence": 0.33,
+          "keywords": [
+            "File"
+          ]
+        },
+        {
+          "name": "Edge",
+          "path": "C:\\Program Files (x86)\\Microsoft\\Edge",
+          "size_mb": 1736.84,
+          "confidence": 0.33,
+          "keywords": [
+            "File"
+          ]
+        },
+        {
+          "name": "Application",
+          "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application",
+          "size_mb": 1736.84,
+          "confidence": 0.33,
+          "keywords": [
+            "File"
+          ]
+        },
+        {
+          "name": "NVIDIA Corporation",
+          "path": "C:\\Program Files\\NVIDIA Corporation",
+          "size_mb": 938.71,
+          "confidence": 0.33,
+          "keywords": [
+            "File"
+          ]
+        },
+        {
+          "name": "dotnet",
+          "path": "C:\\Program Files\\dotnet",
+          "size_mb": 770.11,
+          "confidence": 0.33,
+          "keywords": [
+            "File"
+          ]
+        }
+      ]
+    },
+    "具现系": {
+      "icon": "🔴",
+      "axiom": "个体性×关系性",
+      "count": 3,
+      "total_size_bytes": 15917193,
+      "categories": [
+        "UI框架"
+      ],
+      "top_genes": [
+        {
+          "name": "ASUS Smart Display Control",
+          "path": "C:\\Program Files (x86)\\ASUS\\ASUS Smart Display Control",
+          "size_mb": 14.15,
+          "confidence": 0.67,
+          "keywords": [
+            "Display",
+            "Control"
+          ]
+        },
+        {
+          "name": "TBGraphicControl",
+          "path": "C:\\Program Files\\ASUS\\Armoury Crate Service\\TBGraphicControl",
+          "size_mb": 1.0,
+          "confidence": 0.67,
+          "keywords": [
+            "Graphic",
+            "Control"
+          ]
+        },
+        {
+          "name": "Setup_tool.exe",
+          "path": "C:\\Program Files (x86)\\ASUS\\ASUS Smart Display Control\\Setup_tool.exe",
+          "size_mb": 0.03,
+          "confidence": 0.67,
+          "keywords": [
+            "Display",
+            "Control"
+          ]
+        }
+      ]
+    }
+  },
+  "unclassified": [],
+  "platform_info": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel"
+  },
+  "status": "✅ 系统基因扫描完成"
+}

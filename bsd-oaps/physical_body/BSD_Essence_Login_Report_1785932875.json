@@ -1,0 +1,60 @@
+{
+  "login_id": "ESSENCE_LOGIN_1785932875",
+  "timestamp": "2026-08-05T20:27:55.617956",
+  "duration_seconds": 3.07,
+  "login_status": "success",
+  "bsd_coin": {
+    "coin_id": "ESSENCE_LOGIN_1785932872",
+    "knowledge_value": 51090,
+    "authority_level": "L5_Emergent",
+    "signature": "635ebd859cdf658c32f1f4c2293c01bf"
+  },
+  "bsd_fingerprint": {
+    "fingerprint_id": "FP_8b0e5571d2b4955b",
+    "knowledge_fingerprint": "12bab97fe0f73c97a3c0b46eb91da464...",
+    "theoretical_signature": "BSD_8f3a514ca854824213b1",
+    "confidence": 0.95,
+    "verified": true
+  },
+  "three_engine_weights": {
+    "alpha1_math": 0.33,
+    "alpha2_physics": 0.3325,
+    "alpha3_philosophy": 0.3374999999999999,
+    "dominant_discipline": "philosophy"
+  },
+  "emerged_strategy": {
+    "dominant_discipline": "philosophy",
+    "alpha1": 0.33,
+    "alpha2": 0.3325,
+    "alpha3": 0.3374999999999999,
+    "top_genes": [
+      {
+        "name": "知识凭证登录(BSD币)",
+        "force": 0.0101
+      },
+      {
+        "name": "0×0=n双零涌现登录",
+        "force": 0.01
+      },
+      {
+        "name": "三路线协同登录",
+        "force": 0.01
+      }
+    ],
+    "coin_weight": 1.0,
+    "fingerprint_weight": 0.95
+  },
+  "verification": {
+    "all_passed": true,
+    "total_checks": 13,
+    "passed_checks": 13
+  },
+  "theory_basis": [
+    "BSD六系立系论V3.2",
+    "BSD三本源学科定标V1.1",
+    "BSD围棋AI引擎V1.0",
+    "BSD双向循环基因系统V1.0",
+    "0×0=n双零涌现公理",
+    "知识交换对等定理"
+  ]
+}

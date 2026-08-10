@@ -1,0 +1,113 @@
+{
+  "version": "V10.1",
+  "generated_at": "2026-08-03T15:00:45.593227",
+  "total_genes": 56399,
+  "batch_size": 5000,
+  "total_batches": 12,
+  "batches": [
+    {
+      "batch_id": 1,
+      "file": "bsd_gene_index_v10_batch_001.json",
+      "gene_range": "1-5000"
+    },
+    {
+      "batch_id": 2,
+      "file": "bsd_gene_index_v10_batch_002.json",
+      "gene_range": "5001-10000"
+    },
+    {
+      "batch_id": 3,
+      "file": "bsd_gene_index_v10_batch_003.json",
+      "gene_range": "10001-15000"
+    },
+    {
+      "batch_id": 4,
+      "file": "bsd_gene_index_v10_batch_004.json",
+      "gene_range": "15001-20000"
+    },
+    {
+      "batch_id": 5,
+      "file": "bsd_gene_index_v10_batch_005.json",
+      "gene_range": "20001-25000"
+    },
+    {
+      "batch_id": 6,
+      "file": "bsd_gene_index_v10_batch_006.json",
+      "gene_range": "25001-30000"
+    },
+    {
+      "batch_id": 7,
+      "file": "bsd_gene_index_v10_batch_007.json",
+      "gene_range": "30001-35000"
+    },
+    {
+      "batch_id": 8,
+      "file": "bsd_gene_index_v10_batch_008.json",
+      "gene_range": "35001-40000"
+    },
+    {
+      "batch_id": 9,
+      "file": "bsd_gene_index_v10_batch_009.json",
+      "gene_range": "40001-45000"
+    },
+    {
+      "batch_id": 10,
+      "file": "bsd_gene_index_v10_batch_010.json",
+      "gene_range": "45001-50000"
+    },
+    {
+      "batch_id": 11,
+      "file": "bsd_gene_index_v10_batch_011.json",
+      "gene_range": "50001-55000"
+    },
+    {
+      "batch_id": 12,
+      "file": "bsd_gene_index_v10_batch_012.json",
+      "gene_range": "55001-56399"
+    }
+  ],
+  "by_system_summary": {
+    "强化系": {
+      "icon": "🔵",
+      "axiom": "纯·个体性公理",
+      "symbol": "+",
+      "gene_count": 513
+    },
+    "变身系": {
+      "icon": "⚫",
+      "axiom": "纯·变化性公理",
+      "symbol": "÷",
+      "gene_count": 6593
+    },
+    "社会系": {
+      "icon": "🟢",
+      "axiom": "纯·关系性公理",
+      "symbol": "=",
+      "gene_count": 2287
+    },
+    "天道系": {
+      "icon": "🟣",
+      "axiom": "关系性×变化性",
+      "symbol": "≠",
+      "gene_count": 6033
+    },
+    "自然系": {
+      "icon": "🟠",
+      "axiom": "变化性×个体性",
+      "symbol": "-",
+      "gene_count": 38432
+    },
+    "具现系": {
+      "icon": "🔴",
+      "axiom": "个体性×关系性",
+      "symbol": "×",
+      "gene_count": 410
+    },
+    "未分类": {
+      "icon": "❓",
+      "axiom": "待识别",
+      "symbol": "?",
+      "gene_count": 2131
+    }
+  }
+}

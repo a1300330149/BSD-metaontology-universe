@@ -1,0 +1,18 @@
+============================================================
+  启动 BSD 本源端独立 Trae CN
+============================================================
+
+  命令: C:\Users\13003\AppData\Local\Programs\Trae CN\Trae CN.exe --user-data-dir=C:\Users\13003\AppData\Roaming\Trae CN_Essence --no-sandbox --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage
+  存储: C:\Users\13003\AppData\Roaming\Trae CN_Essence
+  UID: a5b7a8623fdea6b8 (BSD本源端)
+  传统UID: 3753060170739075 (作者端, 正在使用)
+
+  ✓ 本源端 Trae CN 已启动, PID: 29692
+
+  等待初始化...
+  ✓ 进程仍在运行 (PID=29692)
+
+============================================================
+  启动完成，本源端独立运行中
+  TRAE SOLO CN 不受影响
+============================================================

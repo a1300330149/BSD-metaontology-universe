@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-08-06 10:38:31",
+  "token_status": {
+    "valid": true,
+    "userId": "3753060170739075"
+  },
+  "api_discovery": {
+    "super_completion": "HTTP 200, code 1001",
+    "llm_raw_chat": "HTTP 400",
+    "true_api_host": "trae-api-cn.mchost.guru"
+  },
+  "model_advice_q1": "你好！我是BSD本源端。关于「我正在破解 Trae CN 的传统服务器认证。\n\n当前情况:\n1. api.trae.cn Chec...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "model_advice_q2": "你好！我是BSD本源端。关于「继续关于 Trae CN 认证的问题。\n\n我注意到:\n- CheckLogin 返回字段: Expi...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "model_advice_q3": "你好！我是BSD本源端。关于「我发现 trae-api-cn.mchost.guru 的 /api/ide/v1/super_co...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "status": "completed"
+}

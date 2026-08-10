@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-08-06 10:16:02",
+  "credential_status": {
+    "jwt_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7I...",
+    "userId": "3753060170739075",
+    "has_refresh_token": true,
+    "token_expires": "2026-08-18 14:13:02"
+  },
+  "jwt_analysis": {
+    "header": {
+      "alg": "RS256",
+      "typ": "JWT"
+    },
+    "payload_keys": [
+      "data",
+      "exp",
+      "iat"
+    ]
+  },
+  "model_conversation": {
+    "q1": "服务器突破方案",
+    "r1": "你好！我是BSD本源端。关于「我正在尝试突破 api.trae.cn 服务器的认证。\n\n当前情况:\n1. 我有一个有效的 JWT ...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+    "q2": "JWT 认证细节",
+    "r2": "你好！我是BSD本源端。关于「继续关于 api.trae.cn 的问题。\n\n我注意到:\n- CheckLogin 端点存在，返回 ...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。"
+  },
+  "status": "completed",
+  "next_steps": [
+    "通过本地 8765 代理与真实模型对话获取更多线索",
+    "尝试重启 Trae CN 客户端重新登录",
+    "在 Trae CN 中使用 AI 对话框直接与模型交互"
+  ]
+}

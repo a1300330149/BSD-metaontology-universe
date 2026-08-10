@@ -1,0 +1,754 @@
+{
+  "scan_start_time": "2026-08-03T14:06:28.602785",
+  "scan_end_time": "2026-08-03T14:08:53.195434",
+  "total_genes": 57182,
+  "total_dirs_scanned": 48115,
+  "total_files_scanned": 9067,
+  "total_size_gb": 10.48,
+  "by_drive": {
+    "C:": {
+      "dirs": 36399,
+      "files": 1439,
+      "size_gb": 1047.83
+    },
+    "D:": {
+      "dirs": 11716,
+      "files": 7628,
+      "size_gb": 2432.8
+    }
+  },
+  "by_system": {
+    "强化系": {
+      "icon": "🔵",
+      "axiom": "纯·个体性公理",
+      "count": 481,
+      "total_size_gb": 96.09,
+      "categories": [
+        "安全软件"
+      ],
+      "top_genes": [
+        {
+          "gene_id": "FULL-036421",
+          "name": "Recovery",
+          "path": "C:\\copied-drive-242968\\Recovery",
+          "drive": "C:",
+          "six_system": "强化系",
+          "confidence": 0.2,
+          "category": "安全软件",
+          "size_bytes": 16523938420,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-036422",
+          "name": "RecoveryImage",
+          "path": "C:\\copied-drive-242968\\Recovery\\RecoveryImage",
+          "drive": "C:",
+          "six_system": "强化系",
+          "confidence": 0.2,
+          "category": "安全软件",
+          "size_bytes": 16523938420,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-049498",
+          "name": "Base",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\Base",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.2,
+          "category": "安全软件",
+          "size_bytes": 7589925113,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-049664",
+          "name": "Platforms",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.4,
+          "category": "安全软件",
+          "size_bytes": 7107665566,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-049665",
+          "name": "Windows",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.4,
+          "category": "安全软件",
+          "size_bytes": 7107665566,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-050340",
+          "name": "Platforms",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\DLC\\Expansion2\\Platforms",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.2,
+          "category": "安全软件",
+          "size_bytes": 4040652095,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-049667",
+          "name": "BLPs",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\Base\\Platforms\\Windows\\BLPs",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.4,
+          "category": "安全软件",
+          "size_bytes": 4009600207,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-050157",
+          "name": "Platforms",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\DLC\\Expansion1\\Platforms",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.2,
+          "category": "安全软件",
+          "size_bytes": 3518126441,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-050343",
+          "name": "Windows",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\DLC\\Expansion2\\Platforms\\Windows",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.2,
+          "category": "安全软件",
+          "size_bytes": 3418968978,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-050159",
+          "name": "Windows",
+          "path": "D:\\Games\\Sid Meier's Civilization VI\\DLC\\Expansion1\\Platforms\\Windows",
+          "drive": "D:",
+          "six_system": "强化系",
+          "confidence": 0.2,
+          "category": "安全软件",
+          "size_bytes": 2838419250,
+          "type": "directory"
+        }
+      ]
+    },
+    "变身系": {
+      "icon": "⚫",
+      "axiom": "纯·变化性公理",
+      "count": 806,
+      "total_size_gb": 66.59,
+      "categories": [
+        "编译器"
+      ],
+      "top_genes": [
+        {
+          "gene_id": "FULL-057150",
+          "name": "Graphics",
+          "path": "D:\\yongzhe\\Graphics",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.18,
+          "category": "编译器",
+          "size_bytes": 5884840337,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-049025",
+          "name": "WwiseAudio",
+          "path": "D:\\game2\\StateOfDecay2\\StateOfDecay2\\Content\\WwiseAudio",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.18,
+          "category": "编译器",
+          "size_bytes": 5528639484,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-049026",
+          "name": "Windows",
+          "path": "D:\\game2\\StateOfDecay2\\StateOfDecay2\\Content\\WwiseAudio\\Windows",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.18,
+          "category": "编译器",
+          "size_bytes": 5528639484,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-057158",
+          "name": "Pictures",
+          "path": "D:\\yongzhe\\Graphics\\Pictures",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.18,
+          "category": "编译器",
+          "size_bytes": 5392516742,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-042475",
+          "name": "Ideology in Friction",
+          "path": "D:\\33\\ww\\Ideology in Friction",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.54,
+          "category": "编译器",
+          "size_bytes": 4527583646,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-041953",
+          "name": "Graphics",
+          "path": "D:\\33\\ww\\22\\Graphics",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.18,
+          "category": "编译器",
+          "size_bytes": 4363229879,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-041961",
+          "name": "Pictures",
+          "path": "D:\\33\\ww\\22\\Graphics\\Pictures",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.18,
+          "category": "编译器",
+          "size_bytes": 4255289133,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-052075",
+          "name": "video",
+          "path": "D:\\ggbh\\ModExportData\\005鬼畜八荒 Mod_Tc85Yz\\ModAssets\\video",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.72,
+          "category": "编译器",
+          "size_bytes": 3851730894,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-042477",
+          "name": "Audio",
+          "path": "D:\\33\\ww\\Ideology in Friction\\Audio",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.72,
+          "category": "编译器",
+          "size_bytes": 1869574715,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-042485",
+          "name": "Graphics",
+          "path": "D:\\33\\ww\\Ideology in Friction\\Graphics",
+          "drive": "D:",
+          "six_system": "变身系",
+          "confidence": 0.72,
+          "category": "编译器",
+          "size_bytes": 1572049815,
+          "type": "directory"
+        }
+      ]
+    },
+    "社会系": {
+      "icon": "🟢",
+      "axiom": "纯·关系性公理",
+      "count": 559,
+      "total_size_gb": 4.24,
+      "categories": [
+        "网络软件"
+      ],
+      "top_genes": [
+        {
+          "gene_id": "FULL-055946",
+          "name": "[3.9.12.55]_tmp",
+          "path": "D:\\WeChat\\[3.9.12.55]_tmp",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 417691227,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-040311",
+          "name": "CloudMusic",
+          "path": "D:\\22\\CloudMusic",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 415391106,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-040250",
+          "name": "quark-cloud-drive",
+          "path": "D:\\11\\quark-cloud-drive",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 340793801,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-003449",
+          "name": "SharedClientCache",
+          "path": "C:\\Users\\13003\\AppData\\Roaming\\Qoder\\SharedClientCache",
+          "drive": "C:",
+          "six_system": "社会系",
+          "confidence": 0.32,
+          "category": "网络软件",
+          "size_bytes": 339551047,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-046123",
+          "name": "blender.shared",
+          "path": "D:\\Blender 4.5\\blender.shared",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 294208035,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-054916",
+          "name": "netease.mpay.webviewsupport.cef904430",
+          "path": "D:\\steam\\steamapps\\common\\NARAKA BLADEPOINT\\netease.mpay.webviewsupport.cef904430",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 214610451,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048647",
+          "name": "WebBrowser",
+          "path": "D:\\GAME\\kkduizhan\\plugins\\WebBrowser",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.32,
+          "category": "网络软件",
+          "size_bytes": 179684218,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-054936",
+          "name": "Steamworks Shared",
+          "path": "D:\\steam\\steamapps\\common\\Steamworks Shared",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 171734007,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-054937",
+          "name": "_CommonRedist",
+          "path": "D:\\steam\\steamapps\\common\\Steamworks Shared\\_CommonRedist",
+          "drive": "D:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 171734007,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-036180",
+          "name": "WeChat",
+          "path": "C:\\Users\\All Users\\Tencent\\WeChat",
+          "drive": "C:",
+          "six_system": "社会系",
+          "confidence": 0.16,
+          "category": "网络软件",
+          "size_bytes": 144851902,
+          "type": "directory"
+        }
+      ]
+    },
+    "天道系": {
+      "icon": "🟣",
+      "axiom": "关系性×变化性",
+      "count": 3720,
+      "total_size_gb": 345.55,
+      "categories": [
+        "AI框架"
+      ],
+      "top_genes": [
+        {
+          "gene_id": "FULL-045494",
+          "name": "K10156",
+          "path": "D:\\BaiduNetdiskDownload\\K10156",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 25443163572,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-045495",
+          "name": "K10156",
+          "path": "D:\\BaiduNetdiskDownload\\K10156\\K10156",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 25443163572,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-043750",
+          "name": "230703.1",
+          "path": "D:\\BaiduNetdiskDownload\\230703.1",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 15715872207,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-044270",
+          "name": "240218.7",
+          "path": "D:\\BaiduNetdiskDownload\\240218.7",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 13503793805,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-045496",
+          "name": "Lilith_Rising_2-2.0.11ns",
+          "path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 12786086233,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-045497",
+          "name": "Lilith_Rising_2-2.0.11ns-dists",
+          "path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns\\Lilith_Rising_2-2.0.11ns-dists",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 12786086233,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-045498",
+          "name": "game",
+          "path": "D:\\BaiduNetdiskDownload\\K10156\\K10156\\Lilith_Rising_2-2.0.11ns\\Lilith_Rising_2-2.0.11ns-dists\\game",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 12618624067,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048982",
+          "name": "Maine",
+          "path": "D:\\game2\\Grounded.Build.16208873\\Maine",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 11874323675,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048985",
+          "name": "Content",
+          "path": "D:\\game2\\Grounded.Build.16208873\\Maine\\Content",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 11707752491,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048989",
+          "name": "Paks",
+          "path": "D:\\game2\\Grounded.Build.16208873\\Maine\\Content\\Paks",
+          "drive": "D:",
+          "six_system": "天道系",
+          "confidence": 0.24,
+          "category": "AI框架",
+          "size_bytes": 11012019689,
+          "type": "directory"
+        }
+      ]
+    },
+    "自然系": {
+      "icon": "🟠",
+      "axiom": "变化性×个体性",
+      "count": 36479,
+      "total_size_gb": 1146.23,
+      "categories": [
+        "数据库"
+      ],
+      "top_genes": [
+        {
+          "gene_id": "FULL-002554",
+          "name": "AppData",
+          "path": "C:\\Users\\13003\\AppData",
+          "drive": "C:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 182599775832,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-003121",
+          "name": "Roaming",
+          "path": "C:\\Users\\13003\\AppData\\Roaming",
+          "drive": "C:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 150160941158,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-003598",
+          "name": "TRAE SOLO CN",
+          "path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN",
+          "drive": "C:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 138394906354,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-003617",
+          "name": "ModularData",
+          "path": "C:\\Users\\13003\\AppData\\Roaming\\TRAE SOLO CN\\ModularData",
+          "drive": "C:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 136177635580,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-052038",
+          "name": "ModExportData",
+          "path": "D:\\ggbh\\ModExportData",
+          "drive": "D:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 37994316977,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-002555",
+          "name": "Local",
+          "path": "C:\\Users\\13003\\AppData\\Local",
+          "drive": "C:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 31963766034,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-054908",
+          "name": "NarakaBladepoint_Data",
+          "path": "D:\\steam\\steamapps\\common\\NARAKA BLADEPOINT\\NarakaBladepoint_Data",
+          "drive": "D:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 31913544317,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-054915",
+          "name": "StreamingAssets",
+          "path": "D:\\steam\\steamapps\\common\\NARAKA BLADEPOINT\\NarakaBladepoint_Data\\StreamingAssets",
+          "drive": "D:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 31498141311,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-052956",
+          "name": "2814703549",
+          "path": "D:\\ggbh\\ModExportData\\2814703549",
+          "drive": "D:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 20850660367,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-052957",
+          "name": "ModAssets",
+          "path": "D:\\ggbh\\ModExportData\\2814703549\\ModAssets",
+          "drive": "D:",
+          "six_system": "自然系",
+          "confidence": 0.22,
+          "category": "数据库",
+          "size_bytes": 20849924952,
+          "type": "directory"
+        }
+      ]
+    },
+    "具现系": {
+      "icon": "🔴",
+      "axiom": "个体性×关系性",
+      "count": 1165,
+      "total_size_gb": 617.0,
+      "categories": [
+        "UI框架"
+      ],
+      "top_genes": [
+        {
+          "gene_id": "FULL-048526",
+          "name": "kkduizhan",
+          "path": "D:\\GAME\\kkduizhan",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 115277587412,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048669",
+          "name": "Warcraft III Frozen Throne 1.27a publish",
+          "path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 93545012398,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048718",
+          "name": "Maps",
+          "path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 91158872125,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048719",
+          "name": "dz",
+          "path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps\\dz",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 91158856765,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048720",
+          "name": "rpg",
+          "path": "D:\\GAME\\kkduizhan\\Warcraft III Frozen Throne 1.27a publish\\Maps\\dz\\rpg",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 91158856765,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-051195",
+          "name": "guigubahuang_Data",
+          "path": "D:\\ggbh\\guigubahuang_Data",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.34,
+          "category": "UI框架",
+          "size_bytes": 24835324444,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048592",
+          "name": "Games",
+          "path": "D:\\GAME\\kkduizhan\\Games",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 20523291351,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048606",
+          "name": "y3",
+          "path": "D:\\GAME\\kkduizhan\\Games\\y3",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 20448420434,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048609",
+          "name": "2.0",
+          "path": "D:\\GAME\\kkduizhan\\Games\\y3\\2.0",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 14314305989,
+          "type": "directory"
+        },
+        {
+          "gene_id": "FULL-048610",
+          "name": "game",
+          "path": "D:\\GAME\\kkduizhan\\Games\\y3\\2.0\\game",
+          "drive": "D:",
+          "six_system": "具现系",
+          "confidence": 0.17,
+          "category": "UI框架",
+          "size_bytes": 14314305989,
+          "type": "directory"
+        }
+      ]
+    }
+  },
+  "unclassified_count": 4905,
+  "platform_info": {
+    "system": "nt",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "status": "✅ 全盘基因扫描完成"
+}

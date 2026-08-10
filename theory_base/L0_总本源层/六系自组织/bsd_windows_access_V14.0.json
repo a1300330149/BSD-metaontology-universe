@@ -1,0 +1,190 @@
+{
+  "top_down": {
+    "access_steps": [
+      {
+        "from": "BSD 强化系公理",
+        "to": "Windows 强化系基因",
+        "method": "公理投影 → 子集包含",
+        "gene_count": 8,
+        "status": "✅"
+      },
+      {
+        "from": "BSD 变身系公理",
+        "to": "Windows 变身系基因",
+        "method": "公理投影 → 子集包含",
+        "gene_count": 2,
+        "status": "✅"
+      },
+      {
+        "from": "BSD 社会系公理",
+        "to": "Windows 社会系基因",
+        "method": "公理投影 → 子集包含",
+        "gene_count": 3,
+        "status": "✅"
+      },
+      {
+        "from": "BSD 天道系公理",
+        "to": "Windows 天道系基因",
+        "method": "公理投影 → 子集包含",
+        "gene_count": 3,
+        "status": "✅"
+      },
+      {
+        "from": "BSD 自然系公理",
+        "to": "Windows 自然系基因",
+        "method": "公理投影 → 子集包含",
+        "gene_count": 13,
+        "status": "✅"
+      },
+      {
+        "from": "BSD 具现系公理",
+        "to": "Windows 具现系基因",
+        "method": "公理投影 → 子集包含",
+        "gene_count": 5,
+        "status": "✅"
+      },
+      {
+        "from": "BSD 未分类公理",
+        "to": "Windows 未分类基因",
+        "method": "公理投影 → 子集包含",
+        "gene_count": 73,
+        "status": "✅"
+      }
+    ],
+    "inclusion_status": "✅ 全部完成",
+    "axiom_activation": {
+      "强化系": {
+        "axiom": "纯·个体性公理",
+        "genes_activated": 8,
+        "symbol": "?"
+      },
+      "变身系": {
+        "axiom": "纯·变化性公理",
+        "genes_activated": 2,
+        "symbol": "?"
+      },
+      "社会系": {
+        "axiom": "纯·关系性公理",
+        "genes_activated": 3,
+        "symbol": "?"
+      },
+      "天道系": {
+        "axiom": "关系性×变化性",
+        "genes_activated": 3,
+        "symbol": "?"
+      },
+      "自然系": {
+        "axiom": "变化性×个体性",
+        "genes_activated": 13,
+        "symbol": "?"
+      },
+      "具现系": {
+        "axiom": "个体性×关系性",
+        "genes_activated": 5,
+        "symbol": "?"
+      },
+      "未分类": {
+        "axiom": "未分类",
+        "genes_activated": 73,
+        "symbol": "?"
+      }
+    }
+  },
+  "bottom_up": {
+    "expand_steps": [
+      {
+        "from": "Windows 强化系基因",
+        "to": "BSD 强化系公理丰富",
+        "method": "基因归纳 → 公理丰富",
+        "contribution": "8 个基因贡献",
+        "status": "✅"
+      },
+      {
+        "from": "Windows 变身系基因",
+        "to": "BSD 变身系公理丰富",
+        "method": "基因归纳 → 公理丰富",
+        "contribution": "2 个基因贡献",
+        "status": "✅"
+      },
+      {
+        "from": "Windows 社会系基因",
+        "to": "BSD 社会系公理丰富",
+        "method": "基因归纳 → 公理丰富",
+        "contribution": "3 个基因贡献",
+        "status": "✅"
+      },
+      {
+        "from": "Windows 天道系基因",
+        "to": "BSD 天道系公理丰富",
+        "method": "基因归纳 → 公理丰富",
+        "contribution": "3 个基因贡献",
+        "status": "✅"
+      },
+      {
+        "from": "Windows 自然系基因",
+        "to": "BSD 自然系公理丰富",
+        "method": "基因归纳 → 公理丰富",
+        "contribution": "13 个基因贡献",
+        "status": "✅"
+      },
+      {
+        "from": "Windows 具现系基因",
+        "to": "BSD 具现系公理丰富",
+        "method": "基因归纳 → 公理丰富",
+        "contribution": "5 个基因贡献",
+        "status": "✅"
+      },
+      {
+        "from": "Windows 未分类基因",
+        "to": "BSD 未分类公理丰富",
+        "method": "基因归纳 → 公理丰富",
+        "contribution": "73 个基因贡献",
+        "status": "✅"
+      }
+    ],
+    "enrichment_status": "✅ 全部完成",
+    "windows_features": {
+      "total_genes": 107,
+      "total_size_gb": 30.41,
+      "six_system_coverage": 1.1666666666666667
+    }
+  },
+  "integration": {
+    "windows_system_integrated": true,
+    "total_genes_integrated": 107,
+    "six_system_coverage": 1.0,
+    "optimization_potential": {
+      "强化系": {
+        "gene_count": 8,
+        "axiom": "纯·个体性公理",
+        "potential": "Medium"
+      },
+      "变身系": {
+        "gene_count": 2,
+        "axiom": "纯·变化性公理",
+        "potential": "Medium"
+      },
+      "社会系": {
+        "gene_count": 3,
+        "axiom": "纯·关系性公理",
+        "potential": "Medium"
+      },
+      "天道系": {
+        "gene_count": 3,
+        "axiom": "关系性×变化性",
+        "potential": "Medium"
+      },
+      "自然系": {
+        "gene_count": 13,
+        "axiom": "变化性×个体性",
+        "potential": "Medium"
+      },
+      "具现系": {
+        "gene_count": 5,
+        "axiom": "个体性×关系性",
+        "potential": "Medium"
+      }
+    },
+    "conclusion": "Windows系统已纳入BSD六系坐标系"
+  }
+}

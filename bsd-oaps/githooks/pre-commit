@@ -1,0 +1,47 @@
+#!/bin/bash
+# ============================================================
+# BSD-OAPS Pre-commit Hook
+# 提交前自动执行 bsd-verify-axiom 和 bsd-verify-hash
+# 保留手动验证入口：仍可直接运行 CLI 命令或 python -m 调用
+# 绕过方式：git commit --no-verify
+# ============================================================
+
+export PYTHONIOENCODING=utf-8
+
+echo "============================================================"
+echo "BSD-OAPS Pre-commit: 验证锁档参数与公理合规性"
+echo "============================================================"
+
+failed=0
+
+echo ""
+echo "── [1/2] bsd-verify-axiom (公理合规性) ──"
+python -m bsd_engine.validators.axiom_compliance
+if [ $? -ne 0 ]; then
+    failed=1
+    echo ""
+    echo ">> bsd-verify-axiom 未通过"
+fi
+
+echo ""
+echo "── [2/2] bsd-verify-hash (哈希完整性) ──"
+python -m bsd_engine.validators.hash_checker
+if [ $? -ne 0 ]; then
+    failed=1
+    echo ""
+    echo ">> bsd-verify-hash 未通过"
+fi
+
+echo ""
+echo "============================================================"
+if [ $failed -ne 0 ]; then
+    echo "pre-commit: 验证失败，提交已拦截。"
+    echo "  手动运行: bsd-verify-axiom / bsd-verify-hash"
+    echo "  绕过检查: git commit --no-verify"
+    echo "============================================================"
+    exit 1
+fi
+
+echo "pre-commit: 全部验证通过。"
+echo "============================================================"
+exit 0

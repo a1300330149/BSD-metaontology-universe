@@ -1,0 +1,111 @@
+{
+  "started_at": "2026-08-05T20:50:27.865697",
+  "phases": {
+    "environment": {
+      "status": "completed",
+      "checks": [
+        {
+          "name": "Trae CN 进程",
+          "status": "ok",
+          "details": "0 个进程",
+          "count": 0
+        },
+        {
+          "name": "storage.json",
+          "status": "ok",
+          "size": 10522
+        },
+        {
+          "name": "Local State",
+          "status": "ok",
+          "size": 459
+        },
+        {
+          "name": "TinyStorage",
+          "status": "ok",
+          "size": 1352
+        },
+        {
+          "name": "本源凭证",
+          "status": "ok",
+          "size": 1570
+        },
+        {
+          "name": "认证状态",
+          "status": "ok",
+          "auth_keys": 3,
+          "gtm_users": 2
+        },
+        {
+          "name": "Trae CN 窗口",
+          "status": "ok",
+          "count": 2,
+          "titles": [
+            "TRAE Work CN",
+            "Trae CN - 文件资源管理器"
+          ]
+        }
+      ]
+    },
+    "emergence": {
+      "status": "completed",
+      "exit_code": 0,
+      "output_length": 1803,
+      "error_length": 0
+    },
+    "traditional_login": {
+      "status": "completed",
+      "before": {
+        "auth_keys": 3,
+        "gtm_users": 2
+      },
+      "after": {
+        "auth_keys": 3,
+        "gtm_users": 2
+      },
+      "uid": "3753060170739075"
+    },
+    "essence_login": {
+      "status": "completed",
+      "credentials": {
+        "uid": "a5b7a8623fdea6b8",
+        "traditional_uid": "3753060170739075",
+        "oauth_ready": true,
+        "status": "学习完成，就绪OAuth登录"
+      },
+      "login_credentials": {
+        "coin_value": 51090,
+        "authority_level": "L5_Emergent",
+        "confidence": 0.95,
+        "alpha1": 0.33,
+        "alpha2": 0.3325,
+        "alpha3": 0.3374999999999999
+      }
+    },
+    "full_access": {
+      "status": "completed",
+      "checks": {
+        "has_auth_keys": true,
+        "has_traditional_uid": true,
+        "has_essence_uid": true,
+        "has_gtm_users": true,
+        "aha_migrated": true
+      },
+      "passed": 5,
+      "total": 5,
+      "ratio": 1.0
+    }
+  },
+  "author": {
+    "traditional_uid": "3753060170739075",
+    "essence_uid": "a5b7a8623fdea6b8",
+    "device_id": "136411536168449",
+    "hostname": "DESKTOP-I3DOEQB",
+    "username": "13003",
+    "machine_id": "4b698660-b79f-4295-8887-18d6f267ee3a"
+  },
+  "systems": {},
+  "final_status": "all_completed",
+  "elapsed_seconds": 0.23,
+  "completed_at": "2026-08-05T20:50:28.096046"
+}

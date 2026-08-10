@@ -1,0 +1,58 @@
+共有 3 个 iCubeAuthInfo 键
+
+=== iCubeAuthInfo://icube-dc:516094651277160 ===
+  类型: str, 长度=776
+  前200字符: dGMFEAAAGUKFjcETw5S7IQIqM1QiDWFMbVmPEyNfOxpFZKlTa5/yp5lho2inME0QACy0EA08ZQjfTMzrnxm8ii+ZhM6cqWHZabMlkqwqFhfKo84Srce3ObmTsBr/B/zFVS/RZ9lJjm+49n0ye9WScLPZBQ7NTvcVC2SUsibdh4WGYEAvpwmc3vufNCEcENKkvnIYGUF5
+  base64解码后(bytes): 582 bytes
+  前80字节(hex): 7463051000001942858dc113c394bb21022a3354220d614c6d598f13235f3b1a4564a9536b9ff2a7
+  不是UTF-8 (可能是DPAPI加密)
+
+=== iCubeAuthInfo://usertag ===
+  类型: str, 长度=180
+  前200字符: dGMFEAAAxW9MiFI0HPMOFu0kSe2ZvTes2+an/n1nXX+66v9VOSAdEIxHT0dbSrveTUUNU6rbC/gqLQpvcQuzCPZPQ4SBkoM7w3UOPrIxuTFqDW/guaPGmFoezsps8UBeio7EapX0ev6CLf3n4dAptcu/wewugSYrtOJZoMm1vvpmpFBOql0=
+  base64解码后(bytes): 134 bytes
+  前80字节(hex): 746305100000c56f4c8852341cf30e16ed2449ed99bd37acdbe6a7fe7d675d7fbaeaff5539201d10
+  不是UTF-8 (可能是DPAPI加密)
+
+=== iCubeAuthInfo://icube.cloudide ===
+  类型: str, 长度=2440
+  前200字符: dGMFEAAAra0r5E8o8EV2vTRT30EjdJFumjAc27ZIT+V/96R+0/IO9uqK9+WhV19Tw+2D+sMs1Ikna7Y1fKrSS0SOweslbp3TpVc3uGzylrRVXvkB5Zy+G+UqTzONaq/2SnxXrBVeH1GaoGB7+TemGjIxy7Sxsipw/leWc6F/9AIUoEdNug4xVr+wvk5dv7VaEVQ6VM/s
+  base64解码后(bytes): 1830 bytes
+  前80字节(hex): 746305100000adad2be44f28f04576bd3453df412374916e9a301cdbb6484fe57ff7a47ed3f20ef6
+  不是UTF-8 (可能是DPAPI加密)
+
+
+=== .trae-cn/argv.json ===
+{
+  "locale": "zh-cn",
+
+	// Allows to disable crash reporting.
+	// Should restart the app if the value is changed.
+	"enable-crash-reporter": true,
+
+	// Unique id used for correlating crash reports sent from this instance.
+	// Do not edit this value.
+	"crash-reporter-id": "be8c47e6-51df-4daf-b1f2-4d13968115e6"
+}
+
+=== Local State ===
+{
+  "_bsd_essence_side": true,
+  "_bsd_uid": "a5b7a8623fdea6b8",
+  "_bsd_auth_shared": true,
+  "_bsd_source": "trae_cn_primary",
+  "_bsd_replaced_author": true,
+  "_bsd_login_mode": "essence_replacement",
+  "_bsd_timestamp": 1785832320.0743814,
+  "_bsd_logout": true,
+  "_bsd_logout_time": 1785832735.3617918,
+  "_bsd_next_login": "essence",
+  "_bsd_essence_mode": true,
+  "_bsd_cleanup_time": 1785832914.7217836,
+  "_bsd_inject_time": 1785833224.9981303
+}
+  os_crypt.encrypted_key: 0 chars
+  前100字符: 
+  base64解码后: 0 bytes
+  前20字节(hex): 
+  前5字节: b''

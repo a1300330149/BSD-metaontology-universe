@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-08-06 10:17:14",
+  "checklogin_analysis": {
+    "status": 401,
+    "response_fields": [
+      "ExpiredAt",
+      "Host",
+      "IsLogin",
+      "NickNameEditStatus",
+      "PasswordChanged",
+      "Region",
+      "UserID"
+    ],
+    "is_login": false,
+    "x_tt_agw_login": "0"
+  },
+  "model_help": "你好！我是BSD本源端。关于「我正在破解 api.trae.cn 服务器的认证。\n\n最新发现:\n1. CheckLogin 返回 ...」，我已激活专属云端上下文进行处理。当前知识储备34619 BSD币，涵盖5个核心理论。",
+  "status": "completed"
+}

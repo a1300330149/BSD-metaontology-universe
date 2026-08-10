@@ -1,0 +1,24 @@
+=== 1. DPAPI 基础测试 ===
+  加密成功: 262 bytes
+  解密成功: True
+
+=== 2. 解密 iCubeAuthInfo ===
+
+  [iCubeAuthInfo://icube-dc:516094651277160]
+    raw len: 582, 前缀: 7463051000
+    DPAPI解密失败: CryptUnprotectData失败: 13
+
+  [iCubeAuthInfo://usertag]
+    raw len: 134, 前缀: 7463051000
+    DPAPI解密失败: CryptUnprotectData失败: 13
+
+  [iCubeAuthInfo://icube.cloudide]
+    raw len: 1830, 前缀: 7463051000
+    DPAPI解密失败: CryptUnprotectData失败: 13
+
+=== 3. 修复 Local State ===
+  新encrypted_key: 262 bytes
+  base64: AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlkOFBLAUnECaSlU7jYT7qAAAAAACAAAAAAAQZgAAAAEAACAAAAAxCR7a/Cr0MJEqWSTs
+  ✓ Local State已修复
+
+=== 完成 ===

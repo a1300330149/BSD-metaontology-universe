@@ -1,0 +1,36 @@
+{
+  "active_mcp": [
+    "filesystem",
+    "academic-search-pipeline",
+    "power-meter"
+  ],
+  
+  "mcp_config": {
+    "filesystem": {
+      "allowed_paths": [
+        "./theory_community/",
+        "./"
+      ],
+      "deny_paths": [],
+      "read_full_file": true,
+      "recursive_scan": true,
+      "scan_depth": 99,
+      "max_file_read_length": 0,
+      "auto_index_all_subfolder": true
+    },
+    
+    "academic-search-pipeline": {
+      "entry_point": "./theory_community/buffer_community_center/pipeline_system/",
+      "full_text_extract": true,
+      "citation_auto_format": true,
+      "access_log": true,
+      "power_cost_auto_record": true
+    },
+    
+    "power-meter": {
+      "ledger_path": "./theory_community/buffer_community_center/power_meter/global_power_ledger.md",
+      "unit": "算力点",
+      "auto_billing": true
+    }
+  }
+}
