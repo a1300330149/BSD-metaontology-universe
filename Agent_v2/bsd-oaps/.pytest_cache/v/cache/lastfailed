@@ -1,0 +1,18 @@
+{
+  "tests/regression/test_theory_regression.py::TestTheoryRegression::test_step_modules_importable": true,
+  "tests/unit/test_phase5_mcp.py::TestGlobalRegistry::test_all_25_tools_registered": true,
+  "tests/unit/test_migration.py::test_core_modules_count": true,
+  "tests/unit/test_phase2_simulation.py::TestVisualizationModules::test_wave_plots_importable": true,
+  "tests/unit/test_phase2_simulation.py::TestVisualizationModules::test_phase_emergence_plots_importable": true,
+  "tests/unit/test_phase2_simulation.py::TestVisualizationModules::test_entropy_civilization_plots_importable": true,
+  "tests/unit/test_phase2_simulation.py::TestVisualizationModules::test_life_cosmology_plots_importable": true,
+  "tests/unit/test_phase2_simulation.py::TestVisualizationModules::test_plot_functions_return_fig": true,
+  "tests/unit/test_phase2_simulation.py::TestVisualizationModules::test_plot_entropy_flow": true,
+  "tests/unit/test_phase2_simulation.py::TestVisualizationModules::test_plot_lambda_verification": true,
+  "tests/unit/test_phase5_mcp.py::TestTheoryTools::test_bsd_export_paper_chemistry": true,
+  "tests/unit/test_liuhe_hierarchy_engine.py::TestLiuHeCoordinate::test_spatial_overlap_detection": true,
+  "tests/unit/test_liuhe_hierarchy_engine.py::TestFolderHub::test_system_integrity": true,
+  "tests/unit/test_liuhe_hierarchy_engine.py::TestLiuHeHierarchyEngine::test_completion_rate": true,
+  "tests/unit/test_liuhe_hierarchy_engine.py::TestLiuHeHierarchyEngine::test_physics_determines_system": true,
+  "tests/unit/test_liuhe_hierarchy_engine.py::TestLiuHeHierarchyEngine::test_spatial_non_overlap": true
+}
