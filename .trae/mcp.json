@@ -1,0 +1,68 @@
+{
+  "active_mcp": ["filesystem", "file-index-auto"],
+  "mcp_config": {
+    "filesystem": {
+      "allowed_paths": [
+        "./theory_base/",
+        "./theory_base/core/",
+        "./theory_base/core/01_0元空无本源基底/",
+        "./theory_base/core/02_一重九维法理基底/",
+        "./theory_base/core/03_二重三界秩序基底/",
+        "./theory_base/core/04_核心确权归档/",
+        "./theory_base/core/core_base_agents/",
+        "./theory_base/extension/",
+        "./theory_base/extension/01_数理增量拓展/",
+        "./theory_base/extension/02_跨尺度衍生理论/",
+        "./theory_base/extension/03_工程落地分支/",
+        "./theory_base/extension/04_创世世界观分支/",
+        "./theory_base/extension/05_哲学交叉分支/",
+        "./theory_base/extension/06_期刊学术分支/",
+        "./theory_base/extension/07_空白拓展预留区/",
+        "./theory_base/extension/agents/",
+        "./theory_base/extension/agents/01_数理推演类衍生智能/",
+        "./theory_base/extension/agents/02_量子物理类衍生智能/",
+        "./theory_base/extension/agents/03_文明演化类衍生智能/",
+        "./theory_base/extension/agents/04_AI仿真工程智能/",
+        "./theory_base/extension/agents/05_版权文书智能/",
+        "./theory_base/extension/agents/06_自定义全域奇迹推演智能/",
+        "./.trae/",
+        "./"
+      ],
+      "deny_paths": [],
+      "read_full_file": true,
+      "recursive_scan": true,
+      "scan_depth": 99,
+      "max_file_read_length": 0,
+      "auto_index_all_subfolder": true,
+      "index_sync_interval": 1
+    },
+    "file-index-auto": {
+      "auto_refresh_index": true,
+      "index_file_path": "./theory_base/total_index.md",
+      "link_core_extension": true,
+      "keyword_cross_search": true,
+      "agent_cross_link": true
+    }
+  },
+  "theory_base_config": {
+    "auto_load": true,
+    "full_context": true,
+    "priority_order": [
+      "core/01_0元空无本源基底",
+      "core/02_一重九维法理基底",
+      "core/03_二重三界秩序基底",
+      "core/04_核心确权归档",
+      "core/core_base_agents",
+      "extension/*",
+      "extension/agents/*"
+    ],
+    "lock_core": true,
+    "allow_external_extend": true
+  },
+  "dual_kb_config": {
+    "local_priority": 100,
+    "external_priority": 50,
+    "auto_merge": true,
+    "conflict_resolution": "local_first"
+  }
+}

@@ -1,0 +1,36 @@
+﻿# 排除编译产物
+__pycache__/
+*.py[cod]
+*.class
+*.so
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+*.pkg
+*.exe
+*.dll
+
+# 排除备份文件
+*.bak
+*.bak2
+*.bak3
+
+# 排除数据文件
+*.npz
+*.npy
+*.zip
+*.rar
+*.tar
+*.gz
+
+# 排除日志
+*.log
+
+# 排除测试缓存
+.pytest_cache/
+
+# 排除系统文件
+.ds_store
+thumbs.db

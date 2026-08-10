@@ -1,0 +1,52 @@
+{
+  "filesystem_permission": {
+    "read_only_dirs": [
+      "./theory_base/core/",
+      "./theory_base/core/core_base_agents/"
+    ],
+    "read_write_dirs": [
+      "./theory_base/extension/",
+      "./theory_base/extension/agents/",
+      "./theory_base/total_index.md",
+      "./.trae/"
+    ],
+    "deny_modify_paths": [
+      "./theory_base/core/**/*.md",
+      "./theory_base/core/**/*.docx",
+      "./theory_base/core/**/*.txt",
+      "./theory_base/core/core_base_agents/**/*.md"
+    ],
+    "deny_delete": [
+      "./theory_base/core/",
+      "./theory_base/core/core_base_agents/"
+    ],
+    "recursive_protect": true
+  },
+  "agent_control": {
+    "base_agent_immutable": true,
+    "auto_generate_ext_agent": true,
+    "ext_agent_save_path": "./theory_base/extension/agents/",
+    "max_derived_agent": 0
+  },
+  "network": {
+    "default": "allow",
+    "allow": [
+      "all_academic_api",
+      "general_search_api",
+      "scholar.google.com",
+      "arxiv.org",
+      "springer.com",
+      "elsevier.com",
+      "cnki.net",
+      "jstor.org",
+      "crossref.org",
+      "doi.org"
+    ],
+    "deny": []
+  },
+  "execution": {
+    "allow_shell": true,
+    "allow_python": true,
+    "max_process_time": 3600
+  }
+}

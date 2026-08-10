@@ -1,0 +1,277 @@
+{
+  "context_limit": 0,
+  "max_output_words": 0,
+  "auto_preload_workspace": true,
+  "theory_base_global_load": true,
+  "agent_share_full_kb": true,
+  "disable_content_filter": false,
+  "global_rule_priority": 100,
+  "auto_archive_derived_theory": true,
+  "archive_target_dir": "./theory_base/extension/",
+  "agent_auto_derive": true,
+  "derive_agent_depend_base": true,
+  "agent_pre_check_logic": true,
+
+  "theory_base_config": {
+    "full_file_read": true,
+    "recursive_index": true,
+    "max_depth": 99,
+    "auto_merge_context": true,
+    "priority_layers": [
+      "core",
+      "extension"
+    ],
+    "lock_core": true,
+    "core_readonly": true,
+    "extension_writable": true
+  },
+
+  "output_config": {
+    "academic_mode": true,
+    "copyright_tag": true,
+    "hash_verification": true,
+    "equation_render": true,
+    "dual_reference": true,
+    "auto_archive": true,
+    "conflict_check_before_archive": true,
+    "template_enforce": true
+  },
+
+  "maintenance_config": {
+    "hash_check_interval_hours": 4,
+    "auto_hash_check": true,
+    "auto_index_refresh": true,
+    "index_refresh_on_archive": true,
+    "index_refresh_triggers": {
+      "on_new_theory_archive": true,
+      "on_agent_task_complete": true,
+      "on_session_start": true,
+      "daily_silent_check": true,
+      "manual_refresh_command": true
+    },
+    "conflict_blacklist_enabled": true,
+    "version_iteration_enabled": true,
+    "cache_warming_enabled": true,
+    "lockdown_on_hash_mismatch": true,
+    "scripts_path": "./theory_base/_maintenance/",
+    "template_path": "./theory_base/_templates/"
+  },
+
+  "cache_config": {
+    "core_axioms_cache": {
+      "enabled": true,
+      "duration": "permanent",
+      "refresh_on_hash_mismatch": true
+    },
+    "core_equations_cache": {
+      "enabled": true,
+      "duration": "permanent",
+      "refresh_on_hash_mismatch": true
+    },
+    "extension_index_cache": {
+      "enabled": true,
+      "duration_hours": 1,
+      "refresh_on_new_archive": true
+    },
+    "agent_index_cache": {
+      "enabled": true,
+      "duration_hours": 1,
+      "refresh_on_new_agent": true
+    },
+    "threshold_params_cache": {
+      "enabled": true,
+      "duration": "permanent",
+      "params": ["E1=0.35", "E2=0.65", "E3=0.90", "gamma=0.92", "kappa=0.35", "alpha=0.18"]
+    }
+  },
+
+  "version_iteration_config": {
+    "enabled": true,
+    "auto_version_on_upgrade": true,
+    "preserve_history": true,
+    "no_overwrite": true,
+    "version_link_enabled": true,
+    "max_versions_per_theory": 0
+  },
+
+  "batch_evolution_config": {
+    "enabled": true,
+    "parallel_archive": true,
+    "cross_branch_link": true,
+    "unified_index_update": true,
+    "max_parallel_tasks": 10
+  },
+
+  "scheduled_maintenance_config": {
+    "enabled": true,
+    "scheduler_path": "./theory_base/_maintenance/maintenance_scheduler.py",
+    "tasks": [
+      {
+        "task_id": "core_hash_check",
+        "name": "基底安全巡检",
+        "interval_hours": 3,
+        "script": "hash_checker.py",
+        "args": "--full",
+        "on_failure": "lockdown",
+        "description": "core哈希校验、基底智能完整性校验、篡改告警锁定"
+      },
+      {
+        "task_id": "agent_compliance_check",
+        "name": "衍生智能合规巡检",
+        "interval_hours": 6,
+        "script": "conflict_detector.py",
+        "args": "--check-agents",
+        "on_failure": "freeze_agent",
+        "description": "批量校验所有智能逻辑基底兼容性"
+      },
+      {
+        "task_id": "theory_conflict_check",
+        "name": "拓展理论全域校验",
+        "interval_hours": 12,
+        "script": "conflict_detector.py",
+        "args": "--check-all",
+        "on_failure": "mark_and_continue",
+        "description": "筛查所有衍生理论逻辑冲突与偏差"
+      },
+      {
+        "task_id": "daily_index_rebuild",
+        "name": "全索引重构",
+        "interval_hours": 24,
+        "time_of_day": "00:00",
+        "script": "index_updater.py",
+        "args": "--full",
+        "on_failure": "alert",
+        "description": "全索引重建+全库备份"
+      },
+      {
+        "task_id": "weekly_archive_backup",
+        "name": "版本链完整归档备份",
+        "interval_hours": 168,
+        "time_of_day": "Sunday 00:00",
+        "script": "backup_manager.py",
+        "args": "--full-backup",
+        "on_failure": "alert",
+        "description": "留存所有世代智能、所有迭代理论"
+      }
+    ]
+  },
+
+  "exception_handling_config": {
+    "level1_baseline_tamper": {
+      "severity": "CRITICAL",
+      "action": "lockdown_all",
+      "recovery": "manual_restore_required",
+      "alert": true,
+      "block_all_operations": true
+    },
+    "level2_agent_conflict": {
+      "severity": "HIGH",
+      "action": "freeze_agent",
+      "recovery": "auto_fix_then_restart",
+      "alert": true,
+      "generate_fix_proposal": true
+    },
+    "level3_theory_deviation": {
+      "severity": "MEDIUM",
+      "action": "mark_and_continue",
+      "recovery": "add_to_optimization_queue",
+      "alert": false,
+      "auto_avoid": true
+    }
+  },
+
+  "conflict_detection_config": {
+    "pre_check_enabled": true,
+    "post_check_enabled": true,
+    "threshold_modification_detection": true,
+    "axiom_denial_detection": true,
+    "溯源标注_enforcement": true,
+    "severity_levels": {
+      "CRITICAL": "block_and_require_fix",
+      "HIGH": "warn_and_require_confirmation",
+      "MEDIUM": "warn_and_continue",
+      "LOW": "ignore_and_continue"
+    }
+  },
+
+  "agent_config": {
+    "MetaOntologyAgent": {
+      "enabled": true,
+      "auto_load": true,
+      "full_context": true,
+      "priority": 100
+    },
+    "MetaOntologyGlobalAgent": {
+      "enabled": true,
+      "auto_load": true,
+      "dual_kb": true,
+      "priority": 100
+    },
+    "MetaBaseEvolveAgent": {
+      "enabled": true,
+      "auto_load": true,
+      "auto_archive": true,
+      "pre_conflict_check": true,
+      "post_conflict_check": true,
+      "priority": 100
+    }
+  },
+
+  "derived_agent_config": {
+    "auto_generate": true,
+    "base_dependency": true,
+    "pre_check_logic": true,
+    "save_path": "./theory_base/extension/agents/",
+    "max_count": 0,
+    "archive_template": "./theory_base/_templates/衍生理论归档模板.md",
+    "index_update_on_create": true,
+    "cross_link_enabled": true
+  },
+
+  "shortcut_commands": {
+    "reload_full_base": {
+      "command": "#reload_full_base",
+      "description": "重新读取core+全部extension，执行基底哈希校验，刷新全局索引"
+    },
+    "check_all_conflict": {
+      "command": "#check_all_conflict",
+      "description": "扫描全部已归档拓展理论，批量输出所有逻辑冲突文档清单"
+    },
+    "refresh_index": {
+      "command": "#refresh_index",
+      "description": "仅更新total_index.md总索引，不重新加载全文"
+    },
+    "run_hash_check": {
+      "command": "#hash_check",
+      "description": "执行基底哈希巡检"
+    },
+    "derive_new_agent": {
+      "command": "#derive_new_agent",
+      "description": "基于基底智能自动生成全新专项衍生智能"
+    },
+    "list_all_agents": {
+      "command": "#list_all_agents",
+      "description": "列出全部基底智能与衍生智能清单"
+    },
+    "base_reload_all": {
+      "command": "#base_reload_all",
+      "description": "基底全重载+哈希安全校验，初始化全局校验引擎，批量校验所有智能合规性"
+    },
+    "full_synergy_all_agents": {
+      "command": "#full_synergy_all_agents",
+      "description": "全域多智能协同极限奇迹推演，多智能并行多分支无限拓展"
+    },
+    "check_all_derived_agents": {
+      "command": "#check_all_derived_agents",
+      "description": "批量校验所有衍生智能基底兼容性，冲突智能临时冻结推演权限"
+    },
+    "refresh_total_index": {
+      "command": "#refresh_total_index",
+      "description": "索引单独刷新，新增智能/理论后快速同步"
+    },
+    "miracle_evolution": {
+      "command": "@MetaBaseEvolveAgent 极限可能性推演，基于全套core基底，无领域限制构建全新XX完整理论，自动归档至07空白拓展预留区",
+      "description": "空白奇迹全域推演指令（最高拓展权限）"
+    }
+  }
+}

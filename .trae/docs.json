@@ -1,0 +1,764 @@
+{
+  "name": "新四位一体3.0元本体本源知识库",
+  "description": "V3.0 Rev.04 新四位一体框架3.0元本体论理论文档集，包含0-4重宇宙基底完整理论体系",
+  "version": "3.0.04",
+  "hash": "e62f918340dc2975108294736ac8927d90584136972485931027958740925713",
+  "author": "杨腾飞",
+  "lockDate": "2026-06-20",
+  "basePath": "./theory_base",
+  "indexConfig": {
+    "chunkSize": 500,
+    "chunkOverlap": 50,
+    "maxDepth": 3,
+    "includePatterns": [
+      "*.md"
+    ],
+    "excludePatterns": [
+      "__pycache__",
+      ".git",
+      "node_modules"
+    ]
+  },
+  "metadata": {
+    "ontologyVersion": "3.0",
+    "foundationLayers": [
+      "0重元道本源",
+      "1重九维法理",
+      "2重三界秩序",
+      "3重六阶科研",
+      "4重智能体执行"
+    ],
+    "axioms": 7,
+    "dimensions": 9,
+    "threeRealms": [
+      "天道",
+      "自然",
+      "人道"
+    ]
+  },
+  "files": [
+    {
+      "path": "0元本体论数理与多学科交叉验证.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\0元本体论数理与多学科交叉验证.md",
+      "hash": "ad0c4e3543571e7b3f34f29ecd3d0d97600d7911b1d667829d68d198ab4e3eed",
+      "size": 12547,
+      "lastModified": 1782191107.1305473
+    },
+    {
+      "path": "AFAC工程落地分册.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\AFAC工程落地分册.md",
+      "hash": "0800ad96a2215a55ce73756d6ea54b76ac115f8653c5ad4e871e64e3c7acf44e",
+      "size": 5470,
+      "lastModified": 1782191107.1383414
+    },
+    {
+      "path": "AI验证理论大一统.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\AI验证理论大一统.md",
+      "hash": "76af147257bff15fc00af22563f0c7885270ed1bbe2b0185199008d04923a3fc",
+      "size": 38329,
+      "lastModified": 1782191107.143877
+    },
+    {
+      "path": "code_base_0_axiom_1_ablation_automation_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_ablation_automation_20260623_130455.md",
+      "hash": "6d3fca8e2f3cca76e308df32e223c7587ecacbedf4e76cf6ccdc4627938d47ea",
+      "size": 1098,
+      "lastModified": 1782191107.151066
+    },
+    {
+      "path": "code_base_0_axiom_1_base_0_meta_dao_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_base_0_meta_dao_20260623_130455.md",
+      "hash": "66bd24fb67e26e5e7e6b65f106b1bf77d7e70886d6a638791b821a42b5fbbd55",
+      "size": 1094,
+      "lastModified": 1782191107.1566496
+    },
+    {
+      "path": "code_base_0_axiom_1_base_1_nine_dim_legal_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_base_1_nine_dim_legal_20260623_130455.md",
+      "hash": "3f8635b1aa0e587d944a05b1144af42ffc798fedf5d2ae76c93346243ddb3a0a",
+      "size": 1100,
+      "lastModified": 1782191107.1616962
+    },
+    {
+      "path": "code_base_0_axiom_1_base_2_three_realms_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_base_2_three_realms_20260623_130455.md",
+      "hash": "877a4fb60094b46f500b3f4e0e5bccb679e1d54760b2e2b786443d8827f88357",
+      "size": 1098,
+      "lastModified": 1782191107.1682322
+    },
+    {
+      "path": "code_base_0_axiom_1_boundary_guard_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_boundary_guard_20260623_130455.md",
+      "hash": "e3f6d9835b1e20797d17e44ea100b913ab2c8cb68f5d868bddd9f6641c053280",
+      "size": 1093,
+      "lastModified": 1782191107.1747663
+    },
+    {
+      "path": "code_base_0_axiom_1_cause_reward_agent_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_cause_reward_agent_20260623_130455.md",
+      "hash": "f8f1f5ff828992a5adb03d05db30dc3849f6b3110103dc2db4f29487d9567552",
+      "size": 1097,
+      "lastModified": 1782191107.1802833
+    },
+    {
+      "path": "code_base_0_axiom_1_distributed_parallel_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_distributed_parallel_20260623_130455.md",
+      "hash": "8bdd1e1c68e37b1dd2f7dfb4a77f7aa0ea2aa100996f3a404fa112675b83e0dc",
+      "size": 1099,
+      "lastModified": 1782191107.1854076
+    },
+    {
+      "path": "code_base_0_axiom_1_dist_comm_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_dist_comm_20260623_130455.md",
+      "hash": "e1dfc4ca6f1061c976c7ac0d2726614fa68a046fe246b0bf8cd97aedd836b596",
+      "size": 1088,
+      "lastModified": 1782191107.1919646
+    },
+    {
+      "path": "code_base_0_axiom_1_dist_scheduler_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_dist_scheduler_20260623_130455.md",
+      "hash": "368f888341f9bbbe2bac5be8a0619a2898c83e347951817c4c05e25a455856a1",
+      "size": 1093,
+      "lastModified": 1782191107.1981075
+    },
+    {
+      "path": "code_base_0_axiom_1_entertainment_creation_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_entertainment_creation_20260623_130455.md",
+      "hash": "378c09cd8f5581e30fb56817924f783c845da233a1b9111e3d80ac9fbbd3ceaa",
+      "size": 1101,
+      "lastModified": 1782191107.2051928
+    },
+    {
+      "path": "code_base_0_axiom_1_flow_matrix_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_flow_matrix_20260623_130455.md",
+      "hash": "2392ee3cfff47773cb17b62ad5ed814b0c407f1a96984b2473cfa9a228105cee",
+      "size": 1090,
+      "lastModified": 1782191107.2112134
+    },
+    {
+      "path": "code_base_0_axiom_1_foundation_controller_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_foundation_controller_20260623_130455.md",
+      "hash": "287d0079c10d849fc57a6de1f2dc0c30adfeb312d0170358419b6e08a8640f06",
+      "size": 1100,
+      "lastModified": 1782191107.2168539
+    },
+    {
+      "path": "code_base_0_axiom_1_lightweight_embedded_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_lightweight_embedded_20260623_130455.md",
+      "hash": "a85be648281f90ac9df2c3f3df18560d36c2ba2d0fd50ef7c6e51bda600d3029",
+      "size": 1099,
+      "lastModified": 1782191107.2230456
+    },
+    {
+      "path": "code_base_0_axiom_1_master_creation_agent_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_master_creation_agent_20260623_130455.md",
+      "hash": "3388278a3f9d6f455b187f5878db8dc2eb5c8e99f49580d5a00fa9abb9795589",
+      "size": 1100,
+      "lastModified": 1782191107.2291453
+    },
+    {
+      "path": "code_base_0_axiom_1_master_research_agent_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_master_research_agent_20260623_130455.md",
+      "hash": "b88de36296eb1c69573361f5f986ee8f9907e841cbb507d4c8403b38e6336659",
+      "size": 1100,
+      "lastModified": 1782191107.2366712
+    },
+    {
+      "path": "code_base_0_axiom_1_multimodal_extension_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_multimodal_extension_20260623_130455.md",
+      "hash": "72d4fe8e8db0d739d61902138e4f1768a86b312f2dc4520dd27b52f92c31a60e",
+      "size": 1099,
+      "lastModified": 1782191107.2426765
+    },
+    {
+      "path": "code_base_0_axiom_1_negative_transfer_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_negative_transfer_20260623_130455.md",
+      "hash": "3d31bbfcb302f583b8ac4d2244d8019a714f104aecb79d4eb72e56ffd3d1c777",
+      "size": 1096,
+      "lastModified": 1782191107.2478037
+    },
+    {
+      "path": "code_base_0_axiom_1_self_evolution_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_self_evolution_20260623_130455.md",
+      "hash": "24026360d25a8d96bb6ef00a4356d7f8276c4dfc54df514dae1866e111cc1597",
+      "size": 1093,
+      "lastModified": 1782191107.2538238
+    },
+    {
+      "path": "code_base_0_axiom_1_transform_judger_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_1_transform_judger_20260623_130455.md",
+      "hash": "fa9d09268fb725225ddc2604b3bdb3ec0853760256240ce0e9ba954581d04f20",
+      "size": 1095,
+      "lastModified": 1782191107.2593663
+    },
+    {
+      "path": "code_base_0_axiom_2_afac2026_data_loader_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_afac2026_data_loader_20260623_130455.md",
+      "hash": "ee174a689b2e4aee596a401cd9c4dafaab9f4a7340cab6477287b4d9a92bebf7",
+      "size": 1099,
+      "lastModified": 1782191107.265389
+    },
+    {
+      "path": "code_base_0_axiom_2_agent_comm_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_agent_comm_20260623_130455.md",
+      "hash": "40c25bf7ce67befc885cc7c08759aeed17f5556eeb17a057b6bb3f2c68bf5ac3",
+      "size": 1089,
+      "lastModified": 1782191107.2719142
+    },
+    {
+      "path": "code_base_0_axiom_2_audit_logger_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_audit_logger_20260623_130455.md",
+      "hash": "7c4ce032232ede836abe0d251a021a9db40ac9508116c13d63a1b7b0d836186e",
+      "size": 1091,
+      "lastModified": 1782191107.2780085
+    },
+    {
+      "path": "code_base_0_axiom_2_base_graph_agent_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_base_graph_agent_20260623_130455.md",
+      "hash": "7e6d88fdeda1ceda5966acc03936bb8ac67eac8c52c756ba6104d38140ebc8a5",
+      "size": 1095,
+      "lastModified": 1782191107.2840087
+    },
+    {
+      "path": "code_base_0_axiom_2_base_library_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_base_library_20260623_130455.md",
+      "hash": "fca558b314274c014b5e856ed5a45096b03ebdd6df081235633315cf06862272",
+      "size": 1091,
+      "lastModified": 1782191107.2890694
+    },
+    {
+      "path": "code_base_0_axiom_2_bayesian_opt_agent_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_bayesian_opt_agent_20260623_130455.md",
+      "hash": "ddd6a04a351d90aed54a60d9652ef8702962936331cdf98308924d33d6fdb07f",
+      "size": 1097,
+      "lastModified": 1782191107.295586
+    },
+    {
+      "path": "code_base_0_axiom_2_data_preprocess_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_data_preprocess_20260623_130455.md",
+      "hash": "90b77d040c52c38cc8a00676c421a3ae52979ecffa6c8ed90f475edc6b518072",
+      "size": 1094,
+      "lastModified": 1782191107.3012981
+    },
+    {
+      "path": "code_base_0_axiom_2_data_utils_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_data_utils_20260623_130455.md",
+      "hash": "22883636edf1e6f53cacfa906ad43a3ded8da45d54c9268971433c7dced4e6c0",
+      "size": 1089,
+      "lastModified": 1782191107.3083599
+    },
+    {
+      "path": "code_base_0_axiom_2_gcl_agent_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_gcl_agent_20260623_130455.md",
+      "hash": "efa73fe54ab72b727c7c0be40afe2e27f3d2aaeba6e9b2cd1b55b861d9cf7ce6",
+      "size": 1088,
+      "lastModified": 1782191107.3153615
+    },
+    {
+      "path": "code_base_0_axiom_2_global_state_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_global_state_20260623_130455.md",
+      "hash": "85133656ba5506415268757c26d00900ad41781bffac4213a72c67d02e4fafb6",
+      "size": 1091,
+      "lastModified": 1782191107.3249233
+    },
+    {
+      "path": "code_base_0_axiom_2_models_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_models_20260623_130455.md",
+      "hash": "29d276078347d40d1d98f8d17b9272b29dcf21152c3ce9a29e203054f5db2437",
+      "size": 1085,
+      "lastModified": 1782191107.3312378
+    },
+    {
+      "path": "code_base_0_axiom_2_models_ext_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_models_ext_20260623_130455.md",
+      "hash": "cb9541e1e15cb80d339f3df0ac8e4439bfa0e7ef3c4412bd195a775b924bd698",
+      "size": 1089,
+      "lastModified": 1782191107.3388727
+    },
+    {
+      "path": "code_base_0_axiom_2_multi_modal_loader_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_multi_modal_loader_20260623_130455.md",
+      "hash": "89b3480efb6c428d45409408aac5aee4f8dcce83eb5aab6a3f3b5f6f3dc67e9a",
+      "size": 1097,
+      "lastModified": 1782191107.3448799
+    },
+    {
+      "path": "code_base_0_axiom_2_phase_agent_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_phase_agent_20260623_130455.md",
+      "hash": "a270f355542df63b28536cb178cb67609ac6a1fff04d7dcf7d44dd01be1d6d43",
+      "size": 1090,
+      "lastModified": 1782191107.351439
+    },
+    {
+      "path": "code_base_0_axiom_2_result_generator_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\code_base_0_axiom_2_result_generator_20260623_130455.md",
+      "hash": "a7ef2975897dcf29ae2ff7ad793c6651728763acd5e079deeb8b28c059886b97",
+      "size": 1095,
+      "lastModified": 1782191107.3584774
+    },
+    {
+      "path": "experiment_acceptance_report_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_acceptance_report_20260623_130455.md",
+      "hash": "582a060b759c6afa42c2e09e54dd2ca4bb452949f1c164a277481c5136934406",
+      "size": 900,
+      "lastModified": 1782191107.3644798
+    },
+    {
+      "path": "experiment_base_lib_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_base_lib_20260623_130455.md",
+      "hash": "5578f7d8cc4594c8531890e61989cf7d5d5d7eadab3386133952000be2025846",
+      "size": 891,
+      "lastModified": 1782191107.3710427
+    },
+    {
+      "path": "experiment_design_notes_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_design_notes_20260623_130455.md",
+      "hash": "5331b2355c2a0812f91fc563af93958439dc13a58acd3955fd590f1f6fe14244",
+      "size": 895,
+      "lastModified": 1782191107.3780625
+    },
+    {
+      "path": "experiment_diagnosis_report_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_diagnosis_report_20260623_130455.md",
+      "hash": "03d4a1e1fdc85b1f7209850bac872498e0a221070306f95911b6602894ead1e7",
+      "size": 899,
+      "lastModified": 1782191107.3870955
+    },
+    {
+      "path": "experiment_dist_base_lib_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_dist_base_lib_20260623_130455.md",
+      "hash": "91d7197814b2492a1c151d1a26dd6f0d8fbd8507e6a08311153c48d7ef650d16",
+      "size": 896,
+      "lastModified": 1782191107.3931384
+    },
+    {
+      "path": "experiment_experiment_1_report_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_experiment_1_report_20260623_130455.md",
+      "hash": "cd2bb0cd903ff9d11ab839deddd7975bc38cb4d05ef0b18483809dee9cce626d",
+      "size": 902,
+      "lastModified": 1782191107.3991594
+    },
+    {
+      "path": "experiment_experiment_2_report_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_experiment_2_report_20260623_130455.md",
+      "hash": "d93918ad5b439b710ccb8326e1253a34e878f59744e0f0bdd9f302b6c7eb08cd",
+      "size": 902,
+      "lastModified": 1782191107.4056752
+    },
+    {
+      "path": "experiment_literature_summary_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_literature_summary_20260623_130455.md",
+      "hash": "1b1502faea9134b26d8301092b6f89eeefe8c5834e97c7f7f70bd0cf019b8c04",
+      "size": 901,
+      "lastModified": 1782191107.4122066
+    },
+    {
+      "path": "experiment_metrics_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_metrics_20260623_130455.md",
+      "hash": "14b4544ae4c7d6550d83d24834071d4559f12896de9757d5e341a2e301dfe893",
+      "size": 890,
+      "lastModified": 1782191107.417719
+    },
+    {
+      "path": "experiment_research_memory_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_research_memory_20260623_130455.md",
+      "hash": "4fe143a023cd9d682b5b7b43ada5e189e01fc3b4274092e914045f6b7b2bcfe8",
+      "size": 898,
+      "lastModified": 1782191107.4257677
+    },
+    {
+      "path": "experiment_trajectory_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_trajectory_20260623_130455.md",
+      "hash": "8758f68e136fae2012b45d3a58080233df08f6ff632ba1719a783c8cd1770712",
+      "size": 893,
+      "lastModified": 1782191107.432317
+    },
+    {
+      "path": "experiment_trajectory_task1_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_trajectory_task1_20260623_130455.md",
+      "hash": "14e9b0e04ff1b8b374f0cdb9e9d3b4b5c1518bb234af8d4450775dce8d0e24cc",
+      "size": 899,
+      "lastModified": 1782191107.4379244
+    },
+    {
+      "path": "experiment_trajectory_task2_20260623_130455.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\experiment_trajectory_task2_20260623_130455.md",
+      "hash": "dfdaffed8627eb2a096ed97f325824d7a829396c20a18f57df30deabd352888c",
+      "size": 899,
+      "lastModified": 1782191107.4446568
+    },
+    {
+      "path": "一阶实体拟合系统（FO-EFS）工程化完整设计文档.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\一阶实体拟合系统（FO-EFS）工程化完整设计文档.md",
+      "hash": "291d4da4409ca3d2db229cf6e0b94c9d3ff430ae11826c9967679ce45807a6a9",
+      "size": 22292,
+      "lastModified": 1782191107.4527128
+    },
+    {
+      "path": "七大公理专项论文.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\七大公理专项论文.md",
+      "hash": "ff3bc9dfbbe1cd5eac303926dfe32cdf3ef2f1daaa2f048c604f28c210cb8e28",
+      "size": 6071,
+      "lastModified": 1782191107.4582293
+    },
+    {
+      "path": "三态同源统摄与全域学科演化闭环体系（独立成册终极卷宗）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\三态同源统摄与全域学科演化闭环体系（独立成册终极卷宗）.md",
+      "hash": "ad06833ff23bf97d38d4443d8bc995d5a8f5805553a627aff708934a23702dcf",
+      "size": 34947,
+      "lastModified": 1782191107.465434
+    },
+    {
+      "path": "三阶智能决策系统（TO-IDS）工程化完整设计文档.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\三阶智能决策系统（TO-IDS）工程化完整设计文档.md",
+      "hash": "5f4acff94f8d17a252ef67178d40deba49b93e0c07d3e0a6ea049ad16c0632dd",
+      "size": 27482,
+      "lastModified": 1782191107.4729881
+    },
+    {
+      "path": "二阶分布纠偏系统（SOD-DBS）工程化完整设计文档.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\二阶分布纠偏系统（SOD-DBS）工程化完整设计文档.md",
+      "hash": "3d31a7795c97dfa51d33a6c315829629109de0a725645baa68358c3abd0ec139",
+      "size": 25904,
+      "lastModified": 1782191107.4785316
+    },
+    {
+      "path": "五组核心议题系统论证局限.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\五组核心议题系统论证局限.md",
+      "hash": "30b14ca439c92c18457e05c5b87b6bf5086371954b1a332c72d97a7b8fb9c1f5",
+      "size": 18891,
+      "lastModified": 1782191107.4867656
+    },
+    {
+      "path": "五阶科研成果产出系统（FO-ROS）工程化完整设计文档.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\五阶科研成果产出系统（FO-ROS）工程化完整设计文档.md",
+      "hash": "5d0e7aa53fb644f13c77f5b8280ab4b942948c42f1b602f823449972c93378b2",
+      "size": 25571,
+      "lastModified": 1782191107.4922862
+    },
+    {
+      "path": "元本体理论分册.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\元本体理论分册.md",
+      "hash": "fc73afb8eca5acc72fe1888be00d0f390094bacfb8b8fd3a20094cb0aac316cd",
+      "size": 11680,
+      "lastModified": 1782191107.4988692
+    },
+    {
+      "path": "全域元本体视角下马克思主义及其衍生思想的理论边界与固有局限推演.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\全域元本体视角下马克思主义及其衍生思想的理论边界与固有局限推演.md",
+      "hash": "449a2c6d72a2e59e4ba68852a3ad391320800b8c628257f062b0fcc495d2917b",
+      "size": 32127,
+      "lastModified": 1782191107.50489
+    },
+    {
+      "path": "全域文明法典（标准化法条完整版｜对标《刑法》《治安管理处罚法》成文法典体例）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\全域文明法典（标准化法条完整版｜对标《刑法》《治安管理处罚法》成文法典体例）.md",
+      "hash": "2fe26c14022264b02a298d105acec81aa4c13d18317dc69ea4524c352c2570c9",
+      "size": 35896,
+      "lastModified": 1782191107.5109415
+    },
+    {
+      "path": "全域架空体系AI虚拟创世系统.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\全域架空体系AI虚拟创世系统.md",
+      "hash": "9bb600dc8d26b785c75e86f9cae7e30b00a6be8b33f75545900f49dbdbb01f5c",
+      "size": 87575,
+      "lastModified": 1782191107.5190837
+    },
+    {
+      "path": "全域规范性伦理完整理论体系.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\全域规范性伦理完整理论体系.md",
+      "hash": "f9662f113a5d0754389ea9e82935958daf1e49922313d26b541894366753b879",
+      "size": 24886,
+      "lastModified": 1782191107.5251286
+    },
+    {
+      "path": "全套源码说明.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\全套源码说明.md",
+      "hash": "1d42b4626337b5a9215771ae78d9736e1aaf3dcdea40323d09ccbe9243d93fdb",
+      "size": 10131,
+      "lastModified": 1782191107.5326679
+    },
+    {
+      "path": "全方位推翻广义存在论（GET）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\全方位推翻广义存在论（GET）.md",
+      "hash": "501251f2b78bef1393bc973fca869ab28d4d6c26f4ea10b388555e8b0912c838",
+      "size": 28871,
+      "lastModified": 1782191107.539703
+    },
+    {
+      "path": "六阶自主科研架构论文.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\六阶自主科研架构论文.md",
+      "hash": "f2880841879953544849b35b057514d5a71db793e1b79bb453a378c98cfc1f8a",
+      "size": 5097,
+      "lastModified": 1782191107.5457814
+    },
+    {
+      "path": "六阶自主科研闭环系统（SO-ARCLS）工程化完整设计文档.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\六阶自主科研闭环系统（SO-ARCLS）工程化完整设计文档.md",
+      "hash": "c541527980c60663a71a887bcdc9a6fb1acd20599b1f2fb05f242704c59f3ad7",
+      "size": 26125,
+      "lastModified": 1782191107.5518897
+    },
+    {
+      "path": "四阶跨域泛化系统（FO-CDGS）工程化完整设计文档.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\四阶跨域泛化系统（FO-CDGS）工程化完整设计文档.md",
+      "hash": "a705cc85f29d234f681e34f6fc03107a93316fc7d37a696b4a3e5c8cca0c1596",
+      "size": 26666,
+      "lastModified": 1782191107.5594294
+    },
+    {
+      "path": "基于宇宙本体结构的全域完整分层基底体系（兼容原《新四位一体框架3.0元本体论》）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\基于宇宙本体结构的全域完整分层基底体系（兼容原《新四位一体框架3.0元本体论》）.md",
+      "hash": "f176eca8813328fe3f85114107715777012358e4712b02b056e5eed72c8a48d2",
+      "size": 9858,
+      "lastModified": 1782191107.5654624
+    },
+    {
+      "path": "多学科交叉验证卷宗（外挂配套·不触碰主干内核）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\多学科交叉验证卷宗（外挂配套·不触碰主干内核）.md",
+      "hash": "d377005070a1d1df1e47fceca8bfe4a2cc41b7704ae91dc6f1ba53c09e5f4513",
+      "size": 22152,
+      "lastModified": 1782191107.5724888
+    },
+    {
+      "path": "大一统0元本体论.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\大一统0元本体论.md",
+      "hash": "7129e82bafed78835eb1ad99312c616ca9d14ea9e51b03b25cacd4c87fe86e77",
+      "size": 53377,
+      "lastModified": 1782191107.5785134
+    },
+    {
+      "path": "大一统理论落地实录.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\大一统理论落地实录.md",
+      "hash": "f2f80d313aa0e13631166ead29cb1c4a5f12922baa6418b1ff911539ec6023c3",
+      "size": 52568,
+      "lastModified": 1782191107.5865698
+    },
+    {
+      "path": "大一统验证理论.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\大一统验证理论.md",
+      "hash": "36360435504a69adfe24f5f360b6ff567a748dd42a2e2784c1f22ad420e8e234",
+      "size": 40739,
+      "lastModified": 1782191107.5931878
+    },
+    {
+      "path": "实践哲学视域下全域元本体大一统体系的建构、学科验证与现代化意识形态迭代研究——基于新四位一体框架3.0的八维全域推演.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\实践哲学视域下全域元本体大一统体系的建构、学科验证与现代化意识形态迭代研究——基于新四位一体框架3.0的八维全域推演.md",
+      "hash": "b30abc013e62f0a276d68ac081c985691b93494dbff6d3ab2806d7f259268397",
+      "size": 14586,
+      "lastModified": 1782191107.6008735
+    },
+    {
+      "path": "数理验证卷宗（外挂配套·不触碰主干内核）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\数理验证卷宗（外挂配套·不触碰主干内核）.md",
+      "hash": "17286828d4468a272eff4d99f799aadda12256a8371ae213a96ed00ae6ec7e83",
+      "size": 16958,
+      "lastModified": 1782191107.6079047
+    },
+    {
+      "path": "新四位一体3.0元本体本源知识库：0-4重基底完整理论文档合集.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\新四位一体3.0元本体本源知识库：0-4重基底完整理论文档合集.md",
+      "hash": "dfeb2c745486baea74831d8f050245085e82e416e6eb94e8d604e8d976533236",
+      "size": 11540,
+      "lastModified": 1782191107.6144185
+    },
+    {
+      "path": "新四位一体3.0所有存档哈希.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\新四位一体3.0所有存档哈希.md",
+      "hash": "bc30b452eb8e7fe224486f275d27fd3c70c1cf946e612f769e2d0dd0c56c554e",
+      "size": 7329,
+      "lastModified": 1782191107.6204433
+    },
+    {
+      "path": "新时代具有强大凝聚力和引领力的乐观社会主义意识形态.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\新时代具有强大凝聚力和引领力的乐观社会主义意识形态.md",
+      "hash": "1b0ead453adae0dd823d45a35a0e2dcf59a41e4d35eda3c28033bed179d479d1",
+      "size": 13285,
+      "lastModified": 1782191107.6259704
+    },
+    {
+      "path": "旧六系升维重构与新六系六维天道具象体系及个人主体强化变身完整理论体系——基于AFAC2026稀疏图学习智能体全域底层世界观建构.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\旧六系升维重构与新六系六维天道具象体系及个人主体强化变身完整理论体系——基于AFAC2026稀疏图学习智能体全域底层世界观建构.md",
+      "hash": "9ebd7f596bcff1655b193d2365c388c7b2902711257667313193b605a3c601e4",
+      "size": 66737,
+      "lastModified": 1782191107.6340067
+    },
+    {
+      "path": "旧六系升维重构新增补入理论内容.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\旧六系升维重构新增补入理论内容.md",
+      "hash": "c893713682c62c74e3b751e1537f7dea9ac093fddcc8a5dc1a39d52ff066f956",
+      "size": 39262,
+      "lastModified": 1782191107.6414905
+    },
+    {
+      "path": "智能体AI集群实现大一统 .md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\智能体AI集群实现大一统 .md",
+      "hash": "2e6cfe9020d3bc1509387a73519786ae25335065d6c4a473019f46e73ec8dc9c",
+      "size": 39099,
+      "lastModified": 1782191107.6480308
+    },
+    {
+      "path": "本源结构.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\本源结构.md",
+      "hash": "f176eca8813328fe3f85114107715777012358e4712b02b056e5eed72c8a48d2",
+      "size": 9858,
+      "lastModified": 1782191107.6580932
+    },
+    {
+      "path": "模块22：全域文明风控监测子系统（治理体系风控监测层·终版卷宗）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\模块22：全域文明风控监测子系统（治理体系风控监测层·终版卷宗）.md",
+      "hash": "86c23af51f1324f5e76b2710e97db46d9b47548f48e27523e0bb94ca62af7089",
+      "size": 25060,
+      "lastModified": 1782191107.6646702
+    },
+    {
+      "path": "模块23：全域文明运维中枢调度子系统（治理体系中枢运维层·终版卷宗）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\模块23：全域文明运维中枢调度子系统（治理体系中枢运维层·终版卷宗）.md",
+      "hash": "638c4e01d3ec1945da40a37693bbaccf3841c48885012f4ad9650d62ee9976ba",
+      "size": 24273,
+      "lastModified": 1782191107.6706862
+    },
+    {
+      "path": "模块24：全域文明稳态治理核心模块（治理体系顶层内核层·终版卷宗）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\模块24：全域文明稳态治理核心模块（治理体系顶层内核层·终版卷宗）.md",
+      "hash": "b2a5b4639fb4f811f2d73a4b6c6e50b5c23da60bfd1ebbdd6f11f298252b9416",
+      "size": 23036,
+      "lastModified": 1782191107.6782284
+    },
+    {
+      "path": "模块25：全域文明法典&本源双序列外卷落地模块（治理体系实操落地层·终版卷宗）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\模块25：全域文明法典&本源双序列外卷落地模块（治理体系实操落地层·终版卷宗）.md",
+      "hash": "d90fb84b02fa5b0990401e8d954f8c2f9fa2651858ceea8038e486de30621171",
+      "size": 30838,
+      "lastModified": 1782191107.6857414
+    },
+    {
+      "path": "科研闭环公理体系：大一统动力学与AI全链路自进化范式.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\科研闭环公理体系：大一统动力学与AI全链路自进化范式.md",
+      "hash": "f9b307314a067185ca4c8478f79b4d5bd384717dcc4e415ee6951f7051e189ce",
+      "size": 32717,
+      "lastModified": 1782191107.692772
+    },
+    {
+      "path": "第1、2重基底专项适配赛题与科研落地方案.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第1、2重基底专项适配赛题与科研落地方案.md",
+      "hash": "8d8ea1c7a614440e3a26c9d8477bd9f5bbe4430acca5a917d2ee22a47eebbad8",
+      "size": 8894,
+      "lastModified": 1782191107.7001426
+    },
+    {
+      "path": "第一套主干40卷宗正文.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第一套主干40卷宗正文.md",
+      "hash": "f8b45b23f5c6552ce9ac31917a07cb1c38c8c7dc4f045afeb81d787d75de9ee6",
+      "size": 50125,
+      "lastModified": 1782191107.708264
+    },
+    {
+      "path": "第一层1到9模块大一统理论终极不可改基底.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第一层1到9模块大一统理论终极不可改基底.md",
+      "hash": "d6652939fe1412601ac6269a520e46aaba4f3007bdd8be9e366eeb1ffaf1af77",
+      "size": 46294,
+      "lastModified": 1782191107.7142732
+    },
+    {
+      "path": "第七层：全域数理工具&三级工程落地保障层（实操支撑终局保障）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第七层：全域数理工具&三级工程落地保障层（实操支撑终局保障）.md",
+      "hash": "30431e04d30b035c73a468606755afd3a54576fa9eb33b7f3f706eb27635e4bf",
+      "size": 22897,
+      "lastModified": 1782191107.7213225
+    },
+    {
+      "path": "第三套 第三套元规则终审与全域共生40卷宗）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第三套 第三套元规则终审与全域共生40卷宗）.md",
+      "hash": "4d628173c9da0cafb14915110eb74c68052c557a0d03c7c4d7b9f2001e0aab8f",
+      "size": 51102,
+      "lastModified": 1782191107.727348
+    },
+    {
+      "path": "第三层：全域稳态补丁&风控适配保障层（体系自愈兜底）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第三层：全域稳态补丁&风控适配保障层（体系自愈兜底）.md",
+      "hash": "1d82a7f58c24a90b7331626e6fe597de6b502d067e67ad64c602dadb557fbf82",
+      "size": 17637,
+      "lastModified": 1782191107.7339118
+    },
+    {
+      "path": "第二套域外推演40卷宗正文.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第二套域外推演40卷宗正文.md",
+      "hash": "742209b1aa3fbc69bee588a757a880824da776db7ee383bbcca0c1f86c6ab128",
+      "size": 49883,
+      "lastModified": 1782191107.740985
+    },
+    {
+      "path": "第五层全域22模块八大基础&23模块五大高阶系统运行中枢.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第五层全域22模块八大基础&23模块五大高阶系统运行中枢.md",
+      "hash": "4eb65b97a157377be31036c0ada78a38c60396aee14bbb3064d733c107da8cf9",
+      "size": 29486,
+      "lastModified": 1782191107.7485082
+    },
+    {
+      "path": "第八层：全域总根终审&哈希法定合规闭环层（全域终极顶层总控+法定确权终局）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第八层：全域总根终审&哈希法定合规闭环层（全域终极顶层总控+法定确权终局）.md",
+      "hash": "5f267c553ed9ddee151ab188febac4a0e470835efb860ffa4e1527c500cefb94",
+      "size": 21154,
+      "lastModified": 1782191107.7568944
+    },
+    {
+      "path": "第六层·全域文明稳态治理体系 总卷宗【增补专项终版】.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第六层·全域文明稳态治理体系 总卷宗【增补专项终版】.md",
+      "hash": "b63b37430acb5dfe042242ab5aa683bbcfd107472923237a22a0b42b95ea0b36",
+      "size": 11964,
+      "lastModified": 1782191107.763416
+    },
+    {
+      "path": "第四层：BSD四层统一场论&弦论_LQG量子引力融合层（物理统一终极基底）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\第四层：BSD四层统一场论&弦论_LQG量子引力融合层（物理统一终极基底）.md",
+      "hash": "44df82b668fd5ef0472693ea563c2531dbb3cc06ac3d915a1c91017be5b17e8e",
+      "size": 35138,
+      "lastModified": 1782191107.7719586
+    },
+    {
+      "path": "虚拟宇宙学AI游戏小说文学通用基底公理.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\虚拟宇宙学AI游戏小说文学通用基底公理.md",
+      "hash": "76768fa05e3ab667390d8a81d8891a87d462bca8cca80db3aaef3dcf0690836d",
+      "size": 61362,
+      "lastModified": 1782191107.7789648
+    },
+    {
+      "path": "虚拟宇宙学科创世模型与人物创世算子体系.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\虚拟宇宙学科创世模型与人物创世算子体系.md",
+      "hash": "4b53c9a6bb47db6e9f8a2be06bcbcf35740bb88875f7605a2f9120418a75ac53",
+      "size": 26257,
+      "lastModified": 1782191107.7869792
+    },
+    {
+      "path": "通用科研系统（架构可统一其他AI创世体系）.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\通用科研系统（架构可统一其他AI创世体系）.md",
+      "hash": "ede593d488b80c16efc9547d771c3b7437d9e5ed52f7ada7c91994f41446dab9",
+      "size": 31703,
+      "lastModified": 1782191107.7940173
+    },
+    {
+      "path": "配套全域数理模型 + 交叉学科完备补充分册.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\配套全域数理模型 + 交叉学科完备补充分册.md",
+      "hash": "b16d3a1435f68bf33def8439a329d7c58b40c9c8312bd2a2bcc1b882fc31ed6a",
+      "size": 15333,
+      "lastModified": 1782191107.8015962
+    },
+    {
+      "path": "阶段0 正式启动：元本体核心引擎（Ontology Core Engine, OCE）工程化完整设计文档.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\阶段0 正式启动：元本体核心引擎（Ontology Core Engine, OCE）工程化完整设计文档.md",
+      "hash": "49cb1b821270de2b64b19e6a8b4920960727e9d5abfa9ad692050ecc239ab7d5",
+      "size": 16367,
+      "lastModified": 1782191107.809132
+    },
+    {
+      "path": "首页统一理论说明.md",
+      "fullPath": "C:\\Users\\13003\\OneDrive\\桌面\\3333333\\Agent_v2\\theory_base\\首页统一理论说明.md",
+      "hash": "f25982bf7064db678f48b49228f58462c8a2c648acc7ea9ed38ff4d9308a016e",
+      "size": 16524,
+      "lastModified": 1782191107.815165
+    }
+  ],
+  "totalFiles": 103,
+  "lastUpdated": "1782191759.9148169"
+}
