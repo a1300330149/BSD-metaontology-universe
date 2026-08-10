@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "projectName": "Agent_v2",
+    "locale": "zh-CN",
+    "modelId": "agent-work-loop-v4",
+    "reportContractVersion": 25,
+    "overview": "工作区包含丰富的 BSD 理论框架代码和 Trae CN 智能体配置，但缺少版本控制、机械执行门禁和环境锁定，导致变更安全、改动验证和可控执行均存在结构性缺口。会话证据来源全部缺失使经验沉淀无法评估。",
+    "strengths": [
+      "bsd_engine 验证器链（hash_checker、compliance_checker、binding_checker）覆盖理论完整性、公理计数和参数篡改检测，均提供 CLI 入口和格式化输出",
+      "bsd-oaps/tests/ 按 unit/integration/regression 三层组织，pytest 配置完整，断言消息清晰可操作",
+      ".trae/sandbox.json 对 theory_base/core/ 实施了 deny_modify + deny_delete + recursive_protect 保护"
+    ],
+    "aiAgentPractice": {
+      "inspectedSurfaces": [
+        "Rules",
+        "Skills",
+        "MCP",
+        "Commands",
+        "Hooks"
+      ],
+      "coverageRows": [
+        {
+          "surface": "Rules",
+          "scopes": [
+            "Project"
+          ],
+          "count": 4,
+          "paths": [
+            ".trae/rules/global.md",
+            ".trae/rules/global_theory_rule.md",
+            ".trae/rules/global_theory_base_rule.md",
+            ".trae/rules/meta_theory_constraint.md"
+          ]
+        },
+        {
+          "surface": "Skills",
+          "scopes": [
+            "Project"
+          ],
+          "count": 3,
+          "paths": [
+            ".trae/skills/Ontology_Theory_Guard/SKILL.md"
+          ]
+        },
+        {
+          "surface": "MCP",
+          "scopes": [
+            "Project"
+          ],
+          "count": 2,
+          "paths": [
+            ".trae/mcp.json",
+            "bsd-oaps/.trae/mcp.json"
+          ]
+        },
+        {
+          "surface": "Custom Agents",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Hooks",
+          "scopes": [
+            "Project"
+          ],
+          "count": 2,
+          "paths": [
+            ".trae/settings.json",
+            ".trae/sandbox.json"
+          ]
+        },
+        {
+          "surface": "Commands",
+          "scopes": [
+            "Project"
+          ],
+          "count": 11,
+          "paths": [
+            ".trae/settings.json"
+          ]
+        },
+        {
+          "surface": "Memories",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        }
+      ]
+    },
+    "assignmentSummaries": [],
+    "dimensions": [
+      {
+        "id": "task-understanding",
+        "label": "任务理解",
+        "score": 42,
+        "summary": "无 Qoder 原生 AGENTS.md；.trae/rules/ 提供理论治理铁则但缺少工程任务路由。无会话证据验证任务理解行为。",
+        "findingRefs": [
+          "harness-trae-blind-spot"
+        ]
+      },
+      {
+        "id": "controlled-execution",
+        "label": "可控执行",
+        "score": 52,
+        "summary": "pyproject.toml 声明了依赖和 CLI 入口，但无 lockfile、无 doctor 命令、conftest.py 路径注入脆弱。sandbox.json 声明了权限边界但运行时执行未被观测。",
+        "findingRefs": [
+          "environment-not-reproducible"
+        ]
+      },
+      {
+        "id": "change-validation",
+        "label": "改动验证",
+        "score": 38,
+        "summary": "测试分为三层但无 CI 强制执行；无可观测性框架、无结构化日志；validator 存在参数覆盖缺口。无会话证据验证验证行为。",
+        "findingRefs": [
+          "no-mechanical-enforcement",
+          "validator-parameter-coverage-gap"
+        ]
+      },
+      {
+        "id": "reliable-delivery",
+        "label": "可靠交付",
+        "score": 30,
+        "summary": "工作区不在 Git 版本控制之下，无合并接受路径、无回滚恢复能力。CONTRIBUTING.md 描述的 PR 工作流无法执行。sandbox.json 的恢复路径声明缺乏可执行实现。",
+        "findingRefs": [
+          "no-version-control"
+        ]
+      },
+      {
+        "id": "learning-capture",
+        "label": "经验沉淀",
+        "score": 35,
+        "summary": "5 个已启用会话来源根中 0 个存在，0 个合资格话被分析。生命周期机会识别、闭环工程化和长期验证均因证据不可用而无法评估。此证据缺口保留在证据边界中，不作为独立发现。",
+        "findingRefs": []
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "no-version-control",
+      "title": "工作区无版本控制，变更安全链条断裂",
+      "severity": "High",
+      "reason": "evidence-pack 命令因 git rev-parse 失败而无法执行，确认工作区不在 Git 版本控制之下。无提交历史、无分支隔离、无合并门禁、无回滚恢复能力。CONTRIBUTING.md 描述的 fork-branch-PR 工作流无法在工作区执行。修改出错后无 Git 历史可回溯，无 git checkout 或 git revert 可恢复。",
+      "expectedOutput": [
+        "工作区纳入版本控制，支持分支隔离、差异审查和回滚恢复"
+      ],
+      "expectedArtifact": "GitRepository",
+      "aiFixPrompt": "/better-harness fix this issue\n\n在工作区根目录初始化 Git 仓库，添加 .gitignore 排除 .venv/、__pycache__/、.qoder/ 等生成文件和缓存目录，创建基础分支。\n\n## 验证\n\n- 运行 git status 确认仓库初始化成功\n- 确认 .gitignore 正确排除了生成文件和缓存目录\n- 运行 bsd-verify-hash 确认核心参数未被修改",
+      "dimensionRefs": [
+        "reliable-delivery"
+      ]
+    },
+    {
+      "id": "no-mechanical-enforcement",
+      "title": "质量规则全为声明性，无机械执行门禁",
+      "severity": "Medium",
+      "reason": "CONTRIBUTING.md 要求提交前运行 bsd-verify-axiom，但无 pre-commit hook、无 CI pipeline、无 required gate 强制执行。三个领域验证器（hash_checker、compliance_checker、binding_checker）仅在手动运行时生效，开发者可跳过所有验证器直接修改代码。.trae/settings.json 的定时维护任务声明了哈希巡检和合规检查，但对应脚本的可运行性和调度执行未被观测。",
+      "expectedOutput": [
+        "提交前自动执行理论合规验证，篡改检测不再依赖手动运行"
+      ],
+      "expectedArtifact": "PreCommitHook",
+      "aiFixPrompt": "/better-harness fix this issue\n\n在初始化 Git 仓库后添加 pre-commit hook，将 bsd-verify-axiom 和 bsd-verify-hash 绑定到提交前自动执行。保留现有的手动验证入口。\n\n## 验证\n\n- 运行 bsd-verify-axiom 确认验证器正常工作\n- 运行 bsd-verify-hash 确认哈希检测正常\n- 尝试提交包含参数篡改的改动，确认 hook 拦截",
+      "dimensionRefs": [
+        "change-validation"
+      ]
+    },
+    {
+      "id": "environment-not-reproducible",
+      "title": "环境不可复现，缺少 lockfile 与版本锁定",
+      "severity": "Medium",
+      "reason": "pyproject.toml 使用大于等于版本约束无上限，无 requirements.txt lock、无 poetry.lock、无 .python-version。conftest.py 通过 sys.path.insert 手动注入路径，在非标准安装方式下可能失效。无 doctor 命令诊断环境健康，无容器化方案保证跨机器一致性。",
+      "expectedOutput": [
+        "依赖版本锁定，不同机器上安装得到一致的运行环境"
+      ],
+      "expectedArtifact": "Lockfile",
+      "aiFixPrompt": "/better-harness fix this issue\n\n为 bsd-oaps 项目添加 lockfile 固定依赖版本，添加 .python-version 文件声明所需 Python 版本。检查 conftest.py 的路径注入是否可用 pip install -e . 替代。\n\n## 验证\n\n- 运行 pip install -e . 确认安装成功\n- 运行 pytest tests/ -v 确认测试通过\n- 在干净环境中重新安装确认依赖版本一致",
+      "dimensionRefs": [
+        "controlled-execution"
+      ]
+    },
+    {
+      "id": "validator-parameter-coverage-gap",
+      "title": "篡改检测验证器未覆盖 T90 V1.8 新增参数",
+      "severity": "Medium",
+      "reason": "constants.py 的 verify_params() 包含 17 个期望参数值，但 hash_checker.py 的 verify_core_params() 仅检查原有 10 个参数加 3 个元数据字段，未覆盖 T90 V1.8 新增的 7 个参数。两处独立硬编码同一组期望值，存在同步遗漏风险。修改一处而遗忘另一处会导致篡改检测结果不一致。",
+      "expectedOutput": [
+        "hash_checker 覆盖全部 17 个锁档参数，消除参数检测盲区"
+      ],
+      "expectedArtifact": "UpdatedValidator",
+      "aiFixPrompt": "/better-harness fix this issue\n\n在 hash_checker.py 的 verify_core_params() 中补充 T90 V1.8 新增的 7 个参数，使其与 constants.py 的 verify_params() 保持一致。考虑将期望值提取为共享常量以消除重复。\n\n## 验证\n\n- 运行 bsd-verify-hash 确认参数检测完整覆盖全部 17 个参数\n- 运行 pytest tests/unit/test_phase1_core_engine.py 确认验证器测试通过",
+      "dimensionRefs": [
+        "change-validation"
+      ]
+    },
+    {
+      "id": "harness-trae-blind-spot",
+      "title": "Harness 对 Trae CN 智能体配置层全面盲区",
+      "severity": "Low",
+      "reason": "Step 1 资产基线对全部 Qoder 原生面报告 0，但工作区 .trae/ 目录实际包含 10 个自定义 Agent、4 个规则文件、3 个 Skill、MCP 配置、定时门禁和 11 条快捷命令。Qoder 资产扫描器无法识别 Trae CN 格式的配置，导致 Harness 分析无法评估该智能体层的质量和有效性。",
+      "expectedOutput": [
+        "Qoder 资产扫描器能识别工作区的智能体配置，消除 Harness 盲区"
+      ],
+      "expectedArtifact": "AgentsMd",
+      "aiFixPrompt": "/better-harness fix this issue\n\n在工作区根目录添加 AGENTS.md，将 .trae/rules/ 中的工程任务路由信息提炼为 Qoder 原生格式。或将关键 Trae CN 配置迁移为 Qoder 原生结构。\n\n## 验证\n\n- 运行 coding-agent-practices asset-baseline qoder 确认资产被识别\n- 确认 AGENTS.md 包含任务入口和风险路由信息",
+      "dimensionRefs": [
+        "task-understanding"
+      ]
+    }
+  ]
+}

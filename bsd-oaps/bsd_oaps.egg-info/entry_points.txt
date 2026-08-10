@@ -1,0 +1,5 @@
+[console_scripts]
+bsd-mcp-server = bsd_mcp.server:main
+bsd-millennium = bsd_agents.millennium_agent:main
+bsd-verify-axiom = bsd_engine.validators.axiom_compliance:main
+bsd-verify-hash = bsd_engine.validators.hash_checker:main
